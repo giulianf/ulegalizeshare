@@ -5,6 +5,9 @@ import lombok.Getter;
 public class ItemEventDto extends Item<String> {
     @Getter
     private String color;
+    public ItemEventDto() {
+        super("", "");
+    }
 
     public ItemEventDto(String value, String label, String color) {
         super(value, label);
