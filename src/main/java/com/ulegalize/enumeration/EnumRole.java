@@ -9,7 +9,8 @@ public enum EnumRole {
     MEDIATEUR(6, "Médiateur", "Bemiddelaar", "Mediator"),
     LAWYER_ADVICE_CLIENT(7, "Avocat conseil client", "Klantadviseur", "Client adviser"),
     LAWYER_OPPOSING(8, "Avocat partie adverse", "Advocaat van de tegenpartij", "Opposing party lawyer"),
-    LITIGANT_OPPOSING(9, "Justiciable partie adverse", "Gerechtvaardigde tegenpartij", "Justiciable opposing party");
+    LITIGANT_OPPOSING(9, "Justiciable partie adverse", "Gerechtvaardigde tegenpartij", "Justiciable opposing party"),
+    LAWYER_CLIENT(10, "Avocat client", "Klant", "Lawyer Client ");
 
     private int idRole;
 

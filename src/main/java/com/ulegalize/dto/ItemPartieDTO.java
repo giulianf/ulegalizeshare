@@ -11,13 +11,14 @@ import lombok.Setter;
 public class ItemPartieDTO {
     @Getter
     @Setter
-    String label;
-    @Getter
-    @Setter
-    String email;
-    @Getter
-    @Setter
     private String id;
+
+    @Getter
+    @Setter
+    private String label;
+    @Getter
+    @Setter
+    private String email;
     @Getter
     @Setter
     private ItemStringDto emailItem;
@@ -33,4 +34,15 @@ public class ItemPartieDTO {
     @Getter
     @Setter
     private boolean isLitigant;
+    @Getter
+    @Setter
+    private String vcKey;
+
+    public ItemPartieDTO(String id, String label, String email, String function, EnumPartieType type) {
+        this.id = id;
+        this.label = label;
+        this.email = email;
+        this.function = function;
+        this.type = type;
+    }
 }
