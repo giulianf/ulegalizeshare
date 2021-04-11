@@ -31,5 +31,6 @@ public class ObjectRequest implements Serializable {
     @Getter
     @Setter
     String permissionId;
+    public ObjectRequest(){}
 
 }

@@ -8,6 +8,7 @@ import java.util.Date;
 
 @Data
 public class LawfirmUserDTO extends AbstractRestObject {
+    public LawfirmUserDTO(){}
 
     private Long id;
     private boolean isPublic;

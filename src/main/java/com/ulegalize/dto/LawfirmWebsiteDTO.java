@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class LawfirmWebsiteDTO extends AbstractRestObject {
+	public LawfirmWebsiteDTO(){}
 
 	private String vckey;
 	private String title;

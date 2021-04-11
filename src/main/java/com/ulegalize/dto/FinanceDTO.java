@@ -1,10 +1,12 @@
 package com.ulegalize.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
+@NoArgsConstructor
 public class FinanceDTO {
 
     private Integer couthoraire;

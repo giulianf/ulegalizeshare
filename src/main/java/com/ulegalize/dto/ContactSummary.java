@@ -9,6 +9,7 @@ import java.util.Date;
 
 @Data
 public class ContactSummary implements Serializable {
+    public ContactSummary(){}
 
     private Long id;
     private String fullName;

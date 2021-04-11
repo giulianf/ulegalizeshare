@@ -7,6 +7,7 @@ import java.time.LocalDate;
 
 @Data
 public class ComptaDTO {
+    public ComptaDTO(){}
     Long id;
     Integer idType;
     ItemDto idTypeItem;
