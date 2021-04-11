@@ -1,0 +1,119 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'maven'
+    id 'signing'
+}
+apply from: 'version.gradle'
+
+group = applicationGroup
+archivesBaseName =  applicationName
+version = applicationVersion
+project.version = applicationVersion
+description = applicationName
+sourceCompatibility = '1.11'
+
+
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2')
+    }
+}
+dependencies {
+    implementation "com.fasterxml.jackson.core:jackson-core:${jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${jackson}"
+    implementation "com.fasterxml.jackson.module:jackson-module-parameter-names:${jackson}"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jackson}"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jackson}"
+    runtime group: 'com.fasterxml.jackson.module', name: 'jackson-modules-java8', version: "${jackson}"
+
+    compileOnly "org.projectlombok:lombok:${lombok}"
+    annotationProcessor "org.projectlombok:lombok:${lombok}"
+    testCompileOnly "org.projectlombok:lombok:${lombok}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombok}"
+
+    implementation "org.apache.commons:commons-text:${commonsText}"
+    implementation "org.apache.commons:commons-lang3:${commonsLang}"
+
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                name 'Ulegalize Share Library'
+                packaging 'jar'
+                // optionally artifactId can be defined here
+                description 'A application used to share library between Ulegalize application'
+                url 'https://workspace.ulegalize.com'
+
+                scm {
+                    connection 'scm:git:git://bitbucket.org:finauxa/ulegalizeshare.git'
+                    developerConnection 'scm:git:ssh://bitbucket.org:finauxa/ulegalizeshare.git'
+                    url 'https://bitbucket.org/finauxa/ulegalizeshare'
+                }
+
+                licenses {
+                    license {
+                        name 'EUROPEAN UNION PUBLIC LICENCE v. 1.2'
+                        url 'https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/eupl_v1.2_en.pdf'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'fumajul'
+                        name 'Julien Fumanti'
+                        email 'julien.fumanti@finauxa.com'
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+artifacts {
+    archives javadocJar, sourcesJar
+}
+signing {
+    sign configurations.archives
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
