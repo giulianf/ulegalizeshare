@@ -11,13 +11,16 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 
 1. create your gradle.properties in your user folder (ex: ~/.gradle/gradle.properties)
-2. Follow these steps in order to deploy in a repository Onss sonatype  
-https://central.sonatype.org/publish/publish-gradle/
-
-Signin plugin
+2. Signin plugin
 https://docs.gradle.org/current/userguide/signing_plugin.html  
 
 gpg --keyserver hkp://keyserver.ubuntu.com --send-keys  
+3. execute command:  
+` 
+gradle clean  
+gradle build  
+gradle uploadArchives
+`  
 
 
 ### Contribution guidelines ###
@@ -27,6 +30,7 @@ gpg --keyserver hkp://keyserver.ubuntu.com --send-keys
 * Other guidelines
 
 ### Who do I talk to? ###
+https://central.sonatype.org/publish/publish-gradle/
 
 * Repo owner or admin
 * Other community or team contact
