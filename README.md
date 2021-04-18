@@ -12,15 +12,21 @@ This README would normally document whatever steps are necessary to get your app
 
 1. create your gradle.properties in your user folder (ex: ~/.gradle/gradle.properties)
 2. Signin plugin
-https://docs.gradle.org/current/userguide/signing_plugin.html  
+<https://docs.gradle.org/current/userguide/signing_plugin.html>
 
-gpg --keyserver hkp://keyserver.ubuntu.com --send-keys  
+gpg --keyserver <hkp://keyserver.ubuntu.com> --send-keys
 3. execute command:  
 ` 
-gradle clean  
+gradle clean
 gradle build  
+`  
+ `
 gradle uploadArchives
 `  
+Ask (to: julien.fumanti@finauxa.com) the authorization to release the library 
+
+The link to authorize :
+<https://central.sonatype.org/publish/publish-gradle/>
 
 
 ### Contribution guidelines ###
@@ -30,7 +36,7 @@ gradle uploadArchives
 * Other guidelines
 
 ### Who do I talk to? ###
-https://central.sonatype.org/publish/publish-gradle/
+<https://central.sonatype.org/publish/publish-gradle/>
 
 * Repo owner or admin
 * Other community or team contact

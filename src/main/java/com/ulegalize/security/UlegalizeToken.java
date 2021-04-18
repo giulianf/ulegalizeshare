@@ -13,7 +13,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @ToString
-public class LawfirmToken implements Serializable {
+public class UlegalizeToken implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

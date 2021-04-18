@@ -1,6 +1,6 @@
 package com.ulegalize;
 
-import com.ulegalize.security.LawfirmToken;
+import com.ulegalize.security.UlegalizeToken;
 import lombok.*;
 
 import java.io.Serializable;
@@ -14,7 +14,7 @@ public class KafkaObject<T> implements Serializable {
 
     @Getter
     @Setter
-    private LawfirmToken lawfirmToken;
+    private UlegalizeToken ulegalizeToken;
     @Getter
     @Setter
     private T objectTransfert;
