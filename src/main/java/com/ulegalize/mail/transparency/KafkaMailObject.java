@@ -1,6 +1,5 @@
 package com.ulegalize.mail.transparency;
 
-import com.ulegalize.security.UlegalizeToken;
 import lombok.*;
 
 import java.io.Serializable;
@@ -15,7 +14,10 @@ public class KafkaMailObject implements Serializable {
 
     @Getter
     @Setter
-    private UlegalizeToken ulegalizeToken;
+    private String template;
+    @Getter
+    @Setter
+    private String subject;
 
     @Getter
     @Setter
