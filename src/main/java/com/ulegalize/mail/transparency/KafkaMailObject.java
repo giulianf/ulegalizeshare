@@ -15,6 +15,9 @@ public class KafkaMailObject implements Serializable {
 
     @Getter
     @Setter
+    private EnumMailTemplate enumMailTemplate;
+    @Getter
+    @Setter
     private EnumLanguage enumLanguage;
     @Getter
     @Setter
