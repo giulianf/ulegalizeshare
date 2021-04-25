@@ -4,7 +4,7 @@ import com.ulegalize.enumeration.EnumLanguage;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.Map;
 
 @NoArgsConstructor
@@ -33,10 +33,10 @@ public class KafkaMailObject implements Serializable {
     // use for ics
     @Getter
     @Setter
-    private LocalDateTime start;
+    private ZonedDateTime start;
     @Getter
     @Setter
-    private LocalDateTime end;
+    private ZonedDateTime end;
     @Getter
     @Setter
     private String organizer;
