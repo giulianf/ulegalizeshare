@@ -28,6 +28,9 @@ public class KafkaMailObject implements Serializable {
     private String subject;
     @Getter
     @Setter
+    private String location;
+    @Getter
+    @Setter
     private Map<String, Object> context;
 
     // use for ics
