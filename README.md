@@ -16,19 +16,23 @@ This README would normally document whatever steps are necessary to get your app
    <https://docs.gradle.org/current/userguide/signing_plugin.html#sec:signatory_credentials>
 
 gpg --keyserver <hkp://keyserver.ubuntu.com> --send-keys
+
 3. execute command:  
-` 
-gradle clean
+   `
+   gradle clean
+   `
+   increment the version (applicationVersion) within `gradle.properties'
+
+`
 gradle build  
 `  
- `
+`
 gradle uploadArchives
 `  
-Ask (to: julien.fumanti@finauxa.com) the authorization to release the library 
+Ask (to: julien.fumanti@finauxa.com) the authorization to release the library
 
 The link to authorize :
 <https://central.sonatype.org/publish/publish-gradle/>
-
 
 ### Contribution guidelines ###
 
