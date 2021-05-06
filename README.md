@@ -11,8 +11,9 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 
 1. create your gradle.properties in your user folder (ex: ~/.gradle/gradle.properties)
-2. Signin plugin
-<https://docs.gradle.org/current/userguide/signing_plugin.html>
+2. Follow the **signature credentials**  
+   Signin plugin
+   <https://docs.gradle.org/current/userguide/signing_plugin.html#sec:signatory_credentials>
 
 gpg --keyserver <hkp://keyserver.ubuntu.com> --send-keys
 3. execute command:  
