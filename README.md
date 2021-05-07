@@ -10,6 +10,10 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
+create a Pull request
+
+### How do I get to publish? ###
+
 1. create your gradle.properties in your user folder (ex: ~/.gradle/gradle.properties)
 
 Follow the **signature credentials**  
@@ -31,8 +35,9 @@ signing.secretKeyRingFile=/Users/yours/.gnupg/secring.gpg
 6. create an account to https://www.sonatype.org  
    add your credential to your own gradle.properties:
    ossrhUsername=userSonarType ossrhPassword=pwd
+7. Ask Publishing support . The owner of the project will do it.
 
-7. execute command:  
+8. execute command:  
    `
    gradle clean
    `
