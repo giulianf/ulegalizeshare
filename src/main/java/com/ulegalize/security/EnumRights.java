@@ -6,7 +6,7 @@ public enum EnumRights {
     DOSSIERS_LECTURE(2, "Dossiers - lecture"),
     COMPTABILITE_LECTURE(3, "Comptabilité - lecture"),
     ECHEANCIER_LECTURE(4, "Echéancier - lecture"),
-    COMPTABILITÉ_IMPRESSIONDERAPPORTS(6, "Comptabilité - impression de rapports"),
+    COMPTABILITE_IMPRESSIONDERAPPORTS(6, "Comptabilité - impression de rapports"),
     DOSSIERS_VOIRASPECTSFINANCIERS(7, "Dossiers -  voir aspects financiers"),
     DOSSIERS_VOIRNOTEAVOCAT(13, "Dossiers - voir note avocat"),
     COMPTABILITE_ECRITURE(15, "Comptabilité - écriture"),
