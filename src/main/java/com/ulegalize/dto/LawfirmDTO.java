@@ -40,6 +40,8 @@ public class LawfirmDTO extends AbstractRestObject {
 	private String phoneNumber;
 	private String fax;
 
+	private boolean isNotification;
+
 	private byte[] logo;
 
 	private boolean acceptAppointments;
@@ -69,6 +71,7 @@ public class LawfirmDTO extends AbstractRestObject {
 					  String email,
 					  String phoneNumber,
 					  String fax,
+					  Boolean isNotification,
 					  byte[] logo,
 					  DriveType driveType) {
 		this.vckey = vckey;
@@ -90,5 +93,6 @@ public class LawfirmDTO extends AbstractRestObject {
 		this.fax = fax;
 		this.logo = logo;
 		this.driveType = driveType;
+		this.isNotification = isNotification;
 	}
 }

@@ -35,6 +35,7 @@ public class LawyerDTO extends AbstractRestObject {
 
     private List<LawyerDuty> duties;
     private boolean isValid;
+    private boolean isNotification;
 
     //come from LawfirmUsers
     private boolean isActive;
