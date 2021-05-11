@@ -18,10 +18,26 @@ public class PaymentDTO implements Serializable {
     private Long id;
 
     private EnumPaymentStatus status;
+    // amount of the transaction
     private Long amount;
+    // transaction is belong to ...
     private String vcKey;
     private String updUser;
     private ZonedDateTime updDate;
     private String creUser;
     private ZonedDateTime creDate;
+
+    // use to have the correct name of transaction
+    private String workflowName;
+
+    public PaymentDTO(Long id, EnumPaymentStatus status, Long amount, String vcKey, String updUser, ZonedDateTime updDate, String creUser, ZonedDateTime creDate) {
+        this.id = id;
+        this.status = status;
+        this.amount = amount;
+        this.vcKey = vcKey;
+        this.updUser = updUser;
+        this.updDate = updDate;
+        this.creUser = creUser;
+        this.creDate = creDate;
+    }
 }
