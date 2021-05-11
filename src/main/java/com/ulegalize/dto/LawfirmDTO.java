@@ -71,7 +71,7 @@ public class LawfirmDTO extends AbstractRestObject {
 					  String email,
 					  String phoneNumber,
 					  String fax,
-					  Boolean isNotification,
+					  boolean isNotification,
 					  byte[] logo,
 					  DriveType driveType) {
 		this.vckey = vckey;
