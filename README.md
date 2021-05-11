@@ -10,14 +10,34 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
+create a Pull request
+
+### How do I get to publish? ###
+
 1. create your gradle.properties in your user folder (ex: ~/.gradle/gradle.properties)
-2. Follow the **signature credentials**  
-   Signin plugin
-   <https://docs.gradle.org/current/userguide/signing_plugin.html#sec:signatory_credentials>
 
-gpg --keyserver <hkp://keyserver.ubuntu.com> --send-keys
+Follow the **signature credentials**  
+Signin plugin
+<https://docs.gradle.org/current/userguide/signing_plugin.html#sec:signatory_credentials>
 
-3. execute command:  
+1. install gpg
+2. gpg --full-gen-key (https://dzone.com/articles/publish-your-artifacts-to-maven-central point 8 to 9 )
+3. gpg --keyserver <hkp://keyserver.ubuntu.com> --send-keys
+4. gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg
+5. fill in the gradle.properties signing.keyId => gpg -K : get the last 8 digits from 'sec'   
+   signing.password => passphrase
+
+**Example**  
+signing.keyId=123F345  
+signing.password=yourPassPhrase  
+signing.secretKeyRingFile=/Users/yours/.gnupg/secring.gpg
+
+6. create an account to https://www.sonatype.org  
+   add your credential to your own gradle.properties:
+   ossrhUsername=userSonarType ossrhPassword=pwd
+7. Ask Publishing support . The owner of the project will do it.
+
+8. execute command:  
    `
    gradle clean
    `
