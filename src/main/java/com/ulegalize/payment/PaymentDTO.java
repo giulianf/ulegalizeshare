@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.ZonedDateTime;
 
 @Data
 @AllArgsConstructor
@@ -21,7 +21,7 @@ public class PaymentDTO implements Serializable {
     private Long amount;
     private String vcKey;
     private String updUser;
-    private Date updDate;
+    private ZonedDateTime updDate;
     private String creUser;
-    private Date creDate;
+    private ZonedDateTime creDate;
 }
