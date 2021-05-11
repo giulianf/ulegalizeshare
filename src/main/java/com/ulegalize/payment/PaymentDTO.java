@@ -28,9 +28,12 @@ public class PaymentDTO implements Serializable {
     private ZonedDateTime creDate;
 
     // use to have the correct name of transaction
-    private String workflowName;
+    private String workflowNameCode;
+    private String workflowNameLabel;
 
-    public PaymentDTO(Long id, EnumPaymentStatus status, Long amount, String vcKey, String updUser, ZonedDateTime updDate, String creUser, ZonedDateTime creDate) {
+    public PaymentDTO(Long id, EnumPaymentStatus status,
+                      Long amount, String vcKey, String workflowNameCode,
+                      String updUser, ZonedDateTime updDate, String creUser, ZonedDateTime creDate) {
         this.id = id;
         this.status = status;
         this.amount = amount;
@@ -39,5 +42,6 @@ public class PaymentDTO implements Serializable {
         this.updDate = updDate;
         this.creUser = creUser;
         this.creDate = creDate;
+        this.workflowNameCode = workflowNameCode;
     }
 }
