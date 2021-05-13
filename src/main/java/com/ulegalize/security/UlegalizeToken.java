@@ -66,6 +66,10 @@ public class UlegalizeToken implements Serializable {
     @Setter
     protected String dropboxToken;
 
+    @Getter
+    @Setter
+    protected String clientFrom;
+
     @JsonIgnore
     public String getPassword() {
         return password;
