@@ -21,7 +21,9 @@ public enum EnumMailTemplate {
     MAILAPPOINTMENTREGISTEREDTEMPLATE("mailAppointmentRegisteredTemplate", "Nouvelle demande de rendez-vous", "New appointment request", "Nieuw afspraakverzoek"),
     MAILNEWAPPOINTMENTREQUESTTEMPLATE("mailNewAppointmentRequestTemplate", "Demande de rendez-vous enregistrée", "Appointment request recorded", "Afspraakverzoek geregistreerd"),
     MAILSHAREDFOLDERUSERTEMPLATE("mailSharedFolderUserTemplate", "Nouveau partage de dossier ", "New folder sharing ", "Nieuwe mappen delen "),
-    MAILSHAREDUSERSECURITYTEMPLATE("mailSharedUserSecurityTemplate", "Nouvel acces au cabinet ", "New access to the practice ", "Nieuwe toegang tot de praktijk ");
+    MAILSHAREDUSERSECURITYTEMPLATE("mailSharedUserSecurityTemplate", "Nouvel acces au cabinet ", "New access to the practice ", "Nieuwe toegang tot de praktijk "),
+
+    MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel", "Annulation des modules de paiement", "Cancellation of payment modules ", "Annulering van betalingsmodules ");
 
     private String name;
     private String subjectFr;
