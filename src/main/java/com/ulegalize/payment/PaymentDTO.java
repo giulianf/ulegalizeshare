@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Data
@@ -19,7 +20,7 @@ public class PaymentDTO implements Serializable {
 
     private EnumPaymentStatus status;
     // amount of the transaction
-    private Long amount;
+    private BigDecimal amount;
     // transaction is belong to ...
     private String vcKey;
     private String updUser;
@@ -32,7 +33,7 @@ public class PaymentDTO implements Serializable {
     private String workflowNameLabel;
 
     public PaymentDTO(Long id, EnumPaymentStatus status,
-                      Long amount, String vcKey, String workflowNameCode,
+                      BigDecimal amount, String vcKey, String workflowNameCode,
                       String updUser, ZonedDateTime updDate, String creUser, ZonedDateTime creDate) {
         this.id = id;
         this.status = status;
