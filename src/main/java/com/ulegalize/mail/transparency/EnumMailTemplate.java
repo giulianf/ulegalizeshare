@@ -23,7 +23,8 @@ public enum EnumMailTemplate {
     MAILSHAREDFOLDERUSERTEMPLATE("mailSharedFolderUserTemplate", "Nouveau partage de dossier ", "New folder sharing ", "Nieuwe mappen delen "),
     MAILSHAREDUSERSECURITYTEMPLATE("mailSharedUserSecurityTemplate", "Nouvel acces au cabinet ", "New access to the practice ", "Nieuwe toegang tot de praktijk "),
 
-    MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel", "Annulation des modules de paiement", "Cancellation of payment modules ", "Annulering van betalingsmodules ");
+    MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel", "Annulation des modules de paiement", "Cancellation of payment modules ", "Annulering van betalingsmodules "),
+    MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure", "Erreur avec le mode de paiement", "Error with payment method", "Fout met betalingsmethode ");
 
     private String name;
     private String subjectFr;
