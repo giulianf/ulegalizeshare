@@ -12,7 +12,7 @@ public class CaseCreationDTO extends AbstractRestObject implements Serializable 
     private DossierDTO dossier;
     private ContactSummary contact;
     private String note;
-    private List<Item> cat;
+    private List<ItemStringDto> cat;
     private Boolean assistanceJuridique = Boolean.FALSE;
 
     public CaseCreationDTO() {
