@@ -2,7 +2,7 @@ package com.ulegalize.mail.transparency;
 
 public enum EnumMailTemplate {
 
-// transparency
+    // transparency
     INVITELITIGANTCONSEIL("mailInviteLitigant", "Invitation sur votre dossier", "Invitation on your folder", "Uitnodiging om aan een bestand"),
     INVITECONSEIL("mailInviteConseil", "Invitation à travailler sur un dossier", "Invitation to work on a folder", "Uitnodiging om aan een bestand te werken"),
     MAILBLANKTEMPLATE("mailBlankTemplate", "Partage de votre dossier", "Sharing your folder", "Sharing your folder"),
@@ -10,6 +10,7 @@ public enum EnumMailTemplate {
     MAILFINISHSIGNOWNERCLIENTDOCUMENT("mailFinishSignOwnerClientDocument", "Signature du document ", "Document signature", "Documenthandtekening"),
     MAILFINISHSIGNCLIENTDOCUMENT("mailFinishSignClientDocument", "Signature du document ", "Document signature", "Documenthandtekening"),
     MAILATTACHDOCUMENTCASE("mailAttachDocumentCase", "Signature du document ", "Document signature", "Documenthandtekening"),
+    MAILATTACHDOCUMENTCASEFROMPORTAL("mailAttachDocumentCaseFromPortal", "Un fichier a été attaché au cas juridique", "A file has been attached to the legal case", "Er is een dossier bij de rechtszaak gevoegd"),
     MAILSAVEOWNERCASE("mailSaveOwnerCase", "Changement de la prise en charge pour le cas juridique ", "Change of coverage for the legal case", "Een kabinet toevoegen voor de case"),
     MAILUPDATEDOCUMENTCASE("mailUpdateDocumentCase", "Modification du cas juridique ", "Modification of the legal case", "Wijziging van de rechtszaak"),
     MAILFINISHSIGNDOCUMENT("mailFinishSignDocument", "Signature du document ", "Document signature", "Documenthandtekening"),
