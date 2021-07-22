@@ -1,6 +1,7 @@
 package com.ulegalize.dto;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 public interface IDossierDTO {
     Long getId();
@@ -33,5 +34,5 @@ public interface IDossierDTO {
 
     String getVckeyOwner();
 
-    String getCloseDossier();
+    Date getCloseDossier();
 }
