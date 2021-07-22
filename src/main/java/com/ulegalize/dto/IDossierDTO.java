@@ -32,4 +32,6 @@ public interface IDossierDTO {
     BigDecimal getBalance();
 
     String getVckeyOwner();
+
+    String getCloseDossier();
 }
