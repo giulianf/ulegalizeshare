@@ -14,6 +14,8 @@ public class InvoiceDTO {
 
     private Long id;
     private String dossier;
+    private String dossierYear;
+    private String dossierNumber;
     private Long dossierId;
     private ItemLongDto dossierItem;
     private String vcKey;
