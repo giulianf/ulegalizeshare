@@ -41,5 +41,7 @@ public class ContactSummary implements Serializable {
 
     private Long userId;
     private String vcKey;
+    private String iban;
+    private String bic;
 
 }
