@@ -17,6 +17,7 @@ public class LawfirmDTO extends AbstractRestObject {
 	private String abbreviation;
 	private String numentreprise;
 	private String objetsocial;
+	private String countryAlpha2;
 	private EnumRefCurrency currency;
 	private ItemStringDto currencyItem;
 	private String website;
