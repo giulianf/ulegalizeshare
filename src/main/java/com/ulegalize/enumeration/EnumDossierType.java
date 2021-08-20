@@ -1,16 +1,24 @@
 package com.ulegalize.enumeration;
 
 public enum EnumDossierType {
-    BA("BA", "BAJ"),
-    DC("DC", "Cabinet"),
-    DROIT_COLLABORATIF("DF", "Droit collaboratif");
+    BA("BA", "BAJ", "BAJ", "BLA"),
+    DC("DC", "Cabinet", "Kantoor", "Lawfirm"),
+    DROIT_COLLABORATIF("DF", "Droit collaboratif", "Collaboratief recht", "Collaborative law"),
+    MEDIATION("MD", "Médiation", "Bemiddeling", "Mediation");
 
     private String dossType;
-    private String typeDesc;
 
-    EnumDossierType(String dossType, String typeDesc) {
+    private String labelFr;
+    private String labelNl;
+    private String labelEn;
+
+    EnumDossierType(String dossType,
+                    String labelFr,
+                    String labelNl, String labelEn) {
         this.dossType = dossType;
-        this.typeDesc = typeDesc;
+        this.labelFr = labelFr;
+        this.labelNl = labelNl;
+        this.labelEn = labelEn;
     }
 
     public static EnumDossierType fromdossType(String dossType) {
@@ -23,5 +31,18 @@ public enum EnumDossierType {
 
     public String getDossType() {
         return dossType;
+    }
+
+
+    public String getLabelFr() {
+        return labelFr;
+    }
+
+    public String getLabelNl() {
+        return labelNl;
+    }
+
+    public String getLabelEn() {
+        return labelEn;
     }
 }
