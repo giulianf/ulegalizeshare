@@ -3,8 +3,8 @@ package com.ulegalize.enumeration;
 public enum EnumDossierType {
     BA("BA", "BAJ", "BAJ", "BLA"),
     DC("DC", "Cabinet", "Kantoor", "Lawfirm"),
-    DROIT_COLLABORATIF("DF", "Droit collaboratif", "Collaboratief recht", "Collaborative law"),
-    MEDIATION("MD", "Médiation", "Bemiddeling", "Mediation");
+    DF("DF", "Droit collaboratif", "Collaboratief recht", "Collaborative law"),
+    MD("MD", "Médiation", "Bemiddeling", "Mediation");
 
     private String dossType;
 
