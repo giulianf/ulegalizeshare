@@ -27,6 +27,7 @@ public class DossierDTO implements IDossierDTO {
     private Date openDossier;
     private Date closeDossier;
     private EnumDossierType type;
+    private ItemStringDto typeItem;
 
     private boolean isOwner;
     private String vckeyOwner;
