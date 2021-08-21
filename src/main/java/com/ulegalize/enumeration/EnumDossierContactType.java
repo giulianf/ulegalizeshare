@@ -11,7 +11,7 @@ public enum EnumDossierContactType {
         this.id = id;
     }
 
-    public static EnumDossierContactType fromId(Long id) {
+    public static EnumDossierContactType fromId(int id) {
         for (EnumDossierContactType dossierContactType : values()) {
             if (dossierContactType.getId() == id)
                 return dossierContactType;
