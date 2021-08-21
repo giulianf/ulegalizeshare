@@ -19,7 +19,7 @@ public enum EnumDossierContactType {
         return null;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 }
