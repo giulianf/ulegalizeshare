@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Data
@@ -66,6 +67,7 @@ public class DossierDTO implements IDossierDTO {
     private Boolean isDigital;
     private BigDecimal balance = BigDecimal.ZERO;
     private String initiales;
+    private List<ItemLongDto> clientList;
 
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
