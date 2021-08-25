@@ -34,9 +34,13 @@ public class DossierDTO implements IDossierDTO {
     private String vckeyOwner;
 
     private Long idUserResponsible;
+    @Deprecated
     private Long idClient;
+    @Deprecated
     private ItemLongDto client;
+    @Deprecated
     private Long idAdverseClient;
+    @Deprecated
     private ItemLongDto adverseClient;
     private Long conseilIdAdverseClient;
     private ItemLongDto conseilAdverseClient;
@@ -67,7 +71,7 @@ public class DossierDTO implements IDossierDTO {
     private Boolean isDigital;
     private BigDecimal balance = BigDecimal.ZERO;
     private String initiales;
-    private List<ItemLongDto> clientList;
+    private List<ItemClientDto> clientList;
 
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
