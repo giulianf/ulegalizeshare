@@ -93,12 +93,15 @@ public class DossierDTO implements IDossierDTO {
         this.balance = balance;
         this.type = type;
         this.closeDossier = closeDossier;
-        if (enumVCOwner.isPresent() && enumVCOwner.get().equals(EnumVCOwner.NOT_SAME_VC)) {
-            this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
+        if (!type.equals(EnumDossierType.MD)) {
+            if (enumVCOwner.isPresent() && enumVCOwner.get().equals(EnumVCOwner.NOT_SAME_VC)) {
+                this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
+            } else {
+                this.label = DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
 
+            }
         } else {
-            this.label = DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
-
+            this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(String.valueOf(year), num); // MD 2019 / 0012
         }
 
     }
