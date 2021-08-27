@@ -3,11 +3,9 @@ package com.ulegalize.dto;
 import com.ulegalize.enumeration.EnumDossierContactType;
 import lombok.Getter;
 
-public class ItemClientDto extends Item<Long> {
+public class ItemClientDto extends ItemLongDto {
     @Getter
     private EnumDossierContactType type;
-    @Getter
-    private String email;
 
     public ItemClientDto() {
         super(null, "");
@@ -18,9 +16,8 @@ public class ItemClientDto extends Item<Long> {
     }
 
     public ItemClientDto(Long value, String label, String email, EnumDossierContactType extra) {
-        super(value, label);
+        super(value, label, email);
 
-        this.email = email;
         this.type = extra;
     }
 

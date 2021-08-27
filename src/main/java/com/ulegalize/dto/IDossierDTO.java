@@ -35,4 +35,6 @@ public interface IDossierDTO {
     String getVckeyOwner();
 
     Date getCloseDossier();
+
+    String getType();
 }
