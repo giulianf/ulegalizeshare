@@ -1,5 +1,7 @@
 package com.ulegalize.dto;
 
+import com.ulegalize.enumeration.EnumDossierType;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -36,5 +38,5 @@ public interface IDossierDTO {
 
     Date getCloseDossier();
 
-    String getType();
+    EnumDossierType getType();
 }
