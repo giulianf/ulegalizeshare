@@ -27,7 +27,7 @@ public class ItemPartieDTO {
     private String function;
     @Getter
     @Setter
-    private ItemStringDto functionItem;
+    private ItemIntegerDto functionItem;
     @Getter
     @Setter
     private EnumPartieType type;
