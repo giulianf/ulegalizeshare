@@ -38,11 +38,12 @@ public class ItemPartieDTO {
     @Setter
     private String vcKey;
 
-    public ItemPartieDTO(String id, String label, String email, String function, EnumPartieType type) {
+    public ItemPartieDTO(String id, String label, String email, Integer functionId, String functionLabel, EnumPartieType type) {
         this.id = id;
         this.label = label;
         this.email = email;
-        this.function = function;
+        this.function = functionLabel;
+        this.functionItem = new ItemIntegerDto(functionId, functionLabel);
         this.type = type;
     }
 }
