@@ -11,7 +11,8 @@ public enum EnumRole {
     LAWYER_OPPOSING(8, "Avocat partie adverse", "Advocaat van de tegenpartij", "Opposing party lawyer"),
     LITIGANT_OPPOSING(9, "Justiciable partie adverse", "Gerechtvaardigde tegenpartij", "Justiciable opposing party"),
     LAWYER_CLIENT(10, "Avocat client", "Klant", "Lawyer Client "),
-    LAWFIRM(11, "Cabinet", "Kantoor", "Law firm");
+    LAWFIRM(11, "Cabinet", "Kantoor", "Law firm"),
+    LITIGANT_CLIENT(12, "Justiciable client", "Klant tegenpartij", "Litigant client");
 
     private int idRole;
 
