@@ -1,6 +1,7 @@
 package com.ulegalize.payment;
 
 import com.ulegalize.enumeration.EnumPaymentStatus;
+import com.ulegalize.enumeration.EnumUsignOrigin;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,6 +32,9 @@ public class PaymentDTO implements Serializable {
     // use to have the correct name of transaction
     private String workflowNameCode;
     private String workflowNameLabel;
+
+    private String objectId;
+    private EnumUsignOrigin enumUsignOrigin;
 
     public PaymentDTO(Long id, EnumPaymentStatus status,
                       BigDecimal amount, String vcKey, String workflowNameCode,
