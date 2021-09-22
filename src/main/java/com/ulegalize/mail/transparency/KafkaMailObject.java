@@ -43,7 +43,14 @@ public class KafkaMailObject implements Serializable {
     @Getter
     @Setter
     private String organizer;
+    // jitsi
     @Getter
     @Setter
     private Boolean roomAttached;
+    @Getter
+    @Setter
+    private Boolean isModerator;
+    @Getter
+    @Setter
+    private String roomName;
 }
