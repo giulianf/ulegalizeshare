@@ -47,6 +47,7 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
     private Date start;
     private Date end;
 
+    private boolean roomAttached;
 
     public LawfirmCalendarEventDTO() {
 
