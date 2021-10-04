@@ -17,5 +17,7 @@ public class FinanceDTO {
     private BigDecimal debours = BigDecimal.ZERO;
     private BigDecimal collaboration = BigDecimal.ZERO;
     private BigDecimal tiersAccount = BigDecimal.ZERO;
+    private BigDecimal totalHonoraire = BigDecimal.ZERO;
+    private BigDecimal totalInvoice = BigDecimal.ZERO;
     private BigDecimal balance = BigDecimal.ZERO;
 }
