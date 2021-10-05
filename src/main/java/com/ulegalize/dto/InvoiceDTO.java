@@ -25,6 +25,7 @@ public class InvoiceDTO {
     private Long typeId;
     private ItemLongDto typeItem;
     private BigDecimal montant;
+    private BigDecimal totalHonoraire;
     private Boolean valid;
     private ZonedDateTime dateValue;
     private ZonedDateTime dateEcheance;
