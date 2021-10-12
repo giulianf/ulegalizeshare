@@ -69,6 +69,7 @@ public class DossierDTO implements IDossierDTO {
     private String initiales;
     private List<ItemClientDto> clientList;
 
+    private Date lastAccessDate;
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
