@@ -39,4 +39,6 @@ public interface IDossierDTO {
     Date getCloseDossier();
 
     EnumDossierType getType();
+
+    Date getLastAccessDate();
 }
