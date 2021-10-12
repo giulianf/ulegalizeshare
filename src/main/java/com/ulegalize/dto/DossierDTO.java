@@ -74,7 +74,8 @@ public class DossierDTO implements IDossierDTO {
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
                       String adverseFirstnameClient, String adverseLastnameClient, String adverseCompanyClient, Long idClientAdverse,
-                      BigDecimal balance, String vckey, Optional<EnumVCOwner> enumVCOwner, Date closeDossier, EnumDossierType type) {
+                      BigDecimal balance, String vckey, Optional<EnumVCOwner> enumVCOwner, Date closeDossier, EnumDossierType type,
+                      Date lastAccessDate) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -94,6 +95,7 @@ public class DossierDTO implements IDossierDTO {
         this.balance = balance;
         this.type = type;
         this.closeDossier = closeDossier;
+        this.lastAccessDate = lastAccessDate;
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner.isPresent() && enumVCOwner.get().equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
