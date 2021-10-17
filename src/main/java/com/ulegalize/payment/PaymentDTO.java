@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -22,6 +23,9 @@ public class PaymentDTO implements Serializable {
     private EnumPaymentStatus status;
     // amount of the transaction
     private BigDecimal amount;
+    // type to define payjment price
+    List<String> typeList;
+
     // transaction is belong to ...
     private String vcKey;
     private String updUser;
