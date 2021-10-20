@@ -13,6 +13,7 @@ import java.util.List;
 public class InvoiceDTO {
 
     private Long id;
+    private String idString;
     private String dossier;
     private String dossierYear;
     private String dossierNumber;
