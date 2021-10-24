@@ -25,7 +25,10 @@ public class InvoiceDTO {
     private String reference;
     private Long typeId;
     private ItemLongDto typeItem;
+    // ttc
     private BigDecimal montant;
+    // htva
+    private BigDecimal montantHt;
     private BigDecimal totalHonoraire;
     private Boolean valid;
     private ZonedDateTime dateValue;
