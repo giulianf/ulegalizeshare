@@ -23,6 +23,8 @@ public class PaymentDTO implements Serializable {
     private EnumPaymentStatus status;
     // amount of the transaction
     private BigDecimal amount;
+    private BigDecimal amountTt;
+    private String invoiceStripeId;
     // type to define payjment price
     List<String> typeList;
 
@@ -41,11 +43,14 @@ public class PaymentDTO implements Serializable {
     private EnumUsignOrigin enumUsignOrigin;
 
     public PaymentDTO(Long id, EnumPaymentStatus status,
-                      BigDecimal amount, String vcKey, String workflowNameCode,
+                      BigDecimal amount, BigDecimal amountTt, String invoiceStripeId,
+                      String vcKey, String workflowNameCode,
                       String updUser, LocalDateTime updDate, String creUser, LocalDateTime creDate) {
         this.id = id;
         this.status = status;
         this.amount = amount;
+        this.amountTt = amountTt;
+        this.invoiceStripeId = invoiceStripeId;
         this.vcKey = vcKey;
         this.updUser = updUser;
         this.updDate = updDate;
