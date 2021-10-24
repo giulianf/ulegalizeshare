@@ -1,6 +1,6 @@
 package com.ulegalize.exceptions;
 
-public class KafkaNoRetryException extends Exception {
+public class KafkaNoRetryException extends RuntimeException {
 
     public KafkaNoRetryException() {
         super();
