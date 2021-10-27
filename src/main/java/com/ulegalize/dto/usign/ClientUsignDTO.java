@@ -21,6 +21,7 @@ public class ClientUsignDTO implements Serializable {
     private int width = 160;
     private int height = 80;
     private int pageNumber = 1;
+    private int sequence = 1;
 
     private Date birthdate;
 
