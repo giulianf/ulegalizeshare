@@ -31,4 +31,7 @@ public class ComptaDTO {
 
     ItemDto poste;
     String tiersFullname;
+
+    // for invoice
+    private boolean invoiceChecked;
 }

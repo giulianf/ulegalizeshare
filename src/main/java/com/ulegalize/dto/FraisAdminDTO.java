@@ -27,6 +27,9 @@ public class FraisAdminDTO {
     private ZonedDateTime dateAction;
     private BigDecimal pricePerUnit;
 
+    // for invoice
+    private boolean invoiceChecked;
+
     public FraisAdminDTO() {
     }
 

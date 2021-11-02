@@ -42,5 +42,8 @@ public class InvoiceDTO {
 
     private List<InvoiceDetailsDTO> invoiceDetailsDTOList = new ArrayList<>();
     private List<Long> prestationIdList = new ArrayList<>();
+    private List<Long> fraisAdminIdList = new ArrayList<>();
+    private List<Long> deboursIdList = new ArrayList<>();
+    private List<Long> fraisCollaborationIdList = new ArrayList<>();
 
 }
