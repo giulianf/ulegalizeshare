@@ -25,6 +25,7 @@ public class ShareAffaireDTO {
     }
 
     public ShareAffaireDTO(Long id,
+                           Long affaireId,
                            Long userId,
                            String vcKey,
                            EnumVCOwner enumVCOwner,
@@ -32,6 +33,7 @@ public class ShareAffaireDTO {
                            String fullname,
                            ZonedDateTime sharedDate) {
         this.id = id;
+        this.affaireId = affaireId;
         this.userId = userId;
         this.vcKey = vcKey;
         this.vcKeyItem = new ItemStringDto(vcKey, vcKey);
