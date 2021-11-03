@@ -40,8 +40,6 @@ public class ComptaDTO {
      *
      * @param id
      * @param vcKey
-     * @param idType
-     * @param typeDescription
      * @param idPost
      * @param posteDescription
      * @param montant
@@ -53,7 +51,7 @@ public class ComptaDTO {
                      Integer idPost, String posteDescription,
                      BigDecimal montant, BigDecimal montantHt,
                      String tiersFullname,
-                     Integer factureFraisId) {
+                     Long factureFraisId) {
         this.id = id;
         this.vcKey = vcKey;
         this.idPost = idPost;
