@@ -16,6 +16,8 @@ public class CaseCreationDTO extends AbstractRestObject implements Serializable 
     private List<ItemLongDto> cat;
     private Boolean assistanceJuridique = Boolean.FALSE;
 
+    private String caseId;
+
     public CaseCreationDTO() {
 
     }
