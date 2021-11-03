@@ -34,4 +34,37 @@ public class ComptaDTO {
 
     // for invoice
     private boolean invoiceChecked;
+
+    /**
+     * used for invoice
+     *
+     * @param id
+     * @param vcKey
+     * @param idType
+     * @param typeDescription
+     * @param idPost
+     * @param posteDescription
+     * @param montant
+     * @param montantHt
+     * @param tiersFullname
+     * @param factureFraisId
+     */
+    public ComptaDTO(Long id, String vcKey,
+                     Integer idType, String typeDescription,
+                     Integer idPost, String posteDescription,
+                     BigDecimal montant, BigDecimal montantHt,
+                     String tiersFullname,
+                     Integer factureFraisId) {
+        this.id = id;
+        this.vcKey = vcKey;
+        this.idType = idType;
+        this.idTypeItem = new ItemDto(idType, typeDescription);
+        this.idPost = idPost;
+        this.poste = new ItemDto(idPost, posteDescription);
+        this.montant = montant;
+        this.montantHt = montantHt;
+        this.tiersFullname = tiersFullname;
+
+        this.invoiceChecked = factureFraisId != null;
+    }
 }

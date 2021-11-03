@@ -51,4 +51,43 @@ public class FraisAdminDTO {
         this.pricePerUnit = pricePerUnit;
     }
 
+    /**
+     * used for invoice
+     *
+     * @param idDebourType
+     * @param debourTypeDescription
+     * @param vcKey
+     * @param debourDescription
+     * @param pricePerUnit
+     * @param unit
+     * @param mesureTypeId
+     * @param mesureDescription
+     * @param archived
+     * @param dateAction
+     * @param comment
+     * @param factureFraisId
+     */
+    public FraisAdminDTO(Long idDebourType, String debourTypeDescription,
+                         String vcKey, String debourDescription,
+                         BigDecimal pricePerUnit, Integer unit,
+                         Integer mesureTypeId, String mesureDescription,
+                         Boolean archived, ZonedDateTime dateAction, String comment,
+                         Integer factureFraisId) {
+        this.idDebourType = idDebourType;
+        this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
+        this.vcKey = vcKey;
+        this.archived = archived;
+        this.debourDescription = debourDescription;
+        this.mesureDescription = mesureDescription;
+        this.idMesureType = mesureTypeId;
+        this.idMesureTypeItem = new ItemDto(mesureTypeId, mesureDescription);
+        this.pricePerUnit = pricePerUnit;
+        this.unit = unit;
+        this.dateAction = dateAction;
+        this.comment = comment;
+
+        this.invoiceChecked = factureFraisId != null;
+    }
+
+
 }
