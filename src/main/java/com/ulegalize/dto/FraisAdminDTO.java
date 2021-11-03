@@ -71,7 +71,7 @@ public class FraisAdminDTO {
                          BigDecimal pricePerUnit, Integer unit,
                          Integer mesureTypeId, String mesureDescription,
                          Long idDoss, ZonedDateTime dateAction, String comment,
-                         Integer factureFraisId) {
+                         Long factureFraisId) {
         this.id = id;
         this.idDebourType = idDebourType;
         this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
