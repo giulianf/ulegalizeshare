@@ -67,12 +67,14 @@ public class FraisAdminDTO {
      * @param comment
      * @param factureFraisId
      */
-    public FraisAdminDTO(Long idDebourType, String debourTypeDescription,
+    public FraisAdminDTO(Long id,
+                         Long idDebourType, String debourTypeDescription,
                          String vcKey, String debourDescription,
                          BigDecimal pricePerUnit, Integer unit,
                          Integer mesureTypeId, String mesureDescription,
                          Boolean archived, ZonedDateTime dateAction, String comment,
                          Integer factureFraisId) {
+        this.id = id;
         this.idDebourType = idDebourType;
         this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
         this.vcKey = vcKey;
