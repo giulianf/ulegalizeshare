@@ -54,32 +54,28 @@ public class FraisAdminDTO {
     /**
      * used for invoice
      *
+     * @param id
      * @param idDebourType
      * @param debourTypeDescription
-     * @param vcKey
-     * @param debourDescription
      * @param pricePerUnit
      * @param unit
      * @param mesureTypeId
      * @param mesureDescription
-     * @param archived
+     * @param idDoss
      * @param dateAction
      * @param comment
      * @param factureFraisId
      */
     public FraisAdminDTO(Long id,
                          Long idDebourType, String debourTypeDescription,
-                         String vcKey, String debourDescription,
                          BigDecimal pricePerUnit, Integer unit,
                          Integer mesureTypeId, String mesureDescription,
-                         Boolean archived, ZonedDateTime dateAction, String comment,
+                         Long idDoss, ZonedDateTime dateAction, String comment,
                          Integer factureFraisId) {
         this.id = id;
         this.idDebourType = idDebourType;
         this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
-        this.vcKey = vcKey;
-        this.archived = archived;
-        this.debourDescription = debourDescription;
+        this.idDoss = idDoss;
         this.mesureDescription = mesureDescription;
         this.idMesureType = mesureTypeId;
         this.idMesureTypeItem = new ItemDto(mesureTypeId, mesureDescription);
