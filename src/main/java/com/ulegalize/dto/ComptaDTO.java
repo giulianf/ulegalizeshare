@@ -50,15 +50,12 @@ public class ComptaDTO {
      * @param factureFraisId
      */
     public ComptaDTO(Long id, String vcKey,
-                     Integer idType, String typeDescription,
                      Integer idPost, String posteDescription,
                      BigDecimal montant, BigDecimal montantHt,
                      String tiersFullname,
                      Integer factureFraisId) {
         this.id = id;
         this.vcKey = vcKey;
-        this.idType = idType;
-        this.idTypeItem = new ItemDto(idType, typeDescription);
         this.idPost = idPost;
         this.poste = new ItemDto(idPost, posteDescription);
         this.montant = montant;
