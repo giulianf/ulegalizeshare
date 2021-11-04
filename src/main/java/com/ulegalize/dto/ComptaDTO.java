@@ -35,6 +35,7 @@ public class ComptaDTO {
     // for invoice
     private boolean invoiceChecked;
     private boolean alreadyInvoiced;
+    private Long factureLinkedFraisId;
     private Long factureExtFraisId;
     private Long factExtId;
     private String factExtRef;
@@ -65,5 +66,6 @@ public class ComptaDTO {
         this.tiersFullname = tiersFullname;
 
         this.invoiceChecked = factureFraisId != null;
+        this.factureLinkedFraisId = factureFraisId;
     }
 }

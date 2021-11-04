@@ -35,6 +35,7 @@ public class PrestationSummary {
     // for invoice
     private boolean invoiceChecked;
     private boolean alreadyInvoiced;
+    private Integer factureTimesheetLinkedId;
     private Integer factureTimesheetExtId;
     private Long factExtId;
     private String factExtRef;
@@ -68,5 +69,6 @@ public class PrestationSummary {
         this.forfaitHt = forfaitHt;
 
         this.invoiceChecked = factureTimesheetId != null;
+        this.factureTimesheetLinkedId = factureTimesheetId;
     }
 }

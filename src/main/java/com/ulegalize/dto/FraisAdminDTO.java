@@ -31,6 +31,7 @@ public class FraisAdminDTO {
     private boolean invoiceChecked;
     private boolean alreadyInvoiced;
     private Long factureExtFraisId;
+    private Long factureLinkedFraisId;
     private Long factExtId;
     private String factExtRef;
 
@@ -89,6 +90,8 @@ public class FraisAdminDTO {
         this.comment = comment;
 
         this.invoiceChecked = factureFraisId != null;
+        this.factureLinkedFraisId = factureFraisId;
+
     }
 
 
