@@ -6,7 +6,6 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
-import java.util.Objects;
 
 @Data
 public class PrestationSummary {
@@ -47,8 +46,7 @@ public class PrestationSummary {
     public PrestationSummary(Long id, Long dossierId, String yearDossier, Long numDossier, Long idGest, String email, Integer tsType,
                              String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
-                             Boolean forfait, BigDecimal forfaitHt, Integer factureTimesheetId,
-                             Integer factureTimesheetExtId, Long factExtId, String factExtRef) {
+                             Boolean forfait, BigDecimal forfaitHt, Integer factureTimesheetId) {
         this.id = id;
         this.dossierId = dossierId;
         this.dossier = DossiersUtils.getDossierLabelItem(yearDossier, numDossier);
@@ -70,11 +68,5 @@ public class PrestationSummary {
         this.forfaitHt = forfaitHt;
 
         this.invoiceChecked = factureTimesheetId != null;
-        this.factureTimesheetExtId = factureTimesheetExtId;
-        // if it s different then the prestation has been already linked
-        this.alreadyInvoiced = factureTimesheetId != null && factureTimesheetExtId != null
-                && !Objects.equals(factureTimesheetExtId, factureTimesheetId);
-        this.factExtId = factExtId;
-        this.factExtRef = factExtRef;
     }
 }
