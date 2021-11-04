@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.Objects;
 
 @Data
 public class FraisAdminDTO {
@@ -29,6 +30,10 @@ public class FraisAdminDTO {
 
     // for invoice
     private boolean invoiceChecked;
+    private boolean alreadyInvoiced;
+    private Long factureExtFraisId;
+    private Long factExtId;
+    private String factExtRef;
 
     public FraisAdminDTO() {
     }
@@ -71,7 +76,8 @@ public class FraisAdminDTO {
                          BigDecimal pricePerUnit, Integer unit,
                          Integer mesureTypeId, String mesureDescription,
                          Long idDoss, ZonedDateTime dateAction, String comment,
-                         Long factureFraisId) {
+                         Long factureFraisId,
+                         Long factureExtFraisId, Long factExtId, String factExtRef) {
         this.id = id;
         this.idDebourType = idDebourType;
         this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
@@ -85,6 +91,12 @@ public class FraisAdminDTO {
         this.comment = comment;
 
         this.invoiceChecked = factureFraisId != null;
+        this.factureExtFraisId = factureExtFraisId;
+        // if it s different then the prestation has been already linked
+        this.alreadyInvoiced = factureFraisId != null && factureExtFraisId != null
+                && !Objects.equals(factureExtFraisId, factureFraisId);
+        this.factExtId = factExtId;
+        this.factExtRef = factExtRef;
     }
 
 

@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Data
 public class ComptaDTO {
@@ -34,6 +35,10 @@ public class ComptaDTO {
 
     // for invoice
     private boolean invoiceChecked;
+    private boolean alreadyInvoiced;
+    private Long factureExtFraisId;
+    private Long factExtId;
+    private String factExtRef;
 
     /**
      * used for invoice
@@ -51,7 +56,8 @@ public class ComptaDTO {
                      Integer idPost, String posteDescription,
                      BigDecimal montant, BigDecimal montantHt,
                      String tiersFullname,
-                     Long factureFraisId) {
+                     Long factureFraisId,
+                     Long factureExtFraisId, Long factExtId, String factExtRef) {
         this.id = id;
         this.vcKey = vcKey;
         this.idPost = idPost;
@@ -61,5 +67,11 @@ public class ComptaDTO {
         this.tiersFullname = tiersFullname;
 
         this.invoiceChecked = factureFraisId != null;
+        this.factureExtFraisId = factureExtFraisId;
+        // if it s different then the prestation has been already linked
+        this.alreadyInvoiced = factureFraisId != null && factureExtFraisId != null
+                && !Objects.equals(factureExtFraisId, factureFraisId);
+        this.factExtId = factExtId;
+        this.factExtRef = factExtRef;
     }
 }
