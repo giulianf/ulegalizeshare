@@ -13,6 +13,6 @@ import java.util.List;
 public class ShareUserAffaireDTO implements Serializable {
 
     private Long affaireId;
-    private List<Long> userEmail;
+    private List<String> userEmail;
 
 }
