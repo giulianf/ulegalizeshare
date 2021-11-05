@@ -3,11 +3,12 @@ package com.ulegalize.dto;
 import com.ulegalize.enumeration.EnumVCOwner;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.List;
 
 @Data
-public class ShareAffaireDTO {
+public class ShareAffaireDTO implements Serializable {
 
     private Long id;
     private Long affaireId;
