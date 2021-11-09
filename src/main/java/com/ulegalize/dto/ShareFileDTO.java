@@ -8,7 +8,7 @@ import java.util.List;
 public class ShareFileDTO {
 
     Long id;
-    List<ItemDto> usersItem;
+    List<ItemStringDto> usersItem;
     List<Long> usersId;
     private String obj;
     private String msg;
