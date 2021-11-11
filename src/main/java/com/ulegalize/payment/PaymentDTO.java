@@ -1,7 +1,6 @@
 package com.ulegalize.payment;
 
 import com.ulegalize.enumeration.EnumPaymentStatus;
-import com.ulegalize.enumeration.EnumUsignOrigin;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -40,7 +39,7 @@ public class PaymentDTO implements Serializable {
     private String workflowNameLabel;
 
     private String objectId;
-    private EnumUsignOrigin enumUsignOrigin;
+    private String origin;
 
     public PaymentDTO(Long id, EnumPaymentStatus status,
                       BigDecimal amount, BigDecimal amountTt, String invoiceStripeId,
