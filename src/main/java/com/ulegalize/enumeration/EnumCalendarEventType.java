@@ -3,6 +3,7 @@ package com.ulegalize.enumeration;
 public enum EnumCalendarEventType {
 
 	PERM("PERM", "Permanence", "Permanent", "Permanent", "red"),
+	RECORD("RECORD", "Tâche enregistrement", "Taak opnemen", "Task recording", "orange"),
 	TASK("TASK", "Tâche", "Taak", "Task", "orange"),
 	RDV("RDV", "Rendez-vous", "Afspraak", "Appointment", "azure"),
 	AUD("AUD", "Audience", "Publiek", "Audience", "green"),
