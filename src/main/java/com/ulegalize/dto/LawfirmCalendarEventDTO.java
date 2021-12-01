@@ -49,6 +49,7 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
     private String pathFile;
     private String microText;
     private String audioText;
+    private boolean speechToTextActivated = false;
 
     private boolean roomAttached;
 
