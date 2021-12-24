@@ -9,7 +9,7 @@ public enum EnumMailTemplate {
     MAILSIGNDOCUMENT("mailSignDocument", "Signature du document ", "Document signature", "Document handtekening"),
     MAILFINISHSIGNOWNERCLIENTDOCUMENT("mailFinishSignOwnerClientDocument", "Signature du document ", "Document signature", "Documenthandtekening"),
     MAILFINISHSIGNCLIENTDOCUMENT("mailFinishSignClientDocument", "Signature du document ", "Document signature", "Documenthandtekening"),
-    MAILATTACHDOCUMENTCASE("mailAttachDocumentCase", "Signature du document ", "Document signature", "Documenthandtekening"),
+    MAILATTACHDOCUMENTCASE("mailAttachDocumentCase", "Document attaché ", "Document attached", "Document toegevoegd"),
     MAILATTACHDOCUMENTCASEFROMPORTAL("mailAttachDocumentCaseFromPortal", "Un fichier a été attaché au cas juridique", "A file has been attached to the legal case", "Er is een dossier bij de rechtszaak gevoegd"),
     MAILSAVEOWNERCASE("mailSaveOwnerCase", "Changement de la prise en charge pour le cas juridique ", "Change of coverage for the legal case", "Een kabinet toevoegen voor de case"),
     MAILUPDATEDOCUMENTCASE("mailUpdateDocumentCase", "Modification du cas juridique ", "Modification of the legal case", "Wijziging van de rechtszaak"),
