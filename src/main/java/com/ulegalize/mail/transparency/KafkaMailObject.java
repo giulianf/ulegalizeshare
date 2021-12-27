@@ -53,4 +53,7 @@ public class KafkaMailObject implements Serializable {
     @Getter
     @Setter
     private String roomName;
+    @Getter
+    @Setter
+    private byte[] fileAttached;
 }
