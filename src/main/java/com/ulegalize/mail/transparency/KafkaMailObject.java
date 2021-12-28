@@ -1,10 +1,12 @@
 package com.ulegalize.mail.transparency;
 
+import com.ulegalize.dto.ItemByteDto;
 import com.ulegalize.enumeration.EnumLanguage;
 import lombok.*;
 
 import java.io.Serializable;
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.Map;
 
 @NoArgsConstructor
@@ -55,5 +57,5 @@ public class KafkaMailObject implements Serializable {
     private String roomName;
     @Getter
     @Setter
-    private byte[] fileAttached;
+    private List<ItemByteDto> fileAttached;
 }
