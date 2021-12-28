@@ -31,7 +31,6 @@ dependencies {
     testCompileOnly "org.projectlombok:lombok:${lombok}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombok}"
 
-    implementation "org.apache.commons:commons-text:${commonsText}"
     implementation "org.apache.commons:commons-lang3:${commonsLang}"
 
 }
