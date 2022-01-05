@@ -25,5 +25,6 @@ public class ProfileDTO implements Serializable {
     private List<Integer> enumRights;
     private DriveType driveType;
     private String dropboxToken;
+    private boolean verified;
 
 }
