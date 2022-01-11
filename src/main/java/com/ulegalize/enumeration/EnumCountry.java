@@ -262,4 +262,12 @@ public enum EnumCountry {
         this.codeIso2 = iso2;
         this.country = country;
     }
+
+    public static EnumCountry fromCode(String code) {
+        for (EnumCountry enumCountry : values()) {
+            if (enumCountry.getCodeIso2().equalsIgnoreCase(code))
+                return enumCountry;
+        }
+        return null;
+    }
 }
