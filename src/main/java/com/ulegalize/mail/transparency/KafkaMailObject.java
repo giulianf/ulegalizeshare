@@ -35,27 +35,35 @@ public class KafkaMailObject implements Serializable {
     @Setter
     private Map<String, Object> context;
 
-    // use for ics
+    // start date of the event
     @Getter
     @Setter
     private ZonedDateTime start;
+    // end date of the event
     @Getter
     @Setter
     private ZonedDateTime end;
+    // organizer of the event
     @Getter
     @Setter
     private String organizer;
-    // jitsi
+    // jitsi if the room must be link to the body of the event
     @Getter
     @Setter
     private Boolean roomAttached;
     @Getter
     @Setter
-    private Boolean isModerator;
+    private Boolean isModerator = true;
+    // jitsi : this is the room name
     @Getter
     @Setter
     private String roomName;
+    // File attached to event or email
     @Getter
     @Setter
     private List<ItemByteDto> fileAttached;
+    // participant of the event
+    @Getter
+    @Setter
+    private List<String> attendeesEmail;
 }
