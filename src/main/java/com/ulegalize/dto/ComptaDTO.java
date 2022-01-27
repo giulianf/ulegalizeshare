@@ -12,6 +12,7 @@ public class ComptaDTO {
     Integer idType;
     ItemDto idTypeItem;
     Integer idCompte;
+    ItemDto compte;
     LocalDate dateValue;
     BigDecimal montant;
     BigDecimal montantHt;
