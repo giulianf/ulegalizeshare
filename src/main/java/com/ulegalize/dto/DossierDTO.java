@@ -62,6 +62,7 @@ public class DossierDTO implements IDossierDTO {
     private String firstnameClient;
     private String lastnameClient;
     private String companyClient;
+    private String partiesName;
     @JsonFormat(timezone = "GMT+02:00", pattern = "yyyy-MM-dd")
     private Date birthdateClient;
     private Boolean isDigital;
@@ -77,7 +78,7 @@ public class DossierDTO implements IDossierDTO {
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
                       String adverseFirstnameClient, String adverseLastnameClient, String adverseCompanyClient, Long idClientAdverse,
                       BigDecimal balance, String vckey, Optional<EnumVCOwner> enumVCOwner, Date closeDossier, EnumDossierType type,
-                      Date lastAccessDate) {
+                      Date lastAccessDate, String partiesName) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -103,10 +104,14 @@ public class DossierDTO implements IDossierDTO {
                 this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
                 this.label = DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
-
             }
         } else {
-            this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(String.valueOf(year), num); // MD 2019 / 0012
+            if (enumVCOwner.isPresent() && enumVCOwner.get().equals(EnumVCOwner.NOT_SAME_VC)) {
+                this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
+            } else {
+                this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
+
+            }
         }
 
     }

@@ -16,6 +16,8 @@ public interface IDossierDTO {
 
     String getInitiales();
 
+    String getPartiesName();
+
     String getFirstnameClient();
 
     String getLastnameClient();
