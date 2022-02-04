@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 @Data
 @NoArgsConstructor
@@ -30,7 +29,7 @@ public class DossierDTO implements IDossierDTO {
     private EnumDossierType type;
     private ItemStringDto typeItem;
 
-    private boolean isOwner;
+    private EnumVCOwner owner;
     private String vckeyOwner;
 
     private Long idUserResponsible;
@@ -77,7 +76,7 @@ public class DossierDTO implements IDossierDTO {
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
                       String adverseFirstnameClient, String adverseLastnameClient, String adverseCompanyClient, Long idClientAdverse,
-                      BigDecimal balance, String vckey, Optional<EnumVCOwner> enumVCOwner, Date closeDossier, EnumDossierType type,
+                      BigDecimal balance, String vckey, EnumVCOwner enumVCOwner, Date closeDossier, EnumDossierType type,
                       Date lastAccessDate, String partiesName) {
         this.id = dossierId;
         this.year = year;
@@ -98,15 +97,16 @@ public class DossierDTO implements IDossierDTO {
         this.balance = balance;
         this.type = type;
         this.closeDossier = closeDossier;
+        this.owner = enumVCOwner;
         this.lastAccessDate = lastAccessDate;
         if (!type.equals(EnumDossierType.MD)) {
-            if (enumVCOwner.isPresent() && enumVCOwner.get().equals(EnumVCOwner.NOT_SAME_VC)) {
+            if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
                 this.label = DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
             }
         } else {
-            if (enumVCOwner.isPresent() && enumVCOwner.get().equals(EnumVCOwner.NOT_SAME_VC)) {
+            if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
                 this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
