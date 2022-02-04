@@ -1,6 +1,7 @@
 package com.ulegalize.dto;
 
 import com.ulegalize.enumeration.EnumDossierType;
+import com.ulegalize.enumeration.EnumVCOwner;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -41,6 +42,8 @@ public interface IDossierDTO {
     Date getCloseDossier();
 
     EnumDossierType getType();
+
+    EnumVCOwner getOwner();
 
     Date getLastAccessDate();
 }
