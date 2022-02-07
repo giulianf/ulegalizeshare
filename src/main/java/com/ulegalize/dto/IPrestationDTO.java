@@ -40,13 +40,13 @@ public interface IPrestationDTO {
 
     ItemBigDecimalDto getVatItem();
 
-    Boolean isForfait();
+    boolean isForfait();
 
     BigDecimal getForfaitHt();
 
-    Boolean isInvoiceChecked();
+    boolean isInvoiceChecked();
 
-    Boolean isAlreadyInvoiced();
+    boolean isAlreadyInvoiced();
 
     Integer getFactureTimesheetLinkedId();
 
