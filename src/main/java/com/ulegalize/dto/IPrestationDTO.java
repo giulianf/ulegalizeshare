@@ -55,4 +55,8 @@ public interface IPrestationDTO {
     Long getFactExtId();
 
     String getFactExtRef();
+
+    String getYearDossier();
+
+    Long getNumDossier();
 }
