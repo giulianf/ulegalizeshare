@@ -1,12 +1,13 @@
 package com.ulegalize.dto;
 
+import com.ulegalize.utils.DossiersUtils;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Data
-public class FraisAdminDTO {
+public class FraisAdminDTO implements IFraisAdminDTO {
     @Deprecated // for v1 during creation of usign
     private Long type;
     private String vcKey;
@@ -34,6 +35,10 @@ public class FraisAdminDTO {
     private Long factureLinkedFraisId;
     private Long factExtId;
     private String factExtRef;
+    private String dossier;
+    private String yearDossier;
+    private Long numDossier;
+    private String debourTypeDescription;
 
     public FraisAdminDTO() {
     }
@@ -67,20 +72,28 @@ public class FraisAdminDTO {
      * @param mesureTypeId
      * @param mesureDescription
      * @param idDoss
+     * @param yearDossier
+     * @param numDossier
      * @param dateAction
      * @param comment
      * @param factureFraisId
+     * @param invoiceChecked
+     * @param alreadyInvoiced
      */
     public FraisAdminDTO(Long id,
                          Long idDebourType, String debourTypeDescription,
                          BigDecimal pricePerUnit, Integer unit,
                          Integer mesureTypeId, String mesureDescription,
-                         Long idDoss, ZonedDateTime dateAction, String comment,
-                         Long factureFraisId) {
+                         Long idDoss, String yearDossier, Long numDossier,
+                         ZonedDateTime dateAction, String comment,
+                         Long factureFraisId,
+                         boolean invoiceChecked, boolean alreadyInvoiced) {
         this.id = id;
         this.idDebourType = idDebourType;
+        this.debourTypeDescription = debourTypeDescription;
         this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
         this.idDoss = idDoss;
+        this.dossier = DossiersUtils.getDossierLabelItem(yearDossier, numDossier);
         this.mesureDescription = mesureDescription;
         this.idMesureType = mesureTypeId;
         this.idMesureTypeItem = new ItemDto(mesureTypeId, mesureDescription);
@@ -89,7 +102,8 @@ public class FraisAdminDTO {
         this.dateAction = dateAction;
         this.comment = comment;
 
-        this.invoiceChecked = factureFraisId != null;
+        this.invoiceChecked = invoiceChecked;
+        this.alreadyInvoiced = alreadyInvoiced;
         this.factureLinkedFraisId = factureFraisId;
 
     }

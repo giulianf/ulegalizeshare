@@ -78,6 +78,7 @@ public class PrestationSummary implements IPrestationDTO{
         this.forfaitHt = forfaitHt;
 
         this.invoiceChecked = invoiceChecked;
+        this.factureTimesheetExtId = factureTimesheetId;
         this.factureTimesheetLinkedId = factureTimesheetId;
         this.alreadyInvoiced = alreadyInvoiced;
     }
