@@ -41,6 +41,8 @@ public class PrestationSummary implements IPrestationDTO{
     private String factExtRef;
     private String yearDossier;
     private Long numDossier;
+    private String email;
+
 
     public PrestationSummary() {
 
@@ -56,7 +58,9 @@ public class PrestationSummary implements IPrestationDTO{
         this.dossierId = dossierId;
         this.yearDossier = yearDossier;
         this.numDossier = numDossier;
+        this.dossier = DossiersUtils.getDossierLabelItem(yearDossier, numDossier);
         this.idGest = idGest;
+        this.email = email;
         this.idGestItem = new ItemLongDto(idGest, email);
         this.tsType = tsType;
         this.tsTypeItem = new ItemDto(tsType, tsTypeDescription);

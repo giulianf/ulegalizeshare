@@ -59,4 +59,6 @@ public interface IPrestationDTO {
     String getYearDossier();
 
     Long getNumDossier();
+
+    String getEmail();
 }
