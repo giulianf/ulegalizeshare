@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Data
-public class PrestationSummary {
+public class PrestationSummary implements IPrestationDTO{
 
     private Long id;
     private Long dossierId;
@@ -44,10 +44,12 @@ public class PrestationSummary {
 
     }
 
+    // Used for invoice
     public PrestationSummary(Long id, Long dossierId, String yearDossier, Long numDossier, Long idGest, String email, Integer tsType,
                              String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
-                             Boolean forfait, BigDecimal forfaitHt, Integer factureTimesheetId) {
+                             Boolean forfait, BigDecimal forfaitHt, Integer factureTimesheetId, boolean invoiceChecked, boolean alreadyInvoiced) {
+
         this.id = id;
         this.dossierId = dossierId;
         this.dossier = DossiersUtils.getDossierLabelItem(yearDossier, numDossier);
@@ -68,7 +70,9 @@ public class PrestationSummary {
         this.forfait = forfait;
         this.forfaitHt = forfaitHt;
 
-        this.invoiceChecked = factureTimesheetId != null;
+        this.invoiceChecked = invoiceChecked;
         this.factureTimesheetLinkedId = factureTimesheetId;
+        this.alreadyInvoiced = alreadyInvoiced;
     }
+
 }
