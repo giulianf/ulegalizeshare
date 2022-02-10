@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
-public class ComptaDTO implements IComptaDTO {
+public class ComptaDTO {
     public ComptaDTO() {
     }
 
@@ -63,7 +63,8 @@ public class ComptaDTO implements IComptaDTO {
                      BigDecimal montant, BigDecimal montantHt,
                      String tiersFullname,
                      Long factureFraisId,
-                     boolean invoiceChecked, boolean alreadyInvoiced) {
+                     boolean invoiceChecked, boolean alreadyInvoiced,
+                     Long factExtId, String factExtRef) {
         this.id = id;
         this.vcKey = vcKey;
         this.idPost = idPost;
@@ -77,5 +78,7 @@ public class ComptaDTO implements IComptaDTO {
         this.factureExtFraisId = factureFraisId;
         this.alreadyInvoiced = alreadyInvoiced;
         this.factureLinkedFraisId = factureFraisId;
+        this.factExtId = factExtId;
+        this.factExtRef = factExtRef;
     }
 }

@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Data
-public class FraisAdminDTO implements IFraisAdminDTO {
+public class FraisAdminDTO {
     @Deprecated // for v1 during creation of usign
     private Long type;
     private String vcKey;
@@ -63,7 +63,6 @@ public class FraisAdminDTO implements IFraisAdminDTO {
 
     /**
      * used for invoice
-     *
      * @param id
      * @param idDebourType
      * @param debourTypeDescription
@@ -79,6 +78,8 @@ public class FraisAdminDTO implements IFraisAdminDTO {
      * @param factureFraisId
      * @param invoiceChecked
      * @param alreadyInvoiced
+     * @param factExtId
+     * @param factExtRef
      */
     public FraisAdminDTO(Long id,
                          Long idDebourType, String debourTypeDescription,
@@ -87,7 +88,8 @@ public class FraisAdminDTO implements IFraisAdminDTO {
                          Long idDoss, String yearDossier, Long numDossier,
                          ZonedDateTime dateAction, String comment,
                          Long factureFraisId,
-                         boolean invoiceChecked, boolean alreadyInvoiced) {
+                         boolean invoiceChecked, boolean alreadyInvoiced,
+                         Long factExtId, String factExtRef) {
         this.id = id;
         this.idDebourType = idDebourType;
         this.debourTypeDescription = debourTypeDescription;
@@ -105,6 +107,8 @@ public class FraisAdminDTO implements IFraisAdminDTO {
         this.invoiceChecked = invoiceChecked;
         this.alreadyInvoiced = alreadyInvoiced;
         this.factureLinkedFraisId = factureFraisId;
+        this.factExtId = factExtId;
+        this.factExtRef = factExtRef;
 
     }
 

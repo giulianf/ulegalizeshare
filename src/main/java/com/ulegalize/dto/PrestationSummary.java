@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Data
-public class PrestationSummary implements IPrestationDTO{
+public class PrestationSummary {
 
     private Long id;
     private Long dossierId;
@@ -35,8 +35,8 @@ public class PrestationSummary implements IPrestationDTO{
     // for invoice
     private boolean invoiceChecked;
     private boolean alreadyInvoiced;
-    private Integer factureTimesheetLinkedId;
-    private Integer factureTimesheetExtId;
+    private Long factureTimesheetLinkedId;
+    private Long factureTimesheetExtId;
     private Long factExtId;
     private String factExtRef;
     private String yearDossier;
@@ -48,11 +48,37 @@ public class PrestationSummary implements IPrestationDTO{
 
     }
 
-    // Used for invoice
+    /**
+     * Used for invoice
+     *
+     * @param id
+     * @param dossierId
+     * @param yearDossier
+     * @param numDossier
+     * @param idGest
+     * @param email
+     * @param tsType
+     * @param tsTypeDescription
+     * @param couthoraire
+     * @param dateAction
+     * @param dh
+     * @param dm
+     * @param comment
+     * @param vat
+     * @param forfait
+     * @param forfaitHt
+     * @param factureTimesheetId
+     * @param invoiceChecked
+     * @param alreadyInvoiced
+     * @param factExtId
+     * @param factExtRef
+     */
     public PrestationSummary(Long id, Long dossierId, String yearDossier, Long numDossier, Long idGest, String email, Integer tsType,
                              String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
-                             Boolean forfait, BigDecimal forfaitHt, Integer factureTimesheetId, boolean invoiceChecked, boolean alreadyInvoiced) {
+                             Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,
+                             boolean invoiceChecked, boolean alreadyInvoiced,
+                             Long factExtId, String factExtRef) {
 
         this.id = id;
         this.dossierId = dossierId;
@@ -81,6 +107,8 @@ public class PrestationSummary implements IPrestationDTO{
         this.factureTimesheetExtId = factureTimesheetId;
         this.factureTimesheetLinkedId = factureTimesheetId;
         this.alreadyInvoiced = alreadyInvoiced;
+        this.factExtId = factExtId;
+        this.factExtRef = factExtRef;
     }
 
 }
