@@ -52,6 +52,7 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
     private boolean speechToTextActivated = false;
 
     private boolean roomAttached;
+    private String urlRoom;
 
     public LawfirmCalendarEventDTO() {
 
