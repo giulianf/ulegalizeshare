@@ -57,10 +57,10 @@ public class KafkaMailObject implements Serializable {
     @Getter
     @Setter
     private Boolean isModerator = true;
-    // jitsi : this is the room name
+    // jitsi : this is the url room
     @Getter
     @Setter
-    private String roomName;
+    private String urlRoom;
     // File attached to event or email
     @Getter
     @Setter
