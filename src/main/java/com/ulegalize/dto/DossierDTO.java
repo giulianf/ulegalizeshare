@@ -76,7 +76,9 @@ public class DossierDTO implements IDossierDTO {
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
                       String adverseFirstnameClient, String adverseLastnameClient, String adverseCompanyClient, Long idClientAdverse,
-                      BigDecimal balance, String vckey, EnumVCOwner enumVCOwner, Date closeDossier, EnumDossierType type,
+                      BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
+                      Date closeDossier, Date openDossier,
+                      EnumDossierType type,
                       Date lastAccessDate, String partiesName) {
         this.id = dossierId;
         this.year = year;
@@ -97,6 +99,7 @@ public class DossierDTO implements IDossierDTO {
         this.balance = balance;
         this.type = type;
         this.closeDossier = closeDossier;
+        this.openDossier = openDossier;
         this.owner = enumVCOwner;
         this.lastAccessDate = lastAccessDate;
         if (!type.equals(EnumDossierType.MD)) {
