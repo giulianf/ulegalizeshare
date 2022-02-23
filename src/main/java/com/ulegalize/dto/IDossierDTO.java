@@ -41,6 +41,8 @@ public interface IDossierDTO {
 
     Date getCloseDossier();
 
+    Date getOpenDossier();
+
     EnumDossierType getType();
 
     EnumVCOwner getOwner();
