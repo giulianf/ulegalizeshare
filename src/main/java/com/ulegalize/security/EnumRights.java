@@ -29,7 +29,9 @@ public enum EnumRights {
     CALENDAR_LECTURE(34, "Calendar - lecture"),
     CALENDAR_ECRITURE(35, "Calendar - ecriture"),
     JUSTICIABLE_ECRITURE(36, "Justiciable - ecriture"),
-    JUSTICIABLE_ADMIN(37, "Justiciable - admin");
+    JUSTICIABLE_ADMIN(37, "Justiciable - admin"),
+    // this is for administrative/back-office purpose
+    SUPER_ADMIN(99, "Super - Admin");
 
     private int id;
     private String description;
