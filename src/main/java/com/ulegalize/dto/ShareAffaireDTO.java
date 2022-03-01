@@ -13,6 +13,7 @@ public class ShareAffaireDTO implements Serializable {
     private Long id;
     private Long affaireId;
     private String vcKey;
+    private List<String> vcKeyList;
     private ItemStringDto vcKeyItem;
     private boolean allMembers;
     private List<Long> userIdSelected;
