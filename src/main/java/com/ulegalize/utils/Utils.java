@@ -12,7 +12,7 @@ public class Utils {
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile(regexPattern, Pattern.CASE_INSENSITIVE);
 
-    public static String getLabel(EnumLanguage language, String labelFr, String labelEn, String labelNl) {
+    public static String getLabel(EnumLanguage language, String labelFr, String labelEn, String labelNl, String labelDe) {
         if (language != null) {
 
             switch (language) {
@@ -23,6 +23,8 @@ public class Utils {
                     return labelNl;
                 case EN:
                     return labelEn;
+                case DE:
+                    return labelDe;
                 default:
                     return labelFr;
             }

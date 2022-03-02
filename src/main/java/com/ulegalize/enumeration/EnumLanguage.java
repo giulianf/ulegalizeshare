@@ -3,7 +3,8 @@ package com.ulegalize.enumeration;
 public enum EnumLanguage {
     FR("fr"),
     NL("nl"),
-    EN("en");
+    EN("en"),
+    DE("de");
 
     private String shortCode;
 
@@ -18,7 +19,7 @@ public enum EnumLanguage {
             }
         }
 
-        return null;
+        return EnumLanguage.EN;
     }
 
     public String getShortCode() {
