@@ -2,6 +2,7 @@ package com.ulegalize.dto;
 
 import com.ulegalize.AbstractRestObject;
 import com.ulegalize.LawyerDuty;
+import com.ulegalize.enumeration.EnumValid;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class LawyerDTO extends AbstractRestObject {
 
     private List<LawyerDuty> duties;
     private boolean isValid;
+    private EnumValid enumValid;
     private boolean isNotification;
 
     //come from LawfirmUsers
@@ -43,12 +45,12 @@ public class LawyerDTO extends AbstractRestObject {
     public LawyerDTO() {
     }
 
-    public LawyerDTO(Long id, String idUser, String email, String language, String fullName, Boolean emailVerified) {
+    public LawyerDTO(Long id, String idUser, String email, String language, String fullName, EnumValid emailVerified) {
         this.id = id;
         this.idUser = idUser;
         this.email = email;
         this.language = language;
         this.fullName = fullName;
-        this.isValid = emailVerified != null ? emailVerified : false;
+        this.enumValid = emailVerified;
     }
 }
