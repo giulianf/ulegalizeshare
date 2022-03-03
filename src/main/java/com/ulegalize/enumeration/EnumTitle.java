@@ -1,16 +1,35 @@
 package com.ulegalize.enumeration;
 
+import lombok.Getter;
+
 public enum EnumTitle {
-    F("F", "Madame"),
-    L("L", "Mademoiselle"),
-    M("M", "Monsieur");
 
+    F("F", "Madame", "Mevrouw", "Madam", "Frau"),
+    L("L", "Mademoiselle", "Juffrouw", "Miss", "Miss"),
+    M("M", "Monsieur", "Mijnheer", "Sir", "Sir");
+
+    @Getter
     private String idTitle;
-    private String title;
 
-    EnumTitle(String idTitle, String title) {
+    @Getter
+    private String labelFr;
+    @Getter
+    private String labelNl;
+    @Getter
+    private String labelEn;
+    @Getter
+    private String labelDe;
+
+    EnumTitle(String idTitle,
+              String labelFr,
+              String labelNl,
+              String labelEn,
+              String labelDe) {
         this.idTitle = idTitle;
-        this.title = title;
+        this.labelFr = labelFr;
+        this.labelNl = labelNl;
+        this.labelEn = labelEn;
+        this.labelDe = labelDe;
     }
 
 
@@ -23,14 +42,5 @@ public enum EnumTitle {
             }
         }
         return null;
-    }
-
-
-    public String getIdTitle() {
-        return idTitle;
-    }
-
-    public String getTitle() {
-        return title;
     }
 }

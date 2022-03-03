@@ -1,11 +1,14 @@
 package com.ulegalize.enumeration;
 
+import lombok.Getter;
+
 public enum EnumLanguage {
     FR("fr"),
     NL("nl"),
     EN("en"),
     DE("de");
 
+    @Getter
     private String shortCode;
 
     EnumLanguage(String shortCode) {
@@ -20,9 +23,5 @@ public enum EnumLanguage {
         }
 
         return EnumLanguage.EN;
-    }
-
-    public String getShortCode() {
-        return shortCode;
     }
 }

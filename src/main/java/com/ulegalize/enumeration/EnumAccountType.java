@@ -1,21 +1,30 @@
 package com.ulegalize.enumeration;
 
+import lombok.Getter;
+
 public enum EnumAccountType {
 
-	PRO_ACCOUNT(1, "Compte professionnel", "Professioneel account", "Professional account"),
-	ACCOUNT_TIERS(2, "Compte tiers / CARPA", "Account van derden / CARPA", "Third-party account / CARPA"),
-	CASH(3, "Espèces", "Contant geld", "Cash");
+	PRO_ACCOUNT(1, "Compte professionnel", "Professioneel account", "Professional account", "Professionelles Konto"),
+	ACCOUNT_TIERS(2, "Compte tiers / CARPA", "Account van derden / CARPA", "Third-party account / CARPA", "Drittkonto / CARPA"),
+	CASH(3, "Espèces", "Contant geld", "Cash", "Arten");
 
+	@Getter
 	private int id;
+	@Getter
 	private String labelFr;
+	@Getter
 	private String labelNl;
+	@Getter
 	private String labelEn;
+	@Getter
+	private String labelDe;
 
-	EnumAccountType(int id, String labelFr, String labelNl, String labelEn) {
+	EnumAccountType(int id, String labelFr, String labelNl, String labelEn, String labelDe) {
 		this.id = id;
 		this.labelFr = labelFr;
 		this.labelNl = labelNl;
 		this.labelEn = labelEn;
+		this.labelDe = labelDe;
 	}
 
 
@@ -25,22 +34,5 @@ public enum EnumAccountType {
 				return enumAccountType;
 		}
 		return null;
-	}
-
-
-	public String getLabelFr() {
-		return labelFr;
-	}
-
-	public String getLabelNl() {
-		return labelNl;
-	}
-
-	public String getLabelEn() {
-		return labelEn;
-	}
-
-	public int getId() {
-		return id;
 	}
 }

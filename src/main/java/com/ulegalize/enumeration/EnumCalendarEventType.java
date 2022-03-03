@@ -1,25 +1,35 @@
 package com.ulegalize.enumeration;
 
+import lombok.Getter;
+
 public enum EnumCalendarEventType {
 
-	PERM("PERM", "Permanence", "Permanent", "Permanent", "red"),
-	RECORD("RECORD", "Tâche enregistrement", "Taak opnemen", "Task recording", "orange"),
-	TASK("TASK", "Tâche", "Taak", "Task", "orange"),
-	RDV("RDV", "Rendez-vous", "Afspraak", "Appointment", "azure"),
-	AUD("AUD", "Audience", "Publiek", "Audience", "green"),
-	OTH("OTH", "Autre", "Andere", "Other", "grey");
+	PERM("PERM", "Permanence", "Permanent", "Permanent", "Ständigen", "red"),
+	RECORD("RECORD", "Tâche enregistrement", "Taak opnemen", "Task recording", "Task speichern", "orange"),
+	TASK("TASK", "Tâche", "Taak", "Task", "Aufgabe", "orange"),
+	RDV("RDV", "Rendez-vous", "Afspraak", "Appointment", "Termin", "azure"),
+	AUD("AUD", "Audience", "Publiek", "Audience", "Anhörung", "green"),
+	OTH("OTH", "Autre", "Andere", "Other", "Ander", "grey");
 
+	@Getter
 	private String code;
+	@Getter
 	private String labelFr;
+	@Getter
 	private String labelNl;
+	@Getter
 	private String labelEn;
+	@Getter
+	private String labelDe;
+	@Getter
 	private String color;
 
-	EnumCalendarEventType(String code, String labelFr, String labelNl, String labelEn, String color) {
+	EnumCalendarEventType(String code, String labelFr, String labelNl, String labelEn, String labelDe, String color) {
 		this.code = code;
 		this.labelFr = labelFr;
 		this.labelNl = labelNl;
 		this.labelEn = labelEn;
+		this.labelDe = labelDe;
 		this.color = color;
 	}
 
@@ -30,25 +40,5 @@ public enum EnumCalendarEventType {
 				return enumCalendarEventType;
 		}
 		return null;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public String getLabelFr() {
-		return labelFr;
-	}
-
-	public String getLabelNl() {
-		return labelNl;
-	}
-
-	public String getLabelEn() {
-		return labelEn;
-	}
-
-	public String getColor() {
-		return color;
 	}
 }
