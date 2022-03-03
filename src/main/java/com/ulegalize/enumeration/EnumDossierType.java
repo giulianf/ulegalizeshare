@@ -1,24 +1,35 @@
 package com.ulegalize.enumeration;
 
-public enum EnumDossierType {
-    BA("BA", "BAJ", "BAJ", "BLA"),
-    DC("DC", "Cabinet", "Kantoor", "Lawfirm"),
-    DF("DF", "Droit collaboratif", "Collaboratief recht", "Collaborative law"),
-    MD("MD", "Médiation", "Bemiddeling", "Mediation");
+import lombok.Getter;
 
+public enum EnumDossierType {
+    BA("BA", "BAJ", "BAJ", "BLA", "BFRUR"),
+    DC("DC", "Cabinet", "Kantoor", "Lawfirm", "Kabinett"),
+    DF("DF", "Droit collaboratif", "Collaboratief recht", "Collaborative law", "Verbandsrechtlich"),
+    MD("MD", "Médiation", "Bemiddeling", "Mediation", "Mediation");
+
+    @Getter
     private String dossType;
 
+    @Getter
     private String labelFr;
+    @Getter
     private String labelNl;
+    @Getter
     private String labelEn;
+    @Getter
+    private String labelDe;
 
     EnumDossierType(String dossType,
                     String labelFr,
-                    String labelNl, String labelEn) {
+                    String labelNl,
+                    String labelEn,
+                    String labelDe) {
         this.dossType = dossType;
         this.labelFr = labelFr;
         this.labelNl = labelNl;
         this.labelEn = labelEn;
+        this.labelDe = labelDe;
     }
 
     public static EnumDossierType fromdossType(String dossType) {
@@ -27,22 +38,5 @@ public enum EnumDossierType {
                 return enumDossierType;
         }
         return null;
-    }
-
-    public String getDossType() {
-        return dossType;
-    }
-
-
-    public String getLabelFr() {
-        return labelFr;
-    }
-
-    public String getLabelNl() {
-        return labelNl;
-    }
-
-    public String getLabelEn() {
-        return labelEn;
     }
 }

@@ -7,6 +7,7 @@ public enum EnumFactureType {
     CREDIT(2, "Note de crédit", "Credit score", "Creditnota", "Gutschrift", "NC"),
     TEMP(3, "Facture temporaire", "Temporary invoice", "Tijdelijke factuur", "Vorläufige Rechnung", "FT");
 
+    @Getter
     private long id;
     @Getter
     private String descriptionFr;
@@ -26,7 +27,6 @@ public enum EnumFactureType {
         this.descriptionNl = descriptionNl;
         this.descriptionDe = descriptionDe;
         this.code = code;
-
     }
 
     public static EnumFactureType fromId(Long id) {
@@ -35,10 +35,6 @@ public enum EnumFactureType {
                 return clientType;
         }
         return null;
-    }
-
-    public long getId() {
-        return id;
     }
 
 }
