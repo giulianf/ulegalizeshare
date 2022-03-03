@@ -43,11 +43,12 @@ public class LawyerDTO extends AbstractRestObject {
     public LawyerDTO() {
     }
 
-    public LawyerDTO(Long id, String idUser, String email, String language, String fullName) {
+    public LawyerDTO(Long id, String idUser, String email, String language, String fullName, Boolean emailVerified) {
         this.id = id;
         this.idUser = idUser;
         this.email = email;
         this.language = language;
         this.fullName = fullName;
+        this.isValid = emailVerified != null ? emailVerified : false;
     }
 }
