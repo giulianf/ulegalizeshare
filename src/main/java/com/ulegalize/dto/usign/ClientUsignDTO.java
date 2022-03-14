@@ -18,6 +18,7 @@ public class ClientUsignDTO implements Serializable {
     private String email;
     private String language;
     private String clientFrom;
+    private String status;
     private Integer orderByIndex;
 
     private int left = 0;
