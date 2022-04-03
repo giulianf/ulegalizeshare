@@ -26,7 +26,9 @@ public enum EnumMailTemplate {
     MAILSHAREDFOLDERUSERTEMPLATE("mailSharedFolderUserTemplate", "Nouveau partage de dossier ", "New folder sharing ", "Nieuwe mappen delen ", "Neue Freigabe des Ordners "),
     MAILSHAREDUSERSECURITYTEMPLATE("mailSharedUserSecurityTemplate", "Nouvel acces au cabinet ", "New access to the practice ", "Nieuwe toegang tot de praktijk ", "Neuer Zugang zum Kabinett "),
     MAILVERIFYTEMPLATE("mailVerifyTemplate", "Vérifiez votre email utilisateur", "Verify your user email", "Verifieer uw gebruikers-e-mailadres", "Überprüfen Sie Ihre E-Mail-Adresse"),
-    MAILAUTOMATICREGISTER("mailAutomaticRegister", "Bienvenue sur le Workspace de Ulegalize", "Welcome to the Ulegalize Workspace", "Welkom bij de Ulegalize-werkruimte", "Willkommen im Ulegalize-Arbeitsbereich"),
+    MAILAUTOMATICREGISTER("mailAutomaticRegister", "Bienvenue sur le Workspace", "Welcome to the Workspace", "Welkom bij de Ulegalize-werkruimte", "Willkommen im Ulegalize-Arbeitsbereich"),
+    MAILAUTOMATICSUPPORT("mailAutomaticSupport", "Accompagnement du Workspace", "Support to the Workspace", "Begeleiding bij de Workspacee", "Begleitung im Workspace"),
+    MAILAUTOMATICREMINDER("mailAutomaticReminder", "Rappel accompagnement du Workspace", "Reminder support to the Workspace", "Ondersteuning voor herinneringen bij de Workspacee", "Erinnerungsunterstützung im Workspace"),
 
     MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel", "Annulation des modules de paiement", "Cancellation of payment modules ", "Annulering van betalingsmodules ", "Die Zahlungsmodule werden annulliert"),
     MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure", "Erreur avec le mode de paiement", "Error with payment method", "Fout met betalingsmethode ", "Fehler bei der Zahlungsweise");
