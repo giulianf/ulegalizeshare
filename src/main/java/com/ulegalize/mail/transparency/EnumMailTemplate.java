@@ -26,6 +26,7 @@ public enum EnumMailTemplate {
     MAILSHAREDFOLDERUSERTEMPLATE("mailSharedFolderUserTemplate", "Nouveau partage de dossier ", "New folder sharing ", "Nieuwe mappen delen ", "Neue Freigabe des Ordners "),
     MAILSHAREDUSERSECURITYTEMPLATE("mailSharedUserSecurityTemplate", "Nouvel acces au cabinet ", "New access to the practice ", "Nieuwe toegang tot de praktijk ", "Neuer Zugang zum Kabinett "),
     MAILVERIFYTEMPLATE("mailVerifyTemplate", "Vérifiez votre email utilisateur", "Verify your user email", "Verifieer uw gebruikers-e-mailadres", "Überprüfen Sie Ihre E-Mail-Adresse"),
+    MAILAUTOMATICREGISTER("mailAutomaticRegister", "Bienvenue sur le Workspace de Ulegalize", "Welcome to the Ulegalize Workspace", "Welkom bij de Ulegalize-werkruimte", "Willkommen im Ulegalize-Arbeitsbereich"),
 
     MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel", "Annulation des modules de paiement", "Cancellation of payment modules ", "Annulering van betalingsmodules ", "Die Zahlungsmodule werden annulliert"),
     MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure", "Erreur avec le mode de paiement", "Error with payment method", "Fout met betalingsmethode ", "Fehler bei der Zahlungsweise");
