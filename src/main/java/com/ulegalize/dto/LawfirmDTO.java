@@ -50,6 +50,7 @@ public class LawfirmDTO extends AbstractRestObject {
 	private DriveType driveType;
 
 	private List<LawyerDTO> lawyers;
+	private String clientFrom;
 
 	public LawfirmDTO() {
 

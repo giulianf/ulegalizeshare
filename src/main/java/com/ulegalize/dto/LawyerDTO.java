@@ -41,6 +41,7 @@ public class LawyerDTO extends AbstractRestObject {
 
     //come from LawfirmUsers
     private boolean isActive;
+    private String clientFrom;
 
     public LawyerDTO() {
     }
