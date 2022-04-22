@@ -29,6 +29,7 @@ public class ComptaDTO {
     Long idFacture;
     ItemLongDto idFactureItem;
     String memo;
+    boolean isDeleted;
 
     String vcKey;
 
