@@ -29,9 +29,10 @@ public enum EnumMailTemplate {
     MAILAUTOMATICREGISTER("mailAutomaticRegister", "Bienvenue sur le Workspace", "Welcome to the Workspace", "Welkom bij de Ulegalize-werkruimte", "Willkommen im Ulegalize-Arbeitsbereich"),
     MAILAUTOMATICSUPPORT("mailAutomaticSupport", "Accompagnement du Workspace", "Support to the Workspace", "Begeleiding bij de Workspacee", "Begleitung im Workspace"),
     MAILAUTOMATICREMINDER("mailAutomaticReminder", "Rappel accompagnement du Workspace", "Reminder support to the Workspace", "Ondersteuning voor herinneringen bij de Workspacee", "Erinnerungsunterstützung im Workspace"),
+    MAILWORKSPACEASSOCIATION("mailAssociation", "Demande d'association avec le cabinet", "Application for association with the lawfirm", "Verzoek om associatie met het advocatenkantoor",""),
 
     MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel", "Annulation des modules de paiement", "Cancellation of payment modules ", "Annulering van betalingsmodules ", "Die Zahlungsmodule werden annulliert"),
-    MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure", "Erreur avec le mode de paiement", "Error with payment method", "Fout met betalingsmethode ", "Fehler bei der Zahlungsweise");
+    MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure", "Erreur avec le mode de paiement", "Error with payment method", "Fout met betalingsmethode ", "Antrag auf Partnerschaft mit der Anwaltskanzlei");
 
     @Getter
     private String name;
