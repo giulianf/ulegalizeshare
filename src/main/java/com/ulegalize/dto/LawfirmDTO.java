@@ -51,6 +51,7 @@ public class LawfirmDTO extends AbstractRestObject {
 
 	private List<LawyerDTO> lawyers;
 	private String clientFrom;
+	private String nomenclatureDossier;
 
 	public LawfirmDTO() {
 
