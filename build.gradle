@@ -11,7 +11,7 @@ archivesBaseName =  applicationName
 version = applicationVersion
 project.version = applicationVersion
 description = applicationName
-sourceCompatibility = '1.11'
+sourceCompatibility = '1.14'
 
 
 
