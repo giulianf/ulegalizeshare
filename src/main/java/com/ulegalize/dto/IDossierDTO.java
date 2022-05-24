@@ -48,4 +48,6 @@ public interface IDossierDTO {
     EnumVCOwner getOwner();
 
     Date getLastAccessDate();
+
+    String getNomenclature();
 }
