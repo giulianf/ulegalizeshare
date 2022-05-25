@@ -53,7 +53,7 @@ public class PrestationSummary {
      *
      * @param id
      * @param dossierId
-     * @param yearDossier
+     * @param nomenclature
      * @param numDossier
      * @param idGest
      * @param email
@@ -73,7 +73,7 @@ public class PrestationSummary {
      * @param factExtId
      * @param factExtRef
      */
-    public PrestationSummary(Long id, Long dossierId, String yearDossier, Long numDossier, Long idGest, String email, Integer tsType,
+    public PrestationSummary(Long id, Long dossierId, String nomenclature, Long numDossier, Long idGest, String email, Integer tsType,
                              String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
                              Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,
@@ -84,7 +84,7 @@ public class PrestationSummary {
         this.dossierId = dossierId;
         this.yearDossier = yearDossier;
         this.numDossier = numDossier;
-        this.dossier = DossiersUtils.getDossierLabelItem(yearDossier, numDossier);
+        this.dossier = DossiersUtils.getDossierLabelItem(nomenclature);
         this.idGest = idGest;
         this.email = email;
         this.idGestItem = new ItemLongDto(idGest, email);

@@ -8,14 +8,14 @@ public class DossiersUtils {
         throw new IllegalStateException("Utility class");
     }
 
-    public static String getDossierLabel(String yearDossier, Long numDossier, String vcKey) {
+    public static String getDossierLabel(String nomenclature, String vcKey) {
 
-        return getDossierLabelItem(yearDossier, numDossier) + " - " + vcKey;
+        return getDossierLabelItem(nomenclature) + " - " + vcKey;
     }
 
-    public static String getDossierLabelItem(String yearDossier, Long numDossier) {
+    public static String getDossierLabelItem(String nomenclature) {
 
-        return yearDossier + "/" + getDossierNum(numDossier);
+        return nomenclature;
     }
 
     public static String getDossierNum(Long numDossier) {

@@ -63,6 +63,7 @@ public class FraisAdminDTO {
 
     /**
      * used for invoice
+     *
      * @param id
      * @param idDebourType
      * @param debourTypeDescription
@@ -71,8 +72,7 @@ public class FraisAdminDTO {
      * @param mesureTypeId
      * @param mesureDescription
      * @param idDoss
-     * @param yearDossier
-     * @param numDossier
+     * @param nomenclature
      * @param dateAction
      * @param comment
      * @param factureFraisId
@@ -85,7 +85,7 @@ public class FraisAdminDTO {
                          Long idDebourType, String debourTypeDescription,
                          BigDecimal pricePerUnit, Integer unit,
                          Integer mesureTypeId, String mesureDescription,
-                         Long idDoss, String yearDossier, Long numDossier,
+                         Long idDoss, String nomenclature,
                          ZonedDateTime dateAction, String comment,
                          Long factureFraisId,
                          boolean invoiceChecked, boolean alreadyInvoiced,
@@ -95,7 +95,7 @@ public class FraisAdminDTO {
         this.debourTypeDescription = debourTypeDescription;
         this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
         this.idDoss = idDoss;
-        this.dossier = DossiersUtils.getDossierLabelItem(yearDossier, numDossier);
+        this.dossier = DossiersUtils.getDossierLabelItem(nomenclature);
         this.mesureDescription = mesureDescription;
         this.idMesureType = mesureTypeId;
         this.idMesureTypeItem = new ItemDto(mesureTypeId, mesureDescription);

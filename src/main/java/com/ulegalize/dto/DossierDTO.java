@@ -105,15 +105,15 @@ public class DossierDTO implements IDossierDTO {
         this.lastAccessDate = lastAccessDate;
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
+                this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
             }
         } else {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(String.valueOf(year), num, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(String.valueOf(year), num) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
+                this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(nomenclature) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
 
             }
         }
