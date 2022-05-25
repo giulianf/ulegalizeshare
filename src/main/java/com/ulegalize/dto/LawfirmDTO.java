@@ -76,7 +76,9 @@ public class LawfirmDTO extends AbstractRestObject {
 					  String fax,
 					  Boolean isNotification,
 					  byte[] logo,
-					  DriveType driveType) {
+					  DriveType driveType,
+					  String nomenclatureDossier
+	) {
 		this.vckey = vckey;
 		this.name = name;
 		this.alias = alias;
@@ -100,6 +102,8 @@ public class LawfirmDTO extends AbstractRestObject {
 		if (isNotification != null){
 			this.isNotification = isNotification;
 		}
+
+		this.nomenclatureDossier = nomenclatureDossier;
 
 	}
 }
