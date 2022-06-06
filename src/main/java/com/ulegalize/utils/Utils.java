@@ -15,11 +15,11 @@ public class Utils {
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile(regexPattern, Pattern.CASE_INSENSITIVE);
 
-    public static String getLabel(EnumLanguage language, String labelKey) {
+    public static String getLabel(EnumLanguage language, String labelKey, String packageName) {
         if (language != null) {
             Locale locale = new Locale(language.getShortCode());
             ResourceBundle res =
-                    ResourceBundle.getBundle(PACKAGE_NAME, locale);
+                    ResourceBundle.getBundle(packageName == null || packageName.isEmpty() ? PACKAGE_NAME : packageName, locale);
             return res.getString(labelKey);
         }
 
