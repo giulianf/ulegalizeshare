@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id 'maven'
     id 'signing'
 }
 apply from: 'version.gradle'
@@ -11,7 +10,7 @@ archivesBaseName =  applicationName
 version = applicationVersion
 project.version = applicationVersion
 description = applicationName
-sourceCompatibility = '1.14'
+sourceCompatibility = '1.17'
 
 
 
@@ -35,59 +34,6 @@ dependencies {
 
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-
-            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
-            }
-
-            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
-            }
-
-            pom.project {
-                name 'Ulegalize Share Library'
-                packaging 'jar'
-                // optionally artifactId can be defined here
-                description 'A application used to share library between Ulegalize application'
-                url 'https://workspace.ulegalize.com'
-
-                scm {
-                    connection 'scm:git:git://bitbucket.org:finauxa/ulegalizeshare.git'
-                    developerConnection 'scm:git:ssh://bitbucket.org:finauxa/ulegalizeshare.git'
-                    url 'https://bitbucket.org/finauxa/ulegalizeshare'
-                }
-
-                licenses {
-                    license {
-                        name 'EUROPEAN UNION PUBLIC LICENCE v. 1.2'
-                        url 'https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/eupl_v1.2_en.pdf'
-                    }
-                }
-
-                developers {
-                    developer {
-                        id 'fumajul'
-                        name 'Julien Fumanti'
-                        email 'julien.fumanti@finauxa.com'
-                    }
-                }
-            }
-        }
-    }
-}
-
-
 task javadocJar(type: Jar) {
     classifier = 'javadoc'
     from javadoc
@@ -97,13 +43,115 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
     from sourceSets.main.allSource
 }
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'Ulegalize Share Library'
+                packaging = 'jar'
+                description = 'A application used to share library between Ulegalize application'
+                url = 'https://workspace.ulegalize.com'
+                licenses {
+                    license {
+                        name = 'EUROPEAN UNION PUBLIC LICENCE v. 1.2'
+                        url = 'https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/eupl_v1.2_en.pdf'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'fumajul'
+                        name = 'Julien Fumanti'
+                        email = 'julien.fumanti@finauxa.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://bitbucket.org:finauxa/ulegalizeshare.git'
+                    developerConnection = 'scm:git:ssh://bitbucket.org:finauxa/ulegalizeshare.git'
+                    url = 'https://bitbucket.org/finauxa/ulegalizeshare'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            // change URLs to point to your repos, e.g. http://my.org/repo
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username = ossrhUsername
+                password = ossrhPassword
+            }
+        }
+    }
+}
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//
+//            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+//                authentication(userName: ossrhUsername, password: ossrhPassword)
+//            }
+//
+//            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+//                authentication(userName: ossrhUsername, password: ossrhPassword)
+//            }
+//
+//            pom.project {
+//                name 'Ulegalize Share Library'
+//                packaging 'jar'
+//                // optionally artifactId can be defined here
+//                description 'A application used to share library between Ulegalize application'
+//                url 'https://workspace.ulegalize.com'
+//
+//                scm {
+//                    connection 'scm:git:git://bitbucket.org:finauxa/ulegalizeshare.git'
+//                    developerConnection 'scm:git:ssh://bitbucket.org:finauxa/ulegalizeshare.git'
+//                    url 'https://bitbucket.org/finauxa/ulegalizeshare'
+//                }
+//
+//                licenses {
+//                    license {
+//                        name 'EUROPEAN UNION PUBLIC LICENCE v. 1.2'
+//                        url 'https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/eupl_v1.2_en.pdf'
+//                    }
+//                }
+//
+//                developers {
+//                    developer {
+//                        id 'fumajul'
+//                        name 'Julien Fumanti'
+//                        email 'julien.fumanti@finauxa.com'
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+
+
 artifacts {
     archives javadocJar, sourcesJar
 }
 signing {
-    sign configurations.archives
+    sign publishing.publications.mavenJava
 }
-
+//signing {
+//    sign configurations.archives
+//}
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
