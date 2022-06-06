@@ -4,33 +4,16 @@ import lombok.Getter;
 
 public enum EnumTitle {
 
-    F("F", "Madame", "Mevrouw", "Madam", "Frau"),
-    L("L", "Mademoiselle", "Juffrouw", "Miss", "Miss"),
-    M("M", "Monsieur", "Mijnheer", "Sir", "Sir"),
-    A("A", "Maitre", "Mijnheer", "Lawyer", "Sir");
+    F("F"),
+    L("L"),
+    M("M"),
+    A("A");
 
     @Getter
     private String idTitle;
 
-    @Getter
-    private String labelFr;
-    @Getter
-    private String labelNl;
-    @Getter
-    private String labelEn;
-    @Getter
-    private String labelDe;
-
-    EnumTitle(String idTitle,
-              String labelFr,
-              String labelNl,
-              String labelEn,
-              String labelDe) {
+    EnumTitle(String idTitle) {
         this.idTitle = idTitle;
-        this.labelFr = labelFr;
-        this.labelNl = labelNl;
-        this.labelEn = labelEn;
-        this.labelDe = labelDe;
     }
 
 
