@@ -3,7 +3,8 @@ package com.ulegalize.enumeration;
 public enum EnumDossierContactType {
     CLIENT(1),
     OPPOSING(2),
-    PARTY(3);
+    PARTY(3),
+    OPPONENT_COUNSIL(4);
 
     private int id;
 
@@ -22,4 +23,5 @@ public enum EnumDossierContactType {
     public int getId() {
         return id;
     }
+
 }

@@ -6,7 +6,8 @@ public enum EnumTitle {
 
     F("F", "Madame", "Mevrouw", "Madam", "Frau"),
     L("L", "Mademoiselle", "Juffrouw", "Miss", "Miss"),
-    M("M", "Monsieur", "Mijnheer", "Sir", "Sir");
+    M("M", "Monsieur", "Mijnheer", "Sir", "Sir"),
+    A("A", "Maitre", "Mijnheer", "Lawyer", "Sir");
 
     @Getter
     private String idTitle;
