@@ -16,9 +16,11 @@ public enum EnumLanguage {
     }
 
     public static EnumLanguage fromshortCode(String shortCode) {
-        for (EnumLanguage language : EnumLanguage.values()) {
-            if (language.getShortCode().equalsIgnoreCase(shortCode)) {
-                return language;
+        if (shortCode != null) {
+            for (EnumLanguage language : EnumLanguage.values()) {
+                if (language.getShortCode().equalsIgnoreCase(shortCode)) {
+                    return language;
+                }
             }
         }
 

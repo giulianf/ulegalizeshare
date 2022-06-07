@@ -5,12 +5,14 @@ import com.ulegalize.enumeration.EnumLanguage;
 import com.ulegalize.utils.Utils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class BankAccountDTO {
 
     private Integer compteId;
@@ -24,11 +26,8 @@ public class BankAccountDTO {
     private Integer accountTypeId;
     private ItemDto accountTypeIdItem;
 
-    public BankAccountDTO() {
-    }
-
     public BankAccountDTO(Integer compteId, String vcKey, String accountNumber, String accountRef,
-                          String userUpd, Date dateUpd, boolean archived, EnumAccountType enumAccountType, EnumLanguage enumLanguage) {
+                          String userUpd, Date dateUpd, boolean archived, EnumAccountType enumAccountType, String enumLanguageCode) {
         this.compteId = compteId;
         this.vcKey = vcKey;
         this.accountNumber = accountNumber;
@@ -37,8 +36,8 @@ public class BankAccountDTO {
         this.dateUpd = dateUpd;
         this.archived = archived;
         this.accountTypeId = enumAccountType.getId();
-        String label = Utils.getLabel(enumLanguage, enumAccountType.name(), null);
 
-        accountTypeIdItem = new ItemDto(enumAccountType.getId(), label);
+        EnumLanguage enumLanguage = EnumLanguage.fromshortCode(enumLanguageCode);
+        accountTypeIdItem = new ItemDto(enumAccountType.getId(), Utils.getLabel(enumLanguage, enumAccountType.name(), null));
     }
 }
