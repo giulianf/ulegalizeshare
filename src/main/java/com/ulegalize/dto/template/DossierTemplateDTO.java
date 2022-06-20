@@ -1,5 +1,8 @@
 package com.ulegalize.dto.template;
 
+import com.ulegalize.dto.ContactSummary;
+import com.ulegalize.dto.DossierDTO;
+import com.ulegalize.dto.LawyerDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,8 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 public class DossierTemplateDTO extends MainTemplateDTO {
 
-    private List<Person> person;
-    private List<Point> point;
-    private List<Mediator> mediator;
+    private DossierDTO dossierDTO;
+    private List<ContactSummary> contacts;
+    private List<LawyerDTO> users;
 
 }
