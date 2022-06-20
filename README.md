@@ -48,7 +48,7 @@ signing.secretKeyRingFile=/Users/yours/.gnupg/secring.gpg
 gradle build  
 `  
 `
-gradle uploadArchives
+gradle publish
 `  
 Ask (to: julien.fumanti@finauxa.com) the authorization to release the library
 
