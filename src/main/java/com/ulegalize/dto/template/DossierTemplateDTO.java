@@ -1,4 +1,4 @@
-package com.ulegalize.dto.bigleLegal;
+package com.ulegalize.dto.template;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

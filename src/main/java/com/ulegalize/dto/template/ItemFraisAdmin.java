@@ -1,5 +1,5 @@
 
-package com.ulegalize.dto.bigleLegal;
+package com.ulegalize.dto.template;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,12 +13,11 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemFraisColla {
+public class ItemFraisAdmin {
 
-    private String posteColla;
-    private String tiersColla;
-    private BigDecimal amountHTColla;
-    private Integer vatColla;
-    private BigDecimal amountColla;
+    private String descriptionFraisAdmin;
+    private String mesureFraisAdmin;
+    private BigDecimal pricePerUnitFraisAdmin;
+    private BigDecimal unitFraisAdmin;
 
 }

@@ -1,4 +1,4 @@
-package com.ulegalize.dto.bigleLegal;
+package com.ulegalize.dto.template;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

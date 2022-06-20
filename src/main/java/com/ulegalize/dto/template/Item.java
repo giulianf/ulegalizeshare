@@ -1,5 +1,5 @@
 
-package com.ulegalize.dto.bigleLegal;
+package com.ulegalize.dto.template;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,11 +11,12 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @SuppressWarnings("unused")
-public class ItemVat {
+public class Item {
 
-    private String descriptionVat;
-    private BigDecimal vatVat;
-    private BigDecimal groupAmountVat;
+    private BigDecimal amount;
+    private BigDecimal amountTax;
+    private String description;
+    private BigDecimal vat;
 
 
 }
