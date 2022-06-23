@@ -1,5 +1,8 @@
 package com.ulegalize.dto;
 
+import com.ulegalize.enumeration.EnumLanguage;
+import com.ulegalize.enumeration.EnumRefTransaction;
+import com.ulegalize.utils.Utils;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -77,7 +80,6 @@ public class ComptaDTO {
         this.poste = new ItemDto(idPost, posteDescription);
         this.montant = montant;
         this.idTransaction = idTransaction;
-        this.language = language;
         this.montantHt = montantHt;
         this.tiersFullname = tiersFullname;
 
@@ -87,5 +89,12 @@ public class ComptaDTO {
         this.factureLinkedFraisId = factureFraisId;
         this.factExtId = factExtId;
         this.factExtRef = factExtRef;
+
+        EnumLanguage enumLanguage = EnumLanguage.fromshortCode(language);
+        EnumRefTransaction enumRefTransaction = EnumRefTransaction.fromId(idTransaction);
+
+        if(enumRefTransaction!= null) {
+            transactionTypeItem = new ItemDto(idTransaction, Utils.getLabel(enumLanguage, enumRefTransaction.name(), null));
+        }
     }
 }
