@@ -76,8 +76,8 @@ public class ComptaDTO {
         this.posteDescription = posteDescription;
         this.poste = new ItemDto(idPost, posteDescription);
         this.montant = montant;
-        this.idTransaction;
-        this.language;
+        this.idTransaction = idTransaction;
+        this.language = language;
         this.montantHt = montantHt;
         this.tiersFullname = tiersFullname;
 
