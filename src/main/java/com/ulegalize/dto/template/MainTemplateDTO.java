@@ -8,4 +8,7 @@ public abstract class MainTemplateDTO {
     @Setter
     private Long id;
 
+    @Getter
+    @Setter
+    private String logo;
 }
