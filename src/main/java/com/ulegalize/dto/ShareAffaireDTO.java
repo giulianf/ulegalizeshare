@@ -21,6 +21,8 @@ public class ShareAffaireDTO implements Serializable {
     private EnumVCOwner enumVCOwner;
     private String userEmail;
     private String fullname;
+
+    private String nomenclature;
     private ZonedDateTime sharedDate;
 
     public ShareAffaireDTO() {
@@ -33,6 +35,7 @@ public class ShareAffaireDTO implements Serializable {
                            EnumVCOwner enumVCOwner,
                            String userEmail,
                            String fullname,
+                           String nomenclature,
                            ZonedDateTime sharedDate) {
         this.id = id;
         this.affaireId = affaireId;
@@ -42,6 +45,7 @@ public class ShareAffaireDTO implements Serializable {
         this.enumVCOwner = enumVCOwner;
         this.userEmail = userEmail;
         this.fullname = fullname;
+        this.nomenclature = nomenclature;
         this.sharedDate = sharedDate;
     }
 }
