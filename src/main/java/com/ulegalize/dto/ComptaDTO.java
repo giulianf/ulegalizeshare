@@ -19,7 +19,7 @@ public class ComptaDTO {
     BigDecimal montant;
     BigDecimal montantHt;
     Integer idTransaction;
-    String transactionLabel;
+    String language;
     BigDecimal ratio;
     Integer gridId;
     Integer idPost;
@@ -36,7 +36,7 @@ public class ComptaDTO {
 
     ItemDto poste;
 
-    ItemDto transaction;
+    ItemDto transactionTypeItem;
     String tiersFullname;
 
     // for invoice
@@ -67,7 +67,7 @@ public class ComptaDTO {
                      BigDecimal montant, BigDecimal montantHt,
                      String tiersFullname,
                      Long factureFraisId,
-                     Integer idTransaction, String transactionLabel,
+                     Integer idTransaction, String language,
                      boolean invoiceChecked, boolean alreadyInvoiced,
                      Long factExtId, String factExtRef) {
         this.id = id;
@@ -75,8 +75,9 @@ public class ComptaDTO {
         this.idPost = idPost;
         this.posteDescription = posteDescription;
         this.poste = new ItemDto(idPost, posteDescription);
-        this.transaction= new ItemDto(idTransaction, transactionLabel);
         this.montant = montant;
+        this.idTransaction;
+        this.language;
         this.montantHt = montantHt;
         this.tiersFullname = tiersFullname;
 
