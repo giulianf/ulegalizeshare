@@ -1,5 +1,8 @@
 package com.ulegalize.dto;
 
+import com.ulegalize.enumeration.EnumLanguage;
+import com.ulegalize.enumeration.EnumRefTransaction;
+import com.ulegalize.utils.Utils;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -19,6 +22,7 @@ public class ComptaDTO {
     BigDecimal montant;
     BigDecimal montantHt;
     Integer idTransaction;
+    String language;
     BigDecimal ratio;
     Integer gridId;
     Integer idPost;
@@ -34,6 +38,8 @@ public class ComptaDTO {
     String vcKey;
 
     ItemDto poste;
+
+    ItemDto transactionTypeItem;
     String tiersFullname;
 
     // for invoice
@@ -64,6 +70,7 @@ public class ComptaDTO {
                      BigDecimal montant, BigDecimal montantHt,
                      String tiersFullname,
                      Long factureFraisId,
+                     Integer idTransaction, String language,
                      boolean invoiceChecked, boolean alreadyInvoiced,
                      Long factExtId, String factExtRef) {
         this.id = id;
@@ -72,6 +79,7 @@ public class ComptaDTO {
         this.posteDescription = posteDescription;
         this.poste = new ItemDto(idPost, posteDescription);
         this.montant = montant;
+        this.idTransaction = idTransaction;
         this.montantHt = montantHt;
         this.tiersFullname = tiersFullname;
 
@@ -81,5 +89,12 @@ public class ComptaDTO {
         this.factureLinkedFraisId = factureFraisId;
         this.factExtId = factExtId;
         this.factExtRef = factExtRef;
+
+        EnumLanguage enumLanguage = EnumLanguage.fromshortCode(language);
+        EnumRefTransaction enumRefTransaction = EnumRefTransaction.fromId(idTransaction);
+
+        if(enumRefTransaction!= null) {
+            transactionTypeItem = new ItemDto(idTransaction, Utils.getLabel(enumLanguage, enumRefTransaction.name(), null));
+        }
     }
 }
