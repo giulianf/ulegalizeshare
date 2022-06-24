@@ -70,9 +70,8 @@ public class ComptaDTO {
                      BigDecimal montant, BigDecimal montantHt,
                      String tiersFullname,
                      Long factureFraisId,
-                     Integer idTransaction, String language,
                      boolean invoiceChecked, boolean alreadyInvoiced,
-                     Long factExtId, String factExtRef) {
+                     Long factExtId, String factExtRef, Integer idTransaction, String language) {
         this.id = id;
         this.vcKey = vcKey;
         this.idPost = idPost;
