@@ -16,11 +16,12 @@ public class TemplateDTO {
 
     private String templateUid;
 
-    public TemplateDTO(String templateName, String templateDescription, Long idTemplate, String templateUid) {
+    public TemplateDTO(String templateName, String templateDescription, Long idTemplate, String templateUid, String categoryTemplate) {
         this.templateName = templateName;
         this.templateDescription = templateDescription;
         this.idTemplate = idTemplate;
         this.templateUid = templateUid;
+        this.categoryTemplate = categoryTemplate;
     }
 
     public TemplateDTO(String templateName, String templateDescription, Long idTemplate, Long idTemplateFromTable) {
