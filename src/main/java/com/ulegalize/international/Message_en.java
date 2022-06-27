@@ -73,6 +73,7 @@ public class Message_en extends ListResourceBundle {
                 {"MAILWORKSPACEASSOCIATION", "Application for association with the lawfirm"},
                 {"MAILPAYMENTCANCELTEMPLATE", "Cancellation of payment modules "},
                 {"MAILPAYMENTFAILURETEMPLATE", "Error with payment method"},
+                {"MAILREPORTKPI", "Report KPI"},
                 {"ADMINISTRATEUR", "Administrator"},
                 {"TIERS_LECTURE", "Third Party - Read"},
                 {"DOSSIERS_LECTURE", "Folders - Reading"},

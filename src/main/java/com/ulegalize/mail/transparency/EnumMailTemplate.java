@@ -32,7 +32,8 @@ public enum EnumMailTemplate {
     MAILWORKSPACEASSOCIATION("mailAssociation"),
 
     MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel"),
-    MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure");
+    MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure"),
+    MAILREPORTKPI("mailReportKpi");
 
     @Getter
     private String name;

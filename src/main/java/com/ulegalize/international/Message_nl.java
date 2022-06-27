@@ -73,6 +73,7 @@ public class Message_nl extends ListResourceBundle {
                 {"MAILWORKSPACEASSOCIATION", "Verzoek om associatie met het advocatenkantoor"},
                 {"MAILPAYMENTCANCELTEMPLATE", "Annulering van betalingsmodules "},
                 {"MAILPAYMENTFAILURETEMPLATE", "Fout met betalingsmethode "},
+                {"MAILREPORTKPI", "Report KPI "},
                 {"ADMINISTRATEUR", "Beheerder"},
                 {"TIERS_LECTURE", "Tiers - lezen"},
                 {"DOSSIERS_LECTURE", "Records - lezen"},

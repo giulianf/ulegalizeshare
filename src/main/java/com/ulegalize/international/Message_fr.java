@@ -73,6 +73,7 @@ public class Message_fr extends ListResourceBundle {
                 {"MAILWORKSPACEASSOCIATION", "Demande d'association avec le cabinet"},
                 {"MAILPAYMENTCANCELTEMPLATE", "Annulation des modules de paiement"},
                 {"MAILPAYMENTFAILURETEMPLATE", "Erreur avec le mode de paiement"},
+                {"MAILREPORTKPI", "Report KPI"},
                 {"ADMINISTRATEUR", "Administrateur"},
                 {"TIERS_LECTURE", "Tiers - Lecture"},
                 {"DOSSIERS_LECTURE", "Dossiers - Lecture"},

@@ -74,6 +74,7 @@ public class Message_de extends ListResourceBundle {
                 {"MAILWORKSPACEASSOCIATION", "Antrag auf Assoziierung mit der Kanzlei"},
                 {"MAILPAYMENTCANCELTEMPLATE", "Die Zahlungsmodule werden annulliert"},
                 {"MAILPAYMENTFAILURETEMPLATE", "Antrag auf Partnerschaft mit der Anwaltskanzlei"},
+                {"MAILREPORTKPI", "Report KPI"},
                 {"ADMINISTRATEUR", "Administrateur"},
                 {"TIERS_LECTURE", "Dritte - Lesen"},
                 {"DOSSIERS_LECTURE", "Ordner - Lesen"},
