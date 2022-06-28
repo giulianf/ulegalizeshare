@@ -12,8 +12,8 @@ import javax.annotation.Generated;
 @NoArgsConstructor
 public class ImageLogo {
 
-    private Content content;
-    private Boolean optional;
     private String type;
+    private String value;
+    private String fileName;
 
 }
