@@ -10,5 +10,5 @@ public abstract class MainTemplateDTO {
 
     @Getter
     @Setter
-    private String logo;
+    private ImageLogo image_logo;
 }

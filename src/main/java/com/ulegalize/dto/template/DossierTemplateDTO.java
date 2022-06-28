@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 public class DossierTemplateDTO extends MainTemplateDTO {
 
-    private DossierDTO dossierDTO;
+    private DossierDTO dossier;
     private List<ContactSummary> contacts;
     private List<LawyerDTO> users;
 
