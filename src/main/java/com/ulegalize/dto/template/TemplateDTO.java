@@ -17,15 +17,7 @@ public class TemplateDTO {
 
     private String templateUid;
     
-    private ItemLongDto templateCategoryItem;
-
-    public TemplateDTO(String templateName, String templateDescription, Long idTemplate, String templateUid, ItemLongDto templateCategoryItem) {
-        this.templateName = templateName;
-        this.templateDescription = templateDescription;
-        this.idTemplate = idTemplate;
-        this.templateUid = templateUid;
-        this.templateCategoryItem = templateCategoryItem;
-    }
+    private Long idTemplateCategory;
 
     public TemplateDTO(String templateName, String templateDescription, Long idTemplate, Long idTemplateFromTable) {
         this.templateName = templateName;
