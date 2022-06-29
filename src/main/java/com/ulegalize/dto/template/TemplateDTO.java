@@ -1,5 +1,6 @@
 package com.ulegalize.dto.template;
 
+import com.ulegalize.dto.ItemLongDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,13 +16,15 @@ public class TemplateDTO {
     private String categoryTemplate;
 
     private String templateUid;
+    
+    private ItemLongDto templateCategoryItem;
 
-    public TemplateDTO(String templateName, String templateDescription, Long idTemplate, String templateUid, String categoryTemplate) {
+    public TemplateDTO(String templateName, String templateDescription, Long idTemplate, String templateUid, ItemLongDto templateCategoryItem) {
         this.templateName = templateName;
         this.templateDescription = templateDescription;
         this.idTemplate = idTemplate;
         this.templateUid = templateUid;
-        this.categoryTemplate = categoryTemplate;
+        this.templateCategoryItem = templateCategoryItem;
     }
 
     public TemplateDTO(String templateName, String templateDescription, Long idTemplate, Long idTemplateFromTable) {
