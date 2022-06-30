@@ -19,6 +19,8 @@ public class TemplateDTO {
     
     private Long idTemplateCategory;
 
+    private String vckey;
+
     public TemplateDTO(String templateName, String templateDescription, Long idTemplate, Long idTemplateFromTable) {
         this.templateName = templateName;
         this.templateDescription = templateDescription;
