@@ -16,7 +16,9 @@ import java.util.List;
 public class DossierTemplateDTO extends MainTemplateDTO {
 
     private DossierDTO dossier;
-    private List<ContactSummary> contacts;
+    private List<ContactSummary> contactsClient;
+    private List<ContactSummary> contactsOpposing;
+    private List<ContactSummary> contactsParty;
     private List<LawyerDTO> users;
 
 }

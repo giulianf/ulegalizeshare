@@ -24,7 +24,7 @@ Signin plugin
 2. gpg --full-gen-key (https://dzone.com/articles/publish-your-artifacts-to-maven-central point 8 to 9 )
 3. gpg --keyserver <hkp://keyserver.ubuntu.com> --send-keys
 4. gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg
-5. fill in the gradle.properties (/Users/yours/.gradle/gradle.properties) signing.keyId => gpg -K : get the last 8
+5. fill in the gradle.properties (/Users/yours/.gradle/gradle.properties) signing.keyId => gpg -K : get the last 8  
    digits from 'sec'   
    signing.password => passphrase
 
