@@ -21,6 +21,8 @@ public class TemplateDTO {
 
     private String vckey;
 
+    private boolean isActive;
+
     public TemplateDTO(String templateName, String templateDescription, Long idTemplate, Long idTemplateFromTable) {
         this.templateName = templateName;
         this.templateDescription = templateDescription;
