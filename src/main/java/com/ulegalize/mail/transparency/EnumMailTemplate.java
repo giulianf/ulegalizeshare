@@ -33,7 +33,10 @@ public enum EnumMailTemplate {
 
     MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel"),
     MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure"),
-    MAILREPORTKPI("mailReportKpi");
+    MAILREPORTKPI("mailReportKpi"),
+
+    // Template
+    MAILTEMPLATEDOSSIER("mailTemplateDossier");
 
     @Getter
     private String name;

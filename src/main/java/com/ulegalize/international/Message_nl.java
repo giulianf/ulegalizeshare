@@ -103,7 +103,9 @@ public class Message_nl extends ListResourceBundle {
                 {"CALENDAR_ECRITURE", "Calendar - schrijven"},
                 {"JUSTICIABLE_ECRITURE", "Rechtsmiddel - schrijven"},
                 {"JUSTICIABLE_ADMIN", "Rechtsmiddel - Admin"},
-                {"SUPER_ADMIN", "Super - Admin"}
+                {"SUPER_ADMIN", "Super - Admin"},
+                // Template
+                {"MAILTEMPLATEDOSSIER", "Uw document is klaar"}
         };
     }
 

@@ -104,7 +104,9 @@ public class Message_de extends ListResourceBundle {
                 {"CALENDAR_ECRITURE", "Kalender - Schreiben"},
                 {"JUSTICIABLE_ECRITURE", "Gerichtlich - Schreiben"},
                 {"JUSTICIABLE_ADMIN", "Gerichtlich - Admin"},
-                {"SUPER_ADMIN", "Super - Admin"}
+                {"SUPER_ADMIN", "Super - Admin"},
+                // Template
+                {"MAILTEMPLATEDOSSIER", "Ihr Dokument ist fertig"}
         };
     }
 
