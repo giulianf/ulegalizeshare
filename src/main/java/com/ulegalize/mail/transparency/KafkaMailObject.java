@@ -2,7 +2,10 @@ package com.ulegalize.mail.transparency;
 
 import com.ulegalize.dto.ItemByteDto;
 import com.ulegalize.enumeration.EnumLanguage;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.ZonedDateTime;
@@ -11,7 +14,6 @@ import java.util.Map;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class KafkaMailObject implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -69,4 +71,24 @@ public class KafkaMailObject implements Serializable {
     @Getter
     @Setter
     private List<String> attendeesEmail;
+
+    @Override
+    public String toString() {
+        return "KafkaMailObject{" +
+                "eventId='" + eventId + '\'' +
+                ", enumMailTemplate=" + enumMailTemplate +
+                ", enumLanguage=" + enumLanguage +
+                ", template='" + template + '\'' +
+                ", subject='" + subject + '\'' +
+                ", location='" + location + '\'' +
+                ", context=" + context +
+                ", start=" + start +
+                ", end=" + end +
+                ", organizer='" + organizer + '\'' +
+                ", roomAttached=" + roomAttached +
+                ", isModerator=" + isModerator +
+                ", urlRoom='" + urlRoom + '\'' +
+                ", attendeesEmail=" + attendeesEmail +
+                '}';
+    }
 }
