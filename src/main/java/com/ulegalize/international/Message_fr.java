@@ -105,7 +105,7 @@ public class Message_fr extends ListResourceBundle {
                 {"JUSTICIABLE_ADMIN", "Justiciable - Admin"},
                 {"SUPER_ADMIN", "Super - Admin"},
                 // Template
-                {"MAILTEMPLATEDOSSIER", "Votre document est prêt"}
+                {"MAILTEMPLATEDOSSIER", "Votre document est prêt à être édité"}
         };
     }
 
