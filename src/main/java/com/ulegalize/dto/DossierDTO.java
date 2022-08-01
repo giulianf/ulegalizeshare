@@ -103,6 +103,8 @@ public class DossierDTO implements IDossierDTO {
         this.openDossier = openDossier;
         this.owner = enumVCOwner;
         this.lastAccessDate = lastAccessDate;
+        this.partiesName= partiesName;
+
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
@@ -118,7 +120,6 @@ public class DossierDTO implements IDossierDTO {
                 this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
                 this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(nomenclature) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
-
             }
         }
         this.nomenclature = nomenclature;
