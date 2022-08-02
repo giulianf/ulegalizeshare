@@ -109,7 +109,7 @@ public class DossierDTO implements IDossierDTO {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                if (this.companyClient != null || !this.companyClient.isEmpty()){
+                if (this.companyClient != null && !this.companyClient.isEmpty()){
                     this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " - " + companyClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
                 } else {
                     this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
