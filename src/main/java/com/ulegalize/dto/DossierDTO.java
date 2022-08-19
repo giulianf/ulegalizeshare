@@ -73,6 +73,7 @@ public class DossierDTO implements IDossierDTO {
     // used for the creation
     private List<Long> shareUsers;
     private String nomenclature;
+    private String drivePath;
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
@@ -80,7 +81,7 @@ public class DossierDTO implements IDossierDTO {
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       EnumDossierType type,
-                      Date lastAccessDate, String partiesName, String nomenclature) {
+                      Date lastAccessDate, String partiesName, String nomenclature, String drivePath) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -123,6 +124,7 @@ public class DossierDTO implements IDossierDTO {
             }
         }
         this.nomenclature = nomenclature;
+        this.drivePath = drivePath;
 
     }
 
