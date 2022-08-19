@@ -50,4 +50,6 @@ public interface IDossierDTO {
     Date getLastAccessDate();
 
     String getNomenclature();
+
+    String getDrivePath();
 }
