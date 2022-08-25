@@ -105,7 +105,12 @@ public class Message_nl extends ListResourceBundle {
                 {"JUSTICIABLE_ADMIN", "Rechtsmiddel - Admin"},
                 {"SUPER_ADMIN", "Super - Admin"},
                 // Template
-                {"MAILTEMPLATEDOSSIER", "Uw document is klaar om te worden bewerkt"}
+                {"MAILTEMPLATEDOSSIER", "Uw document is klaar om te worden bewerkt"},
+                // EnumDossierContactType
+                {"CLIENT", "Opdrachtgever"},
+                {"OPPOSING", "Wederpartij"},
+                {"PARTY", "Partij"},
+                {"OPPONENT_COUNSIL", "Tegengestelde raadsman"},
         };
     }
 
