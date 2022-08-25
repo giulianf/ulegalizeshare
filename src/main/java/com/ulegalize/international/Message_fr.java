@@ -105,7 +105,12 @@ public class Message_fr extends ListResourceBundle {
                 {"JUSTICIABLE_ADMIN", "Justiciable - Admin"},
                 {"SUPER_ADMIN", "Super - Admin"},
                 // Template
-                {"MAILTEMPLATEDOSSIER", "Votre document est prêt à être édité"}
+                {"MAILTEMPLATEDOSSIER", "Votre document est prêt à être édité"},
+                // EnumDossierContactType
+                {"CLIENT", "Client"},
+                {"OPPOSING", "Partie adverse"},
+                {"PARTY", "Partie"},
+                {"OPPONENT_COUNSIL", "Conseil partie adverse"},
         };
     }
 
