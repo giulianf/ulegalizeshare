@@ -52,4 +52,6 @@ public interface IDossierDTO {
     String getNomenclature();
 
     String getDrivePath();
+
+    ItemDto getVirtualcabNomenclature();
 }
