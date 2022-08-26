@@ -53,5 +53,5 @@ public interface IDossierDTO {
 
     String getDrivePath();
 
-    ItemDto getVirtualcabNomenclature();
+    ItemLongDto getVirtualcabNomenclature();
 }
