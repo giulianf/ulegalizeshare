@@ -74,7 +74,7 @@ public class DossierDTO implements IDossierDTO {
     private List<Long> shareUsers;
     private String nomenclature;
     private String drivePath;
-    private ItemDto virtualcabNomenclature;
+    private ItemLongDto virtualcabNomenclature;
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
