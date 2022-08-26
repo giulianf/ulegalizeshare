@@ -74,6 +74,7 @@ public class DossierDTO implements IDossierDTO {
     private List<Long> shareUsers;
     private String nomenclature;
     private String drivePath;
+    private VirtualcabNomenclatureDTO virtualcabNomenclatureDTO;
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
@@ -104,13 +105,13 @@ public class DossierDTO implements IDossierDTO {
         this.openDossier = openDossier;
         this.owner = enumVCOwner;
         this.lastAccessDate = lastAccessDate;
-        this.partiesName= partiesName;
+        this.partiesName = partiesName;
 
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                if (this.companyClient != null && !this.companyClient.isEmpty()){
+                if (this.companyClient != null && !this.companyClient.isEmpty()) {
                     this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " - " + companyClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
                 } else {
                     this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
