@@ -5,15 +5,15 @@ import lombok.Data;
 @Data
 public class NomenclatureConfigDTO {
     private Long vcNomenclature;
-    private String vcKey, label, parameter;
+    private String vcKey, description, parameter;
 
     public NomenclatureConfigDTO() {
     }
 
-    public NomenclatureConfigDTO(Long vcNomenclature, String vcKey, String label, String parameter) {
+    public NomenclatureConfigDTO(Long vcNomenclature, String vcKey, String description, String parameter) {
         this.vcNomenclature = vcNomenclature;
         this.vcKey = vcKey;
-        this.label = label;
+        this.description = description;
         this.parameter = parameter;
     }
 }
