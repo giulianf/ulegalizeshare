@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DossierContactDTO {
 
-    private ItemLongDto client;
+    private ItemDto client;
 
     private ItemDto clientType;
 }
