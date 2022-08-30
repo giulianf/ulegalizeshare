@@ -69,6 +69,8 @@ public class DossierDTO implements IDossierDTO {
     private String initiales;
     private List<ItemClientDto> clientList;
 
+    private List<DossierContactDTO> dossierContactDTO;
+
     private Date lastAccessDate;
     // used for the creation
     private List<Long> shareUsers;
