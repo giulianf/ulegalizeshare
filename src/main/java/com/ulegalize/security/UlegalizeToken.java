@@ -65,6 +65,9 @@ public class UlegalizeToken implements Serializable {
     @Getter
     @Setter
     protected String dropboxToken;
+    @Getter
+    @Setter
+    protected String onedriveToken;
 
     @Getter
     @Setter
