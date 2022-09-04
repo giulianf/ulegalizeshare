@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 @Data
@@ -22,33 +23,13 @@ public class ProfileDTO implements Serializable {
     private String language;
     private String symbolCurrency;
     private Long userId;
+    private String userLoginId;
     private List<Integer> enumRights;
     private DriveType driveType;
     private String dropboxToken;
     private String onedriveToken;
+    private String onedriveRefreshToken;
+    private ZonedDateTime onedriveExpireToken;
     private boolean verified;
 
-    public ProfileDTO(Long id,
-                      String fullName,
-                      String email,
-                      String vcKeySelected,
-                      String language,
-                      String symbolCurrency,
-                      Long userId,
-                      DriveType driveType,
-                      String dropboxToken,
-                      String onedriveToken,
-                      boolean verified) {
-        this.id = id;
-        this.fullName = fullName;
-        this.email = email;
-        this.vcKeySelected = vcKeySelected;
-        this.language = language;
-        this.symbolCurrency = symbolCurrency;
-        this.userId = userId;
-        this.driveType = driveType;
-        this.dropboxToken = dropboxToken;
-        this.onedriveToken = onedriveToken;
-        this.verified = verified;
-    }
 }
