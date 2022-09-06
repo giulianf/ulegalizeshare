@@ -11,6 +11,11 @@ public class ClientsUtils {
         return lastname + " " + firstname + " " + companyName;
     }
 
+    public static String getFullname(String fullname, String company) {
+        String companyName = company != null && !company.isEmpty() ? " - " + company : "";
+        return fullname + " " + companyName;
+    }
+
     public static String getEmailFullname(String email, String lastname, String firstname, String company) {
         String companyName = company != null && !company.isEmpty() ? " - " + company : "";
         return lastname + " " + firstname + " " + companyName + " (" + email + ")";

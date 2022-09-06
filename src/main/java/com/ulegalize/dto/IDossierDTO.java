@@ -19,6 +19,8 @@ public interface IDossierDTO {
 
     String getPartiesName();
 
+    String getPartiesOppName();
+
     String getFirstnameClient();
 
     String getLastnameClient();
@@ -26,12 +28,6 @@ public interface IDossierDTO {
     String getCompanyClient();
 
     Long getIdClient();
-
-    String getAdverseFirstnameClient();
-
-    String getAdverseLastnameClient();
-
-    String getAdverseCompanyClient();
 
     Long getAdverseIdClient();
 

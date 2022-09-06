@@ -51,17 +51,13 @@ public class DossierDTO implements IDossierDTO {
     private Integer couthoraire;
     private String emailClient;
 
-    private String adverseFirstnameClient;
-
-    private String adverseLastnameClient;
-    private String adverseCompanyClient;
-
     private Long adverseIdClient;
 
     private String firstnameClient;
     private String lastnameClient;
     private String companyClient;
     private String partiesName;
+    private String partiesOppName;
     @JsonFormat(timezone = "GMT+02:00", pattern = "yyyy-MM-dd")
     private Date birthdateClient;
     private Boolean isDigital;
@@ -80,7 +76,7 @@ public class DossierDTO implements IDossierDTO {
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       String firstnameClient, String lastnameClient, String companyClient, Long idClient,
-                      String adverseFirstnameClient, String adverseLastnameClient, String adverseCompanyClient, Long idClientAdverse,
+                      String adverseCompanyClient, Long idClientAdverse,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       EnumDossierType type,
@@ -95,10 +91,7 @@ public class DossierDTO implements IDossierDTO {
         this.client = new ItemLongDto(idClient, ClientsUtils.getFullname(lastnameClient, firstnameClient, companyClient));
 
         this.idClient = idClient;
-        this.adverseFirstnameClient = adverseFirstnameClient;
-        this.adverseLastnameClient = adverseLastnameClient;
-        this.adverseCompanyClient = adverseCompanyClient;
-        this.adverseClient = new ItemLongDto(idClientAdverse, ClientsUtils.getFullname(adverseLastnameClient, adverseFirstnameClient, adverseCompanyClient));
+        this.adverseClient = new ItemLongDto(idClientAdverse, ClientsUtils.getFullname(partiesOppName, adverseCompanyClient));
 
         this.idAdverseClient = idClientAdverse;
         this.balance = balance;
@@ -111,12 +104,12 @@ public class DossierDTO implements IDossierDTO {
 
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + partiesOppName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
                 if (this.companyClient != null && !this.companyClient.isEmpty()) {
-                    this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " - " + companyClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
+                    this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " - " + companyClient + " / " + partiesOppName; //2019 / 0012 blahaz/azklk
                 } else {
-                    this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " / " + adverseLastnameClient + " " + adverseFirstnameClient; //2019 / 0012 blahaz/azklk
+                    this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " / " + partiesOppName; //2019 / 0012 blahaz/azklk
                 }
             }
         } else {
