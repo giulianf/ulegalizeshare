@@ -80,7 +80,10 @@ public class DossierDTO implements IDossierDTO {
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       EnumDossierType type,
-                      Date lastAccessDate, String partiesName, String nomenclature, String drivePath) {
+                      Date lastAccessDate,
+                      String partiesName,
+                      String partiesOppName,
+                      String nomenclature, String drivePath) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -101,6 +104,7 @@ public class DossierDTO implements IDossierDTO {
         this.owner = enumVCOwner;
         this.lastAccessDate = lastAccessDate;
         this.partiesName = partiesName;
+        this.partiesOppName = partiesOppName;
 
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
