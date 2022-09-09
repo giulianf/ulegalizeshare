@@ -19,17 +19,7 @@ public interface IDossierDTO {
 
     String getPartiesName();
 
-    String getPartiesOppName();
-
-    String getFirstnameClient();
-
-    String getLastnameClient();
-
-    String getCompanyClient();
-
     Long getIdClient();
-
-    Long getAdverseIdClient();
 
     BigDecimal getBalance();
 
