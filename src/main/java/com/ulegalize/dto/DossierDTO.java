@@ -108,12 +108,12 @@ public class DossierDTO implements IDossierDTO {
 
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + partiesOppName; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = partiesOppName == null ? DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient : DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + lastnameClient + " " + firstnameClient + " / " + partiesOppName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
                 if (this.companyClient != null && !this.companyClient.isEmpty()) {
-                    this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " - " + companyClient + " / " + partiesOppName; //2019 / 0012 blahaz/azklk
+                    this.label = partiesOppName == null ? DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " - " + companyClient : DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " - " + companyClient + " / " + partiesOppName; //2019 / 0012 blahaz/azklk
                 } else {
-                    this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " / " + partiesOppName; //2019 / 0012 blahaz/azklk
+                    this.label = partiesOppName == null ? DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient : DossiersUtils.getDossierLabelItem(nomenclature) + " - " + lastnameClient + " " + firstnameClient + " / " + partiesOppName; //2019 / 0012 blahaz/azklk
                 }
             }
         } else {
