@@ -51,7 +51,6 @@ public class LawfirmDTO extends AbstractRestObject {
 
 	private List<LawyerDTO> lawyers;
 	private String clientFrom;
-	private String nomenclatureDossier;
 
 	public LawfirmDTO() {
 
@@ -76,8 +75,7 @@ public class LawfirmDTO extends AbstractRestObject {
 					  String fax,
 					  Boolean isNotification,
 					  byte[] logo,
-					  DriveType driveType,
-					  String nomenclatureDossier
+					  DriveType driveType
 	) {
 		this.vckey = vckey;
 		this.name = name;
@@ -102,8 +100,5 @@ public class LawfirmDTO extends AbstractRestObject {
 		if (isNotification != null){
 			this.isNotification = isNotification;
 		}
-
-		this.nomenclatureDossier = nomenclatureDossier;
-
 	}
 }
