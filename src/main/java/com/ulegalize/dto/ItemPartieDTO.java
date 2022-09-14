@@ -38,6 +38,10 @@ public class ItemPartieDTO {
     @Setter
     private String vcKey;
 
+    @Getter
+    @Setter
+    private Long contactId;
+
     public ItemPartieDTO(String id, String label, String email, Integer functionId, String functionLabel, EnumPartieType type) {
         this.id = id;
         this.label = label;
