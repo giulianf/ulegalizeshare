@@ -42,12 +42,13 @@ public class ItemPartieDTO {
     @Setter
     private Long contactId;
 
-    public ItemPartieDTO(String id, String label, String email, Integer functionId, String functionLabel, EnumPartieType type) {
+    public ItemPartieDTO(String id, String label, String email, Integer functionId, String functionLabel, EnumPartieType type, Long contactId) {
         this.id = id;
         this.label = label;
         this.email = email;
         this.function = functionLabel;
         this.functionItem = new ItemIntegerDto(functionId, functionLabel);
         this.type = type;
+        this.contactId = contactId;
     }
 }
