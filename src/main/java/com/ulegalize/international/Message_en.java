@@ -16,6 +16,7 @@ public class Message_en extends ListResourceBundle {
                 {"SELL", "Sales invoice"},
                 {"CREDIT", "Credit score"},
                 {"TEMP", "Temporary invoice"},
+                {"TEMP_NC", "Temporary credit"},
                 {"PRO_ACCOUNT", "Professioneel account"},
                 {"ACCOUNT_TIERS", "Third-party account / CARPA"},
                 {"PERM", "Permanent"},

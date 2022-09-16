@@ -16,6 +16,7 @@ public class Message_nl extends ListResourceBundle {
                 {"SELL", "Verkoopfactuur"},
                 {"CREDIT", "Creditnota"},
                 {"TEMP", "Tijdelijke factuur"},
+                {"TEMP_NC", "Tijdelijke credit"},
                 {"PRO_ACCOUNT", "Professioneel account"},
                 {"ACCOUNT_TIERS", "Account van derden / CARPA"},
                 {"PERM", "Permanent"},

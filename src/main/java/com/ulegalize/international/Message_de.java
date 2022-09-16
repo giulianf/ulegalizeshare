@@ -16,6 +16,7 @@ public class Message_de extends ListResourceBundle {
                 {"SELL", "Verkaufsrechnung"},
                 {"CREDIT", "Gutschrift"},
                 {"TEMP", "Vorläufige Rechnung"},
+                {"TEMP_NC", "Vorläufige Gutschrift"},
                 {"PRO_ACCOUNT", "Professionelles Konto"},
                 {"ACCOUNT_TIERS", "Drittkonto / CARPA"},
                 {"PERM", "Ständigen"},

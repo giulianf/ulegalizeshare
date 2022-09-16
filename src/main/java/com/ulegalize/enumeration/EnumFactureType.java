@@ -5,7 +5,8 @@ import lombok.Getter;
 public enum EnumFactureType {
     SELL(1, "FV"),
     CREDIT(2, "NC"),
-    TEMP(3, "FT");
+    TEMP(3, "FT"),
+    TEMP_NC(4, "NT");
 
     @Getter
     private long id;

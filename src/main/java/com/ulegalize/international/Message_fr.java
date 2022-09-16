@@ -16,6 +16,7 @@ public class Message_fr extends ListResourceBundle {
                 {"SELL", "Facture vente"},
                 {"CREDIT", "Note de crédit"},
                 {"TEMP", "Facture temporaire"},
+                {"TEMP_NC", "Note temporaire"},
                 {"PRO_ACCOUNT", "Compte professionnel"},
                 {"ACCOUNT_TIERS", "Compte tiers / CARPA"},
                 {"PERM", "Permanence"},
