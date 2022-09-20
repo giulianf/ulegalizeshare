@@ -8,6 +8,7 @@ import java.time.ZonedDateTime;
 
 @Data
 public class LawfirmDriveDTO extends AbstractRestObject {
+	private String vckey;
 
 	private DriveType driveType;
 	private String dropboxToken;

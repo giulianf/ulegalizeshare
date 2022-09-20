@@ -47,10 +47,12 @@ public class LawfirmDTO extends AbstractRestObject {
 
 	private boolean acceptAppointments;
 
-	private DriveType driveType;
 
 	private List<LawyerDTO> lawyers;
 	private String clientFrom;
+
+
+	private DriveType driveType;
 
 	public LawfirmDTO() {
 
