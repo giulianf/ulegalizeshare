@@ -4,9 +4,11 @@ import com.ulegalize.AbstractRestObject;
 import com.ulegalize.enumeration.DriveType;
 import com.ulegalize.enumeration.EnumRefCurrency;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
+@ToString(exclude = "logo")
 @Data
 public class LawfirmDTO extends AbstractRestObject {
 

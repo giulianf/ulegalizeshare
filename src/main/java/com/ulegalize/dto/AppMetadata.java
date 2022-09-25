@@ -12,4 +12,7 @@ public class AppMetadata {
     @Getter
     @Setter
     private Boolean signedup_submitted_portal;
+    @Getter
+    @Setter
+    private Boolean kpi_access;
 }
