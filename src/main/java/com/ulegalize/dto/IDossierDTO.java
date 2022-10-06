@@ -19,8 +19,6 @@ public interface IDossierDTO {
 
     String getPartiesName();
 
-    Long getIdClient();
-
     BigDecimal getBalance();
 
     String getVckeyOwner();

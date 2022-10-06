@@ -33,7 +33,6 @@ public class DossierDTO implements IDossierDTO {
     private String vckeyOwner;
 
     private Long idUserResponsible;
-    private Long idClient;
 
     private Long id_matiere_rubrique;
     private ItemLongDto matiere_rubrique;
@@ -62,7 +61,6 @@ public class DossierDTO implements IDossierDTO {
     private ItemLongDto virtualcabNomenclature;
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
-                      Long idClient,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       EnumDossierType type,
@@ -73,7 +71,6 @@ public class DossierDTO implements IDossierDTO {
         this.year = year;
         this.num = number;
         this.initiales = initiales;
-        this.idClient = idClient;
         this.balance = balance;
         this.type = type;
         this.closeDossier = closeDossier;
