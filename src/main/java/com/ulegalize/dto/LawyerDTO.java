@@ -4,10 +4,12 @@ import com.ulegalize.AbstractRestObject;
 import com.ulegalize.LawyerDuty;
 import com.ulegalize.enumeration.EnumValid;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@ToString(exclude = "picture")
 @Data
 public class LawyerDTO extends AbstractRestObject {
 

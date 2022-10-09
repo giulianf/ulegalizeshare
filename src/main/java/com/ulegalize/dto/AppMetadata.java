@@ -15,4 +15,7 @@ public class AppMetadata {
     @Getter
     @Setter
     private Boolean kpi_access;
+    @Getter
+    @Setter
+    private String vcKey;
 }
