@@ -10,7 +10,6 @@ import java.util.List;
 public class CaseCreationDTO extends AbstractRestObject implements Serializable {
 
     private DossierDTO dossier;
-    private ContactSummary contact;
     private List<ContactSummary> contactSummaryList;
     private String note;
     private List<ItemLongDto> cat;
