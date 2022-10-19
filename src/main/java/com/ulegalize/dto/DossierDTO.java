@@ -59,7 +59,7 @@ public class DossierDTO implements IDossierDTO {
     private String nomenclature;
     private String drivePath;
     private ItemLongDto virtualcabNomenclature;
-    private List<ItemDto> tagsList;
+    private List<ItemLongDto> tagsList;
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
