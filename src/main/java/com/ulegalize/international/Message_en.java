@@ -75,6 +75,7 @@ public class Message_en extends ListResourceBundle {
                 {"MAILPAYMENTCANCELTEMPLATE", "Cancellation of payment modules "},
                 {"MAILPAYMENTFAILURETEMPLATE", "Error with payment method"},
                 {"MAILREPORTKPI", "Report KPI"},
+                {"MAILPOSTBID", "status of your shipment"},
                 {"ADMINISTRATEUR", "Administrator"},
                 {"TIERS_LECTURE", "Third Party - Read"},
                 {"DOSSIERS_LECTURE", "Folders - Reading"},

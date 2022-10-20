@@ -76,6 +76,8 @@ public class Message_de extends ListResourceBundle {
                 {"MAILPAYMENTCANCELTEMPLATE", "Die Zahlungsmodule werden annulliert"},
                 {"MAILPAYMENTFAILURETEMPLATE", "Antrag auf Partnerschaft mit der Anwaltskanzlei"},
                 {"MAILREPORTKPI", "Report KPI"},
+                {"MAILPOSTBID", "Status Ihrer Sendung"},
+                {"envoi", "Report KPI"},
                 {"ADMINISTRATEUR", "Administrateur"},
                 {"TIERS_LECTURE", "Dritte - Lesen"},
                 {"DOSSIERS_LECTURE", "Ordner - Lesen"},

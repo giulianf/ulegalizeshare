@@ -75,6 +75,7 @@ public class Message_fr extends ListResourceBundle {
                 {"MAILPAYMENTCANCELTEMPLATE", "Annulation des modules de paiement"},
                 {"MAILPAYMENTFAILURETEMPLATE", "Erreur avec le mode de paiement"},
                 {"MAILREPORTKPI", "Report KPI"},
+                {"MAILPOSTBID", "Status de votre envoi"},
                 {"ADMINISTRATEUR", "Administrateur"},
                 {"TIERS_LECTURE", "Tiers - Lecture"},
                 {"DOSSIERS_LECTURE", "Dossiers - Lecture"},

@@ -75,6 +75,7 @@ public class Message_nl extends ListResourceBundle {
                 {"MAILPAYMENTCANCELTEMPLATE", "Annulering van betalingsmodules "},
                 {"MAILPAYMENTFAILURETEMPLATE", "Fout met betalingsmethode "},
                 {"MAILREPORTKPI", "Report KPI "},
+                {"MAILPOSTBID", "status van uw zending"},
                 {"ADMINISTRATEUR", "Beheerder"},
                 {"TIERS_LECTURE", "Tiers - lezen"},
                 {"DOSSIERS_LECTURE", "Records - lezen"},

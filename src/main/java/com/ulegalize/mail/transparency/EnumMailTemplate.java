@@ -34,6 +34,7 @@ public enum EnumMailTemplate {
     MAILPAYMENTCANCELTEMPLATE("mailPaymentCancel"),
     MAILPAYMENTFAILURETEMPLATE("mailPaymentFailure"),
     MAILREPORTKPI("mailReportKpi"),
+    MAILPOSTBID("mailPostBird"),
 
     // Template
     MAILTEMPLATEDOSSIER("mailTemplateDossier");
