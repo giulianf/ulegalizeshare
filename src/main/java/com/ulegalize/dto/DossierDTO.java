@@ -60,6 +60,7 @@ public class DossierDTO implements IDossierDTO {
     private String drivePath;
     private ItemLongDto virtualcabNomenclature;
     private List<ItemLongDto> tagsList;
+    private String tagsName;
 
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
@@ -67,7 +68,7 @@ public class DossierDTO implements IDossierDTO {
                       EnumDossierType type,
                       Date lastAccessDate,
                       String partiesName,
-                      String nomenclature, String drivePath) {
+                      String nomenclature, String drivePath, String tagsName) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -95,6 +96,7 @@ public class DossierDTO implements IDossierDTO {
         }
         this.nomenclature = nomenclature;
         this.drivePath = drivePath;
+        this.tagsName = tagsName;
 
     }
 
