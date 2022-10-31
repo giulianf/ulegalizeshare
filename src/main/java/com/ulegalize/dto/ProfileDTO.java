@@ -31,5 +31,6 @@ public class ProfileDTO implements Serializable {
     private String onedriveRefreshToken;
     private ZonedDateTime onedriveExpireToken;
     private boolean verified;
+    private String clientFrom;
 
 }
