@@ -72,6 +72,10 @@ public class KafkaMailObject implements Serializable {
     @Setter
     private List<String> attendeesEmail;
 
+    @Getter
+    @Setter
+    private String replyTo;
+
     @Override
     public String toString() {
         return "KafkaMailObject{" +
@@ -89,6 +93,7 @@ public class KafkaMailObject implements Serializable {
                 ", isModerator=" + isModerator +
                 ", urlRoom='" + urlRoom + '\'' +
                 ", attendeesEmail=" + attendeesEmail +
+                ", replyTo=" + replyTo +
                 '}';
     }
 }
