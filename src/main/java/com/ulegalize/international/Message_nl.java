@@ -113,6 +113,7 @@ public class Message_nl extends ListResourceBundle {
                 {"OPPOSING", "Wederpartij"},
                 {"PARTY", "Partij"},
                 {"OPPONENT_COUNSIL", "Tegengestelde raadsman"},
+                {"OTHER", "Andere"},
         };
     }
 
