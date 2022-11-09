@@ -113,6 +113,7 @@ public class Message_fr extends ListResourceBundle {
                 {"OPPOSING", "Partie adverse"},
                 {"PARTY", "Partie"},
                 {"OPPONENT_COUNSIL", "Conseil partie adverse"},
+                {"OTHER", "Autre"},
         };
     }
 

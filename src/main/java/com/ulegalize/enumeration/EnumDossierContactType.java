@@ -4,7 +4,8 @@ public enum EnumDossierContactType {
     CLIENT(1),
     OPPOSING(2),
     PARTY(3),
-    OPPONENT_COUNSIL(4);
+    OPPONENT_COUNSIL(4),
+    OTHER(5);
 
     private int id;
 
