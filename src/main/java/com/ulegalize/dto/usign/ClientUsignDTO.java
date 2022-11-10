@@ -29,5 +29,5 @@ public class ClientUsignDTO implements Serializable {
     private int sequence = 1;
 
     private Date birthdate;
-
+    private Long clientId;
 }
