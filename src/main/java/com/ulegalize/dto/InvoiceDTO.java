@@ -39,6 +39,8 @@ public class InvoiceDTO {
     private ItemDto echeanceItem;
     private Long clientId;
     private ItemLongDto clientItem;
+    private Integer bankAccountId;
+    private ItemIntegerDto bankAccountItem;
 
     private List<InvoiceDetailsDTO> invoiceDetailsDTOList = new ArrayList<>();
     private List<Long> prestationIdList = new ArrayList<>();
