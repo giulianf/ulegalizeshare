@@ -1,27 +1,26 @@
 package com.ulegalize;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
-public abstract class AbstractRestObject {
-	
-	
-	private Date creationDate;
-	private Date updateDate;
-	
-	
-	public Date getCreationDate() {
-		return creationDate;
-	}
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
-	}
-	public Date getUpdateDate() {
-		return updateDate;
-	}
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
-	}
-	
-	
 
+/**
+ * The type Abstract rest object.
+ */
+public abstract class AbstractRestObject {
+
+	/**
+	 * The Creation date.
+	 */
+	@Getter
+	@Setter
+	protected Date creationDate;
+	/**
+	 * The Update date.
+	 */
+	@Getter
+	@Setter
+	protected Date updateDate;
 }

@@ -2,25 +2,51 @@ package com.ulegalize.enumeration;
 
 import lombok.Getter;
 
+/**
+ * The enum Enum account type.
+ */
 public enum EnumAccountType {
 
-	PRO_ACCOUNT(1),
-	ACCOUNT_TIERS(2),
-	CASH(3);
+    /**
+     * Pro account enum account type.
+     */
+    PRO_ACCOUNT(1),
+    /**
+     * Account tiers enum account type.
+     */
+    ACCOUNT_TIERS(2),
+    /**
+     * Cash enum account type.
+     */
+    CASH(3);
 
-	@Getter
-	private int id;
+    /**
+     * The Id.
+     */
+    @Getter
+    private int id;
 
-	EnumAccountType(int id) {
-		this.id = id;
-	}
+    /**
+     * Instantiates a new Enum account type.
+     *
+     * @param id the id
+     */
+    EnumAccountType(int id) {
+        this.id = id;
+    }
 
 
-	public static EnumAccountType fromId(int id) {
-		for (EnumAccountType enumAccountType : values()) {
-			if (enumAccountType.getId() == id)
-				return enumAccountType;
-		}
-		return null;
-	}
+    /**
+     * From id enum account type.
+     *
+     * @param id the id
+     * @return the enum account type
+     */
+    public static EnumAccountType fromId(int id) {
+        for (EnumAccountType enumAccountType : values()) {
+            if (enumAccountType.getId() == id)
+                return enumAccountType;
+        }
+        return null;
+    }
 }

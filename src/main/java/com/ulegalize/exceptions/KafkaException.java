@@ -1,12 +1,23 @@
 package com.ulegalize.exceptions;
 
+/**
+ * The type Kafka exception.
+ */
 public class KafkaException extends Exception {
 
-  public KafkaException() {
-    super();
-  }
+    /**
+     * Instantiates a new Kafka exception.
+     */
+    public KafkaException() {
+        super();
+    }
 
-  public KafkaException(String error) {
-    super(error);
-  }
+    /**
+     * Instantiates a new Kafka exception.
+     *
+     * @param error the error
+     */
+    public KafkaException(String error) {
+        super(error);
+    }
 }

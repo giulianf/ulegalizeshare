@@ -3,8 +3,22 @@ package com.ulegalize.utils;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ * The type Prestation utils.
+ */
 public class PrestationUtils {
 
+    /**
+     * Calculate vat big decimal.
+     *
+     * @param forfait     the forfait
+     * @param minutes     the minutes
+     * @param hours       the hours
+     * @param couthoraire the couthoraire
+     * @param forfaitHt   the forfait ht
+     * @param vat         the vat
+     * @return the big decimal
+     */
     public static BigDecimal calculateVAT(boolean forfait, BigDecimal minutes, BigDecimal hours, Integer couthoraire, BigDecimal forfaitHt, BigDecimal vat) {
 
         if (!forfait) {
@@ -16,6 +30,16 @@ public class PrestationUtils {
         }
     }
 
+    /**
+     * Calculate hvat big decimal.
+     *
+     * @param forfait     the forfait
+     * @param minutes     the minutes
+     * @param hours       the hours
+     * @param couthoraire the couthoraire
+     * @param forfaitHt   the forfait ht
+     * @return the big decimal
+     */
     public static BigDecimal calculateHVAT(boolean forfait, BigDecimal minutes, BigDecimal hours, Integer couthoraire, BigDecimal forfaitHt) {
         if (!forfait) {
             // (( (dh * 60) + dm ) / 60 ) * couthoraire

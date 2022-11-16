@@ -12,66 +12,120 @@ import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Kafka mail object.
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 public class KafkaMailObject implements Serializable {
 
+    /**
+     * The constant serialVersionUID.
+     */
     private static final long serialVersionUID = 1L;
 
+    /**
+     * The Event id.
+     */
     @Getter
     @Setter
     private String eventId;
+    /**
+     * The Enum mail template.
+     */
     @Getter
     @Setter
     private EnumMailTemplate enumMailTemplate;
+    /**
+     * The Enum language.
+     */
     @Getter
     @Setter
     private EnumLanguage enumLanguage;
+    /**
+     * The Template.
+     */
     @Getter
     @Setter
     private String template;
+    /**
+     * The Subject.
+     */
     @Getter
     @Setter
     private String subject;
+    /**
+     * The Location.
+     */
     @Getter
     @Setter
     private String location;
+    /**
+     * The Context.
+     */
     @Getter
     @Setter
     private Map<String, Object> context;
 
-    // start date of the event
+    /**
+     * The Start.
+     */
+// start date of the event
     @Getter
     @Setter
     private ZonedDateTime start;
-    // end date of the event
+    /**
+     * The End.
+     */
+// end date of the event
     @Getter
     @Setter
     private ZonedDateTime end;
-    // organizer of the event
+    /**
+     * The Organizer.
+     */
+// organizer of the event
     @Getter
     @Setter
     private String organizer;
-    // jitsi if the room must be link to the body of the event
+    /**
+     * The Room attached.
+     */
+// jitsi if the room must be link to the body of the event
     @Getter
     @Setter
     private Boolean roomAttached;
+    /**
+     * The Is moderator.
+     */
     @Getter
     @Setter
     private Boolean isModerator = true;
-    // jitsi : this is the url room
+    /**
+     * The Url room.
+     */
+// jitsi : this is the url room
     @Getter
     @Setter
     private String urlRoom;
-    // File attached to event or email
+    /**
+     * The File attached.
+     */
+// File attached to event or email
     @Getter
     @Setter
     private List<ItemByteDto> fileAttached;
-    // participant of the event
+    /**
+     * The Attendees email.
+     */
+// participant of the event
     @Getter
     @Setter
     private List<String> attendeesEmail;
 
+    /**
+     * The Reply to.
+     */
     @Getter
     @Setter
     private String replyTo;

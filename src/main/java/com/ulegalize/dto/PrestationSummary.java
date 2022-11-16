@@ -7,43 +7,136 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
+/**
+ * The type Prestation summary.
+ */
 @Data
 public class PrestationSummary {
 
+    /**
+     * The Id.
+     */
     private Long id;
+    /**
+     * The Dossier id.
+     */
     private Long dossierId;
+    /**
+     * The Dossier.
+     */
     private String dossier;
+    /**
+     * The Dossier item.
+     */
     private ItemLongDto dossierItem;
 
+    /**
+     * The Id gest.
+     */
     private Long idGest;
+    /**
+     * The Id gest item.
+     */
     private ItemLongDto idGestItem;
+    /**
+     * The Ts type.
+     */
     private Integer tsType;
+    /**
+     * The Ts type item.
+     */
     private ItemDto tsTypeItem;
+    /**
+     * The Ts type description.
+     */
     private String tsTypeDescription;
+    /**
+     * The Couthoraire.
+     */
     private Integer couthoraire;
+    /**
+     * The Date action.
+     */
     private ZonedDateTime dateAction;
+    /**
+     * The Dh.
+     */
     private BigDecimal dh;
+    /**
+     * The Dm.
+     */
     private BigDecimal dm;
+    /**
+     * The Comment.
+     */
     private String comment;
+    /**
+     * The Total ht.
+     */
     private BigDecimal totalHt;
+    /**
+     * The Total ttc.
+     */
     private BigDecimal totalTTC;
+    /**
+     * The Vat.
+     */
     private BigDecimal vat;
+    /**
+     * The Vat item.
+     */
     private ItemBigDecimalDto vatItem;
+    /**
+     * The Forfait.
+     */
     private boolean forfait;
+    /**
+     * The Forfait ht.
+     */
     private BigDecimal forfaitHt = BigDecimal.ZERO;
 
-    // for invoice
+    /**
+     * The Invoice checked.
+     */
+// for invoice
     private boolean invoiceChecked;
+    /**
+     * The Already invoiced.
+     */
     private boolean alreadyInvoiced;
+    /**
+     * The Facture timesheet linked id.
+     */
     private Long factureTimesheetLinkedId;
+    /**
+     * The Facture timesheet ext id.
+     */
     private Long factureTimesheetExtId;
+    /**
+     * The Fact ext id.
+     */
     private Long factExtId;
+    /**
+     * The Fact ext ref.
+     */
     private String factExtRef;
+    /**
+     * The Year dossier.
+     */
     private String yearDossier;
+    /**
+     * The Num dossier.
+     */
     private Long numDossier;
+    /**
+     * The Email.
+     */
     private String email;
 
 
+    /**
+     * Instantiates a new Prestation summary.
+     */
     public PrestationSummary() {
 
     }
@@ -51,27 +144,27 @@ public class PrestationSummary {
     /**
      * Used for invoice
      *
-     * @param id
-     * @param dossierId
-     * @param nomenclature
-     * @param numDossier
-     * @param idGest
-     * @param email
-     * @param tsType
-     * @param tsTypeDescription
-     * @param couthoraire
-     * @param dateAction
-     * @param dh
-     * @param dm
-     * @param comment
-     * @param vat
-     * @param forfait
-     * @param forfaitHt
-     * @param factureTimesheetId
-     * @param invoiceChecked
-     * @param alreadyInvoiced
-     * @param factExtId
-     * @param factExtRef
+     * @param id                 the id
+     * @param dossierId          the dossier id
+     * @param nomenclature       the nomenclature
+     * @param numDossier         the num dossier
+     * @param idGest             the id gest
+     * @param email              the email
+     * @param tsType             the ts type
+     * @param tsTypeDescription  the ts type description
+     * @param couthoraire        the couthoraire
+     * @param dateAction         the date action
+     * @param dh                 the dh
+     * @param dm                 the dm
+     * @param comment            the comment
+     * @param vat                the vat
+     * @param forfait            the forfait
+     * @param forfaitHt          the forfait ht
+     * @param factureTimesheetId the facture timesheet id
+     * @param invoiceChecked     the invoice checked
+     * @param alreadyInvoiced    the already invoiced
+     * @param factExtId          the fact ext id
+     * @param factExtRef         the fact ext ref
      */
     public PrestationSummary(Long id, Long dossierId, String nomenclature, Long numDossier, Long idGest, String email, Integer tsType,
                              String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,

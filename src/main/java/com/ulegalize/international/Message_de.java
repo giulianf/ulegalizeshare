@@ -2,6 +2,9 @@ package com.ulegalize.international;
 
 import java.util.ListResourceBundle;
 
+/**
+ * The type Message de.
+ */
 public class Message_de extends ListResourceBundle {
 
     @Override

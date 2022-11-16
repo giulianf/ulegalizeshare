@@ -2,31 +2,70 @@ package com.ulegalize.enumeration;
 
 import lombok.Getter;
 
+/**
+ * The enum Enum calendar event type.
+ */
 public enum EnumCalendarEventType {
 
-	PERM("PERM", "red"),
-	RECORD("RECORD", "orange"),
-	TASK("TASK", "orange"),
-	RDV("RDV", "azure"),
-	AUD("AUD", "green"),
-	OTH("OTH", "grey");
+    /**
+     * Perm enum calendar event type.
+     */
+    PERM("PERM", "red"),
+    /**
+     * Record enum calendar event type.
+     */
+    RECORD("RECORD", "orange"),
+    /**
+     * Task enum calendar event type.
+     */
+    TASK("TASK", "orange"),
+    /**
+     * Rdv enum calendar event type.
+     */
+    RDV("RDV", "azure"),
+    /**
+     * Aud enum calendar event type.
+     */
+    AUD("AUD", "green"),
+    /**
+     * Oth enum calendar event type.
+     */
+    OTH("OTH", "grey");
 
-	@Getter
-	private String code;
-	@Getter
-	private String color;
+    /**
+     * The Code.
+     */
+    @Getter
+    private String code;
+    /**
+     * The Color.
+     */
+    @Getter
+    private String color;
 
-	EnumCalendarEventType(String code, String color) {
-		this.code = code;
-		this.color = color;
-	}
+    /**
+     * Instantiates a new Enum calendar event type.
+     *
+     * @param code  the code
+     * @param color the color
+     */
+    EnumCalendarEventType(String code, String color) {
+        this.code = code;
+        this.color = color;
+    }
 
 
-	public static EnumCalendarEventType fromCode(String code) {
-		for (EnumCalendarEventType enumCalendarEventType : values()) {
-			if (enumCalendarEventType.getCode().equalsIgnoreCase(code))
-				return enumCalendarEventType;
-		}
-		return null;
-	}
+    /**
+     * From code enum calendar event type.
+     *
+     * @param code the code
+     * @return the enum calendar event type
+     */
+    public static EnumCalendarEventType fromCode(String code) {
+        for (EnumCalendarEventType enumCalendarEventType : values()) {
+            if (enumCalendarEventType.getCode().equalsIgnoreCase(code))
+                return enumCalendarEventType;
+        }
+        return null;
+    }
 }

@@ -7,27 +7,85 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.List;
 
+/**
+ * The type Share affaire dto.
+ */
 @Data
 public class ShareAffaireDTO implements Serializable {
 
+    /**
+     * The Id.
+     */
     private Long id;
+    /**
+     * The Affaire id.
+     */
     private Long affaireId;
+    /**
+     * The Vc key.
+     */
     private String vcKey;
+    /**
+     * The Affaire id list.
+     */
     private List<Long> affaireIdList;
+    /**
+     * The Vc key item.
+     */
     private ItemStringDto vcKeyItem;
+    /**
+     * The All members.
+     */
     private boolean allMembers;
+    /**
+     * The User id selected.
+     */
     private List<Long> userIdSelected;
+    /**
+     * The User id.
+     */
     private Long userId;
+    /**
+     * The Enum vc owner.
+     */
     private EnumVCOwner enumVCOwner;
+    /**
+     * The User email.
+     */
     private String userEmail;
+    /**
+     * The Fullname.
+     */
     private String fullname;
 
+    /**
+     * The Nomenclature.
+     */
     private String nomenclature;
+    /**
+     * The Shared date.
+     */
     private ZonedDateTime sharedDate;
 
+    /**
+     * Instantiates a new Share affaire dto.
+     */
     public ShareAffaireDTO() {
     }
 
+    /**
+     * Instantiates a new Share affaire dto.
+     *
+     * @param id           the id
+     * @param affaireId    the affaire id
+     * @param userId       the user id
+     * @param vcKey        the vc key
+     * @param enumVCOwner  the enum vc owner
+     * @param userEmail    the user email
+     * @param fullname     the fullname
+     * @param nomenclature the nomenclature
+     * @param sharedDate   the shared date
+     */
     public ShareAffaireDTO(Long id,
                            Long affaireId,
                            Long userId,
