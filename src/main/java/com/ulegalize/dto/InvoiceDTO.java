@@ -125,6 +125,10 @@ public class InvoiceDTO {
      * The Bank account item.
      */
     private ItemIntegerDto bankAccountItem;
+    /**
+     * communication
+     */
+    private String communication;
 
     /**
      * The Invoice details dto list.
