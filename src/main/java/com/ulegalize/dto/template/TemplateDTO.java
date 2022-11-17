@@ -53,6 +53,11 @@ public class TemplateDTO {
     private boolean isActive;
 
     /**
+     * The contentHtml
+     */
+    private String contentHtml;
+
+    /**
      * Instantiates a new Template dto.
      *
      * @param templateName        the template name
