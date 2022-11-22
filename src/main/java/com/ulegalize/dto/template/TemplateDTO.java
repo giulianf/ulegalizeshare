@@ -58,6 +58,11 @@ public class TemplateDTO {
     private String contentHtml;
 
     /**
+     * ContactID
+     */
+    private Long contactId;
+
+    /**
      * Instantiates a new Template dto.
      *
      * @param templateName        the template name
