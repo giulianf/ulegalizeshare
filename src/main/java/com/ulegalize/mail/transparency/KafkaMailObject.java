@@ -129,6 +129,12 @@ public class KafkaMailObject implements Serializable {
     @Getter
     @Setter
     private String replyTo;
+    /**
+     * html content
+     */
+    @Getter
+    @Setter
+    private String htmlContent;
 
     @Override
     public String toString() {
