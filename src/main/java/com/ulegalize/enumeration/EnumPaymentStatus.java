@@ -17,6 +17,10 @@ public enum EnumPaymentStatus {
      */
     NOT_PAYED,
     /**
+     * Cancelled enum payment status.
+     */
+    CANCELLED,
+    /**
      * Due date enum payment status.
      */
     DUE_DATE,
