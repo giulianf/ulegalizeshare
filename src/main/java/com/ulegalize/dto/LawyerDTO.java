@@ -136,6 +136,11 @@ public class LawyerDTO extends AbstractRestObject {
     private String clientFrom;
 
     /**
+     * User's primary email
+     */
+    private String ulegalizeEmail;
+
+    /**
      * Instantiates a new Lawyer dto.
      */
     public LawyerDTO() {
