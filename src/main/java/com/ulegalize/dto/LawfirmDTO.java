@@ -66,6 +66,10 @@ public class LawfirmDTO extends AbstractRestObject {
 	 * The Start invoice number.
 	 */
 	private Integer startInvoiceNumber;
+	/**
+	 * The Start dossier number.
+	 */
+	private Integer startDossierNumber;
 
 	/**
 	 * The Street.
