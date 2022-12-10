@@ -6,7 +6,10 @@ import lombok.Getter;
  * The enum Enum calendar event type.
  */
 public enum EnumCalendarEventType {
-
+    /**
+     * Rdv enum calendar event type.
+     */
+    RDV("RDV", "azure"),
     /**
      * Perm enum calendar event type.
      */
@@ -19,10 +22,6 @@ public enum EnumCalendarEventType {
      * Task enum calendar event type.
      */
     TASK("TASK", "orange"),
-    /**
-     * Rdv enum calendar event type.
-     */
-    RDV("RDV", "azure"),
     /**
      * Aud enum calendar event type.
      */
