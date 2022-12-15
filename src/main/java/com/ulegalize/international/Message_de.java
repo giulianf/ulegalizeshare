@@ -119,6 +119,7 @@ public class Message_de extends ListResourceBundle {
                 {"PARTY", "Partei"},
                 {"OPPONENT_COUNSIL", "Gegner beraten"},
                 {"OTHER", "Andere"},
+                {"OPPOSING_LAWYER", "gegnerischer anwalt"},
         };
     }
 
