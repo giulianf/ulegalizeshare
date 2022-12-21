@@ -23,11 +23,11 @@ public enum EnumDossierContactType {
     /**
      * Other enum dossier contact type.
      */
-    OTHER(5),
+    OTHER(5);
     /**
      * Opposing lawyer enum dossier contact type.
      */
-    OPPOSING_LAWYER(6);
+//    OPPOSING_LAWYER(6);
 
     /**
      * The Id.
