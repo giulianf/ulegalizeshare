@@ -117,6 +117,7 @@ public class Message_en extends ListResourceBundle {
                 {"PARTY", "Party"},
                 {"OPPONENT_COUNSIL", "Opposing counsil"},
                 {"OTHER", "Other"},
+                {"OPPOSING_LAWYER", "Opposing lawyer"},
         };
     }
 
