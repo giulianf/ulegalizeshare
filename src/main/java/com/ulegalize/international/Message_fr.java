@@ -24,7 +24,7 @@ public class Message_fr extends ListResourceBundle {
                 {"ACCOUNT_TIERS", "Compte tiers / CARPA"},
                 {"PERM", "Permanence"},
                 {"RECORD", "Tâche enregistrement"},
-                {"TASK", "Tâche"},
+                {"TASK", "Tâche/Reminder"},
                 {"RDV", "Rendez-vous"},
                 {"AUD", "Audience"},
                 {"OTH", "Autre"},
