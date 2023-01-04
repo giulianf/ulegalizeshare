@@ -153,6 +153,10 @@ public class DossierDTO implements IDossierDTO {
      */
     private String nomenclature;
     /**
+     * Label of the Dossier must be equals to the nomenclature.
+     */
+    private String labelDossier;
+    /**
      * The Drive path.
      */
     private String drivePath;
