@@ -7,13 +7,17 @@ import lombok.Getter;
  */
 public enum EnumDossierType {
     /**
-     * Ba enum dossier type.
-     */
-    BA("BA"),
-    /**
      * Dc enum dossier type.
      */
     DC("DC"),
+    /**
+     * Conseil
+     */
+    CS("CS"),
+    /**
+     * Ba enum dossier type.
+     */
+    BA("BA"),
     /**
      * Df enum dossier type.
      */

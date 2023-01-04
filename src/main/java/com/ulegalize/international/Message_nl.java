@@ -29,6 +29,7 @@ public class Message_nl extends ListResourceBundle {
                 {"AUD", "Publiek"},
                 {"OTH", "Andere"},
                 {"BA", "BAJ"},
+                {"CS", "Advies"},
                 {"DC", "Case"},
                 {"DF", "Collaboratief recht"},
                 {"MD", "Bemiddeling"},

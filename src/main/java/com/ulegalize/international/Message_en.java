@@ -29,6 +29,7 @@ public class Message_en extends ListResourceBundle {
                 {"AUD", "Audience"},
                 {"OTH", "Other"},
                 {"BA", "BAJ"},
+                {"CS", "Advice"},
                 {"DC", "Case"},
                 {"DF", "Collaborative law"},
                 {"MD", "Mediation"},

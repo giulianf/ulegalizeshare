@@ -29,6 +29,7 @@ public class Message_de extends ListResourceBundle {
                 {"AUD", "Anhörung"},
                 {"OTH", "Ander"},
                 {"BA", "BFRUR"},
+                {"CS", "Rat"},
                 {"DC", "Fall"},
                 {"DF", "Verbandsrechtlich"},
                 {"MD", "Mediation"},
