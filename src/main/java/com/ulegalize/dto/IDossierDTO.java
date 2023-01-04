@@ -109,6 +109,13 @@ public interface IDossierDTO {
     String getNomenclature();
 
     /**
+     * Gets label dossier.
+     *
+     * @return the label of the dossier
+     */
+    String getLabelDossier();
+
+    /**
      * Gets drive path.
      *
      * @return the drive path

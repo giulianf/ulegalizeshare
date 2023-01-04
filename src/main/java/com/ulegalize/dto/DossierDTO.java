@@ -189,6 +189,7 @@ public class DossierDTO implements IDossierDTO {
      * @param lastAccessDate the last access date
      * @param partiesName    the parties name
      * @param nomenclature   the nomenclature
+     * @param labelDossier   the labelDossier
      * @param drivePath      the drive path
      * @param tagsName       the tags name
      */
@@ -198,7 +199,9 @@ public class DossierDTO implements IDossierDTO {
                       EnumDossierType type,
                       Date lastAccessDate,
                       String partiesName,
-                      String nomenclature, String drivePath, String tagsName) {
+                      String nomenclature,
+                      String labelDossier,
+                      String drivePath, String tagsName) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -213,17 +216,18 @@ public class DossierDTO implements IDossierDTO {
 
         if (!type.equals(EnumDossierType.MD)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = DossiersUtils.getDossierLabelItem(nomenclature) + " - " + partiesName; //2019 / 0012 blahaz/azklk
+                this.label = DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; //2019 / 0012 blahaz/azklk
             }
         } else {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(nomenclature, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(nomenclature) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
+                this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
             }
         }
+        this.labelDossier = labelDossier;
         this.nomenclature = nomenclature;
         this.drivePath = drivePath;
         this.tagsName = tagsName;
