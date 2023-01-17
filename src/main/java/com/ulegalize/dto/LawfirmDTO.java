@@ -69,6 +69,7 @@ public class LawfirmDTO extends AbstractRestObject {
 	/**
 	 * The Start dossier number.
 	 */
+	@Deprecated
 	private Long startDossierNumber;
 
 	/**
@@ -175,7 +176,6 @@ public class LawfirmDTO extends AbstractRestObject {
 	 * @param website            the website
 	 * @param couthoraire        the couthoraire
 	 * @param startInvoiceNumber the start invoice number
-	 * @param startDossierNumber the start dossier number
 	 * @param street             the street
 	 * @param city               the city
 	 * @param postalCode         the postal code
@@ -197,7 +197,6 @@ public class LawfirmDTO extends AbstractRestObject {
 					  String website,
 					  int couthoraire,
 					  Integer startInvoiceNumber,
-					  Long startDossierNumber,
 					  String street,
 					  String city,
 					  String postalCode,
@@ -219,7 +218,6 @@ public class LawfirmDTO extends AbstractRestObject {
 		this.website = website;
 		this.couthoraire = couthoraire;
 		this.startInvoiceNumber = startInvoiceNumber;
-		this.startDossierNumber = startDossierNumber;
 		this.street = street;
 		this.city = city;
 		this.postalCode = postalCode;
