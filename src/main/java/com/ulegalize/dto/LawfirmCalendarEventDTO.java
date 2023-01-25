@@ -77,6 +77,11 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
     @JsonProperty("user_id")
     private Long userId;
     /**
+     * The User id.
+     */
+    @JsonProperty("vc_key")
+    private String vcKey;
+    /**
      * The User item.
      */
     private ItemLongDto userItem;
