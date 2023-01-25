@@ -145,7 +145,6 @@ public class KafkaMailObject implements Serializable {
                 ", template='" + template + '\'' +
                 ", subject='" + subject + '\'' +
                 ", location='" + location + '\'' +
-                ", context=" + context +
                 ", start=" + start +
                 ", end=" + end +
                 ", organizer='" + organizer + '\'' +
