@@ -127,6 +127,14 @@ public enum EnumRights {
      */
     JUSTICIABLE_ADMIN(37, false),
     /**
+     * Emails Envoyer enum rights
+     */
+    EMAILS_ENVOYER(38, false),
+    /**
+     * Emails consulter enum rights
+     */
+    EMAILS_CONSULTER(39, false),
+    /**
      * The Super admin.
      */
 // this is for administrative/back-office purpose
