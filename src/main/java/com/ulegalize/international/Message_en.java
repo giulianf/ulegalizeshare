@@ -109,6 +109,8 @@ public class Message_en extends ListResourceBundle {
                 {"CALENDAR_ECRITURE", "Calendar - Writing"},
                 {"JUSTICIABLE_ECRITURE", "Litigant - Writing"},
                 {"JUSTICIABLE_ADMIN", "Litigant - Admin"},
+                {"EMAILS_ENVOYER", "Emails - send"},
+                {"EMAILS_CONSULTER", "Emails - view"},
                 {"SUPER_ADMIN", "Super - Admin"},
                 // Template
                 {"MAILTEMPLATEDOSSIER", "Your document is ready to be edited"},
