@@ -117,6 +117,7 @@ public class Message_nl extends ListResourceBundle {
                 {"SUPER_ADMIN", "Super - Admin"},
                 // Template
                 {"MAILTEMPLATEDOSSIER", "Uw document is klaar om te worden bewerkt"},
+                {"MAILSHARELINKNOTIFICATION", "Een deellink voor jou"},
                 // EnumDossierContactType
                 {"CLIENT", "Opdrachtgever"},
                 {"OPPOSING", "Wederpartij"},

@@ -117,6 +117,7 @@ public class Message_en extends ListResourceBundle {
                 {"SUPER_ADMIN", "Super - Admin"},
                 // Template
                 {"MAILTEMPLATEDOSSIER", "Your document is ready to be edited"},
+                {"MAILSHARELINKNOTIFICATION", "Share link with you"},
                 // EnumDossierContactType
                 {"CLIENT", "Client"},
                 {"OPPOSING", "Opposing party"},

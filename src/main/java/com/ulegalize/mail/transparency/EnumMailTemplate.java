@@ -124,7 +124,13 @@ public enum EnumMailTemplate {
      * Mailtemplatedossier enum mail template.
      */
 // Template
-    MAILTEMPLATEDOSSIER("mailTemplateDossier");
+    MAILTEMPLATEDOSSIER("mailTemplateDossier"),
+
+    /**
+     * Mailtemplatedossier enum mail template.
+     */
+// Template
+    MAILSHARELINKNOTIFICATION("mailShareLinkNotification");
 
     /**
      * The Name.
