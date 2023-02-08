@@ -249,4 +249,8 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * The Tiers lbl.
      */
     private String tiersLbl;
+    /**
+     * The Template name from user choice.
+     */
+    private String templateName;
 }
