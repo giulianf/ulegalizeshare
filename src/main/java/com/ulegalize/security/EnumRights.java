@@ -129,11 +129,11 @@ public enum EnumRights {
     /**
      * Emails Envoyer enum rights
      */
-//    EMAILS_ENVOYER(38, false),
+    EMAILS_ENVOYER(38, false),
     /**
      * Emails consulter enum rights
      */
-//    EMAILS_CONSULTER(39, false),
+    EMAILS_CONSULTER(39, false),
     /**
      * The Super admin.
      */
