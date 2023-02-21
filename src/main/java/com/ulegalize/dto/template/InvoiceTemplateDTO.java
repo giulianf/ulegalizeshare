@@ -77,6 +77,10 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * The Company VAT.
      */
     private String companyVat;
+    /**
+     * The invoice year
+     */
+    private Integer invoiceYear;
 
     /**
      * The Country.
