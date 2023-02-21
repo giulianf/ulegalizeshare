@@ -129,6 +129,10 @@ public class InvoiceDTO {
      * communication
      */
     private String communication;
+    /**
+     * template Name
+     */
+    private String templateName;
 
     /**
      * The Invoice details dto list.
