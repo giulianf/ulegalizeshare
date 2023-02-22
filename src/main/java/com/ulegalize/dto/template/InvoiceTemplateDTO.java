@@ -63,6 +63,10 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * The Client name.
      */
     private String clientName;
+    /**
+     * The Client title.
+     */
+    private String clientTitle;
 
     /**
      * The Client street.
