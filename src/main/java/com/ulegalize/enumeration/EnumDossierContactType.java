@@ -27,7 +27,19 @@ public enum EnumDossierContactType {
     /**
      * Opposing lawyer enum dossier contact type.
      */
-    OPPOSING_LAWYER(6);
+    OPPOSING_LAWYER(6),
+    /**
+     * Tribunal enum dossier contact type.
+     */
+    TRIBUNAL(7),
+    /**
+     * Expert enum dossier contact type.
+     */
+    EXPERT(7),
+    /**
+     * NOTAIRE enum dossier contact type.
+     */
+    NOTARY(8);
 
     /**
      * The Id.
