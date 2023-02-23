@@ -125,6 +125,9 @@ public class Message_fr extends ListResourceBundle {
                 {"OPPONENT_COUNSIL", "Conseil partie adverse"},
                 {"OTHER", "Autre"},
                 {"OPPOSING_LAWYER", "Avocat partie adverse"},
+                {"TRIBUNAL", "Tribunal"},
+                {"EXPERT", "Expert"},
+                {"NOTARY", "Notaire"},
         };
     }
 

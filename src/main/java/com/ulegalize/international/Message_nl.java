@@ -125,6 +125,9 @@ public class Message_nl extends ListResourceBundle {
                 {"OPPONENT_COUNSIL", "Tegengestelde raadsman"},
                 {"OTHER", "Andere"},
                 {"OPPOSING_LAWYER", "advocaat van de tegenpartij"},
+                {"TRIBUNAL", "Court"},
+                {"EXPERT", "Deskundige"},
+                {"NOTARY", "Notaris"},
         };
     }
 
