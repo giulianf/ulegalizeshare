@@ -143,6 +143,14 @@ public class InvoiceDTO {
      */
     private List<Long> prestationIdList = new ArrayList<>();
     /**
+     * The Invoice provision dto list.
+     */
+    private List<InvoiceDetailsDTO> invoiceProvisionList = new ArrayList<>();
+    /**
+     * The Provision id list.
+     */
+    private List<Long> provisionIdList = new ArrayList<>();
+    /**
      * The Frais admin id list.
      */
     private List<Long> fraisAdminIdList = new ArrayList<>();
