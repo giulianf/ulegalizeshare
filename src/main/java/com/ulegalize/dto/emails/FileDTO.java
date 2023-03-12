@@ -14,4 +14,5 @@ public class FileDTO implements Serializable {
     private byte[] file;
     private String fileName;
     private String id;
+    private String drivePath;
 }
