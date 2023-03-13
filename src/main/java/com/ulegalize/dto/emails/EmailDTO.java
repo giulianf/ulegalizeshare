@@ -13,7 +13,13 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EmailDTO {
+    /**
+     * ext Id
+     */
     private UUID extId;
+    /**
+     * ext inbox id
+     */
     private UUID extInboxId;
     private String id;
     private String from;

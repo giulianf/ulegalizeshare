@@ -277,4 +277,8 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * The Template name from user choice.
      */
     private String templateName;
+    /**
+     * The communication
+     */
+    private String communication;
 }
