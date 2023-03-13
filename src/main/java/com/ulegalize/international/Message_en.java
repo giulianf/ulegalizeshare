@@ -23,6 +23,7 @@ public class Message_en extends ListResourceBundle {
                 {"CREDIT", "Credit score"},
                 {"TEMP", "Temporary invoice"},
                 {"TEMP_NC", "Temporary credit score"},
+                {"PROVISION", "Advance"},
                 {"PRO_ACCOUNT", "Professioneel account"},
                 {"ACCOUNT_TIERS", "Third-party account / CARPA"},
                 {"PERM", "Permanent"},
