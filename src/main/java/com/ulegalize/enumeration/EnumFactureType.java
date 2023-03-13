@@ -21,7 +21,12 @@ public enum EnumFactureType {
     /**
      * Temp nc enum facture type.
      */
-    TEMP_NC(4, "NT");
+    TEMP_NC(4, "NT"),
+
+    /**
+     * Provision enum facture type
+     */
+    PROVISION(5, "PR");
 
     /**
      * The Id.
