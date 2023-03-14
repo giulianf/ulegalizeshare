@@ -19,4 +19,6 @@ public class DossierContactDTO {
      * The Client type.
      */
     private ItemDto clientType;
+
+    private String reference;
 }
