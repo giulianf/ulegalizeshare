@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * email dto
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,6 +24,9 @@ public class EmailDTO {
      * ext inbox id
      */
     private UUID extInboxId;
+    /**
+     * id
+     */
     private String id;
     private String from;
     private ItemEmailDTO itemFrom;
