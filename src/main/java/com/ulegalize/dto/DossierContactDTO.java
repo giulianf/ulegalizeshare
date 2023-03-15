@@ -24,4 +24,8 @@ public class DossierContactDTO {
      * reference
      */
     private String reference;
+    /**
+     * quality
+     */
+    private String quality;
 }
