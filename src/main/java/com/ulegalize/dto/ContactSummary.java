@@ -137,5 +137,13 @@ public class ContactSummary implements Serializable {
      * The Job.
      */
     private String job;
+    /**
+     * Dossier contact quality.
+     */
+    private String quality;
+    /**
+     * Dossier contact reference .
+     */
+    private String reference;
 
 }

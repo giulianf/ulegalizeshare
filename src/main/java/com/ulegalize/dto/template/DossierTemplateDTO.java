@@ -37,6 +37,22 @@ public class DossierTemplateDTO extends MainTemplateDTO {
      */
     private List<ContactSummary> contactsParty;
     /**
+     * The Contacts Notary.
+     */
+    private List<ContactSummary> contactsNotary;
+    /**
+     * The Contacts tribunal.
+     */
+    private List<ContactSummary> contactsTribunal;
+    /**
+     * The Contacts expert.
+     */
+    private List<ContactSummary> contactsExpert;
+    /**
+     * The Contacts Other.
+     */
+    private List<ContactSummary> contactsOther;
+    /**
      * The Users.
      */
     private List<LawyerDTO> users;
