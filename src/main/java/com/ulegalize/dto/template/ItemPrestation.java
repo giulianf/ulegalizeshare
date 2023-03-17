@@ -39,4 +39,17 @@ public class ItemPrestation {
      */
     private BigDecimal vatPrestation;
 
+    /**
+     * dh
+     */
+    private BigDecimal dh = BigDecimal.ZERO;
+
+    /**
+     * dm
+     */
+    private BigDecimal dm = BigDecimal.ZERO;
+    /**
+     * cout horaire
+     */
+    private Integer couthoraire = 0;
 }
