@@ -27,6 +27,10 @@ public enum EnumCalendarEventType {
      */
     AUD("AUD", "green"),
     /**
+     * Conclusion enum calendar event type.
+     */
+    CONCLU("CONCLU", "azure"),
+    /**
      * Oth enum calendar event type.
      */
     OTH("OTH", "grey");

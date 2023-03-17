@@ -31,6 +31,7 @@ public class Message_de extends ListResourceBundle {
                 {"TASK", "Aufgabe"},
                 {"RDV", "Termin"},
                 {"AUD", "Anhörung"},
+                {"CONCLU", "Abschluss"},
                 {"OTH", "Ander"},
                 {"BA", "BFRUR"},
                 {"CS", "Rat"},

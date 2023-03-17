@@ -31,6 +31,7 @@ public class Message_nl extends ListResourceBundle {
                 {"TASK", "Taak"},
                 {"RDV", "Afspraak"},
                 {"AUD", "Publiek"},
+                {"CONCLU", "Conclusie"},
                 {"OTH", "Andere"},
                 {"BA", "BAJ"},
                 {"CS", "Advies"},

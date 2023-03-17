@@ -31,6 +31,7 @@ public class Message_fr extends ListResourceBundle {
                 {"TASK", "Tâche/Reminder"},
                 {"RDV", "Rendez-vous"},
                 {"AUD", "Audience"},
+                {"CONCLU", "Conclusion"},
                 {"OTH", "Autre"},
                 {"BA", "BAJ"},
                 {"CS", "Conseil"},

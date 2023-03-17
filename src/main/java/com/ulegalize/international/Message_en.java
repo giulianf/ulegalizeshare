@@ -31,6 +31,7 @@ public class Message_en extends ListResourceBundle {
                 {"TASK", "Task"},
                 {"RDV", "Appointment"},
                 {"AUD", "Audience"},
+                {"CONCLU", "Conclusion"},
                 {"OTH", "Other"},
                 {"BA", "BAJ"},
                 {"CS", "Advice"},
