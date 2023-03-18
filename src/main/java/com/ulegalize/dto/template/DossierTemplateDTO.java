@@ -53,7 +53,7 @@ public class DossierTemplateDTO extends MainTemplateDTO {
      */
     private List<ContactSummary> contactsOther;
     /**
-     * The Contacts HUISSIER.
+     * The Contacts HUISSIER.C
      */
     private List<ContactSummary> contactsBailiff;
     /**

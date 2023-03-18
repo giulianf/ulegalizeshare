@@ -39,7 +39,11 @@ public enum EnumDossierContactType {
     /**
      * NOTAIRE enum dossier contact type.
      */
-    NOTARY(8);
+    NOTARY(8),
+    /**
+     * BAILIFF enum dossier contact type.
+     */
+    BAILIFF(9);
 
     /**
      * The Id.
