@@ -53,6 +53,18 @@ public class DossierTemplateDTO extends MainTemplateDTO {
      */
     private List<ContactSummary> contactsOther;
     /**
+     * The Contacts HUISSIER.
+     */
+    private List<ContactSummary> contactsBailiff;
+    /**
+     * The Contacts conseil adv.
+     */
+    private List<ContactSummary> contactConseilAdv;
+    /**
+     * The Contacts lawyer opposing.
+     */
+    private List<ContactSummary> contactLawyerOpposing;
+    /**
      * The Users.
      */
     private List<LawyerDTO> users;
