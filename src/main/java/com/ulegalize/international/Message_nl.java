@@ -130,6 +130,7 @@ public class Message_nl extends ListResourceBundle {
                 {"TRIBUNAL", "Court"},
                 {"EXPERT", "Deskundige"},
                 {"NOTARY", "Notaris"},
+                {"BAILIFF", "Deurwaarder"},
         };
     }
 

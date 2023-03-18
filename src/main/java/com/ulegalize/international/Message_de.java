@@ -132,6 +132,7 @@ public class Message_de extends ListResourceBundle {
                 {"TRIBUNAL", "Gericht"},
                 {"EXPERT", "Experte"},
                 {"NOTARY", "Notar"},
+                {"BAILIFF", "Gerichtsvollzieher"},
         };
     }
 

@@ -35,15 +35,15 @@ public enum EnumDossierContactType {
     /**
      * Expert enum dossier contact type.
      */
-    EXPERT(7),
+    EXPERT(8),
     /**
      * NOTAIRE enum dossier contact type.
      */
-    NOTARY(8),
+    NOTARY(9),
     /**
      * BAILIFF enum dossier contact type.
      */
-    BAILIFF(9);
+    BAILIFF(10);
 
     /**
      * The Id.
