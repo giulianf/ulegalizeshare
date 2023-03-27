@@ -277,9 +277,9 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
     private BigDecimal totalHtAmount;
 
     /**
-     * The Amounttt lbl.
+     * The total vat.
      */
-    private String totalVat;
+    private BigDecimal totalVat;
 
     /**
      * The Mesure lbl.
