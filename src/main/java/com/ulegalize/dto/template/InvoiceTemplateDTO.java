@@ -20,7 +20,7 @@ import java.util.List;
 @NoArgsConstructor
 public class InvoiceTemplateDTO extends MainTemplateDTO {
     private ContactSummary clientInfo;
-    private DossierTemplateDTO dossierTemplateDTO;
+    private CompleteDossierDTO completeDossierDTO;
     /**
      * The Is valid.
      */
