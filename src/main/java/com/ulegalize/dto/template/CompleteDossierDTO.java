@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * used to lawfirm to template
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
