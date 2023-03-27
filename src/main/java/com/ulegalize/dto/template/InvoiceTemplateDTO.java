@@ -1,6 +1,7 @@
 package com.ulegalize.dto.template;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ulegalize.dto.ContactSummary;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,8 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 public class InvoiceTemplateDTO extends MainTemplateDTO {
+    private ContactSummary clientInfo;
+    private DossierTemplateDTO dossierTemplateDTO;
     /**
      * The Is valid.
      */
@@ -26,16 +29,19 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
     /**
      * The Address.
      */
+
     private String address;
 
     /**
      * The Amount ht lbl.
      */
+    @Deprecated
     private String amountHtLbl;
 
     /**
      * The Amounttt lbl.
      */
+    @Deprecated
     private String amountttLbl;
 
     /**
@@ -47,42 +53,51 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
     /**
      * The Client city.
      */
+    @Deprecated
     private String clientCity;
 
     /**
      * The Client country.
      */
+    @Deprecated
     private String clientCountry;
 
     /**
      * The Client cp.
      */
+    @Deprecated
     private String clientCp;
 
     /**
      * The Client name.
      */
+    @Deprecated
     private String clientName;
     /**
      * The Client title.
      */
+    @Deprecated
     private String clientTitle;
 
     /**
      * The Client street.
      */
+    @Deprecated
     private String clientStreet;
     /**
      * The Client company.
      */
+    @Deprecated
     private String clientCompany;
     /**
      * The Client vat.
      */
+    @Deprecated
     private String clientVat;
     /**
      * The Client type.
      */
+    @Deprecated
     private String clientType;
 
     /**
@@ -184,6 +199,10 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * The Item frais collas.
      */
     private List<ItemFraisColla> itemFraisCollas;
+    /**
+     * The Item provision collas.
+     */
+    private List<Item> itemProvision;
 
     /**
      * The Item vat.
@@ -256,6 +275,11 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * The Total ht amount.
      */
     private BigDecimal totalHtAmount;
+
+    /**
+     * The Amounttt lbl.
+     */
+    private String totalVat;
 
     /**
      * The Mesure lbl.

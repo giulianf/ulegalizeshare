@@ -32,6 +32,10 @@ public class Item {
      * The Vat.
      */
     private BigDecimal vat;
+    /**
+     * total vat
+     */
+    private BigDecimal amountVat;
 
 
 }
