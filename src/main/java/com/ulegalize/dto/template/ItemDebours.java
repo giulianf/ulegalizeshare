@@ -36,6 +36,14 @@ public class ItemDebours {
      */
     private Integer vatDebours;
 
+    /**
+     * @param posteDebours    poste
+     * @param tiersDebours    tiers
+     * @param amountHTDebours amount th
+     * @param vatDebours      vat
+     * @param amountDebours   amount
+     * @param dateValue       date
+     */
     public ItemDebours(String posteDebours, String tiersDebours, BigDecimal amountHTDebours, Integer vatDebours, BigDecimal amountDebours, LocalDate dateValue) {
         this.posteDebours = posteDebours;
         this.tiersDebours = tiersDebours;
