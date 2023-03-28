@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 /**
  * The type Item debours.
@@ -39,6 +38,9 @@ public class ItemDebours {
      * The Amount debours.
      */
     private BigDecimal amountDebours;
-    private LocalDate dateValue;
+    /**
+     * to store in db , no localdate
+     */
+    private String dateValue;
 
 }

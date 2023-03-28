@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
 import java.math.BigDecimal;
-import java.time.ZonedDateTime;
 
 /**
  * The type Item frais admin.
@@ -36,6 +35,9 @@ public class ItemFraisAdmin {
      */
     private BigDecimal unitFraisAdmin;
 
-    private ZonedDateTime dateAction;
+    /**
+     * to store in db , no localdate
+     */
+    private String dateAction;
 
 }

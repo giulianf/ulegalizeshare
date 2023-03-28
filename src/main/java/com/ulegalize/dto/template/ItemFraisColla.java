@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 /**
  * The type Item frais colla.
@@ -40,6 +39,9 @@ public class ItemFraisColla {
      */
     private BigDecimal amountColla;
 
-    private LocalDate dateValue;
+    /**
+     * to store in db , no Zonedatetime
+     */
+    private String dateValue;
 
 }
