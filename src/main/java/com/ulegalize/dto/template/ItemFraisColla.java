@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 /**
  * The type Item frais colla.
@@ -38,5 +39,7 @@ public class ItemFraisColla {
      * The Amount colla.
      */
     private BigDecimal amountColla;
+
+    private LocalDate dateValue;
 
 }
