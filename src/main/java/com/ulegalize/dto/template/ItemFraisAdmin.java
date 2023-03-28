@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
 import java.math.BigDecimal;
+import java.time.ZonedDateTime;
 
 /**
  * The type Item frais admin.
@@ -17,6 +18,14 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ItemFraisAdmin {
+
+    public ItemFraisAdmin(String descriptionFraisAdmin, String mesureFraisAdmin, BigDecimal pricePerUnitFraisAdmin, BigDecimal unitFraisAdmin, ZonedDateTime dateAction) {
+        this.descriptionFraisAdmin = descriptionFraisAdmin;
+        this.mesureFraisAdmin = mesureFraisAdmin;
+        this.pricePerUnitFraisAdmin = pricePerUnitFraisAdmin;
+        this.unitFraisAdmin = unitFraisAdmin;
+        this.dateAction = dateAction.toString();
+    }
 
     /**
      * The Description frais admin.

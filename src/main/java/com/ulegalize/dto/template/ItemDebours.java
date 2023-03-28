@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 /**
  * The type Item debours.
@@ -34,6 +35,16 @@ public class ItemDebours {
      * The Vat debours.
      */
     private Integer vatDebours;
+
+    public ItemDebours(String posteDebours, String tiersDebours, BigDecimal amountHTDebours, Integer vatDebours, BigDecimal amountDebours, LocalDate dateValue) {
+        this.posteDebours = posteDebours;
+        this.tiersDebours = tiersDebours;
+        this.amountHTDebours = amountHTDebours;
+        this.vatDebours = vatDebours;
+        this.amountDebours = amountDebours;
+        this.dateValue = dateValue.toString();
+    }
+
     /**
      * The Amount debours.
      */
