@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Etat ReportDTO
+ */
 @Data
 @NoArgsConstructor
 public class EtatReportDTO {
@@ -17,6 +20,9 @@ public class EtatReportDTO {
     private List<ComptaDTO> honoraireAffaireList;
     private CompleteDossierDTO completeDossierDTO;
 
+    /**
+     * @param completeDossierDTO complete dossier
+     */
     public EtatReportDTO(CompleteDossierDTO completeDossierDTO) {
         this.completeDossierDTO = completeDossierDTO;
     }

@@ -24,6 +24,14 @@ public class ItemFraisColla {
      */
     private String posteColla;
 
+    /**
+     * @param posteColla    desc
+     * @param tiersColla    tiers
+     * @param amountHTColla amount ht
+     * @param vatColla      vat
+     * @param amountColla   amount
+     * @param dateValue     date
+     */
     public ItemFraisColla(String posteColla, String tiersColla, BigDecimal amountHTColla, Integer vatColla, BigDecimal amountColla, LocalDate dateValue) {
         this.posteColla = posteColla;
         this.tiersColla = tiersColla;

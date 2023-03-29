@@ -19,6 +19,13 @@ import java.time.ZonedDateTime;
 @AllArgsConstructor
 public class ItemFraisAdmin {
 
+    /**
+     * @param descriptionFraisAdmin  desc
+     * @param mesureFraisAdmin       mesure
+     * @param pricePerUnitFraisAdmin price unit
+     * @param unitFraisAdmin         unit
+     * @param dateAction             date
+     */
     public ItemFraisAdmin(String descriptionFraisAdmin, String mesureFraisAdmin, BigDecimal pricePerUnitFraisAdmin, BigDecimal unitFraisAdmin, ZonedDateTime dateAction) {
         this.descriptionFraisAdmin = descriptionFraisAdmin;
         this.mesureFraisAdmin = mesureFraisAdmin;
