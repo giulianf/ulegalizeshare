@@ -1,6 +1,7 @@
 package com.ulegalize.dto.report;
 
 import com.ulegalize.dto.ComptaDTO;
+import com.ulegalize.dto.FinanceDTO;
 import com.ulegalize.dto.InvoiceDTO;
 import com.ulegalize.dto.template.*;
 import lombok.Data;
@@ -16,6 +17,9 @@ import java.util.List;
 public class EtatReportDTO {
     private Long dossierId;
     private CompleteDossierDTO completeDossierDTO;
+
+    private FinanceDTO financeDTO;
+
     private List<InvoiceDTO> invoiceList;
     private List<ComptaDTO> tiersAffaireList;
     private List<ComptaDTO> honoraireAffaireList;
