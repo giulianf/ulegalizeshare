@@ -14,6 +14,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class EtatReportDTO {
+    private Long dossierId;
 
     private List<InvoiceDTO> invoiceList;
     private List<ComptaDTO> tiersAffaireList;
