@@ -21,6 +21,10 @@ public class EmailDTO {
      */
     private UUID extId;
     /**
+     * ext Id format String
+     */
+    private String extIdString;
+    /**
      * ext inbox id
      */
     private UUID extInboxId;
