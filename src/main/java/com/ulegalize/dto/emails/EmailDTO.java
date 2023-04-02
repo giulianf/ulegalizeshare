@@ -23,7 +23,7 @@ public class EmailDTO {
     /**
      * ext Id format String
      */
-//    private String extIdString;
+    private String extIdString;
     /**
      * ext inbox id
      */
