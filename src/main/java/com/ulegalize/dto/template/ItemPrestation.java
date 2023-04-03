@@ -3,6 +3,7 @@ package com.ulegalize.dto.template;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
@@ -13,10 +14,11 @@ import java.math.BigDecimal;
  */
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemPrestation {
+public class ItemPrestation extends ItemFrais {
 
     /**
      * The Amount prestation.
