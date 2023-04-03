@@ -21,6 +21,10 @@ public class FinanceDTO {
      */
     private BigDecimal honoraires = BigDecimal.ZERO;
     /**
+     * honoraire with tax
+     */
+    private BigDecimal honorairesTax = BigDecimal.ZERO;
+    /**
      * The Invoiced.
      */
     private BigDecimal invoiced = BigDecimal.ZERO;
@@ -52,6 +56,10 @@ public class FinanceDTO {
      * The Total invoice.
      */
     private BigDecimal totalInvoice = BigDecimal.ZERO;
+    /**
+     * invoice tax
+     */
+    private BigDecimal totalInvoiceTax = BigDecimal.ZERO;
     /**
      * The Balance.
      */
