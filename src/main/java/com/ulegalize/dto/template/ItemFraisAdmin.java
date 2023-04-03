@@ -3,6 +3,7 @@ package com.ulegalize.dto.template;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
@@ -15,6 +16,7 @@ import java.time.ZonedDateTime;
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class ItemFraisAdmin extends ItemFrais {
@@ -25,6 +27,7 @@ public class ItemFraisAdmin extends ItemFrais {
      * @param pricePerUnitFraisAdmin price unit
      * @param unitFraisAdmin         unit
      * @param dateAction             date
+     * @param note                   note
      */
     public ItemFraisAdmin(String descriptionFraisAdmin, String mesureFraisAdmin, BigDecimal pricePerUnitFraisAdmin, BigDecimal unitFraisAdmin, ZonedDateTime dateAction, String note) {
         this.descriptionFraisAdmin = descriptionFraisAdmin;

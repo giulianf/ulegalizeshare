@@ -3,6 +3,7 @@ package com.ulegalize.dto.template;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
@@ -15,6 +16,7 @@ import java.time.LocalDate;
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class ItemDebours extends ItemFrais {
@@ -43,6 +45,7 @@ public class ItemDebours extends ItemFrais {
      * @param vatDebours      vat
      * @param amountDebours   amount
      * @param dateValue       date
+     * @param note            note
      */
     public ItemDebours(String posteDebours, String tiersDebours, BigDecimal amountHTDebours, Integer vatDebours, BigDecimal amountDebours, LocalDate dateValue, String note) {
         this.posteDebours = posteDebours;
