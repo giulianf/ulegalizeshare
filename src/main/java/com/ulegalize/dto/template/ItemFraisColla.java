@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemFraisColla {
+public class ItemFraisColla extends ItemFrais {
 
     /**
      * The Poste colla.
@@ -32,13 +32,14 @@ public class ItemFraisColla {
      * @param amountColla   amount
      * @param dateValue     date
      */
-    public ItemFraisColla(String posteColla, String tiersColla, BigDecimal amountHTColla, Integer vatColla, BigDecimal amountColla, LocalDate dateValue) {
+    public ItemFraisColla(String posteColla, String tiersColla, BigDecimal amountHTColla, Integer vatColla, BigDecimal amountColla, LocalDate dateValue, String note) {
         this.posteColla = posteColla;
         this.tiersColla = tiersColla;
         this.amountHTColla = amountHTColla;
         this.vatColla = vatColla;
         this.amountColla = amountColla;
         this.dateValue = dateValue.toString();
+        this.note = note;
     }
 
     /**
@@ -57,10 +58,5 @@ public class ItemFraisColla {
      * The Amount colla.
      */
     private BigDecimal amountColla;
-
-    /**
-     * to store in db , no Zonedatetime
-     */
-    private String dateValue;
 
 }

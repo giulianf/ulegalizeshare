@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemDebours {
+public class ItemDebours extends ItemFrais {
 
     /**
      * The Poste debours.
@@ -44,22 +44,18 @@ public class ItemDebours {
      * @param amountDebours   amount
      * @param dateValue       date
      */
-    public ItemDebours(String posteDebours, String tiersDebours, BigDecimal amountHTDebours, Integer vatDebours, BigDecimal amountDebours, LocalDate dateValue) {
+    public ItemDebours(String posteDebours, String tiersDebours, BigDecimal amountHTDebours, Integer vatDebours, BigDecimal amountDebours, LocalDate dateValue, String note) {
         this.posteDebours = posteDebours;
         this.tiersDebours = tiersDebours;
         this.amountHTDebours = amountHTDebours;
         this.vatDebours = vatDebours;
         this.amountDebours = amountDebours;
         this.dateValue = dateValue.toString();
+        this.note = note;
     }
 
     /**
      * The Amount debours.
      */
     private BigDecimal amountDebours;
-    /**
-     * to store in db , no localdate
-     */
-    private String dateValue;
-
 }

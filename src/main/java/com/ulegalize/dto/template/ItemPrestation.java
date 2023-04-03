@@ -27,10 +27,6 @@ public class ItemPrestation {
      */
     private BigDecimal amountTaxPrestation;
     /**
-     * The Date prestation.
-     */
-    private String datePrestation;
-    /**
      * The Description prestation.
      */
     private String descriptionPrestation;
