@@ -3,7 +3,7 @@ package com.ulegalize.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.ZonedDateTime;
 
 /**
  * The type Object response dto.
@@ -34,7 +34,7 @@ public class ObjectResponseDTO {
     /**
      * The Last modified.
      */
-    Date lastModified;
+    ZonedDateTime lastModified;
     /**
      * The Container.
      */
