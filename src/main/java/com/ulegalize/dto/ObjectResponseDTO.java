@@ -1,6 +1,7 @@
 package com.ulegalize.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
@@ -8,6 +9,7 @@ import java.util.Date;
  * The type Object response dto.
  */
 @Data
+@NoArgsConstructor
 public class ObjectResponseDTO {
     /**
      * The Id.
@@ -37,11 +39,9 @@ public class ObjectResponseDTO {
      * The Container.
      */
     String container;
-
     /**
-     * Instantiates a new Object response dto.
+     * full path if exist.
      */
-    public ObjectResponseDTO() {
-    }
+    String fullPath;
 
 }
