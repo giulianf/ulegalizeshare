@@ -120,6 +120,7 @@ public class Message_nl extends ListResourceBundle {
                 // Template
                 {"MAILTEMPLATEDOSSIER", "Uw document is klaar om te worden bewerkt"},
                 {"MAILSHARELINKNOTIFICATION", "Een deellink voor jou"},
+                {"MAILPERSONALREPORT", "Rapport personnel"},
                 // EnumDossierContactType
                 {"CLIENT", "Opdrachtgever"},
                 {"OPPOSING", "Wederpartij"},

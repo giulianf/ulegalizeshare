@@ -120,6 +120,7 @@ public class Message_fr extends ListResourceBundle {
                 // Template
                 {"MAILTEMPLATEDOSSIER", "Votre document est prêt à être édité"},
                 {"MAILSHARELINKNOTIFICATION", "Un lien de partage pour vous"},
+                {"MAILPERSONALREPORT", "Rapport personnel"},
                 // EnumDossierContactType
                 {"CLIENT", "Client"},
                 {"OPPOSING", "Partie adverse"},
