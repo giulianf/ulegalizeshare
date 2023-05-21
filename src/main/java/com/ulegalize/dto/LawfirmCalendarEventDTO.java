@@ -96,9 +96,9 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
      */
     private String title;
     /**
-     * The Note.
+     * The last Note.
      */
-    private String note;
+    private String lastNote;
     /**
      * The Location.
      */
