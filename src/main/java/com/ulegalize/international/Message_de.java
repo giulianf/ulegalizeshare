@@ -71,6 +71,7 @@ public class Message_de extends ListResourceBundle {
                 {"MAILUPDATEDOCUMENTCASE", "Änderung des rechtlichen Falles "},
                 {"MAILFINISHSIGNDOCUMENT", "Unterzeichnung des Dokuments "},
                 {"MAILAPPOINTMENT_ADDED_NOTIFICATION", "Ulegalize: Notifikation Agenda"},
+                {"MAILAPPOINTMENT_ADDED_MENTION", "Ulegalize: Notifikation Agenda"},
                 {"MAILAPPOINTMENT_CANCEL_NOTIFICATION", "Ulegalize: Annullierung der Tagesordnung"},
                 {"MAILAPPOINTMENTCONFIRMEDTEMPLATE", "Ulegalize: Vereinbarter Termin bestätigt"},
                 {"MAILAPPOINTMENTREGISTEREDTEMPLATE", "Neuer Antrag auf einen Termin"},

@@ -58,6 +58,12 @@ public enum EnumMailTemplate {
      */
 // lawfirm
     MAILAPPOINTMENT_ADDED_NOTIFICATION("mailAppointmentAddedNotification"),
+
+    /**
+     * Mailappointment added mention enum mail template.
+     */
+// lawfirm
+    MAILAPPOINTMENT_ADDED_MENTION("mailAppointmentAddedMention"),
     /**
      * Mailappointment cancel notification enum mail template.
      */

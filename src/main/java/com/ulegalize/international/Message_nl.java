@@ -70,6 +70,7 @@ public class Message_nl extends ListResourceBundle {
                 {"MAILUPDATEDOCUMENTCASE", "Wijziging van de rechtszaak"},
                 {"MAILFINISHSIGNDOCUMENT", "Documenthandtekening"},
                 {"MAILAPPOINTMENT_ADDED_NOTIFICATION", "Ulegalize: Notificatie agenda"},
+                {"MAILAPPOINTMENT_ADDED_MENTION", "Ulegalize: Notificatie agenda"},
                 {"MAILAPPOINTMENT_CANCEL_NOTIFICATION", "Ulegalize: Cancel agenda"},
                 {"MAILAPPOINTMENTCONFIRMEDTEMPLATE", "Ulegalize: Afspraakverzoek bevestigd"},
                 {"MAILAPPOINTMENTREGISTEREDTEMPLATE", "Nieuw afspraakverzoek"},
