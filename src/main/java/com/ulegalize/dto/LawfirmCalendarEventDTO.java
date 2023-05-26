@@ -151,7 +151,7 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
     /**
      * The status of event.
      */
-    private String calendarStatus;
+    private Integer calendarStatus;
 
     /**
      * Instantiates a new Lawfirm calendar event dto.
