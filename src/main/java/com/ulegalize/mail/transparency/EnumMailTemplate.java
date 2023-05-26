@@ -65,6 +65,10 @@ public enum EnumMailTemplate {
 // lawfirm
     MAILAPPOINTMENT_ADDED_MENTION("mailAppointmentAddedMention"),
     /**
+     * update task status
+     */
+    MAILAPPOINTMENT_UPDATE_TASK_STATUS("mailAppointmentUpdateTaskStatus"),
+    /**
      * Mailappointment cancel notification enum mail template.
      */
     MAILAPPOINTMENT_CANCEL_NOTIFICATION("mailAppointmentCancelNotification"),

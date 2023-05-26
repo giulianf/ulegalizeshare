@@ -71,6 +71,7 @@ public class Message_en extends ListResourceBundle {
                 {"MAILFINISHSIGNDOCUMENT", "Document signature"},
                 {"MAILAPPOINTMENT_ADDED_NOTIFICATION", "Ulegalize: Notification agenda"},
                 {"MAILAPPOINTMENT_ADDED_MENTION", "Ulegalize: Notification agenda"},
+                {"MAILAPPOINTMENT_UPDATE_TASK_STATUS", "Ulegalize Task: status change"},
                 {"MAILAPPOINTMENT_CANCEL_NOTIFICATION", "Ulegalize: Cancel agenda"},
                 {"MAILAPPOINTMENTCONFIRMEDTEMPLATE", "Ulegalize: Appointment request confirmed"},
                 {"MAILAPPOINTMENTREGISTEREDTEMPLATE", "New appointment request"},
