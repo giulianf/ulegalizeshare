@@ -145,5 +145,7 @@ public class ContactSummary implements Serializable {
      * Dossier contact reference .
      */
     private String reference;
+    private ItemStringDto nafItem;
+    private ItemStringDto ccItem;
 
 }
