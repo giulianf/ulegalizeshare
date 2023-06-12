@@ -145,7 +145,17 @@ public class ContactSummary implements Serializable {
      * Dossier contact reference .
      */
     private String reference;
+    /**
+     * Birthplace .
+     */
+    private String birthplace;
+    /**
+     * NAF FRench
+     */
     private ItemStringDto nafItem;
+    /**
+     * convention collective French
+     */
     private ItemStringDto ccItem;
 
 }
