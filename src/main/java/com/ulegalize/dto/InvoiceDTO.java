@@ -133,6 +133,14 @@ public class InvoiceDTO {
      * template Name
      */
     private String templateName;
+    /**
+     * Reminder number
+     */
+    private int nbReminder = 0;
+    /**
+     * Reminder number days
+     */
+    private int nbRemindDays = 0;
 
     /**
      * The Invoice details dto list.
