@@ -53,6 +53,10 @@ public class FinanceDTO {
      */
     private BigDecimal totalHonoraire = BigDecimal.ZERO;
     /**
+     * Total debours (htva)
+     */
+    private BigDecimal totalDebours = BigDecimal.ZERO;
+    /**
      * The Total invoice.
      */
     private BigDecimal totalInvoice = BigDecimal.ZERO;
@@ -60,6 +64,10 @@ public class FinanceDTO {
      * invoice tax
      */
     private BigDecimal totalInvoiceTax = BigDecimal.ZERO;
+    /**
+     * Solde frais et honoraires à facturer HTVA
+     */
+    private BigDecimal soldHonoraireToInvoice = BigDecimal.ZERO;
     /**
      * The Balance.
      */
