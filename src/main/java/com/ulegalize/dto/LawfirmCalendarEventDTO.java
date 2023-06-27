@@ -120,6 +120,10 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
      */
     private Date end;
     /**
+     * Color of the event.
+     */
+    private String colorEvent;
+    /**
      * The Path file.
      */
     private String pathFile;
