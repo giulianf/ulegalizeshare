@@ -141,6 +141,10 @@ public class InvoiceDTO {
      * Reminder number days
      */
     private int nbRemindDays = 0;
+    /**
+     * Send date could be diff than value date
+     */
+    private ZonedDateTime sendDate;
 
     /**
      * The Invoice details dto list.
