@@ -31,7 +31,7 @@ public enum EnumFactureType {
     /**
      * REMINDER enum facture type
      */
-    REMINDER(6, "PR");
+    REMINDER(6, "RM");
 
     /**
      * The Id.
