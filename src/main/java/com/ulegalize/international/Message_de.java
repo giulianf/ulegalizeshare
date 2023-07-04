@@ -23,6 +23,7 @@ public class Message_de extends ListResourceBundle {
                 {"CREDIT", "Gutschrift"},
                 {"TEMP", "Vorläufige Rechnung"},
                 {"TEMP_NC", "Vorläufige Gutschrift"},
+                {"REMINDER", "Erinnerung"},
                 {"PROVISION", "Rückstellung"},
                 {"PRO_ACCOUNT", "Professionelles Konto"},
                 {"ACCOUNT_TIERS", "Drittkonto / CARPA"},

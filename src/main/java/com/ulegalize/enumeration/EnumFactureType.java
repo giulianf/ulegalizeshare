@@ -26,7 +26,12 @@ public enum EnumFactureType {
     /**
      * Provision enum facture type
      */
-    PROVISION(5, "PR");
+    PROVISION(5, "PR"),
+
+    /**
+     * REMINDER enum facture type
+     */
+    REMINDER(6, "PR");
 
     /**
      * The Id.
