@@ -147,6 +147,18 @@ public class InvoiceDTO {
     private ZonedDateTime sendDate;
 
     /**
+     * The montant Reminder.
+     */
+    private BigDecimal reminderMontant;
+    /**
+     * The montant interet.
+     */
+    private BigDecimal interetMontant;
+    /**
+     * The montant clause penal.
+     */
+    private BigDecimal cpMontant;
+    /**
      * The Invoice details dto list.
      */
     private List<InvoiceDetailsDTO> invoiceDetailsDTOList = new ArrayList<>();
