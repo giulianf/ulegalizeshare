@@ -305,4 +305,16 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * The communication
      */
     private String communication;
+    /**
+     * The reminderMontant
+     */
+    private BigDecimal reminderMontant;
+    /**
+     * The cpMontant
+     */
+    private BigDecimal cpMontant;
+    /**
+     * The interetMontant
+     */
+    private BigDecimal interetMontant;
 }
