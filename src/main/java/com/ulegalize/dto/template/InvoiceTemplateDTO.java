@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
 import java.math.BigDecimal;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -321,5 +320,5 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
     /**
      * Send date could be diff than value date
      */
-    private ZonedDateTime sendDate;
+    private String sendDate;
 }
