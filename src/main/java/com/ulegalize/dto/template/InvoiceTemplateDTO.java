@@ -321,4 +321,8 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * Send date could be diff than value date
      */
     private String sendDate;
+    /**
+     * Sbank account label
+     */
+    private String bankAccount;
 }
