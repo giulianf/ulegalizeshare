@@ -15,7 +15,11 @@ public enum DriveType {
     /**
      * Onedrive drive type.
      */
-    onedrive;
+    onedrive,
+    /**
+     * Gmail drive type.
+     */
+    gmail;
 
 
     /**

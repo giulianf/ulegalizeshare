@@ -31,6 +31,10 @@ public class AccessCredentialsDTO extends AbstractRestObject {
      */
     private String onedriveToken;
     /**
+     * The Gmail token.
+     */
+    private String gmailToken;
+    /**
      * The Expire token.
      */
     private ZonedDateTime expireToken;
