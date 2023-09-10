@@ -66,13 +66,9 @@ public class ProfileDTO implements Serializable {
      */
     private DriveType driveType;
     /**
-     * The Dropbox token.
+     * The drive token (could be dropbox or onedrive or gmail).
      */
-    private String dropboxToken;
-    /**
-     * The Onedrive token.
-     */
-    private String onedriveToken;
+    private String driveToken;
     /**
      * The Onedrive refresh token.
      */

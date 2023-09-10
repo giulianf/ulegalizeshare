@@ -107,18 +107,6 @@ public class UlegalizeToken implements Serializable {
     @Getter
     @Setter
     protected DriveType driveType;
-    /**
-     * The Dropbox token.
-     */
-    @Getter
-    @Setter
-    protected String dropboxToken;
-    /**
-     * The Onedrive token.
-     */
-    @Getter
-    @Setter
-    protected String onedriveToken;
 
     /**
      * The Client from.
