@@ -19,23 +19,23 @@ public class Item {
     /**
      * The Amount.
      */
-    private BigDecimal amount;
+    protected BigDecimal amount;
     /**
      * The Amount tax.
      */
-    private BigDecimal amountTax;
+    protected BigDecimal amountTax;
     /**
      * The Description.
      */
-    private String description;
+    protected String description;
     /**
      * The Vat.
      */
-    private BigDecimal vat;
+    protected BigDecimal vat;
     /**
      * total vat
      */
-    private BigDecimal amountVat;
+    protected BigDecimal amountVat;
 
 
 }
