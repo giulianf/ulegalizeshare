@@ -21,7 +21,7 @@ public class ClientsUtils {
      * @return the fullname
      */
     public static String getFullname(String lastname, String firstname, String company) {
-        String companyName = company != null && !company.isEmpty() ? " - " + company : "";
+        String companyName = company != null && !company.isEmpty() ? "- " + company : "";
         return firstname + " " + lastname + " " + companyName;
     }
 
@@ -33,7 +33,7 @@ public class ClientsUtils {
      * @return the fullname
      */
     public static String getFullname(String fullname, String company) {
-        String companyName = company != null && !company.isEmpty() ? " - " + company : "";
+        String companyName = company != null && !company.isEmpty() ? "- " + company : "";
         return fullname + " " + companyName;
     }
 
@@ -47,7 +47,7 @@ public class ClientsUtils {
      * @return the email fullname
      */
     public static String getEmailFullname(String email, String lastname, String firstname, String company) {
-        String companyName = company != null && !company.isEmpty() ? " - " + company : "";
+        String companyName = company != null && !company.isEmpty() ? "- " + company : "";
         return firstname + " " + lastname + " " + companyName + " (" + email + ")";
     }
 

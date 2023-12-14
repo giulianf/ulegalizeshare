@@ -11,7 +11,7 @@ class ClientsUtilsTest {
         String company = "company";
         String fullname = ClientsUtils.getFullname(name, firstname, company);
 
-        assertEquals(name + " " + firstname + " " + company, fullname);
+        assertEquals(firstname + " " + name + " - " + company, fullname);
     }
 
     @org.junit.jupiter.api.Test
@@ -20,7 +20,7 @@ class ClientsUtilsTest {
         String company = "company";
         String fullname2 = ClientsUtils.getFullname(fullname, company);
 
-        assertEquals(fullname + " " + company, fullname2);
+        assertEquals(fullname + " - " + company, fullname2);
     }
 
     @org.junit.jupiter.api.Test
@@ -31,6 +31,6 @@ class ClientsUtilsTest {
         String company = "company";
         String fullname = ClientsUtils.getEmailFullname(email, name, firstname, company);
 
-        assertEquals(name + " " + firstname + " " + company + " (" + email + ")", fullname);
+        assertEquals(firstname + " " + name + " - " + company + " (" + email + ")", fullname);
     }
 }
