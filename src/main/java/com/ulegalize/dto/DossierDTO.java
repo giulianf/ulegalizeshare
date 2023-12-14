@@ -169,6 +169,10 @@ public class DossierDTO implements IDossierDTO {
      */
     private List<ItemLongDto> tagsList;
     /**
+     * The Tags list.
+     */
+    private List<ItemLongDto> managersList;
+    /**
      * The Tags name.
      */
     private String tagsName;

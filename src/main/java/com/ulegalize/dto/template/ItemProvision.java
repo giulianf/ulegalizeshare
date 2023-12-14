@@ -23,10 +23,10 @@ public class ItemProvision extends Item {
     private String dateValue;
 
     /**
-     * @param dateValue
-     * @param amount
-     * @param amountTax
-     * @param description
+     * @param dateValue value of invoice
+     * @param amount amount  of invoice
+     * @param amountTax amount ht  of invoice
+     * @param description description
      */
     public ItemProvision(String dateValue, BigDecimal amount, BigDecimal amountTax, String description) {
         this.dateValue = dateValue;

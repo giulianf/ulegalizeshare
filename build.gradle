@@ -29,10 +29,16 @@ dependencies {
 
     compileOnly "org.projectlombok:lombok:${lombok}"
     annotationProcessor "org.projectlombok:lombok:${lombok}"
-    testCompileOnly "org.projectlombok:lombok:${lombok}"
-    testAnnotationProcessor "org.projectlombok:lombok:${lombok}"
 
     implementation "org.apache.commons:commons-lang3:${commonsLang}"
+
+    testCompileOnly "org.projectlombok:lombok:${lombok}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombok}"
+    // JUnit Jupiter API for writing tests
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+
+    // JUnit Jupiter Engine for running tests
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
 
 }
 
@@ -99,7 +105,9 @@ publishing {
     }
 }
 
-
+test {
+    useJUnitPlatform()
+}
 artifacts {
     archives javadocJar, sourcesJar
 }
