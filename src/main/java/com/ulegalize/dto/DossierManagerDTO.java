@@ -1,14 +1,12 @@
 package com.ulegalize.dto;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
 /**
- * The type Dossier contact dto.
+ * The type Dossier manager dto.
  */
-@Data
-@NoArgsConstructor
-public class DossierManagerDTO {
+@Getter
+public class DossierManagerDTO extends Item<Long> {
     /**
      * id
      */
@@ -18,9 +16,25 @@ public class DossierManagerDTO {
      */
     private Long dossierId;
 
-    /**
-     * The Client.
-     */
-    private ItemLongDto client;
 
+    /**
+     * Instantiates a new Item event dto.
+     */
+    public DossierManagerDTO() {
+        super(null, "");
+    }
+
+    /**
+     * Instantiates a new Item event dto.
+     *
+     * @param userId    the user id
+     * @param label     the label
+     * @param dossierId the dossier Id
+     * @param id        the dossier manager Id
+     */
+    public DossierManagerDTO(Long userId, String label, Long dossierId, Long id) {
+        super(userId, label);
+        this.dossierId = dossierId;
+        this.id = id;
+    }
 }

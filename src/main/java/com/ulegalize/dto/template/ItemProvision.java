@@ -2,6 +2,7 @@
 package com.ulegalize.dto.template;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.annotation.Generated;
@@ -13,6 +14,7 @@ import java.math.BigDecimal;
 @Generated("net.hexar.json2pojo")
 @Data
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 @SuppressWarnings("unused")
 public class ItemProvision extends Item {
 

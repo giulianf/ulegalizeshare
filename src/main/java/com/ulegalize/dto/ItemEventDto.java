@@ -5,11 +5,11 @@ import lombok.Getter;
 /**
  * The type Item event dto.
  */
+@Getter
 public class ItemEventDto extends Item<String> {
     /**
      * The Color.
      */
-    @Getter
     private String color;
 
     /**
