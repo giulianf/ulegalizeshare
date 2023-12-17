@@ -3,6 +3,7 @@ package com.ulegalize.dto;
 import com.ulegalize.utils.DossiersUtils;
 import com.ulegalize.utils.PrestationUtils;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
@@ -11,6 +12,7 @@ import java.time.ZonedDateTime;
  * The type Prestation summary.
  */
 @Data
+@NoArgsConstructor
 public class PrestationSummary {
 
     /**
@@ -25,6 +27,10 @@ public class PrestationSummary {
      * The Dossier.
      */
     private String dossier;
+    /**
+     * The initiales gestionnaire.
+     */
+    private String initialesGestionnaire;
     /**
      * The Dossier item.
      */
@@ -135,18 +141,11 @@ public class PrestationSummary {
 
 
     /**
-     * Instantiates a new Prestation summary.
-     */
-    public PrestationSummary() {
-
-    }
-
-    /**
      * Used for invoice
      *
      * @param id                 the id
      * @param dossierId          the dossier id
-     * @param nomenclature       the nomenclature
+     * @param labelDossier       the label
      * @param numDossier         the num dossier
      * @param idGest             the id gest
      * @param email              the email
@@ -166,7 +165,7 @@ public class PrestationSummary {
      * @param factExtId          the fact ext id
      * @param factExtRef         the fact ext ref
      */
-    public PrestationSummary(Long id, Long dossierId, String nomenclature, Long numDossier, Long idGest, String email, Integer tsType,
+    public PrestationSummary(Long id, Long dossierId, String labelDossier, String yearDossier, String initialesGestionnaire, Long numDossier, Long idGest, String email, Integer tsType,
                              String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
                              Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,
@@ -177,7 +176,8 @@ public class PrestationSummary {
         this.dossierId = dossierId;
         this.yearDossier = yearDossier;
         this.numDossier = numDossier;
-        this.dossier = DossiersUtils.getDossierLabelItem(nomenclature);
+        this.initialesGestionnaire = initialesGestionnaire;
+        this.dossier = DossiersUtils.getDossierLabelItem(labelDossier);
         this.idGest = idGest;
         this.email = email;
         this.idGestItem = new ItemLongDto(idGest, email);
