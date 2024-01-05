@@ -165,7 +165,10 @@ public class PrestationSummary {
      * @param factExtId          the fact ext id
      * @param factExtRef         the fact ext ref
      */
-    public PrestationSummary(Long id, Long dossierId, String labelDossier, String yearDossier, String initialesGestionnaire, Long numDossier, Long idGest, String email, Integer tsType,
+    public PrestationSummary(Long id, Long dossierId,
+                             String labelDossier, String yearDossier,
+                             String initialesGestionnaire,
+                             Long numDossier, Long idGest, String email, Integer tsType,
                              String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
                              Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,

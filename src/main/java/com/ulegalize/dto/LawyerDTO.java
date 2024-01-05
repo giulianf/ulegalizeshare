@@ -5,6 +5,7 @@ import com.ulegalize.LawyerDuty;
 import com.ulegalize.enumeration.EnumValid;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.ArrayList;
@@ -16,12 +17,17 @@ import java.util.List;
 @ToString(exclude = "picture")
 @Data
 @EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
 public class LawyerDTO extends AbstractRestObject {
 
     /**
      * The Id.
      */
     private Long id;
+    /**
+     * The lawfirm user Id.
+     */
+    private Long lawfirmUserId;
     /**
      * The Security group dto list.
      */
@@ -143,12 +149,6 @@ public class LawyerDTO extends AbstractRestObject {
      * all Dossier has Access
      */
     private boolean allDossierAccess;
-
-    /**
-     * Instantiates a new Lawyer dto.
-     */
-    public LawyerDTO() {
-    }
 
     /**
      * Instantiates a new Lawyer dto.
