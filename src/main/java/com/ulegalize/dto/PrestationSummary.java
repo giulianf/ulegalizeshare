@@ -146,6 +146,8 @@ public class PrestationSummary {
      * @param id                 the id
      * @param dossierId          the dossier id
      * @param labelDossier       the label
+     * @param yearDossier         the year dossier
+     * @param initialesGestionnaire         the initial dossier
      * @param numDossier         the num dossier
      * @param idGest             the id gest
      * @param email              the email
