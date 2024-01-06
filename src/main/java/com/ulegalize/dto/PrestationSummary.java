@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.List;
 
 /**
  * The type Prestation summary.
@@ -138,6 +139,10 @@ public class PrestationSummary {
      * The Email.
      */
     private String email;
+    /**
+     * List of managers.
+     */
+    private List<Long> managerDossierIds;
 
 
     /**
@@ -176,6 +181,51 @@ public class PrestationSummary {
                              Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,
                              boolean invoiceChecked, boolean alreadyInvoiced,
                              Long factExtId, String factExtRef) {
+
+        this(id, dossierId, labelDossier, yearDossier, initialesGestionnaire, numDossier, idGest,
+                email, tsType, tsTypeDescription, couthoraire, dateAction, dh, dm, comment, vat,
+                forfait, forfaitHt, factureTimesheetId, invoiceChecked, alreadyInvoiced, factExtId,
+                factExtRef, null);
+    }
+
+    /**
+     * Used for report
+     *
+     * @param id                    the id
+     * @param dossierId             the dossier id
+     * @param labelDossier          the label
+     * @param yearDossier           the year dossier
+     * @param initialesGestionnaire the initial dossier
+     * @param numDossier            the num dossier
+     * @param idGest                the id gest
+     * @param email                 the email
+     * @param tsType                the ts type
+     * @param tsTypeDescription     the ts type description
+     * @param couthoraire           the couthoraire
+     * @param dateAction            the date action
+     * @param dh                    the dh
+     * @param dm                    the dm
+     * @param comment               the comment
+     * @param vat                   the vat
+     * @param forfait               the forfait
+     * @param forfaitHt             the forfait ht
+     * @param factureTimesheetId    the facture timesheet id
+     * @param invoiceChecked        the invoice checked
+     * @param alreadyInvoiced       the already invoiced
+     * @param factExtId             the fact ext id
+     * @param factExtRef            the fact ext ref
+     * @param managerDossierIds     managerDossierIds
+     */
+    public PrestationSummary(Long id, Long dossierId,
+                             String labelDossier, String yearDossier,
+                             String initialesGestionnaire,
+                             Long numDossier, Long idGest, String email, Integer tsType,
+                             String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
+                             BigDecimal vat,
+                             Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,
+                             boolean invoiceChecked, boolean alreadyInvoiced,
+                             Long factExtId, String factExtRef, List<Long> managerDossierIds) {
+        this.managerDossierIds = managerDossierIds;
 
         this.id = id;
         this.dossierId = dossierId;
