@@ -135,4 +135,11 @@ public interface IDossierDTO {
      * @return the tags name
      */
     String getTagsName();
+
+    /**
+     * Gets tags name.
+     *
+     * @return the tags name
+     */
+    String getCouthoraire();
 }
