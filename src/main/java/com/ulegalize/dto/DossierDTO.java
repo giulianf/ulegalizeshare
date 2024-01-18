@@ -196,6 +196,7 @@ public class DossierDTO implements IDossierDTO {
      * @param labelDossier   the labelDossier
      * @param drivePath      the drive path
      * @param tagsName       the tags name
+     * @param couthoraire       cout horaire
      */
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
