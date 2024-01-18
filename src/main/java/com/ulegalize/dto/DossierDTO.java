@@ -205,7 +205,9 @@ public class DossierDTO implements IDossierDTO {
                       String partiesName,
                       String nomenclature,
                       String labelDossier,
-                      String drivePath, String tagsName) {
+                      String drivePath,
+                      String tagsName,
+                      Integer couthoraire) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -235,6 +237,7 @@ public class DossierDTO implements IDossierDTO {
         this.nomenclature = nomenclature;
         this.drivePath = drivePath;
         this.tagsName = tagsName;
+        this.couthoraire = couthoraire;
 
     }
 

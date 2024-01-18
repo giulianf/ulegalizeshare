@@ -137,9 +137,9 @@ public interface IDossierDTO {
     String getTagsName();
 
     /**
-     * Gets tags name.
+     * Gets cout horaire
      *
-     * @return the tags name
+     * @return Cout horaire
      */
-    String getCouthoraire();
+    Integer getCouthoraire();
 }
