@@ -54,7 +54,7 @@ public class ContactSummary implements Serializable {
     /**
      * The Title.
      */
-    private EnumTitle title = EnumTitle.F;
+    private EnumTitle title = null;
     /**
      * The Title item.
      */

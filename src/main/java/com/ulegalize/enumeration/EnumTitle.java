@@ -22,6 +22,10 @@ public enum EnumTitle {
     /**
      * A enum title.
      */
+    D("D"),
+    /**
+     * A enum title.
+     */
     A("A");
 
     /**
