@@ -55,6 +55,7 @@ public class Message_nl extends ListResourceBundle {
                 {"L", "Juffrouw"},
                 {"M", "Mijnheer"},
                 {"A", "Mijnheer"},
+                {"D", "Arts"},
                 {"CHANNEL", "Channel"},
                 {"M_001", "met"},
                 {"SORTIE", "Uitgang"},

@@ -55,6 +55,7 @@ public class Message_en extends ListResourceBundle {
                 {"L", "Miss"},
                 {"M", "Sir"},
                 {"A", "Master"},
+                {"D", "Doctor"},
                 {"CHANNEL", "Channel"},
                 {"M_001", "with"},
                 {"SORTIE", "Output"},
