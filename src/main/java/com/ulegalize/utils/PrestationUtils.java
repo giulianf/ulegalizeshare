@@ -43,7 +43,14 @@ public class PrestationUtils {
     public static BigDecimal calculateHVAT(boolean forfait, BigDecimal minutes, BigDecimal hours, Integer couthoraire, BigDecimal forfaitHt) {
         if (!forfait) {
             // (( (dh * 60) + dm ) / 60 ) * couthoraire
-            return ((hours.multiply(BigDecimal.valueOf(60))).add(minutes)).divide(BigDecimal.valueOf(60), 4, RoundingMode.HALF_EVEN).multiply(BigDecimal.valueOf(couthoraire)).setScale(2, RoundingMode.HALF_UP);
+//            return ((hours.multiply(BigDecimal.valueOf(60))).add(minutes)).divide(BigDecimal.valueOf(60), 4, RoundingMode.HALF_EVEN).multiply(BigDecimal.valueOf(couthoraire)).setScale(2, RoundingMode.HALF_UP);
+            BigDecimal result = ((hours.multiply(BigDecimal.valueOf(60))).add(minutes))
+                    .divide(BigDecimal.valueOf(60L), 6, RoundingMode.HALF_EVEN)
+                    .multiply(BigDecimal.valueOf(couthoraire));
+
+// Set scale to 2 decimal places with HALF_UP rounding mode
+            result = result.setScale(2, RoundingMode.HALF_UP);
+            return result;
         } else {
             return forfaitHt;
         }
