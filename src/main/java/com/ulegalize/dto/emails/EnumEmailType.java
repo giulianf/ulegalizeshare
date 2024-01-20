@@ -15,9 +15,15 @@ public enum EnumEmailType {
      */
     SENT(1);
 
+    /**
+     * id
+     */
     @Getter
     private final Integer id;
 
+    /**
+     * @param id id
+     */
     EnumEmailType(Integer id) {
         this.id = id;
     }

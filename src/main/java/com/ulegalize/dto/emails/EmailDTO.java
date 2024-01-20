@@ -32,17 +32,56 @@ public class EmailDTO {
      * id
      */
     private String id;
+    /**
+     * from
+     */
     private String from;
+    /**
+     * item from
+     */
     private ItemEmailDTO itemFrom;
+    /**
+     * subject
+     */
     private String subject;
+    /**
+     * created date
+     */
     private ZonedDateTime createdDate;
+    /**
+     * attachement
+     */
     private List<FileDTO> attachments = new ArrayList<>();
+    /**
+     * to
+     */
     private List<String> to = new ArrayList<>();
+    /**
+     * bcc
+     */
     private List<String> bcc = new ArrayList<>();
+    /**
+     * cc
+     */
     private List<String> cc = new ArrayList<>();
+    /**
+     * body
+     */
     private String body;
+    /**
+     * read
+     */
     private Boolean read;
+    /**
+     * reply to
+     */
     private String replyTo;
+    /**
+     * id dossier
+     */
     private Long idDossier;
+    /**
+     * email type
+     */
     private EnumEmailType emailType;
 }

@@ -19,7 +19,13 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 public class InvoiceTemplateDTO extends MainTemplateDTO {
+    /**
+     * client info
+     */
     private ContactSummary clientInfo;
+    /**
+     * complete dossier
+     */
     private CompleteDossierDTO completeDossierDTO;
     /**
      * The Is valid.

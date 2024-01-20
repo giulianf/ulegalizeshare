@@ -17,11 +17,29 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CompleteDossierDTO {
+    /**
+     * Template id
+     */
     private Long templateId;
+    /**
+     * Template name
+     */
     private String templateName;
+    /**
+     * The dossier
+     */
     private DossierDTO dossierDTO;
+    /**
+     * user / lawyer.
+     */
     private LawyerDTO lawyerDTO;
+    /**
+     * The Contacts client.
+     */
     private List<ContactSummary> contactSummaries;
+    /**
+     * The Contacts opposing.
+     */
     private List<ContactSummary> contactOpposing;
 
     /**
@@ -56,5 +74,8 @@ public class CompleteDossierDTO {
      * The Contacts lawyer opposing.
      */
     private List<ContactSummary> contactLawyerOpposing;
+    /**
+     * lawfirm
+     */
     private LawfirmDTO lawfirmDTO;
 }

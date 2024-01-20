@@ -15,13 +15,29 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class EtatReportDTO {
+    /**
+     * dossier id
+     */
     private Long dossierId;
+    /**
+     * complete dossier
+     */
     private CompleteDossierDTO completeDossierDTO;
-
+    /**
+     * finance
+     */
     private FinanceDTO financeDTO;
-
+    /**
+     * invoice list
+     */
     private List<InvoiceDTO> invoiceList;
+    /**
+     * tiers list
+     */
     private List<ComptaDTO> tiersAffaireList;
+    /**
+     * honoraire list
+     */
     private List<ComptaDTO> honoraireAffaireList;
 
     /**

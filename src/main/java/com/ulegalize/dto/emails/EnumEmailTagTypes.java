@@ -26,7 +26,7 @@ public enum EnumEmailTagTypes {
     private int id;
 
     /**
-     * @param id
+     * @param id the id
      */
     EnumEmailTagTypes(int id) {
         this.id = id;
