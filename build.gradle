@@ -53,26 +53,26 @@ task generateJavadoc(type: Javadoc) {
 }
 
 // Create a JAR for Javadoc
-task javadocJar(type: Jar) {
-    archiveClassifier.set('javadoc')
-    from generateJavadoc.destinationDir
-    dependsOn generateJavadoc
-}
-
-task sourcesJar(type: Jar) {
-    archiveClassifier.set('sources')
-    from sourceSets.main.allSource
-}
-
-
 //task javadocJar(type: Jar) {
-//    classifier = 'javadoc'
-//    from javadoc
+//    archiveClassifier.set('javadoc')
+//    from generateJavadoc.destinationDir
+//    dependsOn generateJavadoc
 //}
+//
 //task sourcesJar(type: Jar) {
-//    classifier = 'sources'
+//    archiveClassifier.set('sources')
 //    from sourceSets.main.allSource
 //}
+
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -135,8 +135,10 @@ artifacts {
     archives javadocJar, sourcesJar
 }
 signing {
+    required { gradle.taskGraph.hasTask("publish") }
     sign publishing.publications.mavenJava
 }
+
 //signing {
 //    sign configurations.archives
 //}
