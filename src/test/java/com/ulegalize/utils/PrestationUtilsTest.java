@@ -13,7 +13,7 @@ class PrestationUtilsTest {
         BigDecimal forfait = new BigDecimal("33.33");
         BigDecimal forfaitttc = new BigDecimal("40.33");
         BigDecimal minutes = new BigDecimal("10");
-        Integer couthoraire = 200;
+        BigDecimal couthoraire = new BigDecimal("200");
         BigDecimal vat = new BigDecimal("21");
         // 33.3333 * 1.21
         BigDecimal calculateVAT = PrestationUtils.calculateVAT(false, minutes, BigDecimal.ZERO, couthoraire, forfait, vat);
@@ -25,8 +25,9 @@ class PrestationUtilsTest {
         BigDecimal forfait = new BigDecimal("33.33");
         BigDecimal forfaitttc = new BigDecimal("40.33");
         BigDecimal vat = new BigDecimal("21");
+        BigDecimal couthoraire = new BigDecimal("200");
         // 33.3333
-        BigDecimal calculateHVAT = PrestationUtils.calculateVAT(true, new BigDecimal("10"), BigDecimal.ZERO, 200, forfait, vat);
+        BigDecimal calculateHVAT = PrestationUtils.calculateVAT(true, new BigDecimal("10"), BigDecimal.ZERO, couthoraire, forfait, vat);
         assertEquals(forfaitttc, calculateHVAT);
     }
 
@@ -34,7 +35,7 @@ class PrestationUtilsTest {
     void calculateHVAT_notForfait() {
         BigDecimal forfait = new BigDecimal("33.33");
         BigDecimal minutes = new BigDecimal("10");
-        Integer couthoraire = 200;
+        BigDecimal couthoraire = new BigDecimal("200");
         // 200*(10/60) = 33.3333
         BigDecimal calculateHVAT = PrestationUtils.calculateHVAT(false, minutes, BigDecimal.ZERO, couthoraire, forfait);
         assertEquals(forfait, calculateHVAT);
@@ -43,7 +44,8 @@ class PrestationUtilsTest {
     @Test
     void calculateHVAT_forfait() {
         BigDecimal forfait = new BigDecimal("100");
-        BigDecimal calculateHVAT = PrestationUtils.calculateHVAT(true, BigDecimal.ZERO, BigDecimal.ZERO, 0, forfait);
+        BigDecimal couthoraire = new BigDecimal("0");
+        BigDecimal calculateHVAT = PrestationUtils.calculateHVAT(true, BigDecimal.ZERO, BigDecimal.ZERO, couthoraire, forfait);
         assertEquals(forfait, calculateHVAT);
     }
 }

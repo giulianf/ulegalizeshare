@@ -60,7 +60,7 @@ public class PrestationSummary {
     /**
      * The Couthoraire.
      */
-    private Integer couthoraire;
+    private BigDecimal couthoraire;
     /**
      * The Date action.
      */
@@ -176,7 +176,7 @@ public class PrestationSummary {
                              String labelDossier, String yearDossier,
                              String initialesGestionnaire,
                              Long numDossier, Long idGest, String email, Integer tsType,
-                             String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
+                             String tsTypeDescription, BigDecimal couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
                              Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,
                              boolean invoiceChecked, boolean alreadyInvoiced,
@@ -220,7 +220,7 @@ public class PrestationSummary {
                              String labelDossier, String yearDossier,
                              String initialesGestionnaire,
                              Long numDossier, Long idGest, String email, Integer tsType,
-                             String tsTypeDescription, Integer couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
+                             String tsTypeDescription, BigDecimal couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
                              Boolean forfait, BigDecimal forfaitHt, Long factureTimesheetId,
                              boolean invoiceChecked, boolean alreadyInvoiced,
