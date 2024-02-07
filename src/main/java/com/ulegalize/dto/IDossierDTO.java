@@ -141,5 +141,5 @@ public interface IDossierDTO {
      *
      * @return Cout horaire
      */
-    Integer getCouthoraire();
+    BigDecimal getCouthoraire();
 }
