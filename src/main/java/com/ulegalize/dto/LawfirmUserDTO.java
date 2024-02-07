@@ -5,6 +5,7 @@ import com.ulegalize.enumeration.EnumRole;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -38,7 +39,7 @@ public class LawfirmUserDTO extends AbstractRestObject {
     /**
      * The Couthoraire.
      */
-    private Integer couthoraire;
+    private BigDecimal couthoraire;
     /**
      * The Use self couthoraire.
      */
