@@ -107,7 +107,7 @@ public class DossierDTO implements IDossierDTO {
     /**
      * The Couthoraire.
      */
-    private Integer couthoraire;
+    private BigDecimal couthoraire;
     /**
      * The Email client.
      */
@@ -208,7 +208,7 @@ public class DossierDTO implements IDossierDTO {
                       String labelDossier,
                       String drivePath,
                       String tagsName,
-                      Integer couthoraire) {
+                      BigDecimal couthoraire) {
         this.id = dossierId;
         this.year = year;
         this.num = number;

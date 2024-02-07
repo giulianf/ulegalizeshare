@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -61,7 +62,7 @@ public class LawfirmDTO extends AbstractRestObject {
 	/**
 	 * The Couthoraire.
 	 */
-	private int couthoraire;
+	private BigDecimal couthoraire;
 	/**
 	 * The Start invoice number.
 	 */
@@ -195,7 +196,7 @@ public class LawfirmDTO extends AbstractRestObject {
 					  String objetsocial,
 					  EnumRefCurrency currency,
 					  String website,
-					  int couthoraire,
+					  BigDecimal couthoraire,
 					  Integer startInvoiceNumber,
 					  String street,
 					  String city,
