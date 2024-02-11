@@ -23,9 +23,29 @@ public enum EnumDossierType {
      */
     DF("DF"),
     /**
+     * contentieux enum dossier type.
+     */
+    CONTENTIEUX("CT"),
+    /**
+     * formation enum dossier type.
+     */
+    FORMATION("FR"),
+    /**
+     * expertise enum dossier type.
+     */
+    EXPERTISE("EX"),
+    /**
+     * negociation
+     */
+    NEGOCIATION("NG"),
+    /**
+     * PRECONTENTIEUX
+     */
+    PRECONTENTIEUX("PC"),
+    /**
      * Md enum dossier type.
      */
-    MD("MD");
+    MEDIATION("MD");
 
     /**
      * The Doss type.
