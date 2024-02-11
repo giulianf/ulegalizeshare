@@ -221,7 +221,7 @@ public class DossierDTO implements IDossierDTO {
         this.lastAccessDate = lastAccessDate;
         this.partiesName = partiesName;
 
-        if (!type.equals(EnumDossierType.MD)) {
+        if (!type.equals(EnumDossierType.MEDIATION)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
