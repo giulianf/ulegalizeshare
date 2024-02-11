@@ -57,6 +57,10 @@ public class DossierDTO implements IDossierDTO {
      */
     private EnumDossierType type;
     /**
+     * The Type must be convert to type
+     */
+    private String typeString;
+    /**
      * The Type item.
      */
     private ItemStringDto typeItem;

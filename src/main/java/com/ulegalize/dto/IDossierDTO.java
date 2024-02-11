@@ -1,6 +1,5 @@
 package com.ulegalize.dto;
 
-import com.ulegalize.enumeration.EnumDossierType;
 import com.ulegalize.enumeration.EnumVCOwner;
 
 import java.math.BigDecimal;
@@ -85,7 +84,7 @@ public interface IDossierDTO {
      *
      * @return the type
      */
-    EnumDossierType getType();
+    String getTypeString();
 
     /**
      * Gets owner.
