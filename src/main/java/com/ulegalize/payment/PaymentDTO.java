@@ -46,6 +46,10 @@ public class PaymentDTO implements Serializable {
      */
     private String invoiceStripeId;
     /**
+     * The start Invoice stripe id for pagination
+     */
+    private String startInvoiceStripeId;
+    /**
      * The Type list.
      */
 // type to define payjment price
@@ -108,7 +112,9 @@ public class PaymentDTO implements Serializable {
      * @param creDate          the cre date
      */
     public PaymentDTO(Long id, EnumPaymentStatus status,
-                      BigDecimal amount, BigDecimal amountTt, String invoiceStripeId,
+                      BigDecimal amount, BigDecimal amountTt,
+                      String invoiceStripeId,
+                      String startInvoiceStripeId,
                       String vcKey, String workflowNameCode,
                       String updUser, LocalDateTime updDate, String creUser, LocalDateTime creDate) {
         this.id = id;
@@ -116,6 +122,7 @@ public class PaymentDTO implements Serializable {
         this.amount = amount;
         this.amountTt = amountTt;
         this.invoiceStripeId = invoiceStripeId;
+        this.startInvoiceStripeId = startInvoiceStripeId;
         this.vcKey = vcKey;
         this.updUser = updUser;
         this.updDate = updDate;
