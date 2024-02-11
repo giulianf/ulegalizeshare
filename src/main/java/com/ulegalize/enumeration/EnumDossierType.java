@@ -75,4 +75,18 @@ public enum EnumDossierType {
         }
         return null;
     }
+
+    /**
+     * fromname type enum dossier type.
+     *
+     * @param name the doss type
+     * @return the enum dossier type
+     */
+    public static EnumDossierType fromName(String name) {
+        for (EnumDossierType enumDossierType : EnumDossierType.values()) {
+            if (enumDossierType.name().equalsIgnoreCase(name))
+                return enumDossierType;
+        }
+        return null;
+    }
 }
