@@ -201,7 +201,7 @@ public class DossierDTO implements IDossierDTO {
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
-                      EnumDossierType type,
+                      String type,
                       Date lastAccessDate,
                       String partiesName,
                       String nomenclature,
@@ -214,14 +214,14 @@ public class DossierDTO implements IDossierDTO {
         this.num = number;
         this.initiales = initiales;
         this.balance = balance;
-        this.type = type;
+        this.type = EnumDossierType.fromdossType(type);
         this.closeDossier = closeDossier;
         this.openDossier = openDossier;
         this.owner = enumVCOwner;
         this.lastAccessDate = lastAccessDate;
         this.partiesName = partiesName;
 
-        if (!type.equals(EnumDossierType.MEDIATION)) {
+        if (!this.type.equals(EnumDossierType.MEDIATION)) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
@@ -231,7 +231,7 @@ public class DossierDTO implements IDossierDTO {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
+                this.label = this.type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
             }
         }
         this.labelDossier = labelDossier;
