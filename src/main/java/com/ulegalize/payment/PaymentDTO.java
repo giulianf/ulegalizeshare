@@ -104,6 +104,7 @@ public class PaymentDTO implements Serializable {
      * @param amount           the amount
      * @param amountTt         the amount tt
      * @param invoiceStripeId  the invoice stripe id
+     * @param startInvoiceStripeId  the starting invoice stripe id for pagination
      * @param vcKey            the vc key
      * @param workflowNameCode the workflow name code
      * @param updUser          the upd user
