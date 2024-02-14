@@ -5,6 +5,7 @@ import com.ulegalize.enumeration.DriveType;
 import com.ulegalize.enumeration.EnumRefCurrency;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.math.BigDecimal;
@@ -16,6 +17,7 @@ import java.util.List;
 @ToString(exclude = "logo")
 @Data
 @EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
 public class LawfirmDTO extends AbstractRestObject {
 
 
@@ -67,6 +69,10 @@ public class LawfirmDTO extends AbstractRestObject {
 	 * The Start invoice number.
 	 */
 	private Integer startInvoiceNumber;
+	/**
+	 * The acronym invoice.
+	 */
+	private String acronymInvoice;
 	/**
 	 * The Start dossier number.
 	 */
@@ -159,13 +165,6 @@ public class LawfirmDTO extends AbstractRestObject {
 
 	/**
 	 * Instantiates a new Lawfirm dto.
-	 */
-	public LawfirmDTO() {
-
-	}
-
-	/**
-	 * Instantiates a new Lawfirm dto.
 	 *
 	 * @param vckey              the vckey
 	 * @param name               the name
@@ -177,6 +176,7 @@ public class LawfirmDTO extends AbstractRestObject {
 	 * @param website            the website
 	 * @param couthoraire        the couthoraire
 	 * @param startInvoiceNumber the start invoice number
+	 * @param acronymInvoice     the acronym invoice
 	 * @param street             the street
 	 * @param city               the city
 	 * @param postalCode         the postal code
@@ -198,6 +198,7 @@ public class LawfirmDTO extends AbstractRestObject {
 					  String website,
 					  BigDecimal couthoraire,
 					  Integer startInvoiceNumber,
+					  String acronymInvoice,
 					  String street,
 					  String city,
 					  String postalCode,
@@ -219,6 +220,7 @@ public class LawfirmDTO extends AbstractRestObject {
 		this.website = website;
 		this.couthoraire = couthoraire;
 		this.startInvoiceNumber = startInvoiceNumber;
+		this.acronymInvoice = acronymInvoice;
 		this.street = street;
 		this.city = city;
 		this.postalCode = postalCode;
