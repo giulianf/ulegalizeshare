@@ -46,8 +46,8 @@ public class ItemLongDto extends Item<Long> {
     }
 
     /**
-     * @param value
-     * @param label
+     * @param value id
+     * @param label label
      * @param date  dateValue
      */
     public ItemLongDto(Long value, String label, ZonedDateTime date) {
