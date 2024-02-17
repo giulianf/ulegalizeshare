@@ -2,6 +2,9 @@ package com.ulegalize.dto;
 
 import lombok.Getter;
 
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * The type Item long dto.
  */
@@ -40,6 +43,17 @@ public class ItemLongDto extends Item<Long> {
         super(value, label);
 
         this.isDefault = extra;
+    }
+
+    /**
+     * @param value
+     * @param label
+     * @param date  dateValue
+     */
+    public ItemLongDto(Long value, String label, ZonedDateTime date) {
+        super(value, label);
+
+        this.label = label + (date != null ? " - " + DateTimeFormatter.ofPattern("dd/MM/yyyy").format(date) : "");
     }
 
 }
