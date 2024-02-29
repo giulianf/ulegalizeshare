@@ -44,4 +44,8 @@ public class InvoiceDetailsDTO {
      * The Montant ht.
      */
     private BigDecimal montantHt;
+    /**
+     * The percentage Frais.
+     */
+    private boolean percentageFrais;
 }
