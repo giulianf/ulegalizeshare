@@ -48,4 +48,8 @@ public class InvoiceDetailsDTO {
      * The percentage Frais.
      */
     private boolean percentageFrais;
+    /**
+     * Calculate Honoraire.
+     */
+    private boolean honoraireCalculate;
 }
