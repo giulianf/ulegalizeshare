@@ -331,4 +331,12 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * Sbank account label
      */
     private String bankAccount;
+    /**
+     * market number
+     */
+    private String marketNb;
+    /**
+     * order number
+     */
+    private String orderNb;
 }
