@@ -1,5 +1,6 @@
 package com.ulegalize.dto;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -9,6 +10,7 @@ public class ItemStringDto extends Item<String> implements Serializable {
     /**
      * serial
      */
+    @Serial
     private static final long serialVersionUID = 1L;
     /**
      * Instantiates a new Item string dto.

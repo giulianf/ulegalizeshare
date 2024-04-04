@@ -7,6 +7,7 @@ import com.ulegalize.utils.DossiersUtils;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -21,6 +22,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
     /**
      * serial
      */
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /**

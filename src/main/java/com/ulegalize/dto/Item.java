@@ -3,6 +3,7 @@ package com.ulegalize.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -16,6 +17,7 @@ public abstract class Item<T> implements Serializable {
     /**
      * serial
      */
+    @Serial
     private static final long serialVersionUID = 1L;
     /**
      * The Value.

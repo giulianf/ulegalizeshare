@@ -3,6 +3,7 @@ package com.ulegalize.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -14,6 +15,7 @@ public class DossierContactDTO implements Serializable {
     /**
      * serial
      */
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /**
