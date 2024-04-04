@@ -1,0 +1,9 @@
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+skinparam DefaultTextAlignment center
+hide empty description
+[*] --> User
+User -> Tag :push
+Tag -> Release : automatic
+@enduml

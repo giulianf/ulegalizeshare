@@ -21,16 +21,8 @@ git push tag
 .github/workflows/publish-release.yml
 Automatically push a new release
 push tag -> `publish-release.yml` create
-```plantuml
-@startuml
-skinparam style strictuml
-skinparam backgroundcolor transparent
-skinparam DefaultTextAlignment center
-hide empty description
-[*] --> User(you)
-User(you) -> Tag : push -> Release : automatic
-@enduml
-```
+![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/plantuml/plantuml-server/master/src/main/webapp/resource/test2diagrams.txt)
+
 
 
 # this part is to deploy in OSSRH (NOT USED ANYMORE) #
