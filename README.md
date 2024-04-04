@@ -68,7 +68,7 @@ The link to authorize :
 * Repo owner or admin
 * Other community or team contact
 
-### tags
+### hot to tags
 ```
 git tag 6.0.0  
 git push origin 6.0.0
