@@ -53,22 +53,22 @@ task generateJavadoc(type: Javadoc) {
 }
 
 // Create a JAR for Javadoc
-//task javadocJar(type: Jar) {
-//    archiveClassifier.set('javadoc')
-//    from generateJavadoc.destinationDir
-//    dependsOn generateJavadoc
-//}
-//
-//task sourcesJar(type: Jar) {
-//    archiveClassifier.set('sources')
-//    from sourceSets.main.allSource
-//}
-
-
-java {
-    withSourcesJar()
-    withJavadocJar()
+task javadocJar(type: Jar) {
+    archiveClassifier.set('javadoc')
+    from generateJavadoc.destinationDir
+    dependsOn generateJavadoc
 }
+
+task sourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from sourceSets.main.allSource
+}
+
+
+//java {
+//    withSourcesJar()
+//    withJavadocJar()
+//}
 publishing {
     publications {
         mavenJava(MavenPublication) {
