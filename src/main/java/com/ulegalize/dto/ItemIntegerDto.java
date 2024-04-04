@@ -8,6 +8,9 @@ import java.io.Serializable;
  * The type Item integer dto.
  */
 public class ItemIntegerDto extends Item<Integer> implements Serializable {
+    /**
+     * serial
+     */
     private static final long serialVersionUID = 1L;
     /**
      * The Is default.

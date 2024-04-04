@@ -6,6 +6,9 @@ import java.io.Serializable;
  * The type Item string dto.
  */
 public class ItemStringDto extends Item<String> implements Serializable {
+    /**
+     * serial
+     */
     private static final long serialVersionUID = 1L;
     /**
      * Instantiates a new Item string dto.

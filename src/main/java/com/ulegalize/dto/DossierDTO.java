@@ -18,6 +18,9 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class DossierDTO implements IDossierDTO, Serializable {
+    /**
+     * serial
+     */
     private static final long serialVersionUID = 1L;
 
     /**

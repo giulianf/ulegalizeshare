@@ -13,6 +13,9 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 public abstract class Item<T> implements Serializable {
+    /**
+     * serial
+     */
     private static final long serialVersionUID = 1L;
     /**
      * The Value.

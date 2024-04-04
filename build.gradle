@@ -6,7 +6,7 @@ plugins {
 apply from: 'version.gradle'
 
 group = applicationGroup
-archivesBaseName =  applicationName
+//archivesBaseName =  applicationName
 version = applicationVersion
 project.version = applicationVersion
 description = applicationName
@@ -53,16 +53,16 @@ task generateJavadoc(type: Javadoc) {
 }
 
 // Create a JAR for Javadoc
-task javadocJar(type: Jar) {
-    archiveClassifier.set('javadoc')
-    from generateJavadoc.destinationDir
-    dependsOn generateJavadoc
-}
-
-task sourcesJar(type: Jar) {
-    archiveClassifier.set('sources')
-    from sourceSets.main.allSource
-}
+//task javadocJar(type: Jar) {
+//    archiveClassifier.set('javadoc')
+//    from generateJavadoc.destinationDir
+//    dependsOn generateJavadoc
+//}
+//
+//task sourcesJar(type: Jar) {
+//    archiveClassifier.set('sources')
+//    from sourceSets.main.allSource
+//}
 
 //
 java {
@@ -76,6 +76,11 @@ publishing {
             from components.java
         }
     }
+}
+
+wrapper {
+    gradleVersion = "7.3.2"
+    distributionType = Wrapper.DistributionType.ALL
 }
 //publishing {
 //    publications {

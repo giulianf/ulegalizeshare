@@ -11,6 +11,9 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 public class DossierContactDTO implements Serializable {
+    /**
+     * serial
+     */
     private static final long serialVersionUID = 1L;
 
     /**
