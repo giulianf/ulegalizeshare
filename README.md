@@ -21,9 +21,10 @@ git push tag
 .github/workflows/publish-release.yml
 Automatically push a new release
 push tag -> `publish-release.yml` create
-![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/plantuml/plantuml-server/master/src/main/webapp/resource/test2diagrams.txt)
 
+![change workflow.puml](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/giulianf/ulegalizeshare/master/doc/workflow.puml)
 
+[//]: # (![PlantUML model]&#40;http://www.plantuml.com/plantuml/png/NOux3i8m343tdC8pKY_G0HM94w0o8GQJc3PgFf7jIFJsk1jYURBztk1955bxJawsM1eoPX3T4nav-Z_pGhyjN7i9lgRAe8n5J57Hd-fAR-n9P_he9SMbPDFW3SHkZO60SjCT0edds3JMuXwd9mp36UvYpG6mPSO5njPbTJOTXnibGY4O0RlMZ1gzcwY4uyal&#41;x)
 
 # this part is to deploy in OSSRH (NOT USED ANYMORE) #
 
