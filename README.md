@@ -13,6 +13,27 @@ This README would normally document whatever steps are necessary to get your app
 create a Pull request
 
 ### How do I get to publish? ###
+# this part is to deploy in JITPACK #
+Push git tag version MAJOR.MINOR.BUG 
+change `applicationVersion` into `gradle.properties`
+git push tag
+## workflow
+.github/workflows/publish-release.yml
+Automatically push a new release
+push tag -> `publish-release.yml` create
+```plantuml
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+skinparam DefaultTextAlignment center
+hide empty description
+[*] --> User(you)
+User(you) -> Tag : push -> Release : automatic
+@enduml
+```
+
+
+# this part is to deploy in OSSRH (NOT USED ANYMORE) #
 
 1. create your gradle.properties in your user folder (ex: ~/.gradle/gradle.properties)
 
@@ -68,9 +89,3 @@ The link to authorize :
 * Repo owner or admin
 * Other community or team contact
 
-### hot to tags
-```
-git tag 6.0.1  
-git push origin 6.0.1
-
-```
