@@ -2,10 +2,13 @@ package com.ulegalize.dto;
 
 import lombok.Getter;
 
+import java.io.Serializable;
+
 /**
  * The type Item integer dto.
  */
-public class ItemIntegerDto extends Item<Integer> {
+public class ItemIntegerDto extends Item<Integer> implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * The Is default.
      */

@@ -1,9 +1,12 @@
 package com.ulegalize.dto;
 
+import java.io.Serializable;
+
 /**
  * The type Item string dto.
  */
-public class ItemStringDto extends Item<String> {
+public class ItemStringDto extends Item<String> implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * Instantiates a new Item string dto.
      */
