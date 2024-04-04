@@ -64,10 +64,18 @@ task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
 }
 
-
+//
 //java {
 //    withSourcesJar()
 //    withJavadocJar()
+//}
+//
+//publishing {
+//    publications {
+//        maven(MavenPublication) {
+//            from components.java
+//        }
+//    }
 //}
 publishing {
     publications {
