@@ -3,6 +3,7 @@ package com.ulegalize.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 /**
@@ -10,7 +11,7 @@ import java.time.ZonedDateTime;
  */
 @Data
 @NoArgsConstructor
-public class ObjectResponseDTO {
+public class ObjectResponseDTO implements Serializable {
     /**
      * The Id.
      */

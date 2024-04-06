@@ -14,6 +14,7 @@ create a Pull request
 
 ### How do I get to publish? ###
 # this part is to deploy in JITPACK #
+check here https://jitpack.io/#giulianf/ulegalizeshare  
 Push git tag version MAJOR.MINOR.BUG 
 change `applicationVersion` into `gradle.properties`
 git push tag
