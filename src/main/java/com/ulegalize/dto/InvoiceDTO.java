@@ -3,6 +3,7 @@ package com.ulegalize.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-public class InvoiceDTO {
+public class InvoiceDTO implements Serializable {
 
     /**
      * The Id.
