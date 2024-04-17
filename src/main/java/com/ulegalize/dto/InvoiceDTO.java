@@ -158,6 +158,10 @@ public class InvoiceDTO {
      * The montant clause penal.
      */
     private BigDecimal cpMontant;
+    /**
+     * status of invoice
+     */
+    private String status;
 
     /**
      * market number
