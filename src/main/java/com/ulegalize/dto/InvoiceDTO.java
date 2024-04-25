@@ -119,6 +119,10 @@ public class InvoiceDTO implements Serializable {
      */
     private ItemLongDto clientItem;
     /**
+     * The Client vat.
+     */
+    private String clientVat;
+    /**
      * The Bank account id.
      */
     private Integer bankAccountId;
