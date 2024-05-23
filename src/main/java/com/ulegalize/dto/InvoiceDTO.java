@@ -193,6 +193,10 @@ public class InvoiceDTO implements Serializable {
      */
     private ItemLongDto mandataireItem;
     /**
+     * Memo
+     */
+    private String memo;
+    /**
      * The Invoice details dto list.
      */
     private List<InvoiceDetailsDTO> invoiceDetailsDTOList = new ArrayList<>();
