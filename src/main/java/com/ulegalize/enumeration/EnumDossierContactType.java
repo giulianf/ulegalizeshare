@@ -43,7 +43,11 @@ public enum EnumDossierContactType {
     /**
      * BAILIFF enum dossier contact type.
      */
-    BAILIFF(10);
+    BAILIFF(10),
+    /**
+     * REPRESENTATIVE enum dossier contact type.
+     */
+    REPRESENTATIVE(11);
 
     /**
      * The Id.

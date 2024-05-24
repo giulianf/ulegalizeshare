@@ -141,6 +141,7 @@ public class Message_en extends ListResourceBundle {
                 {"EXPERT", "Expert"},
                 {"NOTARY", "Notary"},
                 {"BAILIFF", "Bailiff"},
+                {"REPRESENTATIVE", "Representative"},
         };
     }
 
