@@ -177,21 +177,9 @@ public class InvoiceDTO implements Serializable {
      */
     private String orderNb;
     /**
-     * note
-     */
-    private String note;
-    /**
      * mandataire Vat
      */
     private String mandataireVat;
-    /**
-     * mandataire from contact
-     */
-    private Long mandataireId;
-    /**
-     * The Client item.
-     */
-    private ItemLongDto mandataireItem;
     /**
      * Memo
      */
