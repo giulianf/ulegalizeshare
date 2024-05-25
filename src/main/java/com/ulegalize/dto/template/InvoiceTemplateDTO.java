@@ -24,6 +24,10 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      */
     private ContactSummary clientInfo;
     /**
+     * manadataire info
+     */
+    private ContactSummary mandataireInfo;
+    /**
      * complete dossier
      */
     private CompleteDossierDTO completeDossierDTO;
@@ -55,56 +59,6 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      */
     @JsonProperty("AnnexeLbl")
     private String annexeLbl;
-
-    /**
-     * The Client city.
-     */
-    @Deprecated
-    private String clientCity;
-
-    /**
-     * The Client country.
-     */
-    @Deprecated
-    private String clientCountry;
-
-    /**
-     * The Client cp.
-     */
-    @Deprecated
-    private String clientCp;
-
-    /**
-     * The Client name.
-     */
-    @Deprecated
-    private String clientName;
-    /**
-     * The Client title.
-     */
-    @Deprecated
-    private String clientTitle;
-
-    /**
-     * The Client street.
-     */
-    @Deprecated
-    private String clientStreet;
-    /**
-     * The Client company.
-     */
-    @Deprecated
-    private String clientCompany;
-    /**
-     * The Client vat.
-     */
-    @Deprecated
-    private String clientVat;
-    /**
-     * The Client type.
-     */
-    @Deprecated
-    private String clientType;
 
     /**
      * The Company name.
