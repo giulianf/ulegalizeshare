@@ -293,4 +293,8 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * order number
      */
     private String orderNb;
+    /**
+     * memo
+     */
+    private String memo;
 }
