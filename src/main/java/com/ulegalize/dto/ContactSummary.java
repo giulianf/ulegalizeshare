@@ -100,6 +100,10 @@ public class ContactSummary implements Serializable {
      */
     private String etr = "";
     /**
+     * The nationality.
+     */
+    private String nationality;
+    /**
      * The Tva.
      */
     private String tva = null;
