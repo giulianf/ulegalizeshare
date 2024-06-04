@@ -10,7 +10,7 @@ group = applicationGroup
 version = applicationVersion
 project.version = applicationVersion
 description = applicationName
-sourceCompatibility = '17'
+sourceCompatibility = '21'
 
 
 
