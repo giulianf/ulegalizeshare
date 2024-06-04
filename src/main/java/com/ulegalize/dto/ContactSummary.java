@@ -104,6 +104,10 @@ public class ContactSummary implements Serializable {
      */
     private String nationality;
     /**
+     * The nationality tem.
+     */
+    private ItemStringDto nationalityItem;
+    /**
      * The Tva.
      */
     private String tva = null;
