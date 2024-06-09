@@ -56,6 +56,10 @@ public class TemplateDTO {
      * The contentHtml
      */
     private String contentHtml;
+    /**
+     * The subject
+     */
+    private String subject;
 
     /**
      * ContactID
