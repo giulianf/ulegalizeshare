@@ -61,15 +61,15 @@ public enum EnumDossierContactType {
     /**
      * 1. OPPOSING_party
      */
-    OPPOSING_PARTY_1(12, true),
+    OPPOSING_PARTY_1(16, true),
     /**
      * 2 OPPOSING_party
      */
-    OPPOSING_PARTY_2(14, true),
+    OPPOSING_PARTY_2(17, true),
     /**
      * 3 OPPOSING_party
      */
-    OPPOSING_PARTY_3(15, true);
+    OPPOSING_PARTY_3(18, true);
 
     /**
      * The Id.
