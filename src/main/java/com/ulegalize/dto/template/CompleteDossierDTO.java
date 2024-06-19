@@ -43,9 +43,29 @@ public class CompleteDossierDTO {
     private List<ContactSummary> contactOpposing;
 
     /**
-     * The Contacts party.
+     * The Contacts party 1.
      */
-    private List<ContactSummary> contactsParty;
+    private List<ContactSummary> contactsParty1;
+    /**
+     * The Contacts party 2.
+     */
+    private List<ContactSummary> contactsParty2;
+    /**
+     * The Contacts party 3.
+     */
+    private List<ContactSummary> contactsParty3;
+    /**
+     * The Contacts party ADVICE 1.
+     */
+    private List<ContactSummary> contactsPartyAdv1;
+    /**
+     * The Contacts party ADVICE 2.
+     */
+    private List<ContactSummary> contactsPartyAdv2;
+    /**
+     * The Contacts party ADVICE 3.
+     */
+    private List<ContactSummary> contactsPartyAdv3;
     /**
      * The Contacts Notary.
      */
