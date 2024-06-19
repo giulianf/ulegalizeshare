@@ -133,7 +133,12 @@ public class Message_fr extends ListResourceBundle {
                 // EnumDossierContactType
                 {"CLIENT", "Client"},
                 {"OPPOSING", "Partie adverse"},
-                {"PARTY", "Partie"},
+                {"PARTY_1", "Partie 1"},
+                {"PARTY_2", "Partie 2"},
+                {"PARTY_3", "Partie 3"},
+                {"OPPONENT_PARTY_1", "Conseil de la partie 1"},
+                {"OPPONENT_PARTY_2", "Conseil de la partie 2"},
+                {"OPPONENT_PARTY_3", "Conseil de la partie 3"},
                 {"OPPONENT_COUNSIL", "Conseil partie adverse"},
                 {"OTHER", "Autre"},
                 {"OPPOSING_LAWYER", "Avocat partie adverse"},

@@ -1,5 +1,7 @@
 package com.ulegalize.enumeration;
 
+import lombok.Getter;
+
 /**
  * The enum Enum dossier contact type.
  */
@@ -7,60 +9,84 @@ public enum EnumDossierContactType {
     /**
      * Client enum dossier contact type.
      */
-    CLIENT(1),
+    CLIENT(1, false),
     /**
      * Opposing enum dossier contact type.
      */
-    OPPOSING(2),
-    /**
-     * Party enum dossier contact type.
-     */
-    PARTY(3),
+    OPPOSING(2, false),
     /**
      * Opponent counsil enum dossier contact type.
      */
-    OPPONENT_COUNSIL(4),
+    OPPONENT_COUNSIL(4, false),
     /**
      * Other enum dossier contact type.
      */
-    OTHER(5),
+    OTHER(5, false),
     /**
      * Opposing lawyer enum dossier contact type.
      */
-    OPPOSING_LAWYER(6),
+    OPPOSING_LAWYER(6, false),
     /**
      * Tribunal enum dossier contact type.
      */
-    TRIBUNAL(7),
+    TRIBUNAL(7, false),
     /**
      * Expert enum dossier contact type.
      */
-    EXPERT(8),
+    EXPERT(8, false),
     /**
      * NOTAIRE enum dossier contact type.
      */
-    NOTARY(9),
+    NOTARY(9, false),
     /**
      * BAILIFF enum dossier contact type.
      */
-    BAILIFF(10),
+    BAILIFF(10, false),
     /**
      * REPRESENTATIVE enum dossier contact type.
      */
-    REPRESENTATIVE(11);
+    REPRESENTATIVE(11, false),
+    /**
+     * 1. party
+     */
+    PARTY_1(12, true),
+    /**
+     * 2 party
+     */
+    PARTY_2(14, true),
+    /**
+     * 3 party
+     */
+    PARTY_3(15, true),
+    /**
+     * 1. OPPOSING_party
+     */
+    OPPOSING_PARTY_1(12, true),
+    /**
+     * 2 OPPOSING_party
+     */
+    OPPOSING_PARTY_2(14, true),
+    /**
+     * 3 OPPOSING_party
+     */
+    OPPOSING_PARTY_3(15, true);
 
     /**
      * The Id.
      */
+    @Getter
     private int id;
+    @Getter
+    private boolean isMediation;
 
     /**
      * Instantiates a new Enum dossier contact type.
      *
      * @param id the id
      */
-    EnumDossierContactType(int id) {
+    EnumDossierContactType(int id, boolean isMediation) {
         this.id = id;
+        this.isMediation = isMediation;
     }
 
     /**
@@ -75,15 +101,6 @@ public enum EnumDossierContactType {
                 return dossierContactType;
         }
         return null;
-    }
-
-    /**
-     * Gets id.
-     *
-     * @return the id
-     */
-    public int getId() {
-        return id;
     }
 
 }

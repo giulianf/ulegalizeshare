@@ -133,7 +133,12 @@ public class Message_nl extends ListResourceBundle {
                 // EnumDossierContactType
                 {"CLIENT", "Opdrachtgever"},
                 {"OPPOSING", "Wederpartij"},
-                {"PARTY", "Partij"},
+                {"PARTY_1", "Feest 1"},
+                {"PARTY_2", "Feest 2"},
+                {"PARTY_3", "Feest 3"},
+                {"OPPONENT_PARTY_1", "Feesttip 1"},
+                {"OPPONENT_PARTY_2", "Feest 2-tip"},
+                {"OPPONENT_PARTY_3", "Feest 3-tip"},
                 {"OPPONENT_COUNSIL", "Tegengestelde raadsman"},
                 {"OTHER", "Andere"},
                 {"OPPOSING_LAWYER", "advocaat van de tegenpartij"},

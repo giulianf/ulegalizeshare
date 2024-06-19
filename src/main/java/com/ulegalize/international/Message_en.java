@@ -133,7 +133,12 @@ public class Message_en extends ListResourceBundle {
                 // EnumDossierContactType
                 {"CLIENT", "Client"},
                 {"OPPOSING", "Opposing party"},
-                {"PARTY", "Party"},
+                {"PARTY_1", "Party 1"},
+                {"PARTY_2", "Party 2"},
+                {"PARTY_3", "Party 3"},
+                {"OPPONENT_PARTY_1", "Party Tip 1"},
+                {"OPPONENT_PARTY_2", "Party 2 Tip"},
+                {"OPPONENT_PARTY_3", "Party 3 Tip"},
                 {"OPPONENT_COUNSIL", "Opposing counsil"},
                 {"OTHER", "Other"},
                 {"OPPOSING_LAWYER", "Opposing lawyer"},
