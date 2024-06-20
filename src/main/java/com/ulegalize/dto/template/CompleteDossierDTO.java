@@ -95,6 +95,10 @@ public class CompleteDossierDTO {
      */
     private List<ContactSummary> contactLawyerOpposing;
     /**
+     * The Contacts Sponsor.
+     */
+    private List<ContactSummary> contactsSponsor;
+    /**
      * lawfirm
      */
     private LawfirmDTO lawfirmDTO;
