@@ -69,7 +69,11 @@ public enum EnumDossierContactType {
     /**
      * 3 OPPOSING_party
      */
-    OPPOSING_PARTY_3(18, true);
+    OPPOSING_PARTY_3(18, true),
+    /**
+     * SPONSOR
+     */
+    SPONSOR(19, false);
 
     /**
      * The Id.
