@@ -9,33 +9,37 @@ public enum EnumFactureType {
     /**
      * Sell enum facture type.
      */
-    SELL(1, "FV"),
+    SELL(1, "FV", false ),
     /**
      * Credit enum facture type.
      */
-    CREDIT(2, "NC"),
+    CREDIT(2, "NC", false ),
     /**
      * Temp enum facture type.
      */
-    TEMP(3, "FT"),
+    TEMP(3, "FT", true ),
     /**
      * Temp nc enum facture type.
      */
-    TEMP_NC(4, "NT"),
+    TEMP_NC(4, "NT", true ),
 
     /**
      * Provision enum facture type
      */
-    PROVISION(5, "PR"),
+    PROVISION(5, "PR", false ),
 
     /**
      * REMINDER enum facture type
      */
-    REMINDER(6, "RM"),
+    REMINDER(6, "RM", false ),
     /**
      * Provision temporary enum facture type
      */
-    PROVISION_TEMP(7, "PT");
+    PROVISION_TEMP(7, "PT", true),
+    /**
+     * REMINDER temporary enum facture type
+     */
+    REMINDER_TEMP(8, "PT", true);
 
     /**
      * The Id.
@@ -47,16 +51,23 @@ public enum EnumFactureType {
      */
     @Getter
     private String code;
+    /**
+     * The Code.
+     */
+    @Getter
+    private boolean isTemp;
 
     /**
      * Instantiates a new Enum facture type.
      *
-     * @param id   the id
-     * @param code the code
+     * @param id     the id
+     * @param code   the code
+     * @param isTemp
      */
-    EnumFactureType(long id, String code) {
+    EnumFactureType(long id, String code, boolean isTemp) {
         this.id = id;
         this.code = code;
+        this.isTemp = isTemp;
     }
 
     /**
