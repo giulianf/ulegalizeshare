@@ -25,6 +25,7 @@ public class Message_fr extends ListResourceBundle {
                 {"TEMP_NC", "Note de crédit temporaire"},
                 {"REMINDER", "Rappel"},
                 {"PROVISION", "Provision"},
+                {"PROVISION_TEMP", "Provision temporaire"},
                 {"PRO_ACCOUNT", "Compte professionnel"},
                 {"ACCOUNT_TIERS", "Compte tiers / CARPA"},
                 {"PERM", "Permanence"},

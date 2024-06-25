@@ -25,6 +25,7 @@ public class Message_de extends ListResourceBundle {
                 {"TEMP_NC", "Vorläufige Gutschrift"},
                 {"REMINDER", "Erinnerung"},
                 {"PROVISION", "Rückstellung"},
+                {"PROVISION_TEMP", "Rückstellung Gutschrift"},
                 {"PRO_ACCOUNT", "Professionelles Konto"},
                 {"ACCOUNT_TIERS", "Drittkonto / CARPA"},
                 {"PERM", "Ständigen"},

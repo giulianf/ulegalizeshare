@@ -25,6 +25,7 @@ public class Message_nl extends ListResourceBundle {
                 {"TEMP_NC", "Creditnota credit"},
                 {"REMINDER", "Herinnering"},
                 {"PROVISION", "Provisie"},
+                {"PROVISION_TEMP", "Tijdelijke Provisie"},
                 {"PRO_ACCOUNT", "Professioneel account"},
                 {"ACCOUNT_TIERS", "Account van derden / CARPA"},
                 {"PERM", "Permanent"},
