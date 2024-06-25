@@ -31,7 +31,11 @@ public enum EnumFactureType {
     /**
      * REMINDER enum facture type
      */
-    REMINDER(6, "RM");
+    REMINDER(6, "RM"),
+    /**
+     * Provision temporary enum facture type
+     */
+    PROVISION_TEMP(7, "PT");
 
     /**
      * The Id.
