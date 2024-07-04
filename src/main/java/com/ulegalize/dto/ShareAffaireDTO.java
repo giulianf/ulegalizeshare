@@ -63,6 +63,10 @@ public class ShareAffaireDTO implements Serializable {
      */
     private String nomenclature;
     /**
+     * The idUserResponsible.
+     */
+    private Long idUserResponsible;
+    /**
      * The Shared date.
      */
     private ZonedDateTime sharedDate;
@@ -94,6 +98,7 @@ public class ShareAffaireDTO implements Serializable {
                            String userEmail,
                            String fullname,
                            String nomenclature,
+                           Long idUserResponsible,
                            ZonedDateTime sharedDate) {
         this.id = id;
         this.affaireId = affaireId;
@@ -104,6 +109,7 @@ public class ShareAffaireDTO implements Serializable {
         this.userEmail = userEmail;
         this.fullname = fullname;
         this.nomenclature = nomenclature;
+        this.idUserResponsible = idUserResponsible;
         this.sharedDate = sharedDate;
     }
 }
