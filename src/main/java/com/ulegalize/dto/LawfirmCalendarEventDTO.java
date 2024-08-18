@@ -5,6 +5,7 @@ import com.ulegalize.AbstractRestObject;
 import com.ulegalize.enumeration.EnumCalendarEventType;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,6 +16,7 @@ import java.util.List;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
 public class LawfirmCalendarEventDTO extends AbstractRestObject implements Serializable {
 
     /**
@@ -155,7 +157,7 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
     /**
      * The status of event.
      */
-    private ItemIntegerDto calendarStatus;
+    private ItemLongDto calendarStatus;
     /**
      * The Assignee User item.
      */
@@ -164,12 +166,5 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
      * notifying participants
      */
     private boolean notifyParticipants;
-
-    /**
-     * Instantiates a new Lawfirm calendar event dto.
-     */
-    public LawfirmCalendarEventDTO() {
-
-    }
 
 }
