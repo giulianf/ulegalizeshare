@@ -73,7 +73,15 @@ public enum EnumDossierContactType {
     /**
      * SPONSOR
      */
-    SPONSOR(19, false);
+    SPONSOR(19, false),
+    /**
+     * DOMINUS_LITIS
+     */
+    DOMINUS_LITIS(20, false),
+    /**
+     * INSURANCE
+     */
+    INSURANCE(21, false);
 
     /**
      * The Id.

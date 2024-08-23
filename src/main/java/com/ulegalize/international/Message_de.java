@@ -144,6 +144,8 @@ public class Message_de extends ListResourceBundle {
                 {"OPPOSING_PARTY_2", "Party 2-Tipp"},
                 {"OPPOSING_PARTY_3", "Party 3-Tipp"},
                 {"SPONSOR", "Sponsor"},
+                {"DOMINUS_LITIS", "Dominus Litis"},
+                {"INSURANCE", "Versicherung"},
                 {"OPPONENT_COUNSIL", "Gegner beraten"},
                 {"OTHER", "Andere"},
                 {"OPPOSING_LAWYER", "gegnerischer anwalt"},

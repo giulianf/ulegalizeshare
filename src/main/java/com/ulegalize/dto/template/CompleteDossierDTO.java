@@ -99,6 +99,14 @@ public class CompleteDossierDTO {
      */
     private List<ContactSummary> contactsSponsor;
     /**
+     * The Contacts dominus litis.
+     */
+    private List<ContactSummary> contactsDominusLitis;
+    /**
+     * The Contacts insurance.
+     */
+    private List<ContactSummary> contactsInsurance;
+    /**
      * lawfirm
      */
     private LawfirmDTO lawfirmDTO;

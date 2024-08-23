@@ -142,6 +142,8 @@ public class Message_en extends ListResourceBundle {
                 {"OPPOSING_PARTY_2", "Party 2 Tip"},
                 {"OPPOSING_PARTY_3", "Party 3 Tip"},
                 {"SPONSOR", "Sponsor"},
+                {"DOMINUS_LITIS", "Dominus Litis"},
+                {"INSURANCE", "Insurance"},
                 {"OPPONENT_COUNSIL", "Opposing counsil"},
                 {"OTHER", "Other"},
                 {"OPPOSING_LAWYER", "Opposing lawyer"},
