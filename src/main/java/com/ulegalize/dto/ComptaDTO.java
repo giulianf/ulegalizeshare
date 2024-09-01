@@ -178,6 +178,7 @@ public class ComptaDTO {
      * @param factExtRef       the fact ext ref
      * @param idTransaction    the id transaction
      * @param language         the language
+     * @param dateValue        the dateValue
      */
     public ComptaDTO(Long id, String vcKey,
                      Integer idPost, String posteDescription,
@@ -185,7 +186,9 @@ public class ComptaDTO {
                      String tiersFullname,
                      Long factureFraisId,
                      boolean invoiceChecked, boolean alreadyInvoiced,
-                     Long factExtId, String factExtRef, Integer idTransaction, String language) {
+                     Long factExtId, String factExtRef, Integer idTransaction,
+                     String language,
+                     LocalDate dateValue) {
         this.id = id;
         this.vcKey = vcKey;
         this.idPost = idPost;
@@ -202,11 +205,12 @@ public class ComptaDTO {
         this.factureLinkedFraisId = factureFraisId;
         this.factExtId = factExtId;
         this.factExtRef = factExtRef;
+        this.dateValue = dateValue;
 
         EnumLanguage enumLanguage = EnumLanguage.fromshortCode(language);
         EnumRefTransaction enumRefTransaction = EnumRefTransaction.fromId(idTransaction);
 
-        if(enumRefTransaction!= null) {
+        if (enumRefTransaction != null) {
             transactionTypeItem = new ItemDto(idTransaction, Utils.getLabel(enumLanguage, enumRefTransaction.name(), null));
         }
     }
