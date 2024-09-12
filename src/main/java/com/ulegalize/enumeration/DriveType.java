@@ -19,7 +19,11 @@ public enum DriveType {
     /**
      * Gmail drive type.
      */
-    gmail;
+    gmail,
+    /**
+     * infomaniak drive type.
+     */
+    infomaniak;
 
 
     /**
