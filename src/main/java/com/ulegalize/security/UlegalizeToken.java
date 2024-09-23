@@ -15,7 +15,7 @@ import java.util.List;
  * The type Ulegalize token.
  */
 @NoArgsConstructor
-@ToString
+@ToString(exclude = "token")
 public class UlegalizeToken implements Serializable {
 
     /**
