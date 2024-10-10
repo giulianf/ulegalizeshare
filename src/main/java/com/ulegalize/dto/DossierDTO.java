@@ -133,10 +133,6 @@ public class DossierDTO implements IDossierDTO, Serializable {
     @JsonFormat(timezone = "GMT+02:00", pattern = "yyyy-MM-dd")
     private Date birthdateClient;
     /**
-     * The Is digital.
-     */
-    private Boolean isDigital;
-    /**
      * The Balance.
      */
     private BigDecimal balance = BigDecimal.ZERO;
