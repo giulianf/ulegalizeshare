@@ -3,7 +3,9 @@ package com.ulegalize.dto;
 import com.ulegalize.enumeration.EnumClientType;
 import com.ulegalize.enumeration.EnumTitle;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -157,6 +159,18 @@ public class ContactSummary implements Serializable {
      * Birthplace .
      */
     private String birthplace;
+    /**
+     * district
+     */
+    private String district;
+    /**
+     * canton
+     */
+    private String canton;
+    /**
+     * division
+     */
+    private String division;
     /**
      * NAF FRench
      */
