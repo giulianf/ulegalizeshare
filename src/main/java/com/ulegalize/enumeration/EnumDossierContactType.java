@@ -81,7 +81,15 @@ public enum EnumDossierContactType {
     /**
      * INSURANCE
      */
-    INSURANCE(21, false);
+    INSURANCE(21, false),
+     /**
+     * juge d instruction
+     */
+     INVESTIGATING_JUDGE(22, false),
+    /**
+     * commissariat de police
+     */
+    POLICE_STATION(23, false);
 
     /**
      * The Id.

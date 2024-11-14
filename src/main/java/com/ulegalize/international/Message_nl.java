@@ -144,6 +144,8 @@ public class Message_nl extends ListResourceBundle {
                 {"SPONSOR", "Sponsor"},
                 {"DOMINUS_LITIS", "Dominus Litis"},
                 {"INSURANCE", "Verzekering"},
+                {"INVESTIGATING_JUDGE", "Onderzoeksrechter"},
+                {"POLICE_STATION", "Politiebureau"},
                 {"OPPONENT_COUNSIL", "Tegengestelde raadsman"},
                 {"OTHER", "Andere"},
                 {"OPPOSING_LAWYER", "advocaat van de tegenpartij"},

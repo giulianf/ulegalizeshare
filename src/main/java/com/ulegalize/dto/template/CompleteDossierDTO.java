@@ -83,6 +83,10 @@ public class CompleteDossierDTO {
      */
     private List<ContactSummary> contactsOther;
     /**
+     * The Contacts Other.
+     */
+    private List<ContactSummary> contactsRepresentative;
+    /**
      * The Contacts HUISSIER.
      */
     private List<ContactSummary> contactBailiff;
@@ -106,6 +110,14 @@ public class CompleteDossierDTO {
      * The Contacts insurance.
      */
     private List<ContactSummary> contactsInsurance;
+    /**
+     * The Contacts INVESTIGATING_JUDGE
+     */
+    private List<ContactSummary> contactsInvestigatingJudge;
+    /**
+     * The police station
+     */
+    private List<ContactSummary> contactsPoliceStation;
     /**
      * lawfirm
      */

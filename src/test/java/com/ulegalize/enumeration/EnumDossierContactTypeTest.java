@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EnumDossierContactTypeTest {
     @Test
     public void testDefaultConstructor() {
-        assertEquals(19, EnumDossierContactType.values().length);
+        assertEquals(21, EnumDossierContactType.values().length);
     }
 
     @Test
