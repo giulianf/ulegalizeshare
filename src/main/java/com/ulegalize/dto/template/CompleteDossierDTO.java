@@ -119,6 +119,10 @@ public class CompleteDossierDTO {
      */
     private List<ContactSummary> contactsPoliceStation;
     /**
+     * The Prosecutor Office
+     */
+    private List<ContactSummary> contactsProsecutorOffice;
+    /**
      * lawfirm
      */
     private LawfirmDTO lawfirmDTO;

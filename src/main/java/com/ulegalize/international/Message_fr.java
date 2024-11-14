@@ -146,6 +146,7 @@ public class Message_fr extends ListResourceBundle {
                 {"INSURANCE", "Assurance"},
                 {"INVESTIGATING_JUDGE", "Juge d'instruction"},
                 {"POLICE_STATION", "Commissariat de police"},
+                {"PROSECUTOR_OFFICE", "Parquet"},
                 {"OPPONENT_COUNSIL", "Conseil partie adverse"},
                 {"OTHER", "Autre"},
                 {"OPPOSING_LAWYER", "Avocat partie adverse"},

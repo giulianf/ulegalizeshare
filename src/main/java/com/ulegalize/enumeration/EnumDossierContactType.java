@@ -89,7 +89,11 @@ public enum EnumDossierContactType {
     /**
      * commissariat de police
      */
-    POLICE_STATION(23, false);
+    POLICE_STATION(23, false),
+    /**
+     * PROSECUTOR_OFFICE
+     */
+    PROSECUTOR_OFFICE(24, false);
 
     /**
      * The Id.

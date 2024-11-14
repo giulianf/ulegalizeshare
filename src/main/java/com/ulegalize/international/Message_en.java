@@ -146,6 +146,7 @@ public class Message_en extends ListResourceBundle {
                 {"INSURANCE", "Insurance"},
                 {"INVESTIGATING_JUDGE", "Investigating Judge"},
                 {"POLICE_STATION", "Police Station"},
+                {"PROSECUTOR_OFFICE", "Parquet"},
                 {"OPPONENT_COUNSIL", "Opposing counsil"},
                 {"OTHER", "Other"},
                 {"OPPOSING_LAWYER", "Opposing lawyer"},

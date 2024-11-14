@@ -146,6 +146,7 @@ public class Message_nl extends ListResourceBundle {
                 {"INSURANCE", "Verzekering"},
                 {"INVESTIGATING_JUDGE", "Onderzoeksrechter"},
                 {"POLICE_STATION", "Politiebureau"},
+                {"PROSECUTOR_OFFICE", "Parket"},
                 {"OPPONENT_COUNSIL", "Tegengestelde raadsman"},
                 {"OTHER", "Andere"},
                 {"OPPOSING_LAWYER", "advocaat van de tegenpartij"},
