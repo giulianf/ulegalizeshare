@@ -10,6 +10,7 @@ public class Message_nl extends ListResourceBundle {
     @Override
     protected Object[][] getContents() {
         return new Object[][]{
+                {"COURT", "Court"},
                 {"NATURAL_PERSON", "Natuurlijk persoon"},
                 {"COMPANY", "Rechtspersoon"},
                 {"COLLEGUE", "Collega"},

@@ -15,7 +15,11 @@ public enum EnumClientType {
     /**
      * Collegue enum client type.
      */
-    COLLEGUE(3);
+    COLLEGUE(3),
+    /**
+     * COURT enum client type.
+     */
+    COURT(4);
 
     /**
      * The Id.
