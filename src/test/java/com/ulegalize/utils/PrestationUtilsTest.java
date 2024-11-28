@@ -79,7 +79,7 @@ class PrestationUtilsTest {
     @Test
     void calculateTotalTime_ShouldHandleEmptyList() {
         // Act
-        String result = PrestationUtils.calculateTotalTime(Arrays.asList());
+        String result = PrestationUtils.calculateTotalTime(List.of());
 
         // Assert
         assertEquals("00:00", result); // Should return "00:00" when the list is empty
@@ -92,7 +92,7 @@ class PrestationUtilsTest {
         summary1.setDh(BigDecimal.valueOf(1));
         summary1.setDm(BigDecimal.valueOf(70));
 
-        List<ItemPrestation> summaries = Arrays.asList(summary1);
+        List<ItemPrestation> summaries = List.of(summary1);
 
         // Act
         String result = PrestationUtils.calculateTotalTime(summaries);
@@ -108,7 +108,7 @@ class PrestationUtilsTest {
         summary1.setDh(BigDecimal.valueOf(1));
         summary1.setDm(BigDecimal.valueOf(120)); // 120 minutes equals 2 hours
 
-        List<ItemPrestation> summaries = Arrays.asList(summary1);
+        List<ItemPrestation> summaries = List.of(summary1);
 
         // Act
         String result = PrestationUtils.calculateTotalTime(summaries);
