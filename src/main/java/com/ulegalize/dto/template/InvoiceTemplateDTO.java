@@ -297,8 +297,4 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      * memo
      */
     private String memo;
-    /**
-     * total timesheet
-     */
-    private String totalTimeTimesheet;
 }
