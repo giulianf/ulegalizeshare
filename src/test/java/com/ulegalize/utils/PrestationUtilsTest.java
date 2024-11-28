@@ -1,6 +1,6 @@
 package com.ulegalize.utils;
 
-import com.ulegalize.dto.PrestationSummary;
+import com.ulegalize.dto.template.ItemPrestation;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -55,19 +55,19 @@ class PrestationUtilsTest {
     @Test
     void calculateTotalTime_ShouldReturnCorrectTime_WhenGivenMultipleSummaries() {
         // Arrange
-        PrestationSummary summary1 = new PrestationSummary(); // 2 hours 45 minutes
+        ItemPrestation summary1 = new ItemPrestation(); // 2 hours 45 minutes
         summary1.setDh(BigDecimal.valueOf(2));
         summary1.setDm(BigDecimal.valueOf(45));
 
-        PrestationSummary summary2 = new PrestationSummary(); // 1 hour 30 minutes
+        ItemPrestation summary2 = new ItemPrestation(); // 1 hour 30 minutes
         summary2.setDh(BigDecimal.valueOf(1));
         summary2.setDm(BigDecimal.valueOf(30));
 
-        PrestationSummary summary3 = new PrestationSummary(); // 1 hour 30 minutes
+        ItemPrestation summary3 = new ItemPrestation(); // 1 hour 30 minutes
         summary3.setDh(BigDecimal.valueOf(0));
         summary3.setDm(BigDecimal.valueOf(90));
 
-        List<PrestationSummary> summaries = Arrays.asList(summary1, summary2, summary3);
+        List<ItemPrestation> summaries = Arrays.asList(summary1, summary2, summary3);
 
         // Act
         String result = PrestationUtils.calculateTotalTime(summaries);
@@ -88,11 +88,11 @@ class PrestationUtilsTest {
     @Test
     void calculateTotalTime_ShouldHandleExactHourMinutesConversion() {
         // Arrange
-        PrestationSummary summary1 = new PrestationSummary(); // 2 hours 10 minutes
+        ItemPrestation summary1 = new ItemPrestation(); // 2 hours 10 minutes
         summary1.setDh(BigDecimal.valueOf(1));
         summary1.setDm(BigDecimal.valueOf(70));
 
-        List<PrestationSummary> summaries = Arrays.asList(summary1);
+        List<ItemPrestation> summaries = Arrays.asList(summary1);
 
         // Act
         String result = PrestationUtils.calculateTotalTime(summaries);
@@ -104,11 +104,11 @@ class PrestationUtilsTest {
     @Test
     void calculateTotalTime_ShouldHandleMinutesConversion() {
         // Arrange
-        PrestationSummary summary1 = new PrestationSummary(); // 3 hours
+        ItemPrestation summary1 = new ItemPrestation(); // 3 hours
         summary1.setDh(BigDecimal.valueOf(1));
         summary1.setDm(BigDecimal.valueOf(120)); // 120 minutes equals 2 hours
 
-        List<PrestationSummary> summaries = Arrays.asList(summary1);
+        List<ItemPrestation> summaries = Arrays.asList(summary1);
 
         // Act
         String result = PrestationUtils.calculateTotalTime(summaries);

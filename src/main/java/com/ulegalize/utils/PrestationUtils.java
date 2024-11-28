@@ -1,6 +1,7 @@
 package com.ulegalize.utils;
 
 import com.ulegalize.dto.PrestationSummary;
+import com.ulegalize.dto.template.ItemPrestation;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -57,11 +58,11 @@ public class PrestationUtils {
             return forfaitHt;
         }
     }
-    public static String calculateTotalTime(List<PrestationSummary> summaries) {
+    public static String calculateTotalTime(List<ItemPrestation> summaries) {
         BigDecimal totalHours = BigDecimal.ZERO;
         BigDecimal totalMinutes = BigDecimal.ZERO;
 
-        for (PrestationSummary summary : summaries) {
+        for (ItemPrestation summary : summaries) {
             totalHours = totalHours.add(summary.getDh());
             totalMinutes = totalMinutes.add(summary.getDm());
 
