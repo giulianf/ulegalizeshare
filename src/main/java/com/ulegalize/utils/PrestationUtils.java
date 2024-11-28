@@ -1,7 +1,10 @@
 package com.ulegalize.utils;
 
+import com.ulegalize.dto.PrestationSummary;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.List;
 
 /**
  * The type Prestation utils.
@@ -54,6 +57,27 @@ public class PrestationUtils {
             return forfaitHt;
         }
     }
+    public static String calculateTotalTime(List<PrestationSummary> summaries) {
+        BigDecimal totalHours = BigDecimal.ZERO;
+        BigDecimal totalMinutes = BigDecimal.ZERO;
 
+        for (PrestationSummary summary : summaries) {
+            totalHours = totalHours.add(summary.getDh());
+            totalMinutes = totalMinutes.add(summary.getDm());
+
+            // Handle the conversion of minutes to hours
+            while (totalMinutes.compareTo(BigDecimal.valueOf(60)) >= 0) {
+                totalMinutes = totalMinutes.subtract(BigDecimal.valueOf(60));
+                totalHours = totalHours.add(BigDecimal.ONE);
+            }
+        }
+
+        // Formatting the result as a string
+
+        // Format hours and minutes to ensure two digits
+        String formattedHours = String.format("%02d", totalHours.intValue());
+        String formattedMinutes = String.format("%02d", totalMinutes.intValue());
+        return formattedHours + ":" + formattedMinutes;
+    }
 
 }
