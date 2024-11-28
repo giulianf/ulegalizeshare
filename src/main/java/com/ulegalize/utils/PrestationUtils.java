@@ -1,6 +1,5 @@
 package com.ulegalize.utils;
 
-import com.ulegalize.dto.PrestationSummary;
 import com.ulegalize.dto.template.ItemPrestation;
 
 import java.math.BigDecimal;
@@ -25,12 +24,13 @@ public class PrestationUtils {
      */
     public static BigDecimal calculateVAT(boolean forfait, BigDecimal minutes, BigDecimal hours, BigDecimal couthoraire, BigDecimal forfaitHt, BigDecimal vat) {
 
+        BigDecimal add = BigDecimal.ONE.add(vat.divide(BigDecimal.valueOf(100)));
         if (!forfait) {
             // ( (( (dh * 60) + dm ) / 60 ) * couthoraire ) * (1 + (vat / 100))
-            return calculateHVAT(forfait, minutes, hours, couthoraire, forfaitHt).multiply(BigDecimal.ONE.add(vat.divide(BigDecimal.valueOf(100)))).setScale(2, RoundingMode.HALF_UP);
+            return calculateHVAT(forfait, minutes, hours, couthoraire, forfaitHt).multiply(add).setScale(2, RoundingMode.HALF_UP);
         } else {
             // forfait ht * (1 + (vat / 100))
-            return calculateHVAT(forfait, minutes, hours, couthoraire, forfaitHt).multiply(BigDecimal.ONE.add(vat.divide(BigDecimal.valueOf(100)))).setScale(2, RoundingMode.HALF_UP);
+            return calculateHVAT(forfait, minutes, hours, couthoraire, forfaitHt).multiply(add).setScale(2, RoundingMode.HALF_UP);
         }
     }
 
