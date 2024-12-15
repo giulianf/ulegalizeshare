@@ -1,5 +1,6 @@
 package com.ulegalize.dto;
 
+import com.ulegalize.enumeration.EnumDriveRight;
 import lombok.Data;
 
 import java.util.List;
