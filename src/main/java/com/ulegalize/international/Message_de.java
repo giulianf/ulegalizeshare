@@ -150,6 +150,7 @@ public class Message_de extends ListResourceBundle {
                 {"INVESTIGATING_JUDGE", "Ermittlungsrichter"},
                 {"POLICE_STATION", "Polizeistation"},
                 {"PROSECUTOR_OFFICE", "Parkett"},
+                {"SUBCONTRACTOR", "Subcontractor"},
                 {"OPPONENT_COUNSIL", "Gegner beraten"},
                 {"OTHER", "Andere"},
                 {"OPPOSING_LAWYER", "gegnerischer anwalt"},

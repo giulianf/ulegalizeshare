@@ -123,6 +123,10 @@ public class CompleteDossierDTO {
      */
     private List<ContactSummary> contactsProsecutorOffice;
     /**
+     * The subcontractor Office
+     */
+    private List<ContactSummary> contactsSubContractor;
+    /**
      * lawfirm
      */
     private LawfirmDTO lawfirmDTO;

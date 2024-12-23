@@ -93,7 +93,11 @@ public enum EnumDossierContactType {
     /**
      * PROSECUTOR_OFFICE
      */
-    PROSECUTOR_OFFICE(24, false);
+    PROSECUTOR_OFFICE(24, false),
+    /**
+     * subcontractor
+     */
+    SUBCONTRACTOR(25, false);
 
     /**
      * The Id.
