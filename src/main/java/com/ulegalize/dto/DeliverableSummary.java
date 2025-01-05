@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-public class DelivrableSummary {
+public class DeliverableSummary {
 
     /**
      * The Id.
@@ -163,7 +163,7 @@ public class DelivrableSummary {
      * @param factExtId          the fact ext id
      * @param factExtRef         the fact ext ref
      */
-    public DelivrableSummary(Long id, Long dossierId,
+    public DeliverableSummary(Long id, Long dossierId,
                              String labelDossier, String yearDossier,
                              String initialesGestionnaire,
                              Long numDossier, Long idGest, String email,
@@ -206,7 +206,7 @@ public class DelivrableSummary {
      * @param factExtRef            the fact ext ref
      * @param managerDossierIds     managerDossierIds
      */
-    public DelivrableSummary(Long id, Long dossierId,
+    public DeliverableSummary(Long id, Long dossierId,
                              String labelDossier, String yearDossier,
                              String initialesGestionnaire,
                              Long numDossier, Long idGest, String email,
