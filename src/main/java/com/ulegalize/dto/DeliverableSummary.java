@@ -106,11 +106,11 @@ public class DeliverableSummary {
     /**
      * The Facture timesheet linked id.
      */
-    private Long factureDelivrableLinkedId;
+    private Long factureDeliverableLinkedId;
     /**
      * The Facture Delivrable ext id.
      */
-    private Long factureDelivrableExtId;
+    private Long factureDeliverableExtId;
     /**
      * The Fact ext id.
      */
@@ -199,7 +199,7 @@ public class DeliverableSummary {
      * @param vat                   the vat
      * @param forfait               the forfait
      * @param forfaitHt             the forfait ht
-     * @param factureDelivrableId    the facture Delivrable id
+     * @param factureDeliverableId    the facture Delivrable id
      * @param invoiceChecked        the invoice checked
      * @param alreadyInvoiced       the already invoiced
      * @param factExtId             the fact ext id
@@ -212,7 +212,7 @@ public class DeliverableSummary {
                              Long numDossier, Long idGest, String email,
                              String typeDescription, BigDecimal couthoraire, ZonedDateTime dateAction, BigDecimal dh, BigDecimal dm, String comment,
                              BigDecimal vat,
-                             Boolean forfait, BigDecimal forfaitHt, Long factureDelivrableId,
+                             Boolean forfait, BigDecimal forfaitHt, Long factureDeliverableId,
                              boolean invoiceChecked, boolean alreadyInvoiced,
                              Long factExtId, String factExtRef, List<Long> managerDossierIds) {
         this.managerDossierIds = managerDossierIds;
@@ -240,8 +240,8 @@ public class DeliverableSummary {
         this.forfaitHt = forfaitHt;
 
         this.invoiceChecked = invoiceChecked;
-        this.factureDelivrableExtId = factureDelivrableId;
-        this.factureDelivrableLinkedId = factureDelivrableId;
+        this.factureDeliverableExtId = factureDeliverableId;
+        this.factureDeliverableLinkedId = factureDeliverableId;
         this.alreadyInvoiced = alreadyInvoiced;
         this.factExtId = factExtId;
         this.factExtRef = factExtRef;
