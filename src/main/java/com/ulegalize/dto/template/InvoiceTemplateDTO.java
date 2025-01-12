@@ -160,9 +160,13 @@ public class InvoiceTemplateDTO extends MainTemplateDTO {
      */
     private List<ItemFraisColla> itemFraisCollas;
     /**
-     * The Item provision collas.
+     * The Item provision .
      */
     private List<ItemProvision> itemProvision;
+    /**
+     * The Item deliverable .
+     */
+    private List<ItemPrestation> itemDeliverable;
 
     /**
      * The Item vat.

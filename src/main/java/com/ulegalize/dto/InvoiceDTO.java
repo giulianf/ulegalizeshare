@@ -224,5 +224,9 @@ public class InvoiceDTO implements Serializable {
      * The Frais collaboration id list.
      */
     private List<Long> fraisCollaborationIdList = new ArrayList<>();
+    /**
+     * The deliverable id list.
+     */
+    private List<Long> deliverableIdList = new ArrayList<>();
 
 }
