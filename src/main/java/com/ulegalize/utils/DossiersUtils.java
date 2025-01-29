@@ -48,5 +48,10 @@ public class DossiersUtils {
         return StringUtils.leftPad(numDossier.toString(), 4, "0");
     }
 
+    public static String getMatiereRubrique(String matiere, String rubrique) {
+        return rubrique == null || rubrique.isEmpty() ? matiere : matiere + " - " + rubrique;
+    }
+
+
 
 }
