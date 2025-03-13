@@ -17,6 +17,8 @@ import java.util.Map;
  */
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class KafkaMailObject implements Serializable {
 
     /**
@@ -27,114 +29,84 @@ public class KafkaMailObject implements Serializable {
     /**
      * The Event id.
      */
-    @Getter
-    @Setter
     private String eventId;
     /**
      * The Enum mail template.
      */
-    @Getter
-    @Setter
     private EnumMailTemplate enumMailTemplate;
     /**
      * The Enum language.
      */
-    @Getter
-    @Setter
     private EnumLanguage enumLanguage;
     /**
      * The Template.
      */
-    @Getter
-    @Setter
     private String template;
     /**
      * The Subject.
      */
-    @Getter
-    @Setter
     private String subject;
     /**
      * The Location.
      */
-    @Getter
-    @Setter
     private String location;
     /**
      * The Context.
      */
-    @Getter
-    @Setter
     private Map<String, Object> context;
 
     /**
      * The Start.
      */
 // start date of the event
-    @Getter
-    @Setter
     private ZonedDateTime start;
     /**
      * The End.
      */
 // end date of the event
-    @Getter
-    @Setter
     private ZonedDateTime end;
     /**
      * The Organizer.
      */
 // organizer of the event
-    @Getter
-    @Setter
     private String organizer;
     /**
      * The Room attached.
      */
 // jitsi if the room must be link to the body of the event
-    @Getter
-    @Setter
     private Boolean roomAttached;
     /**
      * The Is moderator.
      */
-    @Getter
-    @Setter
     private Boolean isModerator = true;
     /**
      * The Url room.
      */
 // jitsi : this is the url room
-    @Getter
-    @Setter
     private String urlRoom;
     /**
      * The File attached.
      */
 // File attached to event or email
-    @Getter
-    @Setter
     private List<ItemByteDto> fileAttached;
     /**
      * The Attendees email.
      */
 // participant of the event
-    @Getter
-    @Setter
     private List<String> attendeesEmail;
 
     /**
      * The Reply to.
      */
-    @Getter
-    @Setter
     private String replyTo;
     /**
      * html content
      */
-    @Getter
-    @Setter
     private String htmlContent;
+    /**
+     * color id
+     */
+    private String colorId;
 
     @Override
     public String toString() {
@@ -153,6 +125,7 @@ public class KafkaMailObject implements Serializable {
                 ", urlRoom='" + urlRoom + '\'' +
                 ", attendeesEmail=" + attendeesEmail +
                 ", replyTo=" + replyTo +
+                ", colorId=" + colorId +
                 '}';
     }
 }
