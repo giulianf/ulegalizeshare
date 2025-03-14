@@ -97,7 +97,31 @@ public enum EnumDossierContactType {
     /**
      * subcontractor
      */
-    SUBCONTRACTOR(25, false);
+    SUBCONTRACTOR(25, false),
+    /**
+     * Broker
+     */
+    BROKER(26, false),
+
+    /**
+     * Liability insurance
+     */
+    LIABILITY_INSURANCE(27, false),
+
+    /**
+     * Comprehensive health insurance
+     */
+    COMPREHENSIVE_HEALTH_INSURANCE(28, false),
+
+    /**
+     * Legal protection insurance
+     */
+    LEGAL_PROTECTION_INSURANCE(29, false),
+
+    /**
+     * Adverse liability insurer
+     */
+    ADVERSE_LIABILITY_INSURER(30, false);
 
     /**
      * The Id.

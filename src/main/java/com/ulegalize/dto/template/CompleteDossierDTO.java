@@ -126,6 +126,20 @@ public class CompleteDossierDTO {
      * The subcontractor Office
      */
     private List<ContactSummary> contactsSubContractor;
+    // Broker
+    private List<ContactSummary> contactsBroker;
+
+    // Liability Insurance
+    private List<ContactSummary> contactsLiabilityInsurance;
+
+    // Comprehensive Health Insurance (Omnium)
+    private List<ContactSummary> contactsComprehensiveHealthInsurance;
+
+    // Legal Protection Insurance
+    private List<ContactSummary> contactsLegalProtectionInsurance;
+
+    // Adverse Liability Insurer
+    private List<ContactSummary> contactsAdverseLiabilityInsurer;
     /**
      * lawfirm
      */
