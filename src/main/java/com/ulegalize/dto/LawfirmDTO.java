@@ -162,6 +162,11 @@ public class LawfirmDTO extends AbstractRestObject {
 	 * The Drive type.
 	 */
 	private DriveType driveType;
+	/**
+	 * Iban.
+	 */
+	private String iban;
+	;
 
 	/**
 	 * Instantiates a new Lawfirm dto.
