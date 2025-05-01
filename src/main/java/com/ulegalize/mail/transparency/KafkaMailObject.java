@@ -107,6 +107,10 @@ public class KafkaMailObject implements Serializable {
      * color id
      */
     private String colorId;
+    /**
+     * The msEventId.
+     */
+    private String msEventId;
 
     @Override
     public String toString() {
@@ -126,6 +130,7 @@ public class KafkaMailObject implements Serializable {
                 ", attendeesEmail=" + attendeesEmail +
                 ", replyTo=" + replyTo +
                 ", colorId=" + colorId +
+                ", msEventId=" + msEventId +
                 '}';
     }
 }
