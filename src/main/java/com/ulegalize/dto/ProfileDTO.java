@@ -1,5 +1,6 @@
 package com.ulegalize.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.ulegalize.enumeration.DriveType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +16,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProfileDTO implements Serializable {
 
     /**
@@ -85,5 +87,11 @@ public class ProfileDTO implements Serializable {
      * The Client from.
      */
     private String clientFrom;
+
+    /**
+     * The Last connected.
+     */
+    private ZonedDateTime lastConnected;
+
 
 }
