@@ -93,5 +93,40 @@ public class ProfileDTO implements Serializable {
      */
     private ZonedDateTime lastConnected;
 
+    public ProfileDTO(Long id, String fullName, String email, String phone, String vcKeySelected, boolean temporaryVc, String language, String symbolCurrency, Long userId, String userLoginId, List<Integer> enumRights, DriveType driveType, boolean verified, String clientFrom, ZonedDateTime lastConnected) {
+        this.id = id;
+        this.fullName = fullName;
+        this.email = email;
+        this.phone = phone;
+        this.vcKeySelected = vcKeySelected;
+        this.temporaryVc = temporaryVc;
+        this.language = language;
+        this.symbolCurrency = symbolCurrency;
+        this.userId = userId;
+        this.userLoginId = userLoginId;
+        this.enumRights = enumRights;
+        this.driveType = driveType;
+        this.verified = verified;
+        this.clientFrom = clientFrom;
+        this.lastConnected = lastConnected;
+    }
 
+    public ProfileDTO(Long id, String fullName, String email, String phone, String vcKeySelected, boolean temporaryVc, String language, String symbolCurrency, Long userId, String userLoginId, List<Integer> enumRights, DriveType driveType, String driveToken, String onedriveRefreshToken, ZonedDateTime onedriveExpireToken, String clientFrom) {
+        this.id = id;
+        this.fullName = fullName;
+        this.email = email;
+        this.phone = phone;
+        this.vcKeySelected = vcKeySelected;
+        this.temporaryVc = temporaryVc;
+        this.language = language;
+        this.symbolCurrency = symbolCurrency;
+        this.userId = userId;
+        this.userLoginId = userLoginId;
+        this.enumRights = enumRights;
+        this.driveType = driveType;
+        this.driveToken = driveToken;
+        this.onedriveRefreshToken = onedriveRefreshToken;
+        this.onedriveExpireToken = onedriveExpireToken;
+        this.clientFrom = clientFrom;
+    }
 }
