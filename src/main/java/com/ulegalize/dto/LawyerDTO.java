@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -153,7 +154,7 @@ public class LawyerDTO extends AbstractRestObject {
     /**
      * all Dossier has Access
      */
-    private LocalDateTime loginDate;
+    private ZonedDateTime loginDate;
 
     /**
      * Instantiates a new Lawyer dto.
@@ -166,7 +167,7 @@ public class LawyerDTO extends AbstractRestObject {
      * @param emailVerified the email verified
      * @param loginDate the email verified
      */
-    public LawyerDTO(Long id, String idUser, String email, String language, String fullName, EnumValid emailVerified, LocalDateTime loginDate){
+    public LawyerDTO(Long id, String idUser, String email, String language, String fullName, EnumValid emailVerified, ZonedDateTime loginDate){
         this.id = id;
         this.idUser = idUser;
         this.email = email;
