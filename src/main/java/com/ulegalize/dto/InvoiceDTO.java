@@ -193,6 +193,10 @@ public class InvoiceDTO implements Serializable {
      */
     private String memo;
     /**
+     * Memo
+     */
+    private ContactSummary clientContact;
+    /**
      * The managers list.
      */
     private List<FactureManagerDTO> managersList;
