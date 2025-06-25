@@ -139,6 +139,10 @@ public class InvoiceDTO implements Serializable {
      */
     private String templateName;
     /**
+     * Drive path
+     */
+    private String pathFile;
+    /**
      * Reminder number
      */
     private int nbReminder = 0;
