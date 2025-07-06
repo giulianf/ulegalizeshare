@@ -36,6 +36,14 @@ public class Item {
      * total vat
      */
     protected BigDecimal amountVat;
+    /**
+     * quantity
+     */
+    private Integer quantity;
+    /**
+     * untity
+     */
+    private String unity;
 
 
 }
