@@ -26,6 +26,14 @@ public class InvoiceDetailsDTO {
      * The Description.
      */
     private String description;
+    /**
+     * quantity
+     */
+    private Integer quantityDetail;
+    /**
+     * untity
+     */
+    private String unity;
 
     /**
      * The Tva.

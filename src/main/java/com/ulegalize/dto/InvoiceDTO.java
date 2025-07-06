@@ -197,7 +197,7 @@ public class InvoiceDTO implements Serializable {
      */
     private String memo;
     /**
-     * Memo
+     * client Contact
      */
     private ContactSummary clientContact;
     /**
