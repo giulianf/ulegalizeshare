@@ -180,4 +180,6 @@ public class ContactSummary implements Serializable {
      */
     private ItemStringDto ccItem;
 
+    private ItemRepresentativeDto representativeItem;
+
 }
