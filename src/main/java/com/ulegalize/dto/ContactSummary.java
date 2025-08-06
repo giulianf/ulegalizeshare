@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * The type Contact summary.
@@ -180,6 +182,6 @@ public class ContactSummary implements Serializable {
      */
     private ItemStringDto ccItem;
 
-    private ItemRepresentativeDto representativeItem;
+    private List<ItemRepresentativeDto> representativeItem = new ArrayList<>();
 
 }
