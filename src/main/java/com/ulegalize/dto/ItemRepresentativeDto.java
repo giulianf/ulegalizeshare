@@ -23,4 +23,8 @@ public class ItemRepresentativeDto implements Serializable {
      */
     private ItemLongDto representativeClientItem;
 
+    private String representativeClientTitle;
+    private String representativeClientFirstname;
+    private String representativeClientLastname;
+
 }
