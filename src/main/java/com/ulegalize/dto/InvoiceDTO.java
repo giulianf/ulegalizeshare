@@ -170,7 +170,11 @@ public class InvoiceDTO implements Serializable {
     /**
      * status of invoice
      */
-    private String status;
+    private String chorusStatus;
+    /**
+     * status of invoice
+     */
+    private String billitStatus;
 
     /**
      * market number
