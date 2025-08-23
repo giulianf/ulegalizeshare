@@ -81,6 +81,10 @@ public class EmailDTO {
      */
     private Long idDossier;
     /**
+     * label of dossier
+     */
+    private String labelDossier;
+    /**
      * email type
      */
     private EnumEmailType emailType;
