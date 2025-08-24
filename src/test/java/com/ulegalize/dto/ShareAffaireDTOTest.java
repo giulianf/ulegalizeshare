@@ -22,16 +22,32 @@ class ShareAffaireDTOTest {
         Long affaireId = 2L;
         Long userId = 3L;
         String vcKey = "AV";
-        EnumVCOwner enumVCOwner= EnumVCOwner.OWNER_VC;
+        EnumVCOwner enumVCOwner = EnumVCOwner.OWNER_VC;
         String userEmail = "test@ulegalize.com";
-        String fullname = "";
+        String fullname = "John Doe";
         String nomenclature = "/ddd";
+        String labelDossier = "Case Label";
         Long idUserResponsible = 100L;
         ZonedDateTime sharedDate = ZonedDateTime.now();
 
-        ShareAffaireDTO dto = new ShareAffaireDTO(id, affaireId, userId, vcKey, enumVCOwner, userEmail, fullname, nomenclature, idUserResponsible, sharedDate);
-        assertEquals(userId, dto.getUserId());
-        assertEquals(idUserResponsible, dto.getIdUserResponsible());
+        ShareAffaireDTO dto = new ShareAffaireDTO(id, affaireId, userId, vcKey, enumVCOwner, userEmail, fullname, nomenclature, labelDossier, idUserResponsible, sharedDate);
+
+        // Basic field assertions
         assertEquals(id, dto.getId());
+        assertEquals(affaireId, dto.getAffaireId());
+        assertEquals(userId, dto.getUserId());
+        assertEquals(vcKey, dto.getVcKey());
+        assertEquals(enumVCOwner, dto.getEnumVCOwner());
+        assertEquals(userEmail, dto.getUserEmail());
+        assertEquals(fullname, dto.getFullname());
+        assertEquals(nomenclature, dto.getNomenclature());
+        assertEquals(labelDossier, dto.getLabelDossier());
+        assertEquals(idUserResponsible, dto.getIdUserResponsible());
+        assertEquals(sharedDate, dto.getSharedDate());
+
+        // vcKeyItem should be initialized with value and label equal to vcKey
+        assertNotNull(dto.getVcKeyItem());
+        assertEquals(vcKey, dto.getVcKeyItem().getValue());
+        assertEquals(vcKey, dto.getVcKeyItem().getLabel());
     }
 }
