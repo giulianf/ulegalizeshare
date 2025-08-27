@@ -81,9 +81,9 @@ public class EmailDTO {
      */
     private Long idDossier;
     /**
-     * label of dossier
+     * Full path email (inbox, sent items, drafts...)
      */
-    private String labelDossier;
+    private String pathEmail;
     /**
      * email type
      */
