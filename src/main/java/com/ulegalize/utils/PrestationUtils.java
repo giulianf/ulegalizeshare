@@ -44,7 +44,7 @@ public class PrestationUtils {
      * @param vat         the vat
      * @return the big decimal
      */
-    public static BigDecimal calculateBultVAT(boolean forfait, BigDecimal minutes, BigDecimal hours, BigDecimal couthoraire, BigDecimal forfaitHt, BigDecimal vat) {
+    public static BigDecimal calculateBulkVAT(boolean forfait, BigDecimal minutes, BigDecimal hours, BigDecimal couthoraire, BigDecimal forfaitHt, BigDecimal vat) {
 
         BigDecimal add = BigDecimal.ONE.add(vat.divide(BigDecimal.valueOf(100)));
         if (!forfait) {

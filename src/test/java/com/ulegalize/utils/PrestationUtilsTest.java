@@ -190,7 +190,7 @@ class PrestationUtilsTest {
         );
 
         BigDecimal sumPrestationInvoiced = allPrestationInvoiced.stream()
-                .map(prestation -> PrestationUtils.calculateBultVAT(prestation.getForfait(), prestation.getDm(), prestation.getDh(), prestation.getCouthoraire(), prestation.getForfaitHt(), prestation.getVat()))
+                .map(prestation -> PrestationUtils.calculateBulkVAT(prestation.getForfait(), prestation.getDm(), prestation.getDh(), prestation.getCouthoraire(), prestation.getForfaitHt(), prestation.getVat()))
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
         // Expected total TTC computed per line with HALF_UP rounding at each step
@@ -199,26 +199,26 @@ class PrestationUtilsTest {
     }
 
     @Test
-    void calculateBultVAT_notForfait_oneMinuteRounding() {
+    void calculateBulkVAT_notForfait_oneMinuteRounding() {
         BigDecimal minutes = new BigDecimal("1");
         BigDecimal hours = BigDecimal.ZERO;
         BigDecimal rate = new BigDecimal("175");
         BigDecimal vat = new BigDecimal("21");
         // hoursDecimal = 0.016667; HT ≈ 2.916725; TTC ≈ 3.52923725 -> 3.53
         BigDecimal expected = new BigDecimal("3.53");
-        BigDecimal actual = PrestationUtils.calculateBultVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
+        BigDecimal actual = PrestationUtils.calculateBulkVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
         assertEquals(expected, actual);
     }
 
     @Test
-    void calculateBultVAT_notForfait_fiftyNineMinutes() {
+    void calculateBulkVAT_notForfait_fiftyNineMinutes() {
         BigDecimal minutes = new BigDecimal("59");
         BigDecimal hours = BigDecimal.ZERO;
         BigDecimal rate = new BigDecimal("175");
         BigDecimal vat = new BigDecimal("21");
         // hoursDecimal = 0.983333; HT ≈ 172.083275; TTC ≈ 208.22076275 -> 208.22
         BigDecimal expected = new BigDecimal("208.22");
-        BigDecimal actual = PrestationUtils.calculateBultVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
+        BigDecimal actual = PrestationUtils.calculateBulkVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
         assertEquals(expected, actual);
     }
 
@@ -243,11 +243,11 @@ class PrestationUtilsTest {
     }
 
     @Test
-    void calculateBultVAT_forfait_knownCase() {
+    void calculateBulkVAT_forfait_knownCase() {
         BigDecimal forfaitHt = new BigDecimal("5402.25");
         BigDecimal vat = new BigDecimal("21");
         BigDecimal expected = new BigDecimal("6536.72");
-        BigDecimal actual = PrestationUtils.calculateBultVAT(true, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, forfaitHt, vat);
+        BigDecimal actual = PrestationUtils.calculateBulkVAT(true, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, forfaitHt, vat);
         assertEquals(expected, actual);
     }
 
@@ -259,7 +259,7 @@ class PrestationUtilsTest {
         BigDecimal vat = new BigDecimal("6");
         BigDecimal expected = new BigDecimal("212.00"); // 2.5 * 80 = 200; 200 * 1.06 = 212.00
         BigDecimal ttcVat = PrestationUtils.calculateVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
-        BigDecimal ttcBult = PrestationUtils.calculateBultVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
+        BigDecimal ttcBult = PrestationUtils.calculateBulkVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
         assertEquals(expected, ttcVat);
         assertEquals(expected, ttcBult);
     }
@@ -272,20 +272,20 @@ class PrestationUtilsTest {
         BigDecimal vat = new BigDecimal("21");
         BigDecimal expected = new BigDecimal("121.00");
         BigDecimal ttcVat = PrestationUtils.calculateVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
-        BigDecimal ttcBult = PrestationUtils.calculateBultVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
+        BigDecimal ttcBult = PrestationUtils.calculateBulkVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
         assertEquals(expected, ttcVat);
         assertEquals(expected, ttcBult);
     }
 
     @Test
-    void calculateBultVAT_highPrecisionRate_tinyMinutes() {
+    void calculateBulkVAT_highPrecisionRate_tinyMinutes() {
         BigDecimal minutes = new BigDecimal("1");
         BigDecimal hours = BigDecimal.ZERO;
         BigDecimal rate = new BigDecimal("99.999");
         BigDecimal vat = new BigDecimal("20");
         // HT ≈ 1.666683333; TTC ≈ 2.0000199996 -> 2.00
         BigDecimal expected = new BigDecimal("2.00");
-        BigDecimal actual = PrestationUtils.calculateBultVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
+        BigDecimal actual = PrestationUtils.calculateBulkVAT(false, minutes, hours, rate, BigDecimal.ZERO, vat);
         assertEquals(expected, actual);
     }
 }
