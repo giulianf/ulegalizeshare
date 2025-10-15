@@ -33,6 +33,31 @@ public class PrestationUtils {
             return calculateHVAT(forfait, minutes, hours, couthoraire, forfaitHt).multiply(add).setScale(2, RoundingMode.HALF_UP);
         }
     }
+    /**
+     * Calculate vat big decimal.
+     *
+     * @param forfait     the forfait
+     * @param minutes     the minutes
+     * @param hours       the hours
+     * @param couthoraire the couthoraire
+     * @param forfaitHt   the forfait ht
+     * @param vat         the vat
+     * @return the big decimal
+     */
+    public static BigDecimal calculateBultVAT(boolean forfait, BigDecimal minutes, BigDecimal hours, BigDecimal couthoraire, BigDecimal forfaitHt, BigDecimal vat) {
+
+        BigDecimal add = BigDecimal.ONE.add(vat.divide(BigDecimal.valueOf(100)));
+        if (!forfait) {
+            // Compute HT with higher precision (no rounding to 2 decimals before VAT), then apply VAT and round to 2 decimals
+            BigDecimal hoursDecimal = ((hours.multiply(BigDecimal.valueOf(60))).add(minutes))
+                    .divide(BigDecimal.valueOf(60L), 6, RoundingMode.HALF_UP);
+            BigDecimal htatPrecise = hoursDecimal.multiply(couthoraire);
+            return htatPrecise.multiply(add).setScale(2, RoundingMode.HALF_UP);
+        } else {
+            // forfait ht * (1 + (vat / 100))
+            return calculateHVAT(forfait, minutes, hours, couthoraire, forfaitHt).multiply(add).setScale(2, RoundingMode.HALF_UP);
+        }
+    }
 
     /**
      * Calculate hvat big decimal.
@@ -48,10 +73,10 @@ public class PrestationUtils {
         if (!forfait) {
             // (( (dh * 60) + dm ) / 60 ) * couthoraire
             BigDecimal result = ((hours.multiply(BigDecimal.valueOf(60))).add(minutes))
-                    .divide(BigDecimal.valueOf(60L), 6, RoundingMode.HALF_EVEN)
+                    .divide(BigDecimal.valueOf(60L), 6, RoundingMode.HALF_UP)
                     .multiply(couthoraire);
 
-// Set scale to 2 decimal places with HALF_UP rounding mode
+            // Set scale to 2 decimal places with HALF_UP rounding mode (financial rounding)
             result = result.setScale(2, RoundingMode.HALF_UP);
             return result;
         } else {
