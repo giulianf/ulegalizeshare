@@ -231,6 +231,7 @@ public class FraisAdminDTO {
     this.totalHt = totalHt;
     this.totalTTC = total;
     this.vat = vat;
+    this.vatItem = new ItemBigDecimalDto(vat, vat.toString());
 
   }
 
