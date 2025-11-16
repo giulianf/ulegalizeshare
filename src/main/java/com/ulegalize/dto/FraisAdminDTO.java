@@ -85,6 +85,10 @@ public class FraisAdminDTO {
    */
   private BigDecimal vat;
   /**
+   * The Vat item.
+   */
+  private ItemBigDecimalDto vatItem;
+  /**
    * The Total ht.
    */
   private BigDecimal totalHt;
