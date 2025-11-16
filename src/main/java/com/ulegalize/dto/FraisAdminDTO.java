@@ -142,12 +142,11 @@ public class FraisAdminDTO {
    * @param description  the description
    * @param pricePerUnit the price per unit
    */
-  public FraisAdminDTO(Long idDebourType, Integer idMesureType, String description, BigDecimal pricePerUnit, BigDecimal vat) {
+  public FraisAdminDTO(Long idDebourType, Integer idMesureType, String description, BigDecimal pricePerUnit) {
     this.idDebourType = idDebourType;
     this.idMesureType = idMesureType;
     this.mesureDescription = description;
     this.pricePerUnit = pricePerUnit;
-    this.vat = vat;
   }
 
   /**
@@ -161,7 +160,7 @@ public class FraisAdminDTO {
    * @param mesureDescription the mesure description
    * @param archived          the archived
    */
-  public FraisAdminDTO(Long idDebourType, String vcKey, String debourDescription, BigDecimal pricePerUnit, Integer mesureTypeId, String mesureDescription, Boolean archived, BigDecimal vat ) {
+  public FraisAdminDTO(Long idDebourType, String vcKey, String debourDescription, BigDecimal pricePerUnit, Integer mesureTypeId, String mesureDescription, Boolean archived ) {
     this.idDebourType = idDebourType;
     this.vcKey = vcKey;
     this.archived = archived;
@@ -170,7 +169,6 @@ public class FraisAdminDTO {
     this.idMesureType = mesureTypeId;
     this.idMesureTypeItem = new ItemDto(mesureTypeId, mesureDescription);
     this.pricePerUnit = pricePerUnit;
-    this.vat = vat;
   }
 
   /**
