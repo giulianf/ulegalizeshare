@@ -5,11 +5,13 @@ import java.time.ZonedDateTime;
 
 import com.ulegalize.utils.DossiersUtils;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * The type Frais admin dto.
  */
 @Data
+@NoArgsConstructor
 public class FraisAdminDTO {
   /**
    * The Type.
@@ -134,25 +136,17 @@ public class FraisAdminDTO {
 
   /**
    * Instantiates a new Frais admin dto.
-   */
-  public FraisAdminDTO() {
-  }
-
-  /**
-   * Instantiates a new Frais admin dto.
    *
    * @param idDebourType the id debour type
    * @param idMesureType the id mesure type
    * @param description  the description
    * @param pricePerUnit the price per unit
    */
-  public FraisAdminDTO(Long idDebourType, Integer idMesureType, String description, BigDecimal pricePerUnit, BigDecimal totalHt, BigDecimal total, BigDecimal vat) {
+  public FraisAdminDTO(Long idDebourType, Integer idMesureType, String description, BigDecimal pricePerUnit, BigDecimal vat) {
     this.idDebourType = idDebourType;
     this.idMesureType = idMesureType;
     this.mesureDescription = description;
     this.pricePerUnit = pricePerUnit;
-    this.totalHt = totalHt;
-    this.totalTTC = total;
     this.vat = vat;
   }
 
@@ -167,7 +161,7 @@ public class FraisAdminDTO {
    * @param mesureDescription the mesure description
    * @param archived          the archived
    */
-  public FraisAdminDTO(Long idDebourType, String vcKey, String debourDescription, BigDecimal pricePerUnit, Integer mesureTypeId, String mesureDescription, Boolean archived, BigDecimal totalHt, BigDecimal total, BigDecimal vat ) {
+  public FraisAdminDTO(Long idDebourType, String vcKey, String debourDescription, BigDecimal pricePerUnit, Integer mesureTypeId, String mesureDescription, Boolean archived, BigDecimal vat ) {
     this.idDebourType = idDebourType;
     this.vcKey = vcKey;
     this.archived = archived;
@@ -176,8 +170,6 @@ public class FraisAdminDTO {
     this.idMesureType = mesureTypeId;
     this.idMesureTypeItem = new ItemDto(mesureTypeId, mesureDescription);
     this.pricePerUnit = pricePerUnit;
-    this.totalHt = totalHt;
-    this.totalTTC = total;
     this.vat = vat;
   }
 
