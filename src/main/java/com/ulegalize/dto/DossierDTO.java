@@ -73,6 +73,10 @@ public class DossierDTO implements IDossierDTO, Serializable {
      */
     private String typeString;
     /**
+     * Indicates whether the dossier is a mediation (used by projections and label computation)
+     */
+    private Boolean mediation;
+    /**
      * The Type item.
      */
     private ItemStringDto typeItem;
@@ -229,6 +233,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.balance = balance;
         this.type = EnumDossierType.fromdossType(type);
         this.typeCode = type;
+        this.mediation = isMediation;
         this.closeDossier = closeDossier;
         this.openDossier = openDossier;
         this.owner = enumVCOwner;

@@ -85,6 +85,12 @@ public interface IDossierDTO {
      * @return the type
      */
     String getTypeString();
+    /**
+     * Gets type.
+     *
+     * @return the type
+     */
+    Boolean getMediation();
 
     /**
      * Gets owner.
