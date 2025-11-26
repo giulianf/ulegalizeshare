@@ -60,9 +60,14 @@ public class DossierDTO implements IDossierDTO, Serializable {
      */
     private Date closeDossier;
     /**
+     * The Type. replace by typeCode
+     */
+    @Deprecated(forRemoval = true)
+    private EnumDossierType type;
+    /**
      * The Type.
      */
-    private EnumDossierType type;
+    private String typeCode;
     /**
      * The Type must be convert to type
      */
@@ -209,6 +214,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       String type,
+                      Boolean isMediation,
                       Date lastAccessDate,
                       String partiesName,
                       String nomenclature,
@@ -222,13 +228,14 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.initiales = initiales;
         this.balance = balance;
         this.type = EnumDossierType.fromdossType(type);
+        this.typeCode = type;
         this.closeDossier = closeDossier;
         this.openDossier = openDossier;
         this.owner = enumVCOwner;
         this.lastAccessDate = lastAccessDate;
         this.partiesName = partiesName;
 
-        if (!this.type.equals(EnumDossierType.MEDIATION)) {
+        if (isMediation != null && !isMediation) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
@@ -238,7 +245,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
                 this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = this.type.getDossType() + " - " + DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
+                this.label = this.typeCode + " - " + DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
             }
         }
         this.labelDossier = labelDossier;
