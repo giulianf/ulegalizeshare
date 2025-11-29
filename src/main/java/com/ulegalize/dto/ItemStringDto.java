@@ -18,7 +18,7 @@ public class ItemStringDto extends Item<String> implements Serializable {
    * The Is default.
    */
   @Getter
-  private String isDefault;
+  private Boolean isDefault;
 
   /**
    * Instantiates a new Item string dto.
@@ -44,7 +44,7 @@ public class ItemStringDto extends Item<String> implements Serializable {
    * @param label the label
    * @param extra the extra
    */
-  public ItemStringDto(String value, String label, String extra) {
+  public ItemStringDto(String value, String label, Boolean extra) {
     super(value, label);
 
     this.isDefault = extra;
