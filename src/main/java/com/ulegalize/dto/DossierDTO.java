@@ -69,6 +69,10 @@ public class DossierDTO implements IDossierDTO, Serializable {
      */
     private String typeCode;
     /**
+     * The Type.
+     */
+    private String typeDescription;
+    /**
      * The Type must be convert to type
      */
     private String typeString;
@@ -218,6 +222,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       String type,
+                      String dossierTypeDescription,
                       Boolean isMediation,
                       Date lastAccessDate,
                       String partiesName,
@@ -231,8 +236,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.num = number;
         this.initiales = initiales;
         this.balance = balance;
-        this.type = EnumDossierType.fromdossType(type);
         this.typeCode = type;
+        this.typeDescription = dossierTypeDescription;
         this.mediation = isMediation;
         this.closeDossier = closeDossier;
         this.openDossier = openDossier;

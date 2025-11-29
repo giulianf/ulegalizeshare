@@ -24,6 +24,7 @@ class DossierDTOConstructorTest {
         Date open = date(2025, Calendar.JANUARY, 15);
         Date close = date(2025, Calendar.FEBRUARY, 20);
         String type = "MD"; // mediation type code in this library
+        String typeDescription = "mediation"; // mediation type code in this library
         Boolean isMediation = true; // triggers label with type prefix when SAME_VC
         Date lastAccess = date(2025, Calendar.MARCH, 10);
         String partiesName = "Alice/Bob";
@@ -39,6 +40,7 @@ class DossierDTOConstructorTest {
                 balance, vcKey, owner,
                 close, open,
                 type,
+            typeDescription,
                 isMediation,
                 lastAccess,
                 partiesName,
@@ -90,6 +92,7 @@ class DossierDTOConstructorTest {
         Date open = date(2024, Calendar.SEPTEMBER, 1);
         Date close = null;
         String type = "CA"; // any non-null code
+      String typeDescription = "ca"; // mediation type code in this library
         Boolean isMediation = false; // when false and NOT_SAME_VC -> label excludes type prefix but includes vcKey form
         Date lastAccess = new Date();
         String partiesName = "Charlie/Delta";
@@ -105,6 +108,7 @@ class DossierDTOConstructorTest {
                 balance, vcKey, owner,
                 close, open,
                 type,
+            typeDescription,
                 isMediation,
                 lastAccess,
                 partiesName,

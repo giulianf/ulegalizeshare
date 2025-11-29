@@ -90,6 +90,12 @@ public interface IDossierDTO {
      *
      * @return the type
      */
+    String getTypeDescription();
+    /**
+     * Gets type.
+     *
+     * @return the type
+     */
     Boolean getMediation();
 
     /**
