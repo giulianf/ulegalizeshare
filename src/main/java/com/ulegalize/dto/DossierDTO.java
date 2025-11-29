@@ -238,6 +238,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.balance = balance;
         this.typeCode = type;
         this.typeDescription = dossierTypeDescription;
+        this.typeItem = new ItemStringDto(type, dossierTypeDescription);
         this.mediation = isMediation;
         this.closeDossier = closeDossier;
         this.openDossier = openDossier;
