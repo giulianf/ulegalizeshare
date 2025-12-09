@@ -162,6 +162,16 @@ public class Message_nl extends ListResourceBundle {
                 {"NOTARY", "Notaris"},
                 {"BAILIFF", "Deurwaarder"},
                 {"REPRESENTATIVE", "Vertegenwoordiger"},
+                {"APPLICANT", "Aanvrager"},
+                {"OWNER", "Eigenaar"},
+                {"TENANT", "Huurder"},
+                {"ADMINISTRATOR", "Beheerder"},
+                {"REAL_ESTATE_AGENT", "Makelaar"},
+                {"PROMOTER", "Projectontwikkelaar"},
+                {"MEDIATOR", "Bemiddelaar"},
+                {"ADVICE", "Adviseur"},
+                {"COUNTER_EXPERT", "Tegendeskundige"},
+                {"ARCHITECT", "Architect"},
         };
     }
 

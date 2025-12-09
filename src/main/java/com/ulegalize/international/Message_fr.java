@@ -162,6 +162,16 @@ public class Message_fr extends ListResourceBundle {
                 {"NOTARY", "Notaire"},
                 {"BAILIFF", "Huissier"},
                 {"REPRESENTATIVE", "Mandataire"},
+                {"APPLICANT", "Requérant"},
+                {"OWNER", "Propriétaire"},
+                {"TENANT", "Locataire"},
+                {"ADMINISTRATOR", "Gestionnaire"},
+                {"REAL_ESTATE_AGENT", "Agent immobilier"},
+                {"PROMOTER", "Promoteur"},
+                {"MEDIATOR", "Médiateur"},
+                {"ADVICE", "Conseil"},
+                {"COUNTER_EXPERT", "Contre-expert"},
+                {"ARCHITECT", "Architecte"},
         };
     }
 
