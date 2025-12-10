@@ -149,7 +149,7 @@ public enum EnumDossierContactType {
   /**
    * Médiateur
    */
-  MEDIATOR(37, false),
+  MEDIATOR(37, true),
   /**
    * Conseil
    */

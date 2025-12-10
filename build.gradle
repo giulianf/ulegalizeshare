@@ -25,7 +25,6 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-databind:${jackson}"
     implementation "com.fasterxml.jackson.core:jackson-annotations:${jackson}"
     implementation group: 'javax.annotation', name: 'javax.annotation-api', version: '1.2-b01'
-    implementation group: 'net.minidev', name: 'json-smart', version: "${minidevVersion}"
 
     compileOnly "org.projectlombok:lombok:${lombok}"
     annotationProcessor "org.projectlombok:lombok:${lombok}"
@@ -34,12 +33,14 @@ dependencies {
 
     testCompileOnly "org.projectlombok:lombok:${lombok}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombok}"
-    // JUnit Jupiter API for writing tests
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testImplementation(platform("org.junit:junit-bom:${junitJupiterVersion}"))
 
-    // JUnit Jupiter Engine for running tests
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.junit.jupiter:junit-jupiter-params")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
+    // Required when using Gradle test task with JUnit Platform
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 // Ensure that Javadoc is generated
