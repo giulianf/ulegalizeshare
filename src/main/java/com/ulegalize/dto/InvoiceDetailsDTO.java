@@ -55,6 +55,10 @@ public class InvoiceDetailsDTO {
     /**
      * The percentage Frais.
      */
+    private int percentageValue;
+    /**
+     * The percentage Frais.
+     */
     private boolean percentageFrais;
     /**
      * Calculate Honoraire.
