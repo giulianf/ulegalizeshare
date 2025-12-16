@@ -17,24 +17,24 @@ public class DossiersUtils {
     /**
      * Gets dossier label.
      *
-     * @param nomenclature the nomenclature
+     * @param labelDossier the labelDossier
      * @param vcKey        the vc key
      * @return the dossier label
      */
-    public static String getDossierLabel(String nomenclature, String vcKey) {
+    public static String getDossierLabel(String labelDossier, String nomenclature, String vcKey) {
 
-        return getDossierLabelItem(nomenclature) + " - " + vcKey;
+        return getDossierLabelItem(labelDossier, nomenclature) + " - " + vcKey;
     }
 
     /**
      * Gets dossier label item.
      *
-     * @param nomenclature the nomenclature
+     * @param labelDossier the labelDossier
      * @return the dossier label item
      */
-    public static String getDossierLabelItem(String nomenclature) {
+    public static String getDossierLabelItem(String labelDossier, String nomenclature) {
 
-        return nomenclature;
+        return labelDossier.concat(nomenclature == null || nomenclature.isEmpty() ? "" : " (" + nomenclature + ")");
     }
 
     /**

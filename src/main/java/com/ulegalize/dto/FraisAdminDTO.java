@@ -213,7 +213,7 @@ public class FraisAdminDTO {
     this.debourTypeDescription = debourTypeDescription;
     this.idDebourTypeItem = new ItemLongDto(idDebourType, debourTypeDescription);
     this.idDoss = idDoss;
-    this.dossier = DossiersUtils.getDossierLabelItem(nomenclature);
+    this.dossier = DossiersUtils.getDossierLabelItem(nomenclature, null);
     this.mesureDescription = mesureDescription;
     this.idMesureType = mesureTypeId;
     this.idMesureTypeItem = new ItemDto(mesureTypeId, mesureDescription);

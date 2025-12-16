@@ -232,7 +232,7 @@ public class PrestationSummary {
         this.yearDossier = yearDossier;
         this.numDossier = numDossier;
         this.initialesGestionnaire = initialesGestionnaire;
-        this.dossier = DossiersUtils.getDossierLabelItem(labelDossier);
+        this.dossier = DossiersUtils.getDossierLabelItem(labelDossier, null);
         this.idGest = idGest;
         this.email = email;
         this.idGestItem = new ItemLongDto(idGest, email);

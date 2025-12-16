@@ -248,15 +248,15 @@ public class DossierDTO implements IDossierDTO, Serializable {
 
         if (isMediation != null && !isMediation) {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = DossiersUtils.getDossierLabel(labelDossier, nomenclature, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; //2019 / 0012 blahaz/azklk
+                this.label = DossiersUtils.getDossierLabelItem(labelDossier, nomenclature) + " - " + partiesName; //2019 / 0012 blahaz/azklk
             }
         } else {
             if (enumVCOwner != null && enumVCOwner.equals(EnumVCOwner.NOT_SAME_VC)) {
-                this.label = DossiersUtils.getDossierLabel(labelDossier, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
+                this.label = DossiersUtils.getDossierLabel(labelDossier, nomenclature, vckey) + " - " + partiesName; //2019 / 0012 - CABNAME blahaz/azklk
             } else {
-                this.label = this.typeCode + " - " + DossiersUtils.getDossierLabelItem(labelDossier) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
+                this.label = this.typeCode + " - " + DossiersUtils.getDossierLabelItem(labelDossier, nomenclature) + " - " + partiesName; // MD 2019 / 0012 blabla, blabla
             }
         }
         this.labelDossier = labelDossier;

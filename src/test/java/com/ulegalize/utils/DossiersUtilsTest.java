@@ -13,13 +13,13 @@ class DossiersUtilsTest {
     class GetDossierLabel {
         @Test
         void combines_nomenclature_and_vcKey_with_separator() {
-            String label = DossiersUtils.getDossierLabel("CIV", "VC001");
+            String label = DossiersUtils.getDossierLabel("CIV", "WORK-001", "VC001");
             assertEquals("CIV - VC001", label);
         }
 
         @Test
         void works_with_empty_nomenclature() {
-            String label = DossiersUtils.getDossierLabel("", "KEY");
+            String label = DossiersUtils.getDossierLabel("", null, "KEY");
             assertEquals(" - KEY", label);
         }
     }
@@ -29,7 +29,7 @@ class DossiersUtilsTest {
     class GetDossierLabelItem {
         @Test
         void returns_input_as_is() {
-            assertEquals("PENAL", DossiersUtils.getDossierLabelItem("PENAL"));
+            assertEquals("PENAL", DossiersUtils.getDossierLabelItem("PENAL", "WORK-001"));
         }
     }
 
