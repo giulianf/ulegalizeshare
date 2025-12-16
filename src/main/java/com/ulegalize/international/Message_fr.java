@@ -156,7 +156,7 @@ public class Message_fr extends ListResourceBundle {
                 {"ADVERSE_LIABILITY_INSURER", "Assureur RC adverse"},
                 {"OPPONENT_COUNSIL", "Conseil partie adverse"},
                 {"OTHER", "Autre"},
-                {"OPPOSING_LAWYER", "Avocat partie adverse"},
+                {"LAWYER_OPPOSING", "Avocat partie adverse"},
                 {"TRIBUNAL", "Tribunal"},
                 {"EXPERT", "Expert"},
                 {"NOTARY", "Notaire"},

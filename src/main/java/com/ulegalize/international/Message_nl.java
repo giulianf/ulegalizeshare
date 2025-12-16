@@ -156,7 +156,7 @@ public class Message_nl extends ListResourceBundle {
                 {"ADVERSE_LIABILITY_INSURER", "Aansprakelijkheidsverzekeraar van de tegenpartij"},
                 {"OPPONENT_COUNSIL", "Tegengestelde raadsman"},
                 {"OTHER", "Andere"},
-                {"OPPOSING_LAWYER", "advocaat van de tegenpartij"},
+                {"LAWYER_OPPOSING", "advocaat van de tegenpartij"},
                 {"TRIBUNAL", "Court"},
                 {"EXPERT", "Deskundige"},
                 {"NOTARY", "Notaris"},

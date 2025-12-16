@@ -25,7 +25,7 @@ public enum EnumDossierContactType {
   /**
    * Opposing lawyer enum dossier contact type.
    */
-  OPPOSING_LAWYER(6, false),
+  LAWYER_OPPOSING(6, false),
   /**
    * Tribunal enum dossier contact type.
    */

@@ -158,7 +158,7 @@ public class Message_de extends ListResourceBundle {
                 {"ADVERSE_LIABILITY_INSURER", "Haftpflichtversicherer des Gegners"},
                 {"OPPONENT_COUNSIL", "Gegner beraten"},
                 {"OTHER", "Andere"},
-                {"OPPOSING_LAWYER", "gegnerischer anwalt"},
+                {"LAWYER_OPPOSING", "gegnerischer anwalt"},
                 {"TRIBUNAL", "Gericht"},
                 {"EXPERT", "Experte"},
                 {"NOTARY", "Notar"},
