@@ -1,6 +1,7 @@
 package com.ulegalize.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -8,8 +9,8 @@ import java.util.List;
  * The type Share file dto.
  */
 @Data
+@NoArgsConstructor
 public class ShareFileDTO {
-
     /**
      * The Id.
      */
@@ -46,11 +47,8 @@ public class ShareFileDTO {
      * The Shared with.
      */
     private List<String> shared_with;
-
     /**
-     * Instantiates a new Share file dto.
+     * send notification
      */
-    public ShareFileDTO() {
-    }
-
+    private boolean sendNotification;
 }
