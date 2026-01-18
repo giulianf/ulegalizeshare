@@ -35,6 +35,27 @@ class DossiersUtilsTest {
             String expected = "PENAL (WORK-001)";
             assertEquals(expected, result);
         }
+
+        @Test
+        void returns_nomenclature_when_labelDossier_is_null() {
+            String result = DossiersUtils.getDossierLabelItem(null, "WORK-001");
+            String expected = "WORK-001";
+            assertEquals(expected, result);
+        }
+
+        @Test
+        void returns_empty_string_when_labelDossier_and_nomenclature_are_null() {
+            String result = DossiersUtils.getDossierLabelItem(null, null);
+            String expected = null;
+            assertEquals(expected, result);
+        }
+
+        @Test
+        void returns_labelDossier_when_nomenclature_is_null() {
+            String result = DossiersUtils.getDossierLabelItem("PENAL", null);
+            String expected = "PENAL";
+            assertEquals(expected, result);
+        }
     }
 
     @Nested

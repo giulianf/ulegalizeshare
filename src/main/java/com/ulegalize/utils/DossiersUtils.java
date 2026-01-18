@@ -33,6 +33,9 @@ public class DossiersUtils {
      * @return the dossier label item
      */
     public static String getDossierLabelItem(String labelDossier, String nomenclature) {
+        if (labelDossier == null) {
+            return nomenclature;
+        }
 
         return labelDossier.concat(nomenclature == null || nomenclature.isEmpty() ? "" : " (" + nomenclature + ")");
     }
