@@ -145,9 +145,14 @@ public class PrestationSummary {
     private List<Long> managerDossierIds;
 
     /**
-     * avatarurl .
+     * avatar url .
      */
     private String avatarUrl;
+
+    /**
+     * avatar Version .
+     */
+    private Integer avatarVersion;
 
 
     /**
