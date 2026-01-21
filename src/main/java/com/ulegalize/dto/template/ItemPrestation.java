@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.annotation.Generated;
+import jakarta.annotation.Generated;
 import java.math.BigDecimal;
 
 /**

@@ -10,8 +10,6 @@ group = applicationGroup
 version = applicationVersion
 project.version = applicationVersion
 description = applicationName
-sourceCompatibility = JavaVersion.VERSION_21
-targetCompatibility = JavaVersion.VERSION_21
 
 
 repositories {
@@ -23,8 +21,8 @@ repositories {
 dependencies {
     implementation "com.fasterxml.jackson.core:jackson-core:${jackson}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${jackson}"
-    implementation "com.fasterxml.jackson.core:jackson-annotations:${jackson}"
-    implementation group: 'javax.annotation', name: 'javax.annotation-api', version: '1.2-b01'
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonAnnotation}"
+    implementation("jakarta.annotation:jakarta.annotation-api:3.0.0")
 
     compileOnly "org.projectlombok:lombok:${lombok}"
     annotationProcessor "org.projectlombok:lombok:${lombok}"
@@ -50,7 +48,7 @@ task generateJavadoc(type: Javadoc) {
     options.memberLevel = JavadocMemberLevel.PRIVATE
     options.author = true
     options.version = true
-    options.links("https://docs.oracle.com/en/java/javase/21/docs/api/")
+    options.links("https://docs.oracle.com/en/java/javase/25/docs/api/")
 }
 
 // Create a JAR for Javadoc
@@ -80,7 +78,7 @@ publishing {
 }
 
 wrapper {
-    gradleVersion = "8.6"
+    gradleVersion = "9.2.1"
     distributionType = Wrapper.DistributionType.BIN
 }
 //publishing {
@@ -152,11 +150,8 @@ test {
 //signing {
 //    sign configurations.archives
 //}
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
 }

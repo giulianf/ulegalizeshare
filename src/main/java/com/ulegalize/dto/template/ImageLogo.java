@@ -4,7 +4,7 @@ package com.ulegalize.dto.template;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.annotation.Generated;
+import jakarta.annotation.Generated;
 
 /**
  * The type Image logo.
