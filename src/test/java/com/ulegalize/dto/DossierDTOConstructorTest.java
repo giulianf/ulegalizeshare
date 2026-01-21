@@ -35,13 +35,15 @@ class DossierDTOConstructorTest {
     String drivePath = "/drive/path";
     String tagsName = "tag1, tag2";
     BigDecimal couthoraire = new BigDecimal("200");
-    String avatarUrl= "api.myurl.com/{id}/avatar";
+    Integer avatarVersion= 2;
+    String avatarUrl= "api.myurl.com/{id}/avatar?v=" + avatarVersion;
 
     // Act - use the projection-style constructor used by Spring Data
     DossierDTO dto = new DossierDTO(
         id, year, num,
         initiales,
         userId,
+        avatarVersion,
         balance, vcKey, owner,
         close, open,
         type,
@@ -107,14 +109,16 @@ class DossierDTOConstructorTest {
     String drivePath = null;
     String tagsName = null;
     BigDecimal couthoraire = null;
-    String avatarUrl= "api.myurl.com/{id}/avatar";
     Long userId = 10L;
+    Integer avatarVersion= 2;
+    String avatarUrl= "api.myurl.com/{id}/avatar?v=" + avatarVersion;
 
     // Act
     IDossierDTO projection = new DossierDTO(
         id, year, num,
         initiales,
         userId,
+        avatarVersion,
         balance, vcKey, owner,
         close, open,
         type,

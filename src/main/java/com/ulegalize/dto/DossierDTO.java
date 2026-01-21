@@ -197,9 +197,13 @@ public class DossierDTO implements IDossierDTO, Serializable {
      */
     private String tagsName;
     /**
-     * avatarurl .
+     * avatar url .
      */
     private String avatarUrl;
+    /**
+     * avatar Version .
+     */
+    private Integer avatarVersion;
 
     /**
      * Instantiates a new Dossier dto.
@@ -226,7 +230,9 @@ public class DossierDTO implements IDossierDTO, Serializable {
     public DossierDTO(Long dossierId, Long year, Long number,
                       String initiales,
                       Long userResponsibleId,
-                      BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
+                      Integer avatarVersion,
+                      BigDecimal balance,
+                      String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       String type,
                       String dossierTypeDescription,
@@ -243,6 +249,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.year = year;
         this.num = number;
         this.idUserResponsible = userResponsibleId;
+        this.avatarVersion = avatarVersion;
         this.initiales = initiales;
         this.balance = balance;
         this.typeCode = type;

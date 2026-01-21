@@ -158,4 +158,9 @@ public interface IDossierDTO {
      * @return responsable id
      */
     Long getIdUserResponsible();
+    /**
+     *
+     * @return responsable id
+     */
+    Integer getAvatarVersion();
 }
