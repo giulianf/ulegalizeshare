@@ -143,10 +143,11 @@ public class PrestationSummary {
      * List of managers.
      */
     private List<Long> managerDossierIds;
+
     /**
-     * avatar.
+     * avatarurl .
      */
-    private byte[] avatar;
+    private String avatarUrl;
 
 
     /**

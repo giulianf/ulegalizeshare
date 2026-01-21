@@ -197,9 +197,9 @@ public class DossierDTO implements IDossierDTO, Serializable {
      */
     private String tagsName;
     /**
-     * avatar.
+     * avatarurl .
      */
-    private byte[] avatar;
+    private String avatarUrl;
 
     /**
      * Instantiates a new Dossier dto.
