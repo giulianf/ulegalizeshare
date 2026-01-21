@@ -34,6 +34,7 @@ class DossierDTOConstructorTest {
     String drivePath = "/drive/path";
     String tagsName = "tag1, tag2";
     BigDecimal couthoraire = new BigDecimal("200");
+    String avatarUrl= "api.myurl.com/{id}/avatar";
 
     // Act - use the projection-style constructor used by Spring Data
     DossierDTO dto = new DossierDTO(
@@ -49,7 +50,8 @@ class DossierDTOConstructorTest {
         labelDossier,
         drivePath,
         tagsName,
-        couthoraire
+        couthoraire,
+        avatarUrl
     );
 
     // Also expose it as the interface as Spring does with Page<IDossierDTO>
@@ -102,6 +104,7 @@ class DossierDTOConstructorTest {
     String drivePath = null;
     String tagsName = null;
     BigDecimal couthoraire = null;
+    String avatarUrl= "api.myurl.com/{id}/avatar";
 
     // Act
     IDossierDTO projection = new DossierDTO(
@@ -117,7 +120,8 @@ class DossierDTOConstructorTest {
         labelDossier,
         drivePath,
         tagsName,
-        couthoraire
+        couthoraire,
+        avatarUrl
     );
 
     // Assert expected label for NOT_SAME_VC irrespective of mediation flag
