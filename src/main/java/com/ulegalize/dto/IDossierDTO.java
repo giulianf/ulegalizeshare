@@ -153,4 +153,9 @@ public interface IDossierDTO {
      * @return Cout horaire
      */
     BigDecimal getCouthoraire();
+    /**
+     *
+     * @return responsable id
+     */
+    Long getIdUserResponsible();
 }

@@ -18,6 +18,7 @@ class DossierDTOConstructorTest {
     Long id = 42L;
     Long year = 2025L;
     Long num = 7L;
+    Long userId = 10L;
     String initiales = "AB";
     BigDecimal balance = new BigDecimal("123.45");
     String vcKey = "VC123";
@@ -38,7 +39,9 @@ class DossierDTOConstructorTest {
 
     // Act - use the projection-style constructor used by Spring Data
     DossierDTO dto = new DossierDTO(
-        id, year, num, initiales,
+        id, year, num,
+        initiales,
+        userId,
         balance, vcKey, owner,
         close, open,
         type,
@@ -105,10 +108,13 @@ class DossierDTOConstructorTest {
     String tagsName = null;
     BigDecimal couthoraire = null;
     String avatarUrl= "api.myurl.com/{id}/avatar";
+    Long userId = 10L;
 
     // Act
     IDossierDTO projection = new DossierDTO(
-        id, year, num, initiales,
+        id, year, num,
+        initiales,
+        userId,
         balance, vcKey, owner,
         close, open,
         type,

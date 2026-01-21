@@ -223,7 +223,9 @@ public class DossierDTO implements IDossierDTO, Serializable {
      * @param couthoraire       cout horaire
      * @param avatarUrl       avatar Url
      */
-    public DossierDTO(Long dossierId, Long year, Long number, String initiales,
+    public DossierDTO(Long dossierId, Long year, Long number,
+                      String initiales,
+                      Long userResponsibleId,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
                       Date closeDossier, Date openDossier,
                       String type,
@@ -240,6 +242,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.id = dossierId;
         this.year = year;
         this.num = number;
+        this.idUserResponsible = userResponsibleId;
         this.initiales = initiales;
         this.balance = balance;
         this.typeCode = type;
@@ -271,7 +274,6 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.tagsName = tagsName;
         this.couthoraire = couthoraire;
         this.avatarUrl = avatarUrl;
-
     }
 
 }
