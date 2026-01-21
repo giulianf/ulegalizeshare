@@ -150,12 +150,6 @@ public class PrestationSummary {
     private String avatarUrl;
 
     /**
-     * avatar Version .
-     */
-    private Integer avatarVersion;
-
-
-    /**
      * Used for invoice
      *
      * @param id                 the id
