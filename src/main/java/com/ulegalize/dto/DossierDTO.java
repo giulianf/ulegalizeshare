@@ -221,6 +221,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
      * @param drivePath      the drive path
      * @param tagsName       the tags name
      * @param couthoraire       cout horaire
+     * @param avatarUrl       avatar Url
      */
     public DossierDTO(Long dossierId, Long year, Long number, String initiales,
                       BigDecimal balance, String vckey, EnumVCOwner enumVCOwner,
@@ -234,7 +235,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
                       String labelDossier,
                       String drivePath,
                       String tagsName,
-                      BigDecimal couthoraire) {
+                      BigDecimal couthoraire,
+                      String avatarUrl) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -268,6 +270,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.drivePath = drivePath;
         this.tagsName = tagsName;
         this.couthoraire = couthoraire;
+        this.avatarUrl = avatarUrl;
 
     }
 
