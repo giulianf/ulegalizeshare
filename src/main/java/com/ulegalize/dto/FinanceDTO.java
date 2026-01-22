@@ -3,6 +3,7 @@ package com.ulegalize.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
  */
 @Data
 @NoArgsConstructor
-public class FinanceDTO {
+public class FinanceDTO implements Serializable {
 
     /**
      * The Couthoraire.
