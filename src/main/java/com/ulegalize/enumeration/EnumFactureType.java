@@ -43,7 +43,7 @@ public enum EnumFactureType {
     /**
      * ORDER temporary enum facture type
      */
-    ORDER(9, "OR", true);
+    ORDER(9, "OR", false);
 
     /**
      * The Id.
