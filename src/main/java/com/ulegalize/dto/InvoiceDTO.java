@@ -225,6 +225,10 @@ public class InvoiceDTO implements Serializable {
      */
     private List<Long> provisionIdList = new ArrayList<>();
     /**
+     * The Provision id list.
+     */
+    private List<Long> orderIdList = new ArrayList<>();
+    /**
      * The Frais admin id list.
      */
     private List<Long> fraisAdminIdList = new ArrayList<>();
