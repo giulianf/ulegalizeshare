@@ -39,7 +39,11 @@ public enum EnumFactureType {
     /**
      * REMINDER temporary enum facture type
      */
-    REMINDER_TEMP(8, "RT", true);
+    REMINDER_TEMP(8, "RT", true),
+    /**
+     * ORDER temporary enum facture type
+     */
+    ORDER(9, "OR", true);
 
     /**
      * The Id.
