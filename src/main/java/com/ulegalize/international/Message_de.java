@@ -25,6 +25,7 @@ public class Message_de extends ListResourceBundle {
                 {"TEMP", "Vorläufige Rechnung"},
                 {"TEMP_NC", "Vorläufige Gutschrift"},
                 {"REMINDER", "Erinnerung"},
+                {"QUOTE", "Zitat"},
                 {"REMINDER_TEMP", "Erinnerung Gutschrift"},
                 {"PROVISION", "Rückstellung"},
                 {"PROVISION_TEMP", "Rückstellung Gutschrift"},

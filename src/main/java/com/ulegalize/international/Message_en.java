@@ -26,6 +26,7 @@ public class Message_en extends ListResourceBundle {
                 {"TEMP_NC", "Temporary credit score"},
                 {"REMINDER", "Reminder"},
                 {"REMINDER_TEMP", "Temp Reminder"},
+                {"QUOTE", "Quote"},
                 {"PROVISION", "Advance"},
                 {"PROVISION_TEMP", "Temporary Advance"},
                 {"PRO_ACCOUNT", "Professioneel account"},

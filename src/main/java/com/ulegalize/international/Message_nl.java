@@ -25,6 +25,7 @@ public class Message_nl extends ListResourceBundle {
                 {"TEMP", "Tijdelijke factuur"},
                 {"TEMP_NC", "Creditnota credit"},
                 {"REMINDER", "Herinnering"},
+                {"QUOTE", "Citaat"},
                 {"REMINDER_TEMP", "Tijdelijke Herinnering"},
                 {"PROVISION", "Provisie"},
                 {"PROVISION_TEMP", "Tijdelijke Provisie"},

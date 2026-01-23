@@ -25,6 +25,7 @@ public class Message_fr extends ListResourceBundle {
                 {"TEMP", "Facture temporaire"},
                 {"TEMP_NC", "Note de crédit temporaire"},
                 {"REMINDER", "Rappel"},
+                {"QUOTE", "Devis"},
                 {"REMINDER_TEMP", "Rappel temporaire"},
                 {"PROVISION", "Provision"},
                 {"PROVISION_TEMP", "Provision temporaire"},
