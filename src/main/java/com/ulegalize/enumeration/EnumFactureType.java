@@ -47,7 +47,7 @@ public enum EnumFactureType {
     /**
      * ORDER temporary enum facture type
      */
-    QUOTE(10, "QV", true);
+    QUOTE(10, "QV", false);
 
     /**
      * The Id.
