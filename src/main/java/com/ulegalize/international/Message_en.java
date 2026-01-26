@@ -27,6 +27,7 @@ public class Message_en extends ListResourceBundle {
                 {"REMINDER", "Reminder"},
                 {"REMINDER_TEMP", "Temp Reminder"},
                 {"QUOTE", "Quote"},
+                {"QUOTE_TEMP", "Temporary Quote"},
                 {"PROVISION", "Advance"},
                 {"PROVISION_TEMP", "Temporary Advance"},
                 {"PRO_ACCOUNT", "Professioneel account"},

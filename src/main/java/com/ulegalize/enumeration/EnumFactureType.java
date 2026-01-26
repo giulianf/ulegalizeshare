@@ -43,7 +43,11 @@ public enum EnumFactureType {
     /**
      * ORDER temporary enum facture type
      */
-    QUOTE(9, "OR", true);
+    QUOTE_TEMP(9, "QT", true),
+    /**
+     * ORDER temporary enum facture type
+     */
+    QUOTE(10, "QV", true);
 
     /**
      * The Id.
