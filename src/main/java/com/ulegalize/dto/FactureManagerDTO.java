@@ -15,6 +15,14 @@ public class FactureManagerDTO extends Item<Long> {
      * dossier id
      */
     private Long factureId;
+    /**
+     * avatar url .
+     */
+    private String avatarUrl;
+    /**
+     * avatar Version .
+     */
+    private Integer avatarVersion;
 
 
     /**
@@ -32,9 +40,12 @@ public class FactureManagerDTO extends Item<Long> {
      * @param factureId the invoice Id
      * @param id        the dossier manager Id
      */
-    public FactureManagerDTO(Long userId, String label, Long factureId, Long id) {
+    public FactureManagerDTO(Long userId, String label, Long factureId, Long id, String avatarUrl, Integer avatarVersion) {
         super(userId, label);
         this.factureId = factureId;
         this.id = id;
+
+      this.avatarUrl = avatarUrl;
+      this.avatarVersion = avatarVersion;
     }
 }

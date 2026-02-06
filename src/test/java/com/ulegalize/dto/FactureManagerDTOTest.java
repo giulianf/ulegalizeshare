@@ -20,8 +20,9 @@ class FactureManagerDTOTest {
         String label = "Test Label";
         Long factureId = 456L;
         Long id = 789L;
+        String avatarUrl = "avatarUrl";
 
-        FactureManagerDTO dto = new FactureManagerDTO(userId, label, factureId, id);
+        FactureManagerDTO dto = new FactureManagerDTO(userId, label, factureId, id, avatarUrl, 1);
         assertEquals(userId, dto.getValue());
         assertEquals(factureId, dto.getFactureId());
         assertEquals(id, dto.getId());
