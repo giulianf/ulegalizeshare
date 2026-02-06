@@ -100,6 +100,11 @@ public class DossierDTO implements IDossierDTO, Serializable {
     private Long idUserResponsible;
 
     /**
+     * The user responsible.
+     */
+    private ItemLongDto userResponsible;
+
+    /**
      * The Id matiere rubrique.
      */
     private Long id_matiere_rubrique;
