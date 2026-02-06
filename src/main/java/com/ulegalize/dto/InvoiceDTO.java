@@ -244,5 +244,13 @@ public class InvoiceDTO implements Serializable {
      * The deliverable id list.
      */
     private List<Long> deliverableIdList = new ArrayList<>();
+    /**
+     * avatar url .
+     */
+    private String avatarUrl;
+    /**
+     * avatar Version .
+     */
+    private Integer avatarVersion;
 
 }
