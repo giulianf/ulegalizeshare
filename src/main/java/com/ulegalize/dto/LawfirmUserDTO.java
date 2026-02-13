@@ -69,6 +69,14 @@ public class LawfirmUserDTO extends AbstractRestObject {
      */
     private String lawyerFullname;
     /**
+     * The Lawyer fullname.
+     */
+    private String lawyerInitial;
+    /**
+     * The Lawyer fullname.
+     */
+    private String lawyerLanguage;
+    /**
      * The Email.
      */
     private String email;
