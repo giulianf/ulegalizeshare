@@ -61,6 +61,10 @@ public class LawfirmUserDTO extends AbstractRestObject {
      */
     private EnumRole idRole;
     /**
+     * The Id role.
+     */
+    private Long userId;
+    /**
      * The Lawyer alias.
      */
     private String lawyerAlias;
