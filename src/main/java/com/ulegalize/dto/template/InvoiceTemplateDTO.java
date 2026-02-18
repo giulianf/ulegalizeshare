@@ -1,5 +1,6 @@
 package com.ulegalize.dto.template;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ulegalize.dto.ContactSummary;
 import lombok.Data;
@@ -15,6 +16,7 @@ import java.util.List;
  */
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
