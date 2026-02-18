@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.ulegalize.dto.ContactSummary;
 import com.ulegalize.dto.DossierDTO;
 import com.ulegalize.dto.LawfirmDTO;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 /**
  * used to lawfirm to template
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
