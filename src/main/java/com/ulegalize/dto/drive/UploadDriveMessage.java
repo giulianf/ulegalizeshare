@@ -9,6 +9,7 @@ public class UploadDriveMessage {
   private String container;
   private String filename;
   private String path;
+  private String folderPathUri;
   private Long userId;
   private byte[] file;
 
