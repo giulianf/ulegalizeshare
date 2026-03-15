@@ -87,13 +87,20 @@ public class ProfileDTO implements Serializable {
      * The Client from.
      */
     private String clientFrom;
+    /**
+     * The country code
+     */
+    private String countryCode;
 
     /**
      * The Last connected.
      */
     private ZonedDateTime lastConnected;
 
-    public ProfileDTO(Long id, String fullName, String email, String phone, String vcKeySelected, boolean temporaryVc, String language, String symbolCurrency, Long userId, String userLoginId, List<Integer> enumRights, DriveType driveType, boolean verified, String clientFrom, ZonedDateTime lastConnected) {
+    public ProfileDTO(Long id, String fullName, String email, String phone, String vcKeySelected,
+                      boolean temporaryVc, String language, String symbolCurrency, Long userId,
+                      String userLoginId, List<Integer> enumRights, DriveType driveType,
+                      boolean verified, String clientFrom, ZonedDateTime lastConnected, String countryCode) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
@@ -109,9 +116,14 @@ public class ProfileDTO implements Serializable {
         this.verified = verified;
         this.clientFrom = clientFrom;
         this.lastConnected = lastConnected;
+        this.countryCode = countryCode;
     }
 
-    public ProfileDTO(Long id, String fullName, String email, String phone, String vcKeySelected, boolean temporaryVc, String language, String symbolCurrency, Long userId, String userLoginId, List<Integer> enumRights, DriveType driveType, String driveToken, String onedriveRefreshToken, ZonedDateTime onedriveExpireToken, String clientFrom) {
+    public ProfileDTO(Long id, String fullName, String email, String phone, String vcKeySelected,
+                      boolean temporaryVc, String language, String symbolCurrency, Long userId,
+                      String userLoginId, List<Integer> enumRights, DriveType driveType,
+                      String driveToken, String onedriveRefreshToken, ZonedDateTime onedriveExpireToken,
+                      String clientFrom) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
