@@ -2,7 +2,7 @@ package com.ulegalize.utils;
 
 public class CourtFormatter implements ClientNameFormatter {
     @Override
-    public String formatFullname(String firstname, String lastname, String email, String company, String address, String district) {
+    public String formatFullname(String firstname, String lastname, String email, String company, String address, String district, boolean includeEmail) {
         return (company + (district != null && !district.isEmpty() ? " - " + district : "")).trim();
     }
 }

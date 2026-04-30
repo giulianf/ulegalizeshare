@@ -16,10 +16,15 @@ class ClientNameFormatterFactoryTest {
     void testFactoryForNaturalPerson() {
         ClientNameFormatter formatter = factory.getFormatter(EnumClientType.NATURAL_PERSON);
 
-        String result = formatter.formatFullname("John", "Doe", "john.doe@example.com", null, null, null);
+        // Test with includeEmail = true
+        String result = formatter.formatFullname("John", "Doe", "john.doe@example.com", null, null, null, true);
         assertEquals("John Doe (john.doe@example.com)", result);
 
-        result = formatter.formatFullname("John", "Doe", null, null, null, null);
+        result = formatter.formatFullname("John", "Doe", null, null, null, null, true);
+        assertEquals("John Doe", result);
+
+        // Test with includeEmail = false
+        result = formatter.formatFullname("John", "Doe", "john.doe@example.com", null, null, null, false);
         assertEquals("John Doe", result);
     }
 
@@ -28,11 +33,16 @@ class ClientNameFormatterFactoryTest {
     void testFactoryForCompany() {
         ClientNameFormatter formatter = factory.getFormatter(EnumClientType.COMPANY);
 
-        String result = formatter.formatFullname(null, null, null, "Acme Corp", "123 Business St", null);
+        // Test with includeEmail = true (email should not affect company output)
+        String result = formatter.formatFullname(null, null, null, "Acme Corp", "123 Business St", null, true);
         assertEquals("Acme Corp - 123 Business St", result);
 
-        result = formatter.formatFullname(null, null, null, "Acme Corp", null, null);
+        result = formatter.formatFullname(null, null, null, "Acme Corp", null, null, true);
         assertEquals("Acme Corp", result);
+
+        // Test with includeEmail = false
+        result = formatter.formatFullname(null, null, "contact@acme.com", "Acme Corp", "123 Business St", null, false);
+        assertEquals("Acme Corp - 123 Business St", result);
     }
 
     @Test
@@ -40,11 +50,16 @@ class ClientNameFormatterFactoryTest {
     void testFactoryForCourt() {
         ClientNameFormatter formatter = factory.getFormatter(EnumClientType.COURT);
 
-        String result = formatter.formatFullname(null, null, null, "Court of Justice", null, "District 1");
+        // Test with includeEmail = true (email should not affect court output)
+        String result = formatter.formatFullname(null, null, null, "Court of Justice", null, "District 1", true);
         assertEquals("Court of Justice - District 1", result);
 
-        result = formatter.formatFullname(null, null, null, "Court of Justice", null, null);
+        result = formatter.formatFullname(null, null, null, "Court of Justice", null, null, true);
         assertEquals("Court of Justice", result);
+
+        // Test with includeEmail = false
+        result = formatter.formatFullname(null, null, "court@example.com", "Court of Justice", null, "District 1", false);
+        assertEquals("Court of Justice - District 1", result);
     }
 
     @Test
@@ -58,10 +73,15 @@ class ClientNameFormatterFactoryTest {
     void testFactoryForColleague() {
         ClientNameFormatter formatter = factory.getFormatter(EnumClientType.COLLEGUE);
 
-        String result = formatter.formatFullname("Jane", "Smith", "jane.smith@example.com", null, null, null);
+        // Test with includeEmail = true
+        String result = formatter.formatFullname("Jane", "Smith", "jane.smith@example.com", null, null, null, true);
         assertEquals("Jane Smith (jane.smith@example.com)", result);
 
-        result = formatter.formatFullname("Jane", "Smith", null, null, null, null);
+        result = formatter.formatFullname("Jane", "Smith", null, null, null, null, true);
+        assertEquals("Jane Smith", result);
+
+        // Test with includeEmail = false
+        result = formatter.formatFullname("Jane", "Smith", "jane.smith@example.com", null, null, null, false);
         assertEquals("Jane Smith", result);
     }
 
@@ -70,17 +90,37 @@ class ClientNameFormatterFactoryTest {
     void testEdgeCases() {
         // NATURAL_PERSON with empty fields
         ClientNameFormatter formatter = factory.getFormatter(EnumClientType.NATURAL_PERSON);
-        String result = formatter.formatFullname("", "", null, null, null, null);
+        String result = formatter.formatFullname("", "", null, null, null, null, true);
+        assertEquals("", result);
+
+        result = formatter.formatFullname("", "", "email@test.com", null, null, null, false);
         assertEquals("", result);
 
         // COMPANY with empty fields
         formatter = factory.getFormatter(EnumClientType.COMPANY);
-        result = formatter.formatFullname(null, null, null, "", "", null);
+        result = formatter.formatFullname(null, null, null, "", "", null, true);
         assertEquals("", result);
 
         // COURT with empty fields
         formatter = factory.getFormatter(EnumClientType.COURT);
-        result = formatter.formatFullname(null, null, null, "", null, "");
+        result = formatter.formatFullname(null, null, null, "", null, "", true);
         assertEquals("", result);
+    }
+    @Test
+    @DisplayName("Test formatFullname with includeEmail flag")
+    void testFormatFullnameWithIncludeEmailFlag() {
+        ClientNameFormatter formatter = factory.getFormatter(EnumClientType.NATURAL_PERSON);
+
+        // Should include email when includeEmail is true
+        String result = formatter.formatFullname("John", "Doe", "john.doe@example.com", null, null, null, true);
+        assertEquals("John Doe (john.doe@example.com)", result);
+
+        // Should NOT include email when includeEmail is false
+        result = formatter.formatFullname("John", "Doe", "john.doe@example.com", null, null, null, false);
+        assertEquals("John Doe", result);
+
+        // Should NOT include email when email is null even if includeEmail is true
+        result = formatter.formatFullname("John", "Doe", null, null, null, null, true);
+        assertEquals("John Doe", result);
     }
 }
