@@ -53,6 +53,9 @@ public class Utils {
      * @return the boolean
      */
     public static boolean validateEmail(String email) {
+        if (email == null) {
+            return false;
+        }
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
         return matcher.find();
     }
