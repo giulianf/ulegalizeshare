@@ -2,7 +2,6 @@ package com.ulegalize;
 
 import java.io.Serializable;
 
-import com.ulegalize.security.UlegalizeToken;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,8 +14,11 @@ import lombok.ToString;
 @Setter
 @ToString
 public class SimpleKafkaObject<T> implements Serializable {
+  private Long userId;
 
-  private UlegalizeToken ulegalizeToken;
+  private String vcKey;
+
+  private String email;
 
   private T payload;
 }
