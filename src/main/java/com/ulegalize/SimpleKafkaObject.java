@@ -15,10 +15,8 @@ import lombok.ToString;
 @ToString
 public class SimpleKafkaObject<T> implements Serializable {
   private Long userId;
-
   private String vcKey;
-
   private String email;
-
+  private String username;
   private T payload;
 }
