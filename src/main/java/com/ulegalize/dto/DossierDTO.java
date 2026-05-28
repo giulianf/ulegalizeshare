@@ -211,6 +211,11 @@ public class DossierDTO implements IDossierDTO, Serializable {
     private Integer avatarVersion;
 
     /**
+     * AI metadata.
+     */
+    private DossierAiMetadataDTO aiMetadata;
+
+    /**
      * Instantiates a new Dossier dto.
      *
      * @param dossierId      the dossier id
