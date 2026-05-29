@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.ulegalize.enumeration.DossierStatus;
 import com.ulegalize.enumeration.EnumVCOwner;
 import org.junit.jupiter.api.Test;
 
@@ -39,6 +40,7 @@ class DossierDTOConstructorTest {
     String avatarUrl= "api.myurl.com/{id}/avatar?v=" + avatarVersion;
 
     // Act - use the projection-style constructor used by Spring Data
+    DossierStatus status = DossierStatus.IN_PROGRESS;
     DossierDTO dto = new DossierDTO(
         id, year, num,
         initiales,
@@ -56,7 +58,8 @@ class DossierDTOConstructorTest {
         drivePath,
         tagsName,
         couthoraire,
-        avatarUrl
+        avatarUrl,
+        status
     );
 
     // Also expose it as the interface as Spring does with Page<IDossierDTO>
@@ -131,7 +134,8 @@ class DossierDTOConstructorTest {
         drivePath,
         tagsName,
         couthoraire,
-        avatarUrl
+        avatarUrl,
+        DossierStatus.IN_PROGRESS
     );
 
     // Assert expected label for NOT_SAME_VC irrespective of mediation flag
