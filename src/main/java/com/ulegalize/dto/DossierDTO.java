@@ -213,7 +213,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
 
     /**
      * AI metadata.
-     */ 
+     */
     private DossierAiMetadataDTO aiMetadata;
 
     private DossierStatus status;
@@ -239,8 +239,11 @@ public class DossierDTO implements IDossierDTO, Serializable {
      * @param tagsName       the tags name
      * @param couthoraire       cout horaire
      * @param avatarUrl       avatar Url
+     * @param status       status
      */
-    public DossierDTO(Long dossierId, Long year, Long number,
+    public DossierDTO(Long dossierId,
+                      Long year,
+                      Long number,
                       String initiales,
                       Long userResponsibleId,
                       Integer avatarVersion,
@@ -257,7 +260,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
                       String drivePath,
                       String tagsName,
                       BigDecimal couthoraire,
-                      String avatarUrl) {
+                      String avatarUrl,
+                      DossierStatus status) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -294,6 +298,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.tagsName = tagsName;
         this.couthoraire = couthoraire;
         this.avatarUrl = avatarUrl;
+        this.status = status;
     }
 
 }

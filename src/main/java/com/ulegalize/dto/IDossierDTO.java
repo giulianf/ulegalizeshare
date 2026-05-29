@@ -1,5 +1,6 @@
 package com.ulegalize.dto;
 
+import com.ulegalize.enumeration.DossierStatus;
 import com.ulegalize.enumeration.EnumVCOwner;
 
 import java.math.BigDecimal;
@@ -163,4 +164,9 @@ public interface IDossierDTO {
      * @return responsable id
      */
     Integer getAvatarVersion();
+    /**
+     *
+     * @return status
+     */
+    DossierStatus getStatus();
 }
