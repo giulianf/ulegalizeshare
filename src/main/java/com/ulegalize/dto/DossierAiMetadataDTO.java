@@ -21,4 +21,6 @@ public class DossierAiMetadataDTO implements Serializable {
     private String aiProvider;
 
     private String model;
+
+    private List<String> generatedFields;
 }
