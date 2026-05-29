@@ -1,6 +1,7 @@
 package com.ulegalize.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.ulegalize.enumeration.DossierStatus;
 import com.ulegalize.enumeration.EnumDossierType;
 import com.ulegalize.enumeration.EnumVCOwner;
 import com.ulegalize.utils.DossiersUtils;
@@ -212,8 +213,10 @@ public class DossierDTO implements IDossierDTO, Serializable {
 
     /**
      * AI metadata.
-     */
+     */ 
     private DossierAiMetadataDTO aiMetadata;
+
+    private DossierStatus status;
 
     /**
      * Instantiates a new Dossier dto.
