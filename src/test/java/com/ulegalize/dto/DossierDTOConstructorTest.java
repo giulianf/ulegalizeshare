@@ -1,6 +1,7 @@
 package com.ulegalize.dto;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -59,7 +60,8 @@ class DossierDTOConstructorTest {
         tagsName,
         couthoraire,
         avatarUrl,
-        status
+        status,
+        LocalDate.now()
     );
 
     // Also expose it as the interface as Spring does with Page<IDossierDTO>
@@ -135,7 +137,8 @@ class DossierDTOConstructorTest {
         tagsName,
         couthoraire,
         avatarUrl,
-        DossierStatus.IN_PROGRESS
+        DossierStatus.IN_PROGRESS,
+        LocalDate.now()
     );
 
     // Assert expected label for NOT_SAME_VC irrespective of mediation flag

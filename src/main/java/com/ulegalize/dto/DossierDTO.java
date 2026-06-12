@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -218,6 +220,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
 
     private DossierStatus status;
 
+    private LocalDate limitationExpiryDate;
+
     /**
      * Instantiates a new Dossier dto.
      *
@@ -240,6 +244,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
      * @param couthoraire       cout horaire
      * @param avatarUrl       avatar Url
      * @param status       status
+     * @param limitationExpiryDate       limitationExpiryDate
      */
     public DossierDTO(Long dossierId,
                       Long year,
@@ -249,7 +254,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
                       Integer avatarVersion,
                       BigDecimal balance,
                       String vckey, EnumVCOwner enumVCOwner,
-                      Date closeDossier, Date openDossier,
+                      Date closeDossier,
+                      Date openDossier,
                       String type,
                       String dossierTypeDescription,
                       Boolean isMediation,
@@ -261,7 +267,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
                       String tagsName,
                       BigDecimal couthoraire,
                       String avatarUrl,
-                      DossierStatus status) {
+                      DossierStatus status,
+                      LocalDate limitationExpiryDate) {
         this.id = dossierId;
         this.year = year;
         this.num = number;
@@ -299,6 +306,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.couthoraire = couthoraire;
         this.avatarUrl = avatarUrl;
         this.status = status;
+        this.limitationExpiryDate = limitationExpiryDate;
     }
 
 }

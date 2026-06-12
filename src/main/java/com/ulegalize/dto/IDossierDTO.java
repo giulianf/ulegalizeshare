@@ -4,6 +4,7 @@ import com.ulegalize.enumeration.DossierStatus;
 import com.ulegalize.enumeration.EnumVCOwner;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -169,4 +170,9 @@ public interface IDossierDTO {
      * @return status
      */
     DossierStatus getStatus();
+    /**
+     *
+     * @return limitationExpiryDate
+     */
+    LocalDate getLimitationExpiryDate();
 }
