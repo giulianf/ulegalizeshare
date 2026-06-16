@@ -222,6 +222,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
 
     private LocalDate limitationExpiryDate;
 
+    private String tempFolderId;
+
     /**
      * Instantiates a new Dossier dto.
      *
