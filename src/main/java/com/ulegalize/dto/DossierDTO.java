@@ -280,7 +280,7 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.avatarVersion = avatarVersion;
         this.avatarUrl = avatarUrl;
         this.responsibleUserAvatar = userResponsibleId != null
-                ? new AvatarDTO(userResponsibleId, avatarVersion, avatarUrl) : null;
+                ? new AvatarDTO(userResponsibleId, avatarVersion, avatarUrl, initiales) : null;
         this.initiales = initiales;
         this.balance = balance;
         this.typeCode = type;

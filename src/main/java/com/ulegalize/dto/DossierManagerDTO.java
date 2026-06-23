@@ -33,11 +33,12 @@ public class DossierManagerDTO extends Item<Long> {
      * @param label     the label
      * @param dossierId the dossier Id
      * @param id        the dossier manager Id
+     * @param initiales
      */
-    public DossierManagerDTO(Long userId, String label, Long dossierId, Long id, String avatarUrl, Integer avatarVersion) {
+    public DossierManagerDTO(Long userId, String label, Long dossierId, Long id, String avatarUrl, Integer avatarVersion, String initiales) {
         super(userId, label);
         this.dossierId = dossierId;
         this.id = id;
-        this.avatar = new AvatarDTO(userId, avatarVersion, avatarUrl);
+        this.avatar = new AvatarDTO(userId, avatarVersion, avatarUrl, initiales);
     }
 }
