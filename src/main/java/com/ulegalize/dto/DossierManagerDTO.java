@@ -16,6 +16,8 @@ public class DossierManagerDTO extends Item<Long> {
      */
     private Long dossierId;
 
+    private AvatarDTO avatar;
+
 
     /**
      * Instantiates a new Item event dto.
@@ -32,9 +34,10 @@ public class DossierManagerDTO extends Item<Long> {
      * @param dossierId the dossier Id
      * @param id        the dossier manager Id
      */
-    public DossierManagerDTO(Long userId, String label, Long dossierId, Long id) {
+    public DossierManagerDTO(Long userId, String label, Long dossierId, Long id, String avatarUrl, Integer avatarVersion) {
         super(userId, label);
         this.dossierId = dossierId;
         this.id = id;
+        this.avatar = new AvatarDTO(userId, avatarVersion, avatarUrl);
     }
 }

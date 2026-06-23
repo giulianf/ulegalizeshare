@@ -204,6 +204,8 @@ public class DossierDTO implements IDossierDTO, Serializable {
      * The Tags name.
      */
     private String tagsName;
+
+    private AvatarDTO responsibleUserAvatar;
     /**
      * avatar url .
      */
@@ -276,6 +278,9 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.num = number;
         this.idUserResponsible = userResponsibleId;
         this.avatarVersion = avatarVersion;
+        this.avatarUrl = avatarUrl;
+        this.responsibleUserAvatar = userResponsibleId != null
+                ? new AvatarDTO(userResponsibleId, avatarVersion, avatarUrl) : null;
         this.initiales = initiales;
         this.balance = balance;
         this.typeCode = type;
@@ -306,7 +311,6 @@ public class DossierDTO implements IDossierDTO, Serializable {
         this.drivePath = drivePath;
         this.tagsName = tagsName;
         this.couthoraire = couthoraire;
-        this.avatarUrl = avatarUrl;
         this.status = status;
         this.limitationExpiryDate = limitationExpiryDate;
     }

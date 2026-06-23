@@ -20,8 +20,10 @@ class DossierManagerDTOTest {
         String label = "Test Label";
         Long dossierId = 456L;
         Long id = 789L;
+        String avatar = "avatar";
+        Integer avatarVersion = 1;
 
-        DossierManagerDTO dto = new DossierManagerDTO(userId, label, dossierId, id);
+        DossierManagerDTO dto = new DossierManagerDTO(userId, label, dossierId, id, avatar, avatarVersion);
         assertEquals(userId, dto.getValue());
         assertEquals(dossierId, dto.getDossierId());
         assertEquals(id, dto.getId());
