@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 public class AvatarDTO {
 
   private Long userId;
-
   private Integer avatarVersion;
-
   private String avatarUrl;
+  private String initiales;
 }
