@@ -2,6 +2,8 @@ package com.ulegalize.dto.template;
 
 import java.io.Serializable;
 
+import com.ulegalize.enumeration.DriveType;
+
 public record GenerateManagedReportDocumentDTO(
 
     String reportId,
@@ -20,7 +22,9 @@ public record GenerateManagedReportDocumentDTO(
 
     String answers,
 
-    String prestations
+    String prestations,
+
+    DriveType driveType
 
 ) implements Serializable {
 }
