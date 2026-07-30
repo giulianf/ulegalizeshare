@@ -8,7 +8,8 @@ public record GenerateManagedReportDocumentDTO(
 
     String reportId,
 
-    Long dossierId,
+    String dossierReference,
+    String administre,
 
     String reportName,
 
@@ -23,6 +24,7 @@ public record GenerateManagedReportDocumentDTO(
     String answers,
 
     String prestations,
+    String comments,
 
     DriveType driveType
 
