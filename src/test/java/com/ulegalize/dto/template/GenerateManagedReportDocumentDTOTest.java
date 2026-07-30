@@ -1,6 +1,7 @@
 package com.ulegalize.dto.template;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ulegalize.enumeration.DriveType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,20 +15,24 @@ class GenerateManagedReportDocumentDTOTest {
     public void testSerializationDeserialization() throws Exception {
         GenerateManagedReportDocumentDTO dto = new GenerateManagedReportDocumentDTO(
             "report-123",
-            456L,
+            "dossierReference",
+            "administre",
             "reportName",
             "driveFolderPath",
             "vcKey",
             789L,
             "summary",
             "answers",
-            "prestations"
+            "prestations",
+            "comments",
+            DriveType.openstack
         );
 
         String json = objectMapper.writeValueAsString(dto);
 
         assertTrue(json.contains("\"reportId\":\"report-123\""));
-        assertTrue(json.contains("\"dossierId\":456"));
+        assertTrue(json.contains("\"dossierReference\":\"dossierReference\""));
+        assertTrue(json.contains("\"administre\":\"administre\""));
         assertTrue(json.contains("\"reportName\":\"reportName\""));
         assertTrue(json.contains("\"driveFolderPath\":\"driveFolderPath\""));
         assertTrue(json.contains("\"vcKey\":\"vcKey\""));
@@ -35,12 +40,15 @@ class GenerateManagedReportDocumentDTOTest {
         assertTrue(json.contains("\"summary\":\"summary\""));
         assertTrue(json.contains("\"answers\":\"answers\""));
         assertTrue(json.contains("\"prestations\":\"prestations\""));
+        assertTrue(json.contains("\"comments\":\"comments\""));
+        assertTrue(json.contains("\"driveType\":\"openstack\""));
 
         GenerateManagedReportDocumentDTO deserialized = objectMapper.readValue(json, GenerateManagedReportDocumentDTO.class);
 
         assertEquals(dto, deserialized);
         assertEquals(dto.reportId(), deserialized.reportId());
-        assertEquals(dto.dossierId(), deserialized.dossierId());
+        assertEquals(dto.dossierReference(), deserialized.dossierReference());
+        assertEquals(dto.administre(), deserialized.administre());
         assertEquals(dto.reportName(), deserialized.reportName());
         assertEquals(dto.driveFolderPath(), deserialized.driveFolderPath());
         assertEquals(dto.vcKey(), deserialized.vcKey());
@@ -48,6 +56,8 @@ class GenerateManagedReportDocumentDTOTest {
         assertEquals(dto.summary(), deserialized.summary());
         assertEquals(dto.answers(), deserialized.answers());
         assertEquals(dto.prestations(), deserialized.prestations());
+        assertEquals(dto.comments(), deserialized.comments());
+        assertEquals(dto.driveType(), deserialized.driveType());
     }
 
     @Test
@@ -55,9 +65,12 @@ class GenerateManagedReportDocumentDTOTest {
         GenerateManagedReportDocumentDTO dto = new GenerateManagedReportDocumentDTO(
             "report-123",
             null,
+            null,
             "reportName",
             null,
             "vcKey",
+            null,
+            null,
             null,
             null,
             null,
