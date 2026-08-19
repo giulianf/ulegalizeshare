@@ -1,4 +1,4 @@
-package com.ulegalize.dto.payment;
+package com.ulegalize.dto.events.payment;
 
 public record ActivePaymentEvent(
     String vcKey,

@@ -2,7 +2,7 @@ package com.ulegalize;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ulegalize.dto.payment.ActivePaymentEvent;
+import com.ulegalize.dto.events.payment.ActivePaymentEvent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

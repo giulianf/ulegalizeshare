@@ -1,7 +1,7 @@
 package com.ulegalize;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ulegalize.dto.payment.ActivePaymentEvent;
+import com.ulegalize.dto.events.payment.ActivePaymentEvent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,7 +20,7 @@ class KafkaObjectTest {
         String json = objectMapper.writeValueAsString(kafkaObject);
 
         // Check that @class is present in the objectTransfert field
-        assertTrue(json.contains("\"@class\":\"com.ulegalize.dto.payment.ActivePaymentEvent\""));
+        assertTrue(json.contains("\"@class\":\"com.ulegalize.dto.events.payment.ActivePaymentEvent\""));
         assertTrue(json.contains("\"vcKey\":\"MYVC\""));
 
         // Deserialize back

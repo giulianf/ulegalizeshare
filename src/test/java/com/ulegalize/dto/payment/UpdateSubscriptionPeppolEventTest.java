@@ -1,6 +1,7 @@
 package com.ulegalize.dto.payment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ulegalize.dto.events.payment.UpdateSubscriptionPeppolEvent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

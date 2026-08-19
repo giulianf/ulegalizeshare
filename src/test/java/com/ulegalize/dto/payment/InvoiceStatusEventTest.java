@@ -1,6 +1,8 @@
 package com.ulegalize.dto.payment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ulegalize.dto.events.payment.InvoiceStatusEvent;
+import com.ulegalize.enumeration.InvoiceStatusProvider;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,13 +14,13 @@ class InvoiceStatusEventTest {
 
     @Test
     public void testSerializationDeserialization() throws Exception {
-        InvoiceStatusEvent original = new InvoiceStatusEvent("MYVC", 12345L, "PROVIDER", "PAID");
+        InvoiceStatusEvent original = new InvoiceStatusEvent("MYVC", 12345L, InvoiceStatusProvider.billit, "PAID");
 
         String json = objectMapper.writeValueAsString(original);
 
         assertTrue(json.contains("\"vcKey\":\"MYVC\""));
         assertTrue(json.contains("\"invoiceId\":12345"));
-        assertTrue(json.contains("\"provider\":\"PROVIDER\""));
+        assertTrue(json.contains("\"provider\":\"billit\""));
         assertTrue(json.contains("\"status\":\"PAID\""));
 
         InvoiceStatusEvent result = objectMapper.readValue(json, InvoiceStatusEvent.class);

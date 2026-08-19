@@ -1,6 +1,7 @@
 package com.ulegalize.dto.drive;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ulegalize.dto.events.drive.DriveFileEvent;
 import com.ulegalize.enumeration.DriveType;
 import org.junit.jupiter.api.Test;
 

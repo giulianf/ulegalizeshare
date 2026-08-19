@@ -1,4 +1,4 @@
-package com.ulegalize.dto.drive;
+package com.ulegalize.dto.events.drive;
 
 import com.ulegalize.enumeration.DriveType;
 
