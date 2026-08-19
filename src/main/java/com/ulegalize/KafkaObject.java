@@ -1,10 +1,13 @@
 package com.ulegalize;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.ulegalize.security.UlegalizeToken;
-import lombok.*;
-
 import java.io.Serializable;
+
+import com.ulegalize.security.UlegalizeToken;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * The type Kafka object.
@@ -16,39 +19,21 @@ import java.io.Serializable;
 @ToString
 public class KafkaObject<T> implements Serializable {
 
-    /**
-     * The constant serialVersionUID.
-     */
-    private static final long serialVersionUID = 1L;
+  /**
+   * The constant serialVersionUID.
+   */
+  private static final long serialVersionUID = 1L;
 
-    /**
-     * The Ulegalize token.
-     */
-    @Getter
-    @Setter
-    private UlegalizeToken ulegalizeToken;
-    /**
-     * objectTransfert
-     */
-    @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
-    private T objectTransfert;
-
-
-    /**
-     * Gets object transfert.
-     *
-     * @return the object transfert
-     */
-    public T getObjectTransfert() {
-        return objectTransfert;
-    }
-
-    /**
-     * Sets object transfert.
-     *
-     * @param objectTransfert the object transfert
-     */
-    public void setObjectTransfert(T objectTransfert) {
-        this.objectTransfert = objectTransfert;
-    }
+  /**
+   * The Ulegalize token.
+   */
+  @Getter
+  @Setter
+  private UlegalizeToken ulegalizeToken;
+  /**
+   * objectTransfert
+   */
+  @Getter
+  @Setter
+  private T objectTransfert;
 }
