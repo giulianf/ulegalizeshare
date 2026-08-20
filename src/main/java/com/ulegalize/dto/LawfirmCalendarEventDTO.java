@@ -161,7 +161,12 @@ public class LawfirmCalendarEventDTO extends AbstractRestObject implements Seria
     /**
      * The Assignee User item.
      */
+    @Deprecated
     private ItemLongDto assigneeUser;
+    /**
+     * The Assignee User item.
+     */
+    private List<ItemLongDto> assigneeUsers;
     /**
      * notifying participants
      */
