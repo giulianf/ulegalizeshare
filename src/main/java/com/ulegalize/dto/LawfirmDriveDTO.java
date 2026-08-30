@@ -1,23 +1,9 @@
 package com.ulegalize.dto;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import com.ulegalize.enumeration.DriveType;
 
-/**
- * The type Lawfirm drive dto.
- */
-@Data
-@EqualsAndHashCode(callSuper = true)
-public class LawfirmDriveDTO extends AccessCredentialsDTO {
-    /**
-     * The Vckey.
-     */
-    private String vckey;
-
-    /**
-     * Instantiates a new Lawfirm drive dto.
-     */
-    public LawfirmDriveDTO() {
-
-    }
+public record LawfirmDriveDTO(
+    String vckey,
+    DriveType driveType
+) {
 }
