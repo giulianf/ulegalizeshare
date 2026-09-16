@@ -116,6 +116,10 @@ public class ContactSummary implements Serializable {
      */
     private String tva = null;
     /**
+     * Siret.
+     */
+    private String siret = null;
+    /**
      * The Birthdate.
      */
     private Date birthdate;
