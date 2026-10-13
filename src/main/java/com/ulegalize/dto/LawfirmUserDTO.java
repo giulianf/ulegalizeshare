@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
+import java.time.ZonedDateTime;
 import java.util.Date;
 
 /**
@@ -84,5 +85,13 @@ public class LawfirmUserDTO extends AbstractRestObject {
      * The Email.
      */
     private String email;
+    /**
+     * login date .
+     */
+    private ZonedDateTime loginDate;
+    /**
+     * login count .
+     */
+    private int loginCount;
 
 }
