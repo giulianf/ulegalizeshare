@@ -244,5 +244,6 @@ public class InvoiceDTO implements Serializable {
      * The deliverable id list.
      */
     private List<Long> deliverableIdList = new ArrayList<>();
+    private Long generatedPercentageDebourId;
 
 }
