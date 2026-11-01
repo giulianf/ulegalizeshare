@@ -48,4 +48,7 @@ public class CompleteDossierDTO {
    * lawfirm
    */
   private LawfirmDTO lawfirmDTO;
+
+  // V2: optional destination
+  private DocumentDestinationDTO targetFolder;
 }
