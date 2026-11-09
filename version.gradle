@@ -1,6 +1,6 @@
-ext.jackson = '2.21.0'
-ext.jacksonAnnotation = '2.21'
+ext.jackson = '3.2.4'
+ext.jacksonAnnotation = '2.22'
 ext.lombok = '1.18.42'
 ext.commonsLang = '3.20.0'
 ext.minidevVersion = '2.6.0'
-ext.junitJupiterVersion = '6.0.2' // Use the latest version of JUnit Jupiter
+ext.junitJupiterVersion = '6.1.3'
