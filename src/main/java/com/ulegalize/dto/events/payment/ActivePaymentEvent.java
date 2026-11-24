@@ -4,6 +4,7 @@ public record ActivePaymentEvent(
     String vcKey,
     boolean active,
     boolean activeEInvoice,
-    boolean activeCnb
+    boolean activeCnb,
+    boolean activeAi
 ) {
 }
